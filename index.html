@@ -316,7 +316,7 @@ td:first-child,td.l{text-align:left}
   </div>
   <div class="hdr-r">
     <a href="https://stockbee.blogspot.com/p/mm.html" target="_blank" rel="noopener" class="btn btn-pri" title="Stockbee Market Monitor (Pradeep Bonde) — opens in new tab">▸ Stockbee MM</a>
-    <a href="https://in.tradingview.com/chart/3b5Ftr5S/" target="_blank" rel="noopener" class="btn btn-pri" title="SPX Breadth chart on TradingView (% &gt; 50 DMA / 200 DMA) — opens in new tab">▸ SPX Breadth</a>
+    <a href="position-calc.html" target="_blank" rel="noopener" class="btn btn-pri" title="Position Size Calculator — opens in new tab">▸ Position Calc</a>
     <span id="lastUpdatedBadge" style="font-size:9px;color:var(--text3);letter-spacing:1px;padding:4px 8px;background:var(--bg3);border:1px solid var(--border);border-radius:2px">LOADING DATA...</span>
       </div>
 </div>
@@ -477,72 +477,6 @@ td:first-child,td.l{text-align:left}
     <div class="card-lbl" style="margin-bottom:14px">&#9658; Market Internals Dashboard</div>
     <div id="breadthGrid" style="display:grid;grid-template-columns:repeat(7,1fr);gap:10px">
       <div style="color:var(--text3);font-size:11px;grid-column:span 7;text-align:center;padding:20px 0">Loading breadth data&hellip;</div>
-    </div>
-  </div>
-</div>
-
-<div class="divider"></div>
-
-<!-- SECTION 4: POSITION SIZING                            -->
-<!-- ══════════════════════════════════════════════════════ -->
-<div class="sec" id="s4">
-  <div class="sec-hdr">
-    <div class="sec-n">04</div>
-    <div class="sec-t">Position Sizing Calculator</div>
-    <div class="sec-sub">RISK-BASED · STAGGERED STOPS</div>
-  </div>
-  <div class="calc-wrap">
-    <!-- Inputs -->
-    <div class="cpanel">
-      <div class="c-ttl">▸ Trade Parameters</div>
-      <div class="dir-tog">
-        <button class="dir-b long on" id="bLong" onclick="setDir('long')">▲ LONG</button>
-        <button class="dir-b short" id="bShort" onclick="setDir('short')">▼ SHORT</button>
-      </div>
-      <div class="fg"><label class="fl">Account Equity (USD)</label>
-        <input class="fi" type="number" id="cEquity" value="10000000" oninput="calc()"></div>
-      <div class="fg"><label class="fl">Risk per Trade (%)</label>
-        <input class="fi" type="number" id="cRisk" value="0.3" step="0.05" oninput="calc()"></div>
-      <div class="fr">
-        <div class="fg"><label class="fl">Entry Price ($)</label>
-          <input class="fi" type="number" id="cEntry" value="100" oninput="calc()"></div>
-        <div class="fg"><label class="fl">Stop Loss ($)</label>
-          <input class="fi" type="number" id="cStop" value="95" oninput="calc()"></div>
-      </div>
-      <div class="fg"><label class="fl">Ticker (optional)</label>
-        <input class="fi" type="text" id="cTicker" placeholder="e.g. AAPL" style="text-transform:uppercase"></div>
-      <div class="res">
-        <div class="res-big" id="rShares">6,000</div>
-        <div class="res-lbl">SHARES TO TRADE</div>
-        <div class="res-sub">
-          <div class="ri"><div class="rv" id="rRisk" style="color:var(--red)">$30,000</div><div class="rl">Max Risk $</div></div>
-          <div class="ri"><div class="rv" id="rVal">$600,000</div><div class="rl">Position Value</div></div>
-          <div class="ri"><div class="rv" id="rPts" style="color:var(--amber)">$5.00</div><div class="rl">Risk/Share</div></div>
-          <div class="ri"><div class="rv" id="rEq" style="color:var(--text2)">6.0%</div><div class="rl">% Equity</div></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Stops -->
-    <div class="stops-panel">
-      <div class="stops-hdr">
-        <span style="font-size:9px;color:var(--text2);letter-spacing:1px;text-transform:uppercase;margin-right:auto">▸ Staggered Stop Levels</span>
-        <button class="s-tab on" id="st2" onclick="setStops(2)">2-STOP</button>
-        <button class="s-tab" id="st3" onclick="setStops(3)">3-STOP</button>
-      </div>
-      <div class="stops-body">
-        <div class="sr-hdr"><span>Level</span><span>Price</span><span>Shares to Remove</span><span>% of Position</span><span>P&L at Stop</span></div>
-        <div id="srRows"></div>
-        <div style="margin-top:14px;padding-top:12px;border-top:1px solid var(--border)">
-          <div class="viz-note">Scale-Out Visualization</div>
-          <div class="scale-viz" id="scaleViz"></div>
-        </div>
-        <!-- Risk/Reward helper -->
-        <div style="margin-top:22px;padding-top:12px;border-top:1px solid var(--border)">
-          <div class="viz-note" style="margin-bottom:8px">R:R Targets</div>
-          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:6px" id="rrTargets"></div>
-        </div>
-      </div>
     </div>
   </div>
 </div>
@@ -872,11 +806,6 @@ const CRYPTO_DEMO = [
   {id:'solana',sym:'SOL',name:'Solana',price:168.4,d1:-4.22,w1:-12.18,hi52:-44.12,ytd:-18.84,spark:[-3.1,4.2,-8.4,-2.8,-4.22]},
   {id:'ripple',sym:'XRP',name:'Ripple',price:2.284,d1:-1.88,w1:-5.44,hi52:-31.22,ytd:14.82,spark:[-0.8,3.2,-4.1,-1.4,-1.88]},
 ];
-
-// ═══════════════════════════════════════════════════════
-// STATE
-// ═══════════════════════════════════════════════════════
-let DIR = 'long', STOPS = 2;
 
 // ═══════════════════════════════════════════════════════
 // CLOCK
@@ -1309,102 +1238,9 @@ function renderBreadth(d) {
 // ═══════════════════════════════════════════════════════
 window.addEventListener('load',()=>{
   loadData();
-  calc();
   // Silent re-fetch every 60 min in case the daily data has refreshed
   setInterval(loadData, 60 * 60 * 1000);
 });
-
-// ═══════════════════════════════════════════════════════
-// POSITION CALCULATOR
-// ═══════════════════════════════════════════════════════
-function setDir(d){
-  DIR=d;
-  document.getElementById('bLong').className='dir-b long'+(d==='long'?' on':'');
-  document.getElementById('bShort').className='dir-b short'+(d==='short'?' on':'');
-  calc();
-}
-function setStops(n){
-  STOPS=n;
-  document.getElementById('st2').classList.toggle('on',n===2);
-  document.getElementById('st3').classList.toggle('on',n===3);
-  calc();
-}
-function calc(){
-  const eq=parseFloat(document.getElementById('cEquity').value)||0;
-  const rp=parseFloat(document.getElementById('cRisk').value)||0;
-  const en=parseFloat(document.getElementById('cEntry').value)||0;
-  const st=parseFloat(document.getElementById('cStop').value)||0;
-  if(!eq||!rp||!en||!st)return;
-  const rAmt=eq*(rp/100);
-  const rPts=Math.abs(en-st);
-  if(!rPts)return;
-  const shares=Math.floor(rAmt/rPts);
-  const posVal=shares*en;
-  const pctEq=(posVal/eq)*100;
-  document.getElementById('rShares').textContent=shares.toLocaleString();
-  document.getElementById('rRisk').textContent='$'+Math.round(rAmt).toLocaleString();
-  document.getElementById('rVal').textContent='$'+Math.round(posVal).toLocaleString();
-  document.getElementById('rPts').textContent='$'+rPts.toFixed(2);
-  document.getElementById('rEq').textContent=pctEq.toFixed(1)+'%';
-
-  // Build staggered stops (shares = qty to REMOVE at level; pct = % remaining)
-  const levels=[];
-  if(STOPS===2){
-    const mid=(en+st)/2;
-    const s1=Math.floor(shares/2), s2=shares-Math.floor(shares/2);
-    levels.push({lbl:'Entry',       price:en,  shares:0,  pct:100,                       pnl:0,              cls:'sr-entry'});
-    levels.push({lbl:'Stop 1 (mid)',price:mid, shares:s1, pct:Math.round(s2/shares*100), pnl:-Math.abs(en-mid)*s1, cls:'sr-mid'});
-    levels.push({lbl:'Final Stop',  price:st,  shares:s2, pct:0,                         pnl:-rPts*s2,       cls:'sr-fin'});
-  } else {
-    const gap=rPts/3, dDir=DIR==='long'?-1:1;
-    const s1=Math.floor(shares/3), s2=Math.floor(shares/3), s3=shares-Math.floor(shares/3)-Math.floor(shares/3);
-    const p1=en+gap*dDir, p2=en+gap*2*dDir;
-    levels.push({lbl:'Entry',       price:en, shares:0,  pct:100,                              pnl:0,          cls:'sr-entry'});
-    levels.push({lbl:'Stop 1 (⅓)', price:p1, shares:s1, pct:Math.round((shares-s1)/shares*100), pnl:-(gap*s1),    cls:'sr-mid'});
-    levels.push({lbl:'Stop 2 (⅔)', price:p2, shares:s2, pct:Math.round(s3/shares*100),         pnl:-(gap*2*s2),  cls:'sr-mid'});
-    levels.push({lbl:'Final Stop',  price:st, shares:s3, pct:0,                                pnl:-(rPts*s3),   cls:'sr-fin'});
-  }
-
-  const rows=document.getElementById('srRows');rows.innerHTML='';
-  levels.forEach(lv=>{
-    const pnlCol=lv.pnl<0?'var(--red)':lv.pnl>0?'var(--green)':'var(--accent)';
-    const d=document.createElement('div');d.className='sr';
-    d.innerHTML=`<span class="sr-lbl">${lv.lbl}</span>
-      <span class="sr-price ${lv.cls}">$${fp(lv.price)}</span>
-      <span class="sr-shares">${lv.shares===0?'—':lv.shares.toLocaleString()+' sh'}</span>
-      <span class="sr-pct" style="color:var(--text2)">${lv.pct}%</span>
-      <span class="sr-pnl" style="color:${pnlCol}">${lv.pnl===0?'—':'$'+Math.round(lv.pnl).toLocaleString()}</span>`;
-    rows.appendChild(d);
-  });
-
-  // Visualization
-  const viz=document.getElementById('scaleViz');viz.innerHTML='';
-  const mn=Math.min(en,st)*0.9985,mx=Math.max(en,st)*1.0015,rng=mx-mn;
-  const bar=document.createElement('div');
-  bar.style.cssText=`position:absolute;top:20px;left:0;right:0;height:1px;background:var(--border2)`;viz.appendChild(bar);
-  levels.forEach(lv=>{
-    const x=((lv.price-mn)/rng)*100;
-    const line=document.createElement('div');
-    const col=lv.cls==='sr-entry'?'var(--accent)':lv.cls==='sr-fin'?'var(--red)':'var(--amber)';
-    line.style.cssText=`position:absolute;left:${x}%;top:8px;width:2px;height:24px;background:${col};border-radius:1px;transform:translateX(-1px)`;viz.appendChild(line);
-    const lbl=document.createElement('div');
-    lbl.style.cssText=`position:absolute;left:${x}%;bottom:-4px;transform:translateX(-50%);font-size:8.5px;color:var(--text3);white-space:nowrap`;
-    lbl.textContent='$'+fp(lv.price);viz.appendChild(lbl);
-  });
-
-  // R:R targets
-  const rr=document.getElementById('rrTargets');rr.innerHTML='';
-  [1,1.5,2,3,4,5].forEach(r=>{
-    const tgt=DIR==='long'?en+rPts*r:en-rPts*r;
-    const pnl=rPts*r*shares;
-    const d=document.createElement('div');
-    d.style.cssText='background:var(--bg3);border:1px solid var(--border);border-radius:2px;padding:7px 9px;text-align:center';
-    d.innerHTML=`<div style="font-size:9px;color:var(--text3);letter-spacing:1px;margin-bottom:3px">${r}:1 R</div>
-      <div style="font-size:12px;font-weight:500;color:var(--green)">$${fp(tgt)}</div>
-      <div style="font-size:9px;color:var(--green);margin-top:2px">+$${Math.round(pnl).toLocaleString()}</div>`;
-    rr.appendChild(d);
-  });
-}
 
 // ═══════════════════════════════════════════════════════
 // SNAPSHOT + SHARE

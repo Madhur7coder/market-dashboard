@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#07090d">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>Position Size Calculator · Market Command Centre</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;1,300&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:      #07090d;
+  --bg2:     #0c0f15;
+  --bg3:     #111520;
+  --bg4:     #161b26;
+  --border:  #1c2535;
+  --border2: #243044;
+  --accent:  #00c8ff;
+  --accent2: #0099cc;
+  --adim:    rgba(0,200,255,0.07);
+  --green:   #00e676;
+  --gdim:    rgba(0,230,118,0.09);
+  --red:     #ff3355;
+  --rdim:    rgba(255,51,85,0.09);
+  --amber:   #ffb300;
+  --adim2:   rgba(255,179,0,0.09);
+  --text:    #c8d8ea;
+  --text2:   #7292b0;
+  --text3:   #3d5a78;
+  --mono:    'IBM Plex Mono', monospace;
+  --sans:    'DM Sans', sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--mono);font-size:13px;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(0,200,255,0.015) 1px,transparent 1px),linear-gradient(90deg,rgba(0,200,255,0.015) 1px,transparent 1px);background-size:48px 48px;pointer-events:none;z-index:0}
+.wrap{position:relative;z-index:1;max-width:1280px;margin:0 auto;padding:14px}
+
+/* Header */
+.hdr{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;background:var(--bg2);border:1px solid var(--border);border-radius:4px;margin-bottom:14px;position:relative;overflow:hidden}
+.hdr::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent 0%,var(--accent) 40%,var(--green) 70%,transparent 100%)}
+.hdr-l{display:flex;align-items:center;gap:14px}
+.logo{font-size:18px;font-weight:600;letter-spacing:3px;color:var(--accent)}
+.logo em{color:var(--text3);font-style:normal}
+.hdr-meta{font-size:11px;color:var(--text2);letter-spacing:1px;line-height:1.4}
+.hdr-r{display:flex;gap:7px;align-items:center}
+
+.btn{display:inline-flex;align-items:center;gap:5px;padding:7px 13px;border:1px solid var(--border2);border-radius:3px;background:var(--bg3);color:var(--text2);font-family:var(--mono);font-size:11px;letter-spacing:1px;cursor:pointer;transition:all .15s;text-transform:uppercase;white-space:nowrap;text-decoration:none}
+.btn:hover{border-color:var(--accent);color:var(--accent);background:var(--adim)}
+.btn-pri{background:rgba(0,200,255,.12);border-color:var(--accent);color:var(--accent);font-weight:600}
+.btn-pri:hover{background:rgba(0,200,255,.2)}
+
+/* Section header */
+.sec{margin-bottom:22px}
+.sec-hdr{display:flex;align-items:center;gap:10px;padding:8px 0 7px;border-bottom:1px solid var(--border);margin-bottom:14px}
+.sec-n{font-size:10px;color:var(--accent);letter-spacing:2px;padding:2px 7px;border:1px solid rgba(0,200,255,.25);border-radius:2px}
+.sec-t{font-size:13px;font-weight:600;color:var(--text);letter-spacing:2px;text-transform:uppercase}
+.sec-sub{font-size:10px;color:var(--text3);letter-spacing:1px;margin-left:auto}
+
+/* Position calc */
+.calc-wrap{display:grid;grid-template-columns:340px 1fr;gap:12px}
+.cpanel{background:var(--bg2);border:1px solid var(--border);border-radius:4px;padding:18px}
+.c-ttl{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--accent);margin-bottom:14px;font-weight:500}
+.dir-tog{display:flex;border:1px solid var(--border2);border-radius:3px;overflow:hidden;margin-bottom:14px}
+.dir-b{flex:1;padding:9px;border:none;background:var(--bg3);color:var(--text3);font-family:var(--mono);font-size:11px;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:all .15s;font-weight:500}
+.dir-b.long.on{background:var(--gdim);color:var(--green)}
+.dir-b.short.on{background:var(--rdim);color:var(--red)}
+.fg{margin-bottom:11px}
+.fl{font-size:9.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text3);margin-bottom:4px;display:block}
+.fi{width:100%;padding:9px 10px;background:var(--bg3);border:1px solid var(--border2);border-radius:2px;color:var(--text);font-family:var(--mono);font-size:13px;outline:none;transition:border .15s}
+.fi:focus{border-color:var(--accent)}
+.fi::placeholder{color:var(--text3)}
+.fr{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+.res{background:var(--bg3);border:1px solid var(--border);border-radius:3px;padding:14px;margin-top:13px}
+.res-big{font-size:32px;font-weight:600;color:var(--accent);letter-spacing:-1px;line-height:1}
+.res-lbl{font-size:9.5px;color:var(--text3);letter-spacing:2px;text-transform:uppercase;margin-top:3px}
+.res-sub{display:flex;gap:18px;margin-top:11px;padding-top:11px;border-top:1px solid var(--border);flex-wrap:wrap}
+.ri{display:flex;flex-direction:column;gap:2px}
+.rv{font-size:13px;font-weight:500}
+.rl{font-size:9.5px;color:var(--text3);letter-spacing:1px;text-transform:uppercase}
+
+.stops-panel{background:var(--bg2);border:1px solid var(--border);border-radius:4px;overflow:hidden}
+.stops-hdr{display:flex;align-items:center;padding:10px 14px;background:var(--bg3);border-bottom:1px solid var(--border);gap:7px}
+.s-tab{padding:5px 12px;border:1px solid var(--border2);border-radius:2px;background:transparent;color:var(--text3);font-family:var(--mono);font-size:10.5px;letter-spacing:1px;cursor:pointer;transition:all .15s;text-transform:uppercase}
+.s-tab.on{border-color:var(--accent);color:var(--accent);background:var(--adim)}
+.stops-body{padding:14px}
+.sr-hdr{display:grid;grid-template-columns:110px 90px 1fr 1fr 1fr;gap:6px;padding:5px 0;font-size:9.5px;color:var(--text3);letter-spacing:1px;text-transform:uppercase;border-bottom:1px solid var(--border)}
+.sr{display:grid;grid-template-columns:110px 90px 1fr 1fr 1fr;gap:6px;padding:8px 0;border-bottom:1px solid rgba(28,37,53,.4);align-items:center}
+.sr:last-child{border-bottom:none}
+.sr-lbl{font-size:11px;color:var(--text2)}
+.sr-price{font-size:14px;font-weight:600}
+.sr-entry{color:var(--accent)}
+.sr-mid{color:var(--amber)}
+.sr-fin{color:var(--red)}
+.sr-shares{font-size:11px;color:var(--text2)}
+.sr-pct{font-size:11px}
+.sr-pnl{font-size:11px}
+.scale-viz{position:relative;height:50px;margin:10px 0 4px;border-top:1px solid var(--border)}
+.viz-note{font-size:10px;color:var(--text3);letter-spacing:1px;text-transform:uppercase;margin-bottom:6px}
+
+/* Note panel */
+.note{background:var(--bg2);border:1px solid var(--border);border-radius:4px;padding:14px 16px;margin-top:14px;color:var(--text2);font-size:11px;line-height:1.7}
+.note strong{color:var(--text);font-weight:500}
+
+/* Responsive */
+@media(max-width:880px){
+  .calc-wrap{grid-template-columns:1fr;gap:10px}
+}
+@media(max-width:600px){
+  .wrap{padding:8px}
+  body{font-size:12px}
+  .hdr{flex-direction:column;align-items:stretch;gap:10px;padding:12px 14px}
+  .hdr-l{flex-wrap:wrap;gap:10px;align-items:center}
+  .hdr-r{justify-content:flex-start}
+  .logo{font-size:15px;letter-spacing:2px}
+  .sec-sub{display:none}
+  .cpanel{padding:14px}
+  .fr{grid-template-columns:1fr}
+  .res-big{font-size:26px}
+  .stops-body{padding:10px}
+  .sr-hdr,.sr{grid-template-columns:80px 70px 1fr 50px 1fr;gap:4px;font-size:9.5px}
+  .sr-price{font-size:12px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- Header -->
+<div class="hdr">
+  <div class="hdr-l">
+    <div class="logo">Position Calculator</div>
+    <div class="hdr-meta">RISK-BASED · STAGGERED STOPS · R:R TARGETS</div>
+  </div>
+  <div class="hdr-r">
+    <a href="index.html" class="btn btn-pri" title="Back to dashboard">◂ Back to Dashboard</a>
+  </div>
+</div>
+
+<!-- Calculator -->
+<div class="sec">
+  <div class="sec-hdr">
+    <div class="sec-n">01</div>
+    <div class="sec-t">Position Sizing</div>
+    <div class="sec-sub">RISK-BASED · STAGGERED STOPS</div>
+  </div>
+  <div class="calc-wrap">
+    <!-- Inputs -->
+    <div class="cpanel">
+      <div class="c-ttl">▸ Trade Parameters</div>
+      <div class="dir-tog">
+        <button class="dir-b long on" id="bLong" onclick="setDir('long')">▲ LONG</button>
+        <button class="dir-b short" id="bShort" onclick="setDir('short')">▼ SHORT</button>
+      </div>
+      <div class="fg"><label class="fl">Account Equity (USD)</label>
+        <input class="fi" type="number" id="cEquity" value="10000000" oninput="calc()"></div>
+      <div class="fg"><label class="fl">Risk per Trade (%)</label>
+        <input class="fi" type="number" id="cRisk" value="0.3" step="0.05" oninput="calc()"></div>
+      <div class="fr">
+        <div class="fg"><label class="fl">Entry Price ($)</label>
+          <input class="fi" type="number" id="cEntry" value="100" oninput="calc()"></div>
+        <div class="fg"><label class="fl">Stop Loss ($)</label>
+          <input class="fi" type="number" id="cStop" value="95" oninput="calc()"></div>
+      </div>
+      <div class="fg"><label class="fl">Ticker (optional)</label>
+        <input class="fi" type="text" id="cTicker" placeholder="e.g. AAPL" style="text-transform:uppercase"></div>
+      <div class="res">
+        <div class="res-big" id="rShares">6,000</div>
+        <div class="res-lbl">SHARES TO TRADE</div>
+        <div class="res-sub">
+          <div class="ri"><div class="rv" id="rRisk" style="color:var(--red)">$30,000</div><div class="rl">Max Risk $</div></div>
+          <div class="ri"><div class="rv" id="rVal">$600,000</div><div class="rl">Position Value</div></div>
+          <div class="ri"><div class="rv" id="rPts" style="color:var(--amber)">$5.00</div><div class="rl">Risk/Share</div></div>
+          <div class="ri"><div class="rv" id="rEq" style="color:var(--text2)">6.0%</div><div class="rl">% Equity</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stops -->
+    <div class="stops-panel">
+      <div class="stops-hdr">
+        <span style="font-size:9px;color:var(--text2);letter-spacing:1px;text-transform:uppercase;margin-right:auto">▸ Staggered Stop Levels</span>
+        <button class="s-tab on" id="st2" onclick="setStops(2)">2-STOP</button>
+        <button class="s-tab" id="st3" onclick="setStops(3)">3-STOP</button>
+      </div>
+      <div class="stops-body">
+        <div class="sr-hdr"><span>Level</span><span>Price</span><span>Shares to Remove</span><span>% of Position</span><span>P&amp;L at Stop</span></div>
+        <div id="srRows"></div>
+        <div style="margin-top:14px;padding-top:12px;border-top:1px solid var(--border)">
+          <div class="viz-note">Scale-Out Visualization</div>
+          <div class="scale-viz" id="scaleViz"></div>
+        </div>
+        <div style="margin-top:22px;padding-top:12px;border-top:1px solid var(--border)">
+          <div class="viz-note" style="margin-bottom:8px">R:R Targets</div>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:6px" id="rrTargets"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="note">
+    <strong>How to use:</strong> Set your account equity and the % of equity you'll risk on this trade. Enter the planned entry and stop-loss prices &mdash; the calculator returns the exact share count that caps your downside at the chosen risk amount. The 2-stop / 3-stop tabs split the position into staggered exit tranches; the R:R panel shows price targets and dollar P&amp;L at common reward multiples (1R, 1.5R, 2R, 3R, 4R, 5R).
+  </div>
+</div>
+
+</div><!-- /wrap -->
+
+<script>
+let DIR = 'long', STOPS = 2;
+
+function fp(v,dec=2){return v.toLocaleString('en-US',{minimumFractionDigits:dec,maximumFractionDigits:dec})}
+
+function setDir(d){
+  DIR=d;
+  document.getElementById('bLong').className='dir-b long'+(d==='long'?' on':'');
+  document.getElementById('bShort').className='dir-b short'+(d==='short'?' on':'');
+  calc();
+}
+function setStops(n){
+  STOPS=n;
+  document.getElementById('st2').classList.toggle('on',n===2);
+  document.getElementById('st3').classList.toggle('on',n===3);
+  calc();
+}
+function calc(){
+  const eq=parseFloat(document.getElementById('cEquity').value)||0;
+  const rp=parseFloat(document.getElementById('cRisk').value)||0;
+  const en=parseFloat(document.getElementById('cEntry').value)||0;
+  const st=parseFloat(document.getElementById('cStop').value)||0;
+  if(!eq||!rp||!en||!st)return;
+  const rAmt=eq*(rp/100);
+  const rPts=Math.abs(en-st);
+  if(!rPts)return;
+  const shares=Math.floor(rAmt/rPts);
+  const posVal=shares*en;
+  const pctEq=(posVal/eq)*100;
+  document.getElementById('rShares').textContent=shares.toLocaleString();
+  document.getElementById('rRisk').textContent='$'+Math.round(rAmt).toLocaleString();
+  document.getElementById('rVal').textContent='$'+Math.round(posVal).toLocaleString();
+  document.getElementById('rPts').textContent='$'+rPts.toFixed(2);
+  document.getElementById('rEq').textContent=pctEq.toFixed(1)+'%';
+
+  const levels=[];
+  if(STOPS===2){
+    const mid=(en+st)/2;
+    const s1=Math.floor(shares/2), s2=shares-Math.floor(shares/2);
+    levels.push({lbl:'Entry',       price:en,  shares:0,  pct:100,                       pnl:0,                    cls:'sr-entry'});
+    levels.push({lbl:'Stop 1 (mid)',price:mid, shares:s1, pct:Math.round(s2/shares*100), pnl:-Math.abs(en-mid)*s1, cls:'sr-mid'});
+    levels.push({lbl:'Final Stop',  price:st,  shares:s2, pct:0,                         pnl:-rPts*s2,             cls:'sr-fin'});
+  } else {
+    const gap=rPts/3, dDir=DIR==='long'?-1:1;
+    const s1=Math.floor(shares/3), s2=Math.floor(shares/3), s3=shares-Math.floor(shares/3)-Math.floor(shares/3);
+    const p1=en+gap*dDir, p2=en+gap*2*dDir;
+    levels.push({lbl:'Entry',       price:en, shares:0,  pct:100,                                pnl:0,           cls:'sr-entry'});
+    levels.push({lbl:'Stop 1 (⅓)', price:p1, shares:s1, pct:Math.round((shares-s1)/shares*100), pnl:-(gap*s1),   cls:'sr-mid'});
+    levels.push({lbl:'Stop 2 (⅔)', price:p2, shares:s2, pct:Math.round(s3/shares*100),          pnl:-(gap*2*s2), cls:'sr-mid'});
+    levels.push({lbl:'Final Stop',  price:st, shares:s3, pct:0,                                  pnl:-(rPts*s3),  cls:'sr-fin'});
+  }
+
+  const rows=document.getElementById('srRows');rows.innerHTML='';
+  levels.forEach(lv=>{
+    const pnlCol=lv.pnl<0?'var(--red)':lv.pnl>0?'var(--green)':'var(--accent)';
+    const d=document.createElement('div');d.className='sr';
+    d.innerHTML=`<span class="sr-lbl">${lv.lbl}</span>
+      <span class="sr-price ${lv.cls}">$${fp(lv.price)}</span>
+      <span class="sr-shares">${lv.shares===0?'—':lv.shares.toLocaleString()+' sh'}</span>
+      <span class="sr-pct" style="color:var(--text2)">${lv.pct}%</span>
+      <span class="sr-pnl" style="color:${pnlCol}">${lv.pnl===0?'—':'$'+Math.round(lv.pnl).toLocaleString()}</span>`;
+    rows.appendChild(d);
+  });
+
+  // Visualization
+  const viz=document.getElementById('scaleViz');viz.innerHTML='';
+  const mn=Math.min(en,st)*0.9985,mx=Math.max(en,st)*1.0015,rng=mx-mn;
+  const bar=document.createElement('div');
+  bar.style.cssText=`position:absolute;top:20px;left:0;right:0;height:1px;background:var(--border2)`;viz.appendChild(bar);
+  levels.forEach(lv=>{
+    const x=((lv.price-mn)/rng)*100;
+    const line=document.createElement('div');
+    const col=lv.cls==='sr-entry'?'var(--accent)':lv.cls==='sr-fin'?'var(--red)':'var(--amber)';
+    line.style.cssText=`position:absolute;left:${x}%;top:8px;width:2px;height:24px;background:${col};border-radius:1px;transform:translateX(-1px)`;viz.appendChild(line);
+    const lbl=document.createElement('div');
+    lbl.style.cssText=`position:absolute;left:${x}%;bottom:-4px;transform:translateX(-50%);font-size:8.5px;color:var(--text3);white-space:nowrap`;
+    lbl.textContent='$'+fp(lv.price);viz.appendChild(lbl);
+  });
+
+  // R:R targets
+  const rr=document.getElementById('rrTargets');rr.innerHTML='';
+  [1,1.5,2,3,4,5].forEach(r=>{
+    const tgt=DIR==='long'?en+rPts*r:en-rPts*r;
+    const pnl=rPts*r*shares;
+    const d=document.createElement('div');
+    d.style.cssText='background:var(--bg3);border:1px solid var(--border);border-radius:2px;padding:7px 9px;text-align:center';
+    d.innerHTML=`<div style="font-size:9px;color:var(--text3);letter-spacing:1px;margin-bottom:3px">${r}:1 R</div>
+      <div style="font-size:12px;font-weight:500;color:var(--green)">$${fp(tgt)}</div>
+      <div style="font-size:9px;color:var(--green);margin-top:2px">+$${Math.round(pnl).toLocaleString()}</div>`;
+    rr.appendChild(d);
+  });
+}
+
+window.addEventListener('load', calc);
+</script>
+</body>
+</html>
