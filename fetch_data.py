@@ -204,16 +204,42 @@ def pct(new, old):
         return round((new - old) / abs(old) * 100, 2)
     return 0.0
 
-def _calc_ema(closes, period):
-    """EMA seeded with SMA of first `period` values."""
+def _calc_ema_series(closes, period):
+    """Full EMA series aligned with `closes`. First (period-1) entries are None
+    (insufficient data); thereafter EMA seeded with SMA of the first `period` values."""
     closes = list(closes)
     if len(closes) < period:
         return None
+    series = [None] * (period - 1)
     k = 2.0 / (period + 1)
     ema = sum(closes[:period]) / period
+    series.append(ema)
     for c in closes[period:]:
         ema = float(c) * k + ema * (1.0 - k)
-    return ema
+        series.append(ema)
+    return series
+
+def _calc_ema(closes, period):
+    """EMA value at the last bar (convenience wrapper around _calc_ema_series)."""
+    s = _calc_ema_series(closes, period)
+    return s[-1] if s else None
+
+def _ema_streak(closes, ema_series):
+    """Consecutive days the close-vs-EMA relationship has held, looking back from
+    the latest bar. Returns the count (>=1) or None if EMA series is unavailable."""
+    if not ema_series or ema_series[-1] is None:
+        return None
+    closes = list(closes)
+    latest_above = float(closes[-1]) > ema_series[-1]
+    count = 0
+    for i in range(len(closes) - 1, -1, -1):
+        if ema_series[i] is None:
+            break
+        if (float(closes[i]) > ema_series[i]) == latest_above:
+            count += 1
+        else:
+            break
+    return count
 
 def fetch_individual(tickers, retries=2):
     results = {}
@@ -293,10 +319,10 @@ def extract_metrics(df, sym):
         if ema10 is not None and ema20 is not None:
             ema_uptrend = bool(ema10 > ema20)
 
-    # Trend identification: price vs 21/50/200 EMA
-    ema21  = _calc_ema(closes, 21)
-    ema50  = _calc_ema(closes, 50)
-    ema200 = _calc_ema(closes, 200)
+    # Trend identification: price vs 21/50/200 EMA + consecutive-day streaks
+    ema21_s  = _calc_ema_series(closes, 21)
+    ema50_s  = _calc_ema_series(closes, 50)
+    ema200_s = _calc_ema_series(closes, 200)
 
     result = {
         'sym':   TICKER_REMAP.get(sym, sym),
@@ -309,15 +335,24 @@ def extract_metrics(df, sym):
     }
     if ema_uptrend is not None:
         result['ema_uptrend'] = ema_uptrend
-    if ema21 is not None:
-        result['above_ema21']  = bool(price > ema21)
-        result['ema21_val']    = round(ema21, 4)
-    if ema50 is not None:
-        result['above_ema50']  = bool(price > ema50)
-        result['ema50_val']    = round(ema50, 4)
-    if ema200 is not None:
-        result['above_ema200'] = bool(price > ema200)
-        result['ema200_val']   = round(ema200, 4)
+    if ema21_s is not None:
+        result['above_ema21']  = bool(price > ema21_s[-1])
+        result['ema21_val']    = round(ema21_s[-1], 4)
+        streak21 = _ema_streak(closes, ema21_s)
+        if streak21 is not None:
+            result['streak_21'] = streak21
+    if ema50_s is not None:
+        result['above_ema50']  = bool(price > ema50_s[-1])
+        result['ema50_val']    = round(ema50_s[-1], 4)
+        streak50 = _ema_streak(closes, ema50_s)
+        if streak50 is not None:
+            result['streak_50'] = streak50
+    if ema200_s is not None:
+        result['above_ema200'] = bool(price > ema200_s[-1])
+        result['ema200_val']   = round(ema200_s[-1], 4)
+        streak200 = _ema_streak(closes, ema200_s)
+        if streak200 is not None:
+            result['streak_200'] = streak200
 
     crypto_ids   = {'BTC-USD':'bitcoin','ETH-USD':'ethereum','SOL-USD':'solana','XRP-USD':'ripple'}
     crypto_names = {'BTC-USD':'Bitcoin','ETH-USD':'Ethereum','SOL-USD':'Solana','XRP-USD':'Ripple'}

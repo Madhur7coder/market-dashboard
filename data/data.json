@@ -561,7 +561,10 @@
       "above_ema50": true,
       "ema50_val": 694.6864,
       "above_ema200": true,
-      "ema200_val": 663.9385
+      "ema200_val": 663.9385,
+      "streak_21": 25,
+      "streak_50": 23,
+      "streak_200": 27
     },
     {
       "sym": "QQQ",

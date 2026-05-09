@@ -214,6 +214,9 @@ td:first-child,td.l{text-align:left}
 .trend-bear{font-size:18px;font-weight:700;color:var(--red);letter-spacing:1px}
 .trend-na{font-size:18px;color:var(--text3)}
 .trend-meta{font-size:9.5px;color:var(--text3);letter-spacing:.5px;font-family:var(--mono)}
+.trend-row-sublbl{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text2);font-weight:500}
+.trend-days-num{font-size:20px;font-weight:600;color:var(--text);letter-spacing:.5px;font-family:var(--mono)}
+.trend-days-lbl{font-size:9.5px;color:var(--text3);letter-spacing:1px;text-transform:uppercase;margin-top:2px}
 
 /* ── LOADING STATE ── */
 .loading{color:var(--text3);font-size:11px;letter-spacing:1px;padding:14px;text-align:center;animation:fade .8s infinite alternate}
@@ -347,6 +350,10 @@ td:first-child,td.l{text-align:left}
       <div class="trend-cell" id="trend-spy-21"><span class="trend-na">—</span></div>
       <div class="trend-cell" id="trend-spy-50"><span class="trend-na">—</span></div>
       <div class="trend-cell" id="trend-spy-200"><span class="trend-na">—</span></div>
+      <div class="trend-cell row-lbl"><div class="trend-row-sublbl">No. of days</div></div>
+      <div class="trend-cell" id="trend-spy-days-21"><span class="trend-na">—</span></div>
+      <div class="trend-cell" id="trend-spy-days-50"><span class="trend-na">—</span></div>
+      <div class="trend-cell" id="trend-spy-days-200"><span class="trend-na">—</span></div>
     </div>
   </div>
 </div>
@@ -1152,21 +1159,33 @@ function toast(msg){
 function renderTrend(d) {
   const spy = d && d.etfmain ? d.etfmain.find(x => x.sym === 'SPY') : null;
   const cells = [
-    {id:'trend-spy-21',  flag: spy ? spy.above_ema21  : null, ema: spy ? spy.ema21_val  : null},
-    {id:'trend-spy-50',  flag: spy ? spy.above_ema50  : null, ema: spy ? spy.ema50_val  : null},
-    {id:'trend-spy-200', flag: spy ? spy.above_ema200 : null, ema: spy ? spy.ema200_val : null},
+    {id:'trend-spy-21',  daysId:'trend-spy-days-21',  flag: spy ? spy.above_ema21  : null, ema: spy ? spy.ema21_val  : null, streak: spy ? spy.streak_21  : null},
+    {id:'trend-spy-50',  daysId:'trend-spy-days-50',  flag: spy ? spy.above_ema50  : null, ema: spy ? spy.ema50_val  : null, streak: spy ? spy.streak_50  : null},
+    {id:'trend-spy-200', daysId:'trend-spy-days-200', flag: spy ? spy.above_ema200 : null, ema: spy ? spy.ema200_val : null, streak: spy ? spy.streak_200 : null},
   ];
   cells.forEach(c => {
     const el = document.getElementById(c.id);
-    if (!el) return;
-    if (c.flag === true) {
-      const meta = (spy && c.ema) ? `<div class="trend-meta">${spy.price.toFixed(2)} &gt; ${c.ema.toFixed(2)}</div>` : '';
-      el.innerHTML = `<span class="trend-bull">BULLISH</span>${meta}`;
-    } else if (c.flag === false) {
-      const meta = (spy && c.ema) ? `<div class="trend-meta">${spy.price.toFixed(2)} &le; ${c.ema.toFixed(2)}</div>` : '';
-      el.innerHTML = `<span class="trend-bear">BEARISH</span>${meta}`;
-    } else {
-      el.innerHTML = '<span class="trend-na">—</span>';
+    if (el) {
+      if (c.flag === true) {
+        const meta = (spy && c.ema) ? `<div class="trend-meta">${spy.price.toFixed(2)} &gt; ${c.ema.toFixed(2)}</div>` : '';
+        el.innerHTML = `<span class="trend-bull">BULLISH</span>${meta}`;
+      } else if (c.flag === false) {
+        const meta = (spy && c.ema) ? `<div class="trend-meta">${spy.price.toFixed(2)} &le; ${c.ema.toFixed(2)}</div>` : '';
+        el.innerHTML = `<span class="trend-bear">BEARISH</span>${meta}`;
+      } else {
+        el.innerHTML = '<span class="trend-na">—</span>';
+      }
+    }
+    const daysEl = document.getElementById(c.daysId);
+    if (daysEl) {
+      if (typeof c.streak === 'number' && c.streak >= 1) {
+        const word = c.streak === 1 ? 'day' : 'days';
+        const dirLbl = c.flag === true ? 'above' : c.flag === false ? 'below' : '';
+        const meta = dirLbl ? `<div class="trend-days-lbl">${dirLbl} EMA</div>` : '';
+        daysEl.innerHTML = `<span class="trend-days-num">${c.streak}</span><span class="trend-days-lbl">${word}</span>${meta}`;
+      } else {
+        daysEl.innerHTML = '<span class="trend-na">—</span>';
+      }
     }
   });
 }
