@@ -210,8 +210,8 @@ td:first-child,td.l{text-align:left}
 .trend-cell.row-lbl{background:var(--bg3);align-items:flex-start;justify-content:center;padding-left:16px}
 .trend-sym{font-size:16px;font-weight:600;color:var(--text);letter-spacing:1px}
 .trend-sublbl{font-size:9px;color:var(--text3);letter-spacing:1px;text-transform:uppercase}
-.trend-yes{font-size:22px;font-weight:700;color:var(--green);letter-spacing:1px}
-.trend-no{font-size:22px;font-weight:700;color:var(--red);letter-spacing:1px}
+.trend-bull{font-size:18px;font-weight:700;color:var(--green);letter-spacing:1px}
+.trend-bear{font-size:18px;font-weight:700;color:var(--red);letter-spacing:1px}
 .trend-na{font-size:18px;color:var(--text3)}
 .trend-meta{font-size:9.5px;color:var(--text3);letter-spacing:.5px;font-family:var(--mono)}
 
@@ -260,7 +260,7 @@ td:first-child,td.l{text-align:left}
   .trend-cell.row-lbl{padding-left:10px}
   .trend-sym{font-size:13px;letter-spacing:.5px}
   .trend-sublbl{font-size:8px}
-  .trend-yes,.trend-no{font-size:17px}
+  .trend-bull,.trend-bear{font-size:14px;letter-spacing:.5px}
   .trend-meta{font-size:8.5px}
 
   /* Breadth grid */
@@ -1161,10 +1161,10 @@ function renderTrend(d) {
     if (!el) return;
     if (c.flag === true) {
       const meta = (spy && c.ema) ? `<div class="trend-meta">${spy.price.toFixed(2)} &gt; ${c.ema.toFixed(2)}</div>` : '';
-      el.innerHTML = `<span class="trend-yes">YES</span>${meta}`;
+      el.innerHTML = `<span class="trend-bull">BULLISH</span>${meta}`;
     } else if (c.flag === false) {
       const meta = (spy && c.ema) ? `<div class="trend-meta">${spy.price.toFixed(2)} &le; ${c.ema.toFixed(2)}</div>` : '';
-      el.innerHTML = `<span class="trend-no">NO</span>${meta}`;
+      el.innerHTML = `<span class="trend-bear">BEARISH</span>${meta}`;
     } else {
       el.innerHTML = '<span class="trend-na">—</span>';
     }
