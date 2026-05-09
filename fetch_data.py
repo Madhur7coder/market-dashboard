@@ -548,11 +548,24 @@ def fetch_all(prices_only=False):
     for key in ('country', 'sector', 'sectorew', 'thematic', 'submarket'):
         output[key].sort(key=lambda x: x.get('w1', 0), reverse=True)
 
+    # Map output keys to the input ticker list that drives them.
+    # We only preserve a section's previous data if it was MEANT to be fetched
+    # (input list non-empty) but the fetch returned nothing. Sections explicitly
+    # configured to be empty (e.g. sectorew) must stay empty.
     if existing:
-        preserve_sections = ['etfmain', 'submarket', 'sector', 'sectorew',
-                             'thematic', 'country', 'crypto', 'global', 'yields']
-        for key in preserve_sections:
-            if not output.get(key) and existing.get(key):
+        preserve_sources = {
+            'etfmain':   ETF_MAIN,
+            'submarket': SUBMARKET,
+            'sector':    SECTOR,
+            'sectorew':  SECTOR_EW,
+            'thematic':  THEMATIC,
+            'country':   COUNTRY,
+            'crypto':    CRYPTO_YF,
+            'global':    GLOBAL_IDX,
+            'yields':    YIELDS,
+        }
+        for key, source in preserve_sources.items():
+            if source and not output.get(key) and existing.get(key):
                 output[key] = existing[key]
                 print(f"  ⚠ {key}: no data returned — preserving existing values")
         vix_in_output = any(r.get('sym') == 'CBOE:VIX' for r in output.get('dxvix', []))
