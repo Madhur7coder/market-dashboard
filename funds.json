@@ -25,11 +25,12 @@
         },
         {
           "name": "JPM Income Fund",
-          "share_class": "C2 (Acc) USD — Lux SICAV",
+          "share_class": "I2 (Acc) USD — Lux SICAV",
           "isin": "LU2114516292",
           "currency": "USD",
-          "bloomberg": "JPIAUIU LX",
-          "source": "yfinance"
+          "bloomberg": "JPIAUIU LX Equity",
+          "source": "yfinance",
+          "proxy_note": "Bloomberg ticker JPIAUIU LX = I2 share class. Yahoo and FT label ISIN LU2114516292 as 'C2 (acc) USD' — likely a class rename their databases haven't reflected yet. NAVs and returns are accurate."
         },
         {
           "name": "PIMCO GIS Capital Securities",
