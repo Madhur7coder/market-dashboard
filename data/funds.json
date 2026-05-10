@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-10T14:51:47Z",
+  "generated_at": "2026-05-10T14:59:07Z",
   "sections": [
     {
       "title": "Watchlist",
@@ -181,15 +181,27 @@
         },
         {
           "name": "L&G Global Income Bond Fund",
-          "share_class": "Legal & General ICAV",
-          "isin": null,
+          "share_class": "J USD (Acc) \u00e2\u20ac\u201d L&G ICAV",
+          "isin": "IE000L99G8E6",
           "currency": "USD",
           "bloomberg": "LGGIBDE ID",
           "yahoo_symbol": null,
           "proxy_note": null,
-          "source_used": "none",
-          "metrics": {},
-          "note": "User-provided ISIN IE000U1YG020 fails ISO checksum validation (correct check digit would be 6 for IE000U1YG026, but that's also not indexed). Please re-verify the ISIN from the issuer factsheet. [ISIN missing]"
+          "source_used": "yfinance",
+          "metrics": {
+            "price": 1.0685,
+            "as_of": "2026-05-07",
+            "d1": 0.04,
+            "w1": 0.6,
+            "mtd": 0.51,
+            "ytd": 1.35,
+            "m1": 2.03,
+            "m3": -0.23,
+            "m6": 1.91,
+            "y1": null,
+            "history_days": 217
+          },
+          "note": null
         },
         {
           "name": "BNY Mellon Multi-Sector Credit Income",
@@ -404,6 +416,36 @@
             "m6": 1.99,
             "y1": 8.24,
             "history_days": 240
+          },
+          "note": null
+        }
+      ]
+    },
+    {
+      "title": "Benchmark",
+      "subtitle": "REFERENCE INDEX \u00c2\u00b7 ETF PROXY (TRACKING ERROR <10 BPS/YR)",
+      "funds": [
+        {
+          "name": "Bloomberg Global Aggregate TR Hedged USD",
+          "share_class": "ETF proxy: iShares Core Global Aggregate Bond UCITS ETF (USD-Hedged)",
+          "isin": "IE00BDBRDM35",
+          "currency": "USD",
+          "bloomberg": "LEGATRUH Index (proxy: AGGG LN Equity)",
+          "yahoo_symbol": null,
+          "proxy_note": "Bloomberg index LEGATRUH is not publicly available \u00e2\u20ac\u201d using iShares AGGG (IE00BDBRDM35), which explicitly tracks the same Bloomberg Global Aggregate Bond Index USD-Hedged. Tracking error typically under 10 bps/year.",
+          "source_used": "yfinance",
+          "metrics": {
+            "price": 4.9247,
+            "as_of": "2026-05-08",
+            "d1": -0.03,
+            "w1": 0.23,
+            "mtd": 0.23,
+            "ytd": -0.21,
+            "m1": -0.1,
+            "m3": -0.3,
+            "m6": -0.41,
+            "y1": 1.3,
+            "history_days": 254
           },
           "note": null
         }

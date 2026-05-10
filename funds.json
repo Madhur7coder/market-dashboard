@@ -73,12 +73,11 @@
         },
         {
           "name": "L&G Global Income Bond Fund",
-          "share_class": "Legal & General ICAV",
-          "isin": null,
+          "share_class": "J USD (Acc) — L&G ICAV",
+          "isin": "IE000L99G8E6",
           "currency": "USD",
           "bloomberg": "LGGIBDE ID",
-          "source": "yfinance",
-          "note": "User-provided ISIN IE000U1YG020 fails ISO checksum validation (correct check digit would be 6 for IE000U1YG026, but that's also not indexed). Please re-verify the ISIN from the issuer factsheet."
+          "source": "yfinance"
         },
         {
           "name": "BNY Mellon Multi-Sector Credit Income",
@@ -154,6 +153,21 @@
           "currency": "USD",
           "bloomberg": "TRPGEMQ / TREMCB-family LX",
           "source": "yfinance"
+        }
+      ]
+    },
+    {
+      "title": "Benchmark",
+      "subtitle": "REFERENCE INDEX · ETF PROXY (TRACKING ERROR <10 BPS/YR)",
+      "funds": [
+        {
+          "name": "Bloomberg Global Aggregate TR Hedged USD",
+          "share_class": "ETF proxy: iShares Core Global Aggregate Bond UCITS ETF (USD-Hedged)",
+          "isin": "IE00BDBRDM35",
+          "currency": "USD",
+          "bloomberg": "LEGATRUH Index (proxy: AGGG LN Equity)",
+          "source": "yfinance",
+          "proxy_note": "Bloomberg index LEGATRUH is not publicly available — using iShares AGGG (IE00BDBRDM35), which explicitly tracks the same Bloomberg Global Aggregate Bond Index USD-Hedged. Tracking error typically under 10 bps/year."
         }
       ]
     }
