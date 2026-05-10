@@ -29,8 +29,7 @@
           "isin": "LU2114516292",
           "currency": "USD",
           "bloomberg": "JPIAUIU LX",
-          "source": "yfinance",
-          "note": "User labelled this fund as 'I2' but ISIN LU2114516292 resolves to JPMorgan Funds — Income Fund C2 (acc) USD on both Yahoo and FT."
+          "source": "yfinance"
         },
         {
           "name": "PIMCO GIS Capital Securities",
