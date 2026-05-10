@@ -44,6 +44,40 @@
       ]
     },
     {
+      "title": "Benchmarks",
+      "subtitle": "REFERENCE INDICES · ETF PROXIES (TRACKING ERROR <10 BPS/YR WHERE NOTED)",
+      "funds": [
+        {
+          "name": "Bloomberg Global Aggregate TR Hedged USD",
+          "share_class": "ETF proxy: iShares Core Global Aggregate Bond UCITS ETF (USD-Hedged)",
+          "isin": "IE00BDBRDM35",
+          "currency": "USD",
+          "bloomberg": "LEGATRUH Index (proxy: AGGG LN Equity)",
+          "source": "yfinance",
+          "proxy_note": "Bloomberg LEGATRUH not publicly available — using AGGG (IE00BDBRDM35), which explicitly tracks the Bloomberg Global Aggregate Bond Index USD-Hedged. Tracking error typically under 10 bps/year."
+        },
+        {
+          "name": "Bloomberg Global High Yield TR Hedged USD",
+          "share_class": "ETF proxy: iShares Global High Yield Corp Bond UCITS ETF (USD)",
+          "isin": "IE00B74DQ490",
+          "currency": "USD",
+          "bloomberg": "Bloomberg Global HY TR Hedged (proxy: HYLD LN Equity)",
+          "source": "yfinance",
+          "proxy_note": "No major UCITS ETF tracks the Bloomberg Global HY index directly — using HYLD (IE00B74DQ490), which tracks Markit iBoxx Global Liquid HY Capped (similar methodology, similar global HY universe). Index families differ by ~10-30 bps/yr depending on credit cycle. JNK (SPDR Bloomberg HY Bond ETF) tracks Bloomberg directly but is US-only."
+        },
+        {
+          "name": "Bloomberg Global Emerging Markets TR Hedged USD",
+          "share_class": "ETF proxy: SPDR Bloomberg Emerging Markets USD Bond ETF",
+          "isin": null,
+          "currency": "USD",
+          "bloomberg": "Bloomberg EM USD Aggregate TR (proxy: EMHC US Equity)",
+          "source": "yfinance",
+          "yahoo_symbol": "EMHC",
+          "proxy_note": "Using EMHC (SPDR Bloomberg Emerging Markets USD Bond ETF) — explicitly tracks the Bloomberg Emerging Markets USD Aggregate Index. Index is USD-denominated already so 'hedged' is moot. Tracking error typically under 10 bps/year."
+        }
+      ]
+    },
+    {
       "title": "Selected Universe",
       "subtitle": "RANKED DAILY BY YTD (HIGHEST FIRST) · CCY-NATIVE RETURNS",
       "funds": [
@@ -153,21 +187,6 @@
           "currency": "USD",
           "bloomberg": "TRPGEMQ / TREMCB-family LX",
           "source": "yfinance"
-        }
-      ]
-    },
-    {
-      "title": "Benchmark",
-      "subtitle": "REFERENCE INDEX · ETF PROXY (TRACKING ERROR <10 BPS/YR)",
-      "funds": [
-        {
-          "name": "Bloomberg Global Aggregate TR Hedged USD",
-          "share_class": "ETF proxy: iShares Core Global Aggregate Bond UCITS ETF (USD-Hedged)",
-          "isin": "IE00BDBRDM35",
-          "currency": "USD",
-          "bloomberg": "LEGATRUH Index (proxy: AGGG LN Equity)",
-          "source": "yfinance",
-          "proxy_note": "Bloomberg index LEGATRUH is not publicly available — using iShares AGGG (IE00BDBRDM35), which explicitly tracks the same Bloomberg Global Aggregate Bond Index USD-Hedged. Tracking error typically under 10 bps/year."
         }
       ]
     }
