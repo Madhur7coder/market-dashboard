@@ -46,6 +46,7 @@
     {
       "title": "Benchmarks",
       "subtitle": "REFERENCE INDICES · ETF PROXIES (TRACKING ERROR <10 BPS/YR WHERE NOTED)",
+      "footer_note": "These are PROXY benchmarks. Bloomberg index data isn't available on free public APIs, so each row uses the closest publicly-available ETF that tracks the same Bloomberg index. Returns approximate the actual indices but may differ by tracking error — typically under 10 bps/year for the Aggregate and EM proxies, and 10–30 bps/year for HY (since the only available global HY UCITS ETF tracks Markit iBoxx, not Bloomberg). Use these directionally, not as exact index quotes.",
       "funds": [
         {
           "name": "Bloomberg Global Aggregate TR Hedged USD",

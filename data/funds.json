@@ -1,9 +1,10 @@
 {
-  "generated_at": "2026-05-10T15:03:20Z",
+  "generated_at": "2026-05-10T15:14:21Z",
   "sections": [
     {
       "title": "Watchlist",
       "subtitle": "PRIORITY MONITORING \u00c2\u00b7 BLOOMBERG TICKERS PROVIDED",
+      "footer_note": null,
       "funds": [
         {
           "name": "JPM USD Liquidity LVNAV",
@@ -106,6 +107,7 @@
     {
       "title": "Benchmarks",
       "subtitle": "REFERENCE INDICES \u00c2\u00b7 ETF PROXIES (TRACKING ERROR <10 BPS/YR WHERE NOTED)",
+      "footer_note": "These are PROXY benchmarks. Bloomberg index data isn't available on free public APIs, so each row uses the closest publicly-available ETF that tracks the same Bloomberg index. Returns approximate the actual indices but may differ by tracking error \u00e2\u20ac\u201d typically under 10 bps/year for the Aggregate and EM proxies, and 10\u00e2\u20ac\u201c30 bps/year for HY (since the only available global HY UCITS ETF tracks Markit iBoxx, not Bloomberg). Use these directionally, not as exact index quotes.",
       "funds": [
         {
           "name": "Bloomberg Global Aggregate TR Hedged USD",
@@ -184,6 +186,7 @@
     {
       "title": "Selected Universe",
       "subtitle": "RANKED DAILY BY YTD (HIGHEST FIRST) \u00c2\u00b7 CCY-NATIVE RETURNS",
+      "footer_note": null,
       "funds": [
         {
           "name": "PGIM Global AAA CLO",

@@ -313,9 +313,10 @@ def main():
         total_funds += len(funds)
         total_ok += ok
         sections_out.append({
-            'title':    title,
-            'subtitle': section.get('subtitle'),
-            'funds':    results,
+            'title':       title,
+            'subtitle':    section.get('subtitle'),
+            'footer_note': section.get('footer_note'),
+            'funds':       results,
         })
         print(f"  -> {ok}/{len(funds)} returned metrics\n")
 
