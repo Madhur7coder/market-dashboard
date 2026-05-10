@@ -131,16 +131,19 @@ def compute_metrics(closes_dict_or_df, name=''):
 
 
 # ── PRIMARY SOURCE: YFINANCE ─────────────────────────────────────────────────
-def fetch_via_yfinance(isin):
-    """Pull 1Y of daily NAV history from Yahoo Finance for a fund ISIN.
-    Returns the DataFrame, or None if unavailable / has no series."""
+def fetch_via_yfinance(symbol, auto_adjust=False):
+    """Pull 1Y of daily NAV history from Yahoo Finance. `symbol` may be an ISIN
+    or one of Yahoo's internal '0P...' identifiers.
+    `auto_adjust=True` is required for distributing money-market funds where
+    income is paid out rather than reinvested — without it, NAV stays at $1.00
+    and reported returns are zero."""
     try:
-        df = yf.Ticker(isin).history(period='1y', interval='1d', auto_adjust=False)
+        df = yf.Ticker(symbol).history(period='1y', interval='1d', auto_adjust=auto_adjust)
         if df is None or df.empty or len(df) < 2:
             return None
         return df
     except Exception as e:
-        print(f"    yfinance error for {isin}: {e}")
+        print(f"    yfinance error for {symbol}: {e}")
         return None
 
 
@@ -220,10 +223,16 @@ def fetch_via_ft(isin, currency='USD'):
 
 # ── DRIVER ────────────────────────────────────────────────────────────────────
 def fetch_one(fund):
-    name      = fund.get('name', '?')
-    isin      = fund.get('isin')
-    currency  = fund.get('currency', 'USD')
-    source    = fund.get('source', 'yfinance')
+    name        = fund.get('name', '?')
+    isin        = fund.get('isin')
+    yahoo_sym   = fund.get('yahoo_symbol')
+    currency    = fund.get('currency', 'USD')
+    source      = fund.get('source', 'yfinance')
+    auto_adjust = bool(fund.get('auto_adjust', False))
+
+    # Prefer an explicit yahoo_symbol override (used for funds not indexed by
+    # ISIN on Yahoo, or when proxying to a sister share class). Fall back to ISIN.
+    lookup_sym = yahoo_sym or isin
 
     rec = {
         'name':       name,
@@ -231,28 +240,32 @@ def fetch_one(fund):
         'isin':       isin,
         'currency':   currency,
         'bloomberg':  fund.get('bloomberg'),
+        'yahoo_symbol': yahoo_sym,
+        'proxy_note': fund.get('proxy_note'),
         'source_used': None,
         'metrics':    {},
         'note':       fund.get('note'),
     }
 
-    if not isin:
+    if not lookup_sym:
         rec['source_used'] = 'none'
         rec['note'] = (rec['note'] or '') + ' [ISIN missing]'
-        print(f"  [SKIP] {name}: no ISIN")
+        print(f"  [SKIP] {name}: no ISIN/yahoo_symbol")
         return rec
 
-    print(f"  [{source.upper()}] {name} ({isin})...")
+    print(f"  [{source.upper()}] {name} ({lookup_sym})...")
     df = None
     if source == 'yfinance':
-        df = fetch_via_yfinance(isin)
+        df = fetch_via_yfinance(lookup_sym, auto_adjust=auto_adjust)
         if df is None or len(df) < 2:
-            print(f"    yfinance returned no series — falling back to FT")
-            df = fetch_via_ft(isin, currency)
-            if df is not None:
-                rec['source_used'] = 'ft (fallback)'
+            # FT fallback only makes sense when we have a real ISIN to look up.
+            if isin:
+                print(f"    yfinance returned no series — falling back to FT")
+                df = fetch_via_ft(isin, currency)
+                if df is not None:
+                    rec['source_used'] = 'ft (fallback)'
         else:
-            rec['source_used'] = 'yfinance'
+            rec['source_used'] = 'yfinance' + (' (adj)' if auto_adjust else '')
     elif source == 'ft':
         df = fetch_via_ft(isin, currency)
         if df is not None:

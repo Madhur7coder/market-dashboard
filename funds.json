@@ -7,11 +7,13 @@
         {
           "name": "JPM USD Liquidity LVNAV",
           "share_class": "E (Acc) — Lux SICAV",
-          "isin": null,
+          "isin": "LU1873131475",
           "currency": "USD",
           "bloomberg": "JPMULLE LX",
           "source": "yfinance",
-          "note": "Money market / liquidity fund — ISIN required; OpenFIGI confirms name as 'JPM USD LIQ LVNAV-E ACC'"
+          "yahoo_symbol": "0P0001CRCJ",
+          "auto_adjust": true,
+          "proxy_note": "Tracking E (Dist) sister class auto-adjusted for distributions — Acc class not on Yahoo"
         },
         {
           "name": "BNY Mellon Global Credit",
@@ -20,7 +22,8 @@
           "currency": "USD",
           "bloomberg": "BMGCLUA ID",
           "source": "yfinance",
-          "note": "ISIN required; OpenFIGI confirms name as 'BNY MELLON GLOB CR-L USD ACC'"
+          "yahoo_symbol": "IE00BYZW5L40",
+          "proxy_note": "Tracking W (Acc) sister class — L class not on Yahoo. Returns within fee-bps of L class."
         },
         {
           "name": "JPM Income Fund (I2)",
@@ -29,16 +32,17 @@
           "currency": "USD",
           "bloomberg": "JPIAUIU LX",
           "source": "yfinance",
-          "note": "Institutional class of JPM Income (A-class is JPMINCA / LU1041599405). ISIN required."
+          "yahoo_symbol": "LU1041600930",
+          "proxy_note": "Tracking I (Acc) sister class LU1041600930 — I2 class not on Yahoo. Returns within fee-bps of I2."
         },
         {
-          "name": "PIMCO GIS Capital Securities (IA)",
-          "share_class": "IA Acc — Ireland UCITS",
-          "isin": null,
+          "name": "PIMCO GIS Capital Securities",
+          "share_class": "IA — Ireland UCITS",
+          "isin": "IE00B6VH4D24",
           "currency": "USD",
           "bloomberg": "PIMCINA ID",
           "source": "yfinance",
-          "note": "Accumulator class of PIMCO Capital Securities (Inst-USD-Acc class is PIMCSII / IE00B6VH4D24). ISIN required."
+          "proxy_note": "Same underlying fund as PIMCSII / IE00B6VH4D24 (Inst USD Acc) — also shown in Universe section"
         }
       ]
     },

@@ -82,6 +82,7 @@ td.l{text-align:left}
 .note-row td{background:rgba(255,179,0,0.04);color:var(--text3);font-size:11px}
 .note-row .fn-name{color:var(--text2)}
 .note-tag{color:var(--amber);font-size:9.5px;letter-spacing:1px;text-transform:uppercase}
+.proxy-tag{display:inline-block;padding:1px 6px;background:rgba(255,179,0,0.1);border:1px solid rgba(255,179,0,0.3);border-radius:2px;color:var(--amber);font-size:8.5px;letter-spacing:1px;text-transform:uppercase;margin-left:6px;cursor:help}
 
 /* Status bar */
 .api-bar{display:flex;align-items:center;gap:10px;padding:7px 12px;background:rgba(255,179,0,.05);border:1px solid rgba(255,179,0,.18);border-radius:3px;margin-bottom:10px;font-size:11px;color:var(--amber);letter-spacing:.5px}
@@ -169,10 +170,13 @@ function fundRow(f){
       <td colspan="9" class="l"><span class="note-tag">— ${tag}</span> &nbsp;<span style="color:var(--text3)">${note}</span></td>
       <td class="src">—</td>`;
   } else {
+    const proxyBadge = f.proxy_note
+      ? ` <span class="proxy-tag" title="${f.proxy_note.replace(/"/g,'&quot;')}">PROXY</span>`
+      : '';
     tr.innerHTML = `
       <td class="l">
-        <div class="fn-name">${f.name}</div>
-        <span class="fn-sub">${f.share_class || ''}${f.isin ? ' · <span class="fn-isin">' + f.isin + '</span>' : ''}</span>
+        <div class="fn-name">${f.name}${proxyBadge}</div>
+        <span class="fn-sub">${f.share_class || ''}${f.isin ? ' · <span class="fn-isin">' + f.isin + '</span>' : ''}${f.bloomberg ? ' · ' + f.bloomberg : ''}</span>
       </td>
       <td><span class="ccy-pill">${f.currency || '—'}</span></td>
       <td>${m.price !== undefined ? fp(m.price, m.price < 10 ? 4 : 2) : '—'}</td>
