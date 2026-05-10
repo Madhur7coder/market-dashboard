@@ -23,14 +23,21 @@ jobs:
       - name: Install dependencies
         run: pip install yfinance requests pandas beautifulsoup4
 
-      - name: Run data fetcher
+      - name: Run market data fetcher
         run: python fetch_data.py
 
-      - name: Commit & push data.json
+      - name: Run fixed-income funds fetcher
+        run: python fetch_funds.py
+        # Don't fail the whole workflow if some funds fail to fetch — fund-source
+        # availability is flaky for institutional UCITS, but the main dashboard
+        # data should still get committed even if this step has issues.
+        continue-on-error: true
+
+      - name: Commit & push generated data
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/data.json
+          git add data/data.json data/funds.json
           git diff --staged --quiet || git commit -m "chore: refresh market data $(date -u '+%Y-%m-%d %H:%M UTC')"
           git pull --rebase origin main
           git push

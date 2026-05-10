@@ -1,0 +1,114 @@
+{
+  "funds": [
+    {
+      "name": "PGIM Global AAA CLO",
+      "share_class": "USD I (Cap), Lux UCITS",
+      "isin": "LU3068597817",
+      "currency": "USD",
+      "bloomberg": "WSPGAIU LX",
+      "source": "yfinance"
+    },
+    {
+      "name": "Lord Abbett Short Duration Income",
+      "share_class": "Ireland UCITS",
+      "isin": null,
+      "currency": "USD",
+      "bloomberg": "LASDIUA ID",
+      "source": "yfinance",
+      "note": "ISIN not provided — fund will show as 'ISIN needed' in table"
+    },
+    {
+      "name": "PIMCO GIS Income Fund",
+      "share_class": "Inst USD Acc",
+      "isin": "IE00B87KCF77",
+      "currency": "USD",
+      "bloomberg": "PIMINIA ID",
+      "source": "yfinance"
+    },
+    {
+      "name": "L&G Global Income Bond Fund",
+      "share_class": "Legal & General ICAV",
+      "isin": null,
+      "currency": "USD",
+      "bloomberg": "LGGIBDE ID",
+      "source": "yfinance",
+      "note": "ISIN not provided — fund will show as 'ISIN needed' in table"
+    },
+    {
+      "name": "BNY Mellon Multi-Sector Credit Income",
+      "share_class": "USD A Acc",
+      "isin": "IE00BYRC8G84",
+      "currency": "USD",
+      "bloomberg": null,
+      "source": "yfinance"
+    },
+    {
+      "name": "JPMorgan Income Fund",
+      "share_class": "A acc USD (Lux SICAV)",
+      "isin": "LU1041599405",
+      "currency": "USD",
+      "bloomberg": "JPMINCA LX",
+      "source": "yfinance"
+    },
+    {
+      "name": "JPMorgan Global Bond Opportunities",
+      "share_class": "A acc USD",
+      "isin": "LU0867954264",
+      "currency": "USD",
+      "bloomberg": "JPMGBOA LX",
+      "source": "yfinance"
+    },
+    {
+      "name": "Neuberger Berman Corporate Hybrid Bond",
+      "share_class": "I2 EUR Dist",
+      "isin": "IE00BD37NF41",
+      "currency": "EUR",
+      "bloomberg": "NBCHEI2 ID",
+      "source": "yfinance"
+    },
+    {
+      "name": "PIMCO GIS Capital Securities Fund",
+      "share_class": "Inst USD Acc",
+      "isin": "IE00B6VH4D24",
+      "currency": "USD",
+      "bloomberg": "PIMCSII ID",
+      "source": "yfinance"
+    },
+    {
+      "name": "Oaktree Global Credit Select Fund",
+      "share_class": "Newly launched ~Feb 2026 (predecessor: Schroder GAIA Oaktree Credit)",
+      "isin": "LU2252519595",
+      "currency": "USD",
+      "bloomberg": "SCGOCCU LX (predecessor)",
+      "source": "yfinance",
+      "note": "Predecessor ISIN; new SICAV ticker may not be widely indexed"
+    },
+    {
+      "name": "MFS Meridian Global High Yield",
+      "share_class": "A1 USD Acc",
+      "isin": "LU0035377810",
+      "currency": "USD",
+      "bloomberg": "MFSGLGB LX",
+      "source": "ft",
+      "note": "yfinance has only quote, no series — using FT fallback (21-day window)"
+    },
+    {
+      "name": "MFS Meridian Emerging Markets Debt",
+      "share_class": "A1 USD Acc",
+      "isin": "LU0125948108",
+      "currency": "USD",
+      "bloomberg": "MFSEDA1 LX",
+      "source": "ft",
+      "note": "yfinance has only quote, no series — using FT fallback (21-day window)"
+    },
+    {
+      "name": "T. Rowe Price EM Corporate Bond",
+      "share_class": "SICAV",
+      "isin": null,
+      "currency": "USD",
+      "bloomberg": "TRPGEMQ / TREMCB-family LX",
+      "source": "yfinance",
+      "note": "ISIN not provided — fund will show as 'ISIN needed' in table"
+    }
+  ]
+}
