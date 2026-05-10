@@ -45,7 +45,7 @@
     },
     {
       "title": "Selected Universe",
-      "subtitle": "RANKED BY YTD · CCY-NATIVE RETURNS",
+      "subtitle": "RANKED DAILY BY YTD (HIGHEST FIRST) · CCY-NATIVE RETURNS",
       "funds": [
         {
           "name": "PGIM Global AAA CLO",
@@ -57,12 +57,11 @@
         },
         {
           "name": "Lord Abbett Short Duration Income",
-          "share_class": "Ireland UCITS",
-          "isin": null,
+          "share_class": "Class A USD (Acc) — Ireland UCITS",
+          "isin": "IE00BFNWXY26",
           "currency": "USD",
           "bloomberg": "LASDIUA ID",
-          "source": "yfinance",
-          "note": "ISIN not provided"
+          "source": "yfinance"
         },
         {
           "name": "PIMCO GIS Income Fund",
@@ -79,7 +78,7 @@
           "currency": "USD",
           "bloomberg": "LGGIBDE ID",
           "source": "yfinance",
-          "note": "ISIN not provided"
+          "note": "User-provided ISIN IE000U1YG020 fails ISO checksum validation (correct check digit would be 6 for IE000U1YG026, but that's also not indexed). Please re-verify the ISIN from the issuer factsheet."
         },
         {
           "name": "BNY Mellon Multi-Sector Credit Income",
@@ -123,12 +122,12 @@
         },
         {
           "name": "Oaktree Global Credit Select Fund",
-          "share_class": "Newly launched ~Feb 2026 (predecessor: Schroder GAIA Oaktree Credit)",
-          "isin": "LU2252519595",
+          "share_class": "Class F USD (Acc) — newly launched May 2026",
+          "isin": "LU3300361097",
           "currency": "USD",
           "bloomberg": "SCGOCCU LX (predecessor)",
-          "source": "yfinance",
-          "note": "Predecessor ISIN; new SICAV ticker not yet indexed"
+          "source": "ft",
+          "note": "New SICAV launched ~early May 2026 — only a few trading days of history. Using FT for the deepest available daily window."
         },
         {
           "name": "MFS Meridian Global High Yield",
@@ -150,12 +149,11 @@
         },
         {
           "name": "T. Rowe Price EM Corporate Bond",
-          "share_class": "SICAV",
-          "isin": null,
+          "share_class": "Class I USD (Acc) — SICAV",
+          "isin": "LU0596126465",
           "currency": "USD",
           "bloomberg": "TRPGEMQ / TREMCB-family LX",
-          "source": "yfinance",
-          "note": "ISIN not provided"
+          "source": "yfinance"
         }
       ]
     }

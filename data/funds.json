@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-10T14:29:03Z",
+  "generated_at": "2026-05-10T14:51:47Z",
   "sections": [
     {
       "title": "Watchlist",
@@ -55,12 +55,12 @@
         },
         {
           "name": "JPM Income Fund",
-          "share_class": "C2 (Acc) USD \u00e2\u20ac\u201d Lux SICAV",
+          "share_class": "I2 (Acc) USD \u00e2\u20ac\u201d Lux SICAV",
           "isin": "LU2114516292",
           "currency": "USD",
-          "bloomberg": "JPIAUIU LX",
+          "bloomberg": "JPIAUIU LX Equity",
           "yahoo_symbol": null,
-          "proxy_note": null,
+          "proxy_note": "Bloomberg ticker JPIAUIU LX = I2 share class. Yahoo and FT label ISIN LU2114516292 as 'C2 (acc) USD' \u00e2\u20ac\u201d likely a class rename their databases haven't reflected yet. NAVs and returns are accurate.",
           "source_used": "yfinance",
           "metrics": {
             "price": 117.98,
@@ -75,7 +75,7 @@
             "y1": 5.84,
             "history_days": 244
           },
-          "note": "User labelled this fund as 'I2' but ISIN LU2114516292 resolves to JPMorgan Funds \u00e2\u20ac\u201d Income Fund C2 (acc) USD on both Yahoo and FT."
+          "note": null
         },
         {
           "name": "PIMCO GIS Capital Securities",
@@ -105,7 +105,7 @@
     },
     {
       "title": "Selected Universe",
-      "subtitle": "RANKED BY YTD \u00c2\u00b7 CCY-NATIVE RETURNS",
+      "subtitle": "RANKED DAILY BY YTD (HIGHEST FIRST) \u00c2\u00b7 CCY-NATIVE RETURNS",
       "funds": [
         {
           "name": "PGIM Global AAA CLO",
@@ -133,15 +133,27 @@
         },
         {
           "name": "Lord Abbett Short Duration Income",
-          "share_class": "Ireland UCITS",
-          "isin": null,
+          "share_class": "Class A USD (Acc) \u00e2\u20ac\u201d Ireland UCITS",
+          "isin": "IE00BFNWXY26",
           "currency": "USD",
           "bloomberg": "LASDIUA ID",
           "yahoo_symbol": null,
           "proxy_note": null,
-          "source_used": "none",
-          "metrics": {},
-          "note": "ISIN not provided [ISIN missing]"
+          "source_used": "yfinance",
+          "metrics": {
+            "price": 12.56,
+            "as_of": "2026-05-07",
+            "d1": -0.08,
+            "w1": 0.16,
+            "mtd": 0.08,
+            "ytd": 0.48,
+            "m1": 0.32,
+            "m3": 0.24,
+            "m6": 1.45,
+            "y1": 4.41,
+            "history_days": 242
+          },
+          "note": null
         },
         {
           "name": "PIMCO GIS Income Fund",
@@ -177,7 +189,7 @@
           "proxy_note": null,
           "source_used": "none",
           "metrics": {},
-          "note": "ISIN not provided [ISIN missing]"
+          "note": "User-provided ISIN IE000U1YG020 fails ISO checksum validation (correct check digit would be 6 for IE000U1YG026, but that's also not indexed). Please re-verify the ISIN from the issuer factsheet. [ISIN missing]"
         },
         {
           "name": "BNY Mellon Multi-Sector Credit Income",
@@ -301,15 +313,27 @@
         },
         {
           "name": "Oaktree Global Credit Select Fund",
-          "share_class": "Newly launched ~Feb 2026 (predecessor: Schroder GAIA Oaktree Credit)",
-          "isin": "LU2252519595",
+          "share_class": "Class F USD (Acc) \u00e2\u20ac\u201d newly launched May 2026",
+          "isin": "LU3300361097",
           "currency": "USD",
           "bloomberg": "SCGOCCU LX (predecessor)",
           "yahoo_symbol": null,
           "proxy_note": null,
-          "source_used": null,
-          "metrics": {},
-          "note": "Predecessor ISIN; new SICAV ticker not yet indexed [data unavailable]"
+          "source_used": "ft",
+          "metrics": {
+            "price": 100.1,
+            "as_of": "2026-05-08",
+            "d1": 0.05,
+            "w1": 0.39,
+            "mtd": 0.39,
+            "ytd": null,
+            "m1": null,
+            "m3": null,
+            "m6": null,
+            "y1": null,
+            "history_days": 12
+          },
+          "note": "New SICAV launched ~early May 2026 \u00e2\u20ac\u201d only a few trading days of history. Using FT for the deepest available daily window."
         },
         {
           "name": "MFS Meridian Global High Yield",
@@ -361,15 +385,27 @@
         },
         {
           "name": "T. Rowe Price EM Corporate Bond",
-          "share_class": "SICAV",
-          "isin": null,
+          "share_class": "Class I USD (Acc) \u00e2\u20ac\u201d SICAV",
+          "isin": "LU0596126465",
           "currency": "USD",
           "bloomberg": "TRPGEMQ / TREMCB-family LX",
           "yahoo_symbol": null,
           "proxy_note": null,
-          "source_used": "none",
-          "metrics": {},
-          "note": "ISIN not provided [ISIN missing]"
+          "source_used": "yfinance",
+          "metrics": {
+            "price": 18.92,
+            "as_of": "2026-05-08",
+            "d1": -0.05,
+            "w1": 0.58,
+            "mtd": 0.58,
+            "ytd": 1.39,
+            "m1": 1.5,
+            "m3": 0.48,
+            "m6": 1.99,
+            "y1": 8.24,
+            "history_days": 240
+          },
+          "note": null
         }
       ]
     }

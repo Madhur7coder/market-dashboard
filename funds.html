@@ -83,6 +83,8 @@ td.l{text-align:left}
 .note-row .fn-name{color:var(--text2)}
 .note-tag{color:var(--amber);font-size:9.5px;letter-spacing:1px;text-transform:uppercase}
 .proxy-tag{display:inline-block;padding:1px 6px;background:rgba(255,179,0,0.1);border:1px solid rgba(255,179,0,0.3);border-radius:2px;color:var(--amber);font-size:8.5px;letter-spacing:1px;text-transform:uppercase;margin-left:6px;cursor:help}
+.rank{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:2px;font-size:10.5px;font-weight:600;background:var(--bg4);color:var(--text3)}
+.rank.g{background:rgba(0,230,118,.12);color:var(--green)}
 
 /* Status bar */
 .api-bar{display:flex;align-items:center;gap:10px;padding:7px 12px;background:rgba(255,179,0,.05);border:1px solid rgba(255,179,0,.18);border-radius:3px;margin-bottom:10px;font-size:11px;color:var(--amber);letter-spacing:.5px}
@@ -153,15 +155,19 @@ function pctCell(v, badge=true){
   return `<span class="${cls}">${sign}${Number(v).toFixed(2)}%</span>`;
 }
 
-function fundRow(f){
+function fundRow(f, rank){
   const m = f.metrics || {};
   const tr = document.createElement('tr');
+  const rankCell = rank
+    ? `<td class="l"><span class="rank ${rank <= 3 ? 'g' : ''}">${rank}</span></td>`
+    : `<td class="l"><span class="rank">—</span></td>`;
 
   if (!m.price && !m.d1 && !m.ytd) {
     tr.classList.add('note-row');
     const tag = !f.isin ? 'ISIN MISSING' : 'DATA UNAVAILABLE';
     const note = f.note || (f.isin ? 'fetcher returned no series' : 'add an ISIN to funds.json');
     tr.innerHTML = `
+      ${rankCell}
       <td class="l">
         <div class="fn-name">${f.name}</div>
         <span class="fn-sub">${f.share_class || ''}${f.bloomberg ? ' · ' + f.bloomberg : ''}</span>
@@ -174,6 +180,7 @@ function fundRow(f){
       ? ` <span class="proxy-tag" title="${f.proxy_note.replace(/"/g,'&quot;')}">PROXY</span>`
       : '';
     tr.innerHTML = `
+      ${rankCell}
       <td class="l">
         <div class="fn-name">${f.name}${proxyBadge}</div>
         <span class="fn-sub">${f.share_class || ''}${f.isin ? ' · <span class="fn-isin">' + f.isin + '</span>' : ''}${f.bloomberg ? ' · ' + f.bloomberg : ''}</span>
@@ -208,6 +215,7 @@ function buildSection(section, idx){
       <div class="card-lbl">▸ ${section.title} (${section.funds.length} fund${section.funds.length === 1 ? '' : 's'})</div>
       <table>
         <thead><tr>
+          <th class="l">#</th>
           <th class="l">Fund</th>
           <th>CCY</th>
           <th>NAV</th>
@@ -225,12 +233,13 @@ function buildSection(section, idx){
       </table>
     </div>`;
 
-  // Sort: funds with metrics first (by YTD desc), then no-data funds.
-  const withData = section.funds.filter(f => f.metrics && f.metrics.price !== undefined);
-  const noData   = section.funds.filter(f => !f.metrics || f.metrics.price === undefined);
-  withData.sort((a, b) => (b.metrics.ytd ?? -999) - (a.metrics.ytd ?? -999));
+  // Sort: funds with YTD data first (by YTD desc), then no-data funds at the bottom.
+  const withYtd = section.funds.filter(f => f.metrics && typeof f.metrics.ytd === 'number');
+  const noYtd   = section.funds.filter(f => !(f.metrics && typeof f.metrics.ytd === 'number'));
+  withYtd.sort((a, b) => b.metrics.ytd - a.metrics.ytd);
   const tbody = sec.querySelector('.tbody-funds');
-  [...withData, ...noData].forEach(f => tbody.appendChild(fundRow(f)));
+  withYtd.forEach((f, i) => tbody.appendChild(fundRow(f, i + 1)));
+  noYtd.forEach(f => tbody.appendChild(fundRow(f, null)));
   return sec;
 }
 
