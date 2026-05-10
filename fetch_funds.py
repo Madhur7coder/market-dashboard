@@ -280,24 +280,42 @@ def main():
     cfg_path = Path(__file__).parent / 'funds.json'
     with open(cfg_path) as f:
         cfg = json.load(f)
-    funds = cfg.get('funds', [])
-    print(f"Loaded {len(funds)} funds from funds.json\n")
 
-    results = []
-    for fund in funds:
-        results.append(fetch_one(fund))
+    # Support both shapes:
+    #   1) {"sections": [{"title": ..., "funds": [...]}, ...]}   (new, multi-section)
+    #   2) {"funds": [...]}                                        (legacy, flat)
+    sections_in = cfg.get('sections')
+    if sections_in is None:
+        sections_in = [{'title': 'Funds', 'funds': cfg.get('funds', [])}]
+
+    sections_out = []
+    total_funds = 0
+    total_ok = 0
+    for section in sections_in:
+        title = section.get('title', 'Funds')
+        funds = section.get('funds', [])
+        print(f"--- Section: {title} ({len(funds)} funds) ---")
+        results = [fetch_one(f) for f in funds]
+        ok = sum(1 for r in results if r.get('metrics'))
+        total_funds += len(funds)
+        total_ok += ok
+        sections_out.append({
+            'title':    title,
+            'subtitle': section.get('subtitle'),
+            'funds':    results,
+        })
+        print(f"  -> {ok}/{len(funds)} returned metrics\n")
 
     out = {
         'generated_at': datetime.datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ'),
-        'funds': results,
+        'sections':     sections_out,
     }
     out_path = Path('data/funds.json')
     out_path.parent.mkdir(exist_ok=True)
     with open(out_path, 'w') as f:
         json.dump(out, f, indent=2, default=str)
 
-    ok = sum(1 for r in results if r.get('metrics'))
-    print(f"\n{ok}/{len(results)} funds returned metrics")
+    print(f"=== {total_ok}/{total_funds} funds returned metrics ===")
     print(f"Wrote {out_path}")
 
 

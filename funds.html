@@ -131,39 +131,11 @@ td.l{text-align:left}
   <span id="dataAge"></span>
 </div>
 
-<!-- Funds table -->
-<div class="sec">
-  <div class="sec-hdr">
-    <div class="sec-n">01</div>
-    <div class="sec-t">Performance Table</div>
-    <div class="sec-sub">RANKED BY YTD · CCY-NATIVE RETURNS</div>
-  </div>
-  <div class="card">
-    <div class="card-lbl">▸ Selected Fixed-Income UCITS Funds</div>
-    <table>
-      <thead><tr>
-        <th class="l">Fund</th>
-        <th>CCY</th>
-        <th>NAV</th>
-        <th>1D %</th>
-        <th>1W %</th>
-        <th>MTD %</th>
-        <th>YTD %</th>
-        <th>1M %</th>
-        <th>3M %</th>
-        <th>6M %</th>
-        <th>1Y %</th>
-        <th class="l">Source</th>
-      </tr></thead>
-      <tbody id="t-funds">
-        <tr><td colspan="12" class="loading">Loading…</td></tr>
-      </tbody>
-    </table>
-  </div>
+<!-- Sections render here -->
+<div id="sections-container"></div>
 
-  <div class="note">
-    <strong>Notes.</strong> NAVs are end-of-day, fund-currency-native (no FX adjustment). Primary source is Yahoo Finance via <code>yfinance</code> (free, no API key); Financial Times <code>markets.ft.com</code> historical pages serve as fallback for funds yfinance doesn't cover with a daily series. <strong>1D, 1W, MTD</strong> are computed from the most recent NAV vs. previous trading day / 5 trading days back / last trading day of previous month. <strong>YTD</strong> uses the close of the last trading day of the previous calendar year. <strong>1M / 3M / 6M / 1Y</strong> are calendar-date-based (look back ~30 / 91 / 182 / 365 days). Funds marked <span class="note-tag">— ISIN MISSING</span> need an ISIN added to <code>funds.json</code>; <span class="note-tag">— DATA UNAVAILABLE</span> means neither yfinance nor FT could return a series. <strong>Refresh:</strong> auto-fetched weekday post-close (~17:00 EST) by GitHub Actions, same schedule as the main dashboard.
-  </div>
+<div class="note">
+  <strong>Notes.</strong> NAVs are end-of-day, fund-currency-native (no FX adjustment). Primary source is Yahoo Finance via <code>yfinance</code> (free, no API key); Financial Times <code>markets.ft.com</code> historical pages serve as fallback for funds yfinance doesn't cover with a daily series. <strong>1D, 1W, MTD</strong> are computed from the most recent NAV vs. previous trading day / 5 trading days back / last trading day of previous month. <strong>YTD</strong> uses the close of the last trading day of the previous calendar year. <strong>1M / 3M / 6M / 1Y</strong> are calendar-date-based (look back ~30 / 91 / 182 / 365 days). Funds marked <span class="note-tag">— ISIN MISSING</span> need an ISIN added to <code>funds.json</code>; <span class="note-tag">— DATA UNAVAILABLE</span> means neither yfinance nor FT could return a series. <strong>Refresh:</strong> auto-fetched weekday post-close (~17:00 EST) by GitHub Actions, same schedule as the main dashboard.
 </div>
 
 </div><!-- /wrap -->
@@ -180,69 +152,112 @@ function pctCell(v, badge=true){
   return `<span class="${cls}">${sign}${Number(v).toFixed(2)}%</span>`;
 }
 
-function render(d){
-  const tb = document.getElementById('t-funds');
-  tb.innerHTML = '';
+function fundRow(f){
+  const m = f.metrics || {};
+  const tr = document.createElement('tr');
 
-  const funds = (d && d.funds) || [];
-  if (funds.length === 0) {
-    tb.innerHTML = '<tr><td colspan="12" style="padding:18px;text-align:center;color:var(--text3)">No fund data — run fetch_funds.py to generate.</td></tr>';
+  if (!m.price && !m.d1 && !m.ytd) {
+    tr.classList.add('note-row');
+    const tag = !f.isin ? 'ISIN MISSING' : 'DATA UNAVAILABLE';
+    const note = f.note || (f.isin ? 'fetcher returned no series' : 'add an ISIN to funds.json');
+    tr.innerHTML = `
+      <td class="l">
+        <div class="fn-name">${f.name}</div>
+        <span class="fn-sub">${f.share_class || ''}${f.bloomberg ? ' · ' + f.bloomberg : ''}</span>
+      </td>
+      <td><span class="ccy-pill">${f.currency || '—'}</span></td>
+      <td colspan="9" class="l"><span class="note-tag">— ${tag}</span> &nbsp;<span style="color:var(--text3)">${note}</span></td>
+      <td class="src">—</td>`;
+  } else {
+    tr.innerHTML = `
+      <td class="l">
+        <div class="fn-name">${f.name}</div>
+        <span class="fn-sub">${f.share_class || ''}${f.isin ? ' · <span class="fn-isin">' + f.isin + '</span>' : ''}</span>
+      </td>
+      <td><span class="ccy-pill">${f.currency || '—'}</span></td>
+      <td>${m.price !== undefined ? fp(m.price, m.price < 10 ? 4 : 2) : '—'}</td>
+      <td>${pctCell(m.d1)}</td>
+      <td>${pctCell(m.w1)}</td>
+      <td>${pctCell(m.mtd)}</td>
+      <td>${pctCell(m.ytd)}</td>
+      <td>${pctCell(m.m1)}</td>
+      <td>${pctCell(m.m3)}</td>
+      <td>${pctCell(m.m6)}</td>
+      <td>${pctCell(m.y1)}</td>
+      <td class="l src">${f.source_used || '—'}<br><span style="font-size:9px;color:var(--text3)">as of ${m.as_of || '—'}</span></td>`;
+  }
+  return tr;
+}
+
+function buildSection(section, idx){
+  const sec = document.createElement('div');
+  sec.className = 'sec';
+  const idxStr = String(idx).padStart(2, '0');
+  const subtitle = section.subtitle || '';
+  sec.innerHTML = `
+    <div class="sec-hdr">
+      <div class="sec-n">${idxStr}</div>
+      <div class="sec-t">${section.title}</div>
+      <div class="sec-sub">${subtitle}</div>
+    </div>
+    <div class="card">
+      <div class="card-lbl">▸ ${section.title} (${section.funds.length} fund${section.funds.length === 1 ? '' : 's'})</div>
+      <table>
+        <thead><tr>
+          <th class="l">Fund</th>
+          <th>CCY</th>
+          <th>NAV</th>
+          <th>1D %</th>
+          <th>1W %</th>
+          <th>MTD %</th>
+          <th>YTD %</th>
+          <th>1M %</th>
+          <th>3M %</th>
+          <th>6M %</th>
+          <th>1Y %</th>
+          <th class="l">Source</th>
+        </tr></thead>
+        <tbody class="tbody-funds"></tbody>
+      </table>
+    </div>`;
+
+  // Sort: funds with metrics first (by YTD desc), then no-data funds.
+  const withData = section.funds.filter(f => f.metrics && f.metrics.price !== undefined);
+  const noData   = section.funds.filter(f => !f.metrics || f.metrics.price === undefined);
+  withData.sort((a, b) => (b.metrics.ytd ?? -999) - (a.metrics.ytd ?? -999));
+  const tbody = sec.querySelector('.tbody-funds');
+  [...withData, ...noData].forEach(f => tbody.appendChild(fundRow(f)));
+  return sec;
+}
+
+function render(d){
+  const container = document.getElementById('sections-container');
+  container.innerHTML = '';
+
+  // Support both shapes: {sections: [...]} (new) and {funds: [...]} (legacy)
+  let sections = d && d.sections;
+  if (!sections && d && d.funds) {
+    sections = [{title: 'Funds', subtitle: '', funds: d.funds}];
+  }
+  if (!sections || sections.length === 0) {
+    container.innerHTML = '<div class="card" style="padding:20px;text-align:center;color:var(--text3)">No fund data — run fetch_funds.py to generate.</div>';
     return;
   }
 
-  // Sort: funds with metrics first, ranked by YTD descending; funds without data go to the end.
-  const withData = funds.filter(f => f.metrics && f.metrics.price !== undefined);
-  const noData   = funds.filter(f => !f.metrics || f.metrics.price === undefined);
-  withData.sort((a, b) => {
-    const ya = (a.metrics.ytd ?? -999), yb = (b.metrics.ytd ?? -999);
-    return yb - ya;
-  });
-
-  const rows = [...withData, ...noData];
-  rows.forEach(f => {
-    const m = f.metrics || {};
-    const tr = document.createElement('tr');
-
-    if (!m.price && !m.d1 && !m.ytd) {
-      // No-data row — show note instead of metrics
-      tr.classList.add('note-row');
-      const tag = !f.isin ? 'ISIN MISSING' : 'DATA UNAVAILABLE';
-      const note = f.note || (f.isin ? 'fetcher returned no series' : 'add an ISIN to funds.json');
-      tr.innerHTML = `
-        <td class="l">
-          <div class="fn-name">${f.name}</div>
-          <span class="fn-sub">${f.share_class || ''}${f.bloomberg ? ' · ' + f.bloomberg : ''}</span>
-        </td>
-        <td><span class="ccy-pill">${f.currency || '—'}</span></td>
-        <td colspan="9" class="l"><span class="note-tag">— ${tag}</span> &nbsp;<span style="color:var(--text3)">${note}</span></td>
-        <td class="src">—</td>`;
-    } else {
-      tr.innerHTML = `
-        <td class="l">
-          <div class="fn-name">${f.name}</div>
-          <span class="fn-sub">${f.share_class || ''}${f.isin ? ' · <span class="fn-isin">' + f.isin + '</span>' : ''}</span>
-        </td>
-        <td><span class="ccy-pill">${f.currency || '—'}</span></td>
-        <td>${m.price !== undefined ? fp(m.price, m.price < 10 ? 4 : 2) : '—'}</td>
-        <td>${pctCell(m.d1)}</td>
-        <td>${pctCell(m.w1)}</td>
-        <td>${pctCell(m.mtd)}</td>
-        <td>${pctCell(m.ytd)}</td>
-        <td>${pctCell(m.m1)}</td>
-        <td>${pctCell(m.m3)}</td>
-        <td>${pctCell(m.m6)}</td>
-        <td>${pctCell(m.y1)}</td>
-        <td class="l src">${f.source_used || '—'}<br><span style="font-size:9px;color:var(--text3)">as of ${m.as_of || '—'}</span></td>`;
-    }
-    tb.appendChild(tr);
+  let allFunds = [], allOk = 0;
+  sections.forEach((section, i) => {
+    container.appendChild(buildSection(section, i + 1));
+    section.funds.forEach(f => {
+      allFunds.push(f);
+      if (f.metrics && f.metrics.price !== undefined) allOk++;
+    });
   });
 
   // Status bar
-  const ok = withData.length, total = funds.length;
   const sb = document.getElementById('statusBar');
   const st = document.getElementById('status');
-  if (ok === total) sb.classList.add('ok');
-  st.textContent = `✓ ${ok} of ${total} funds returned data`;
+  if (allOk === allFunds.length && allOk > 0) sb.classList.add('ok');
+  st.textContent = `✓ ${allOk} of ${allFunds.length} funds returned data`;
 
   if (d.generated_at) {
     const dt = new Date(d.generated_at);
