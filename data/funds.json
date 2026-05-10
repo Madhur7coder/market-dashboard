@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-10T14:25:13Z",
+  "generated_at": "2026-05-10T14:29:03Z",
   "sections": [
     {
       "title": "Watchlist",
@@ -12,7 +12,7 @@
           "currency": "USD",
           "bloomberg": "JPMULLE LX",
           "yahoo_symbol": "0P0001CRCJ",
-          "proxy_note": "Tracking E (Dist) sister class auto-adjusted for distributions \u00e2\u20ac\u201d Acc class not on Yahoo",
+          "proxy_note": "User-provided ISIN LU1873131475 not indexed by yfinance \u00e2\u20ac\u201d tracking E (Dist) sister class with auto-adjusted distributions. Sister-class tracking error within fee-bps for an MMF.",
           "source_used": "yfinance (adj)",
           "metrics": {
             "price": 1.0,
@@ -32,59 +32,59 @@
         {
           "name": "BNY Mellon Global Credit",
           "share_class": "L USD (Acc)",
-          "isin": null,
+          "isin": "IE000J3LXBI2",
           "currency": "USD",
           "bloomberg": "BMGCLUA ID",
-          "yahoo_symbol": "IE00BYZW5L40",
-          "proxy_note": "Tracking W (Acc) sister class \u00e2\u20ac\u201d L class not on Yahoo. Returns within fee-bps of L class.",
+          "yahoo_symbol": null,
+          "proxy_note": null,
           "source_used": "yfinance",
           "metrics": {
-            "price": 1.4684,
+            "price": 1.2031,
             "as_of": "2026-05-07",
             "d1": -0.11,
             "w1": 0.47,
-            "mtd": 0.31,
-            "ytd": 0.45,
-            "m1": 0.92,
-            "m3": 0.19,
-            "m6": 1.11,
-            "y1": 5.51,
+            "mtd": 0.32,
+            "ytd": 0.54,
+            "m1": 0.94,
+            "m3": 0.26,
+            "m6": 1.25,
+            "y1": 5.8,
             "history_days": 240
           },
           "note": null
         },
         {
-          "name": "JPM Income Fund (I2)",
-          "share_class": "I2 (Acc) USD \u00e2\u20ac\u201d Lux SICAV",
-          "isin": null,
+          "name": "JPM Income Fund",
+          "share_class": "C2 (Acc) USD \u00e2\u20ac\u201d Lux SICAV",
+          "isin": "LU2114516292",
           "currency": "USD",
           "bloomberg": "JPIAUIU LX",
-          "yahoo_symbol": "LU1041600930",
-          "proxy_note": "Tracking I (Acc) sister class LU1041600930 \u00e2\u20ac\u201d I2 class not on Yahoo. Returns within fee-bps of I2.",
+          "yahoo_symbol": null,
+          "proxy_note": null,
           "source_used": "yfinance",
           "metrics": {
-            "price": 129.68,
+            "price": 117.98,
             "as_of": "2026-05-07",
-            "d1": 0.17,
+            "d1": 0.18,
             "w1": 0.42,
             "mtd": 0.42,
-            "ytd": 1.22,
-            "m1": 0.93,
-            "m3": 0.82,
-            "m6": 2.29,
-            "y1": 5.73,
+            "ytd": 1.25,
+            "m1": 0.94,
+            "m3": 0.85,
+            "m6": 2.34,
+            "y1": 5.84,
             "history_days": 244
           },
-          "note": null
+          "note": "User labelled this fund as 'I2' but ISIN LU2114516292 resolves to JPMorgan Funds \u00e2\u20ac\u201d Income Fund C2 (acc) USD on both Yahoo and FT."
         },
         {
           "name": "PIMCO GIS Capital Securities",
-          "share_class": "IA \u00e2\u20ac\u201d Ireland UCITS",
+          "share_class": "Institutional USD (Acc) \u00e2\u20ac\u201d Ireland UCITS",
           "isin": "IE00B6VH4D24",
           "currency": "USD",
           "bloomberg": "PIMCINA ID",
           "yahoo_symbol": null,
-          "proxy_note": "Same underlying fund as PIMCSII / IE00B6VH4D24 (Inst USD Acc) \u00e2\u20ac\u201d also shown in Universe section",
+          "proxy_note": null,
           "source_used": "yfinance",
           "metrics": {
             "price": 26.38,
@@ -99,7 +99,7 @@
             "y1": 9.42,
             "history_days": 245
           },
-          "note": null
+          "note": "Shares its ISIN with PIMCSII (also in Universe section) \u00e2\u20ac\u201d same underlying fund/class."
         }
       ]
     },

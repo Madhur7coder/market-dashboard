@@ -13,36 +13,33 @@
           "source": "yfinance",
           "yahoo_symbol": "0P0001CRCJ",
           "auto_adjust": true,
-          "proxy_note": "Tracking E (Dist) sister class auto-adjusted for distributions — Acc class not on Yahoo"
+          "proxy_note": "User-provided ISIN LU1873131475 not indexed by yfinance — tracking E (Dist) sister class with auto-adjusted distributions. Sister-class tracking error within fee-bps for an MMF."
         },
         {
           "name": "BNY Mellon Global Credit",
           "share_class": "L USD (Acc)",
-          "isin": null,
+          "isin": "IE000J3LXBI2",
           "currency": "USD",
           "bloomberg": "BMGCLUA ID",
-          "source": "yfinance",
-          "yahoo_symbol": "IE00BYZW5L40",
-          "proxy_note": "Tracking W (Acc) sister class — L class not on Yahoo. Returns within fee-bps of L class."
+          "source": "yfinance"
         },
         {
-          "name": "JPM Income Fund (I2)",
-          "share_class": "I2 (Acc) USD — Lux SICAV",
-          "isin": null,
+          "name": "JPM Income Fund",
+          "share_class": "C2 (Acc) USD — Lux SICAV",
+          "isin": "LU2114516292",
           "currency": "USD",
           "bloomberg": "JPIAUIU LX",
           "source": "yfinance",
-          "yahoo_symbol": "LU1041600930",
-          "proxy_note": "Tracking I (Acc) sister class LU1041600930 — I2 class not on Yahoo. Returns within fee-bps of I2."
+          "note": "User labelled this fund as 'I2' but ISIN LU2114516292 resolves to JPMorgan Funds — Income Fund C2 (acc) USD on both Yahoo and FT."
         },
         {
           "name": "PIMCO GIS Capital Securities",
-          "share_class": "IA — Ireland UCITS",
+          "share_class": "Institutional USD (Acc) — Ireland UCITS",
           "isin": "IE00B6VH4D24",
           "currency": "USD",
           "bloomberg": "PIMCINA ID",
           "source": "yfinance",
-          "proxy_note": "Same underlying fund as PIMCSII / IE00B6VH4D24 (Inst USD Acc) — also shown in Universe section"
+          "note": "Shares its ISIN with PIMCSII (also in Universe section) — same underlying fund/class."
         }
       ]
     },
