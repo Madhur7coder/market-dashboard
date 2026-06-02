@@ -9,6 +9,7 @@ writes the result to data/funds.json for the dashboard to consume.
 
 import json
 import datetime
+import math
 import re
 import urllib.request
 import warnings
@@ -29,10 +30,26 @@ UA = ('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
 
 
 # ── METRIC HELPERS ────────────────────────────────────────────────────────────
+def _sanitize(obj):
+    """Recursively replace non-finite floats (NaN/Infinity) with None so the
+    output is valid JSON. JSON has no NaN literal, and the browser's JSON.parse
+    rejects it — a single NaN would otherwise break the entire dashboard."""
+    if isinstance(obj, float):
+        return obj if math.isfinite(obj) else None
+    if isinstance(obj, dict):
+        return {k: _sanitize(v) for k, v in obj.items()}
+    if isinstance(obj, (list, tuple)):
+        return [_sanitize(v) for v in obj]
+    return obj
+
+
 def _pct(new, old):
-    if old and old != 0:
-        return round((float(new) - float(old)) / abs(float(old)) * 100, 2)
-    return None
+    if new is None or old is None:
+        return None
+    new, old = float(new), float(old)
+    if math.isnan(new) or math.isnan(old) or old == 0:
+        return None
+    return round((new - old) / abs(old) * 100, 2)
 
 
 def _last_trading_day_of_prev_month(history_index):
@@ -67,9 +84,13 @@ def compute_metrics(closes_dict_or_df, name=''):
     if df is None or len(df) == 0:
         return {}
 
-    closes = df['Close']
-    last_date = df.index[-1]
+    closes = df['Close'].dropna()
+    if len(closes) == 0:
+        return {}
+    last_date = closes.index[-1]
     last = float(closes.iloc[-1])
+    if math.isnan(last):
+        return {}
 
     out = {
         'price':     round(last, 4),
@@ -324,10 +345,14 @@ def main():
         'generated_at': datetime.datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ'),
         'sections':     sections_out,
     }
+    out = _sanitize(out)
     out_path = Path('data/funds.json')
     out_path.parent.mkdir(exist_ok=True)
     with open(out_path, 'w') as f:
-        json.dump(out, f, indent=2, default=str)
+        # allow_nan=False guarantees we never emit invalid JSON (NaN/Infinity),
+        # which the browser's JSON.parse rejects — _sanitize has already
+        # replaced any non-finite floats with None, so this won't raise.
+        json.dump(out, f, indent=2, default=str, allow_nan=False)
 
     print(f"=== {total_ok}/{total_funds} funds returned metrics ===")
     print(f"Wrote {out_path}")

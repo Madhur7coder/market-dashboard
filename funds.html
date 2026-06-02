@@ -297,8 +297,9 @@ async function loadData(){
     const data = await resp.json();
     render(data);
   } catch (e) {
-    document.getElementById('status').textContent = '⚠ funds.json not found — run fetch_funds.py first (locally or via GitHub Actions)';
-    document.getElementById('t-funds').innerHTML = '<tr><td colspan="12" style="padding:18px;text-align:center;color:var(--text3)">No data file. The GitHub Action regenerates this weekday post-close.</td></tr>';
+    console.error('Failed to load funds.json:', e);
+    document.getElementById('status').textContent = '⚠ Could not load fund data — funds.json missing or invalid. The GitHub Action regenerates it weekday post-close.';
+    document.getElementById('sections-container').innerHTML = '<div class="card" style="padding:20px;text-align:center;color:var(--text3)">No data file. The GitHub Action regenerates this weekday post-close.</div>';
   }
 }
 
