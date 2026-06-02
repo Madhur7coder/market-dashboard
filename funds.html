@@ -76,6 +76,14 @@ td.l{text-align:left}
 .up-b{background:var(--gdim);color:var(--green);padding:1px 6px;border-radius:2px;font-size:11px;display:inline-block;min-width:60px;text-align:right}
 .dn-b{background:var(--rdim);color:var(--red);padding:1px 6px;border-radius:2px;font-size:11px;display:inline-block;min-width:60px;text-align:right}
 .neu-b{color:var(--text3);font-size:11px;display:inline-block;min-width:60px;text-align:right}
+
+/* Boxed YTD column — make the headline return stand out */
+thead th.ytd-cell{color:var(--accent);background:var(--bg4)}
+td.ytd-cell{background:rgba(0,200,255,.04)}
+.ytd-box{display:inline-block;min-width:66px;text-align:right;padding:3px 9px;border-radius:3px;font-size:11.5px;font-weight:600;border:1px solid var(--border2)}
+.ytd-box.up{background:var(--gdim);color:var(--green);border-color:rgba(0,230,118,.45)}
+.ytd-box.dn{background:var(--rdim);color:var(--red);border-color:rgba(255,51,85,.45)}
+.ytd-box.neu{color:var(--text3)}
 .src{color:var(--text3);font-size:9.5px;letter-spacing:.5px}
 
 /* Note row for funds without data */
@@ -154,6 +162,13 @@ function pctCell(v, badge=true){
   const sign = v > 0 ? '+' : '';
   return `<span class="${cls}">${sign}${Number(v).toFixed(2)}%</span>`;
 }
+// YTD gets a stronger boxed treatment so the headline return stands out.
+function ytdCell(v){
+  if (v === null || v === undefined) return '<span class="ytd-box neu">—</span>';
+  const cls = v > 0 ? 'up' : v < 0 ? 'dn' : 'neu';
+  const sign = v > 0 ? '+' : '';
+  return `<span class="ytd-box ${cls}">${sign}${Number(v).toFixed(2)}%</span>`;
+}
 
 function fundRow(f, rank){
   const m = f.metrics || {};
@@ -190,7 +205,7 @@ function fundRow(f, rank){
       <td>${pctCell(m.d1)}</td>
       <td>${pctCell(m.w1)}</td>
       <td>${pctCell(m.mtd)}</td>
-      <td>${pctCell(m.ytd)}</td>
+      <td class="ytd-cell">${ytdCell(m.ytd)}</td>
       <td>${pctCell(m.m1)}</td>
       <td>${pctCell(m.m3)}</td>
       <td>${pctCell(m.m6)}</td>
@@ -222,7 +237,7 @@ function buildSection(section, idx){
           <th>1D %</th>
           <th>1W %</th>
           <th>MTD %</th>
-          <th>YTD %</th>
+          <th class="ytd-cell">YTD %</th>
           <th>1M %</th>
           <th>3M %</th>
           <th>6M %</th>
