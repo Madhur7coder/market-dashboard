@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-01T23:26:08Z",
+  "generated_at": "2026-06-02T07:59:06Z",
   "sections": [
     {
       "title": "Watchlist",
@@ -107,7 +107,7 @@
     {
       "title": "Benchmarks",
       "subtitle": "REFERENCE INDICES \u00b7 ETF PROXIES (TRACKING ERROR <10 BPS/YR WHERE NOTED)",
-      "footer_note": "These are PROXY benchmarks. Bloomberg index data isn't available on free public APIs, so each row uses the closest publicly-available ETF that tracks the same Bloomberg index. Returns approximate the actual indices but may differ by tracking error \u2014 typically under 10 bps/year for the Aggregate and EM proxies, and 10\u201330 bps/year for HY (since the only available global HY UCITS ETF tracks Markit iBoxx, not Bloomberg). Use these directionally, not as exact index quotes.",
+      "footer_note": "These are PROXY benchmarks. Bloomberg index data isn't available on free public APIs, so each row uses the closest publicly-available ETF that tracks the same Bloomberg index. Returns approximate the actual indices but may differ by tracking error \u2014 typically under 10 bps/year for the Aggregate and EM proxies, and 10\u201330 bps/year for HY (the global HY proxy tracks Markit iBoxx, not Bloomberg). Use these directionally, not as exact index quotes.",
       "funds": [
         {
           "name": "Bloomberg Global Aggregate TR Hedged USD",
@@ -119,41 +119,41 @@
           "proxy_note": "Bloomberg LEGATRUH not publicly available \u2014 using AGGG (IE00BDBRDM35), which explicitly tracks the Bloomberg Global Aggregate Bond Index USD-Hedged. Tracking error typically under 10 bps/year.",
           "source_used": "yfinance",
           "metrics": {
-            "price": 4.914,
-            "as_of": "2026-06-01",
-            "d1": -0.53,
-            "w1": 0.38,
-            "mtd": -0.53,
-            "ytd": -0.42,
-            "m1": 0.1,
-            "m3": -1.75,
-            "m6": -0.71,
-            "y1": 1.3,
-            "history_days": 253
+            "price": 4.9349,
+            "as_of": "2026-06-02",
+            "d1": 0.43,
+            "w1": 0.47,
+            "mtd": -0.1,
+            "ytd": 0.0,
+            "m1": 0.52,
+            "m3": -0.95,
+            "m6": -0.01,
+            "y1": 1.74,
+            "history_days": 254
           },
           "note": null
         },
         {
           "name": "Bloomberg Global High Yield TR Hedged USD",
-          "share_class": "ETF proxy: iShares Global High Yield Corp Bond UCITS ETF (USD)",
-          "isin": "IE00B74DQ490",
+          "share_class": "ETF proxy: iShares US & Intl High Yield Corp Bond ETF (USD) \u00b7 UNHEDGED",
+          "isin": "US4642886794",
           "currency": "USD",
-          "bloomberg": "Bloomberg Global HY TR Hedged (proxy: HYLD LN Equity)",
-          "yahoo_symbol": null,
-          "proxy_note": "No major UCITS ETF tracks the Bloomberg Global HY index directly \u2014 using HYLD (IE00B74DQ490), which tracks Markit iBoxx Global Liquid HY Capped (similar methodology, similar global HY universe). Index families differ by ~10-30 bps/yr depending on credit cycle. JNK (SPDR Bloomberg HY Bond ETF) tracks Bloomberg directly but is US-only.",
+          "bloomberg": "Bloomberg Global HY TR Hedged (proxy: GHYG US Equity)",
+          "yahoo_symbol": "GHYG",
+          "proxy_note": "No free ETF tracks the Bloomberg Global HY index directly \u2014 using GHYG (iShares US & Intl High Yield Corp Bond ETF), which tracks the Markit iBoxx Global Developed Markets Liquid High Yield index: a genuinely global HY universe, USD-denominated, and US-listed so it resolves reliably on Yahoo. Index families (Markit iBoxx vs Bloomberg) differ by ~10-30 bps/yr depending on the credit cycle, and GHYG is USD-unhedged (its underlying is largely USD-issued global HY). JNK (SPDR Bloomberg HY Bond ETF) tracks the Bloomberg family directly but is US-only.",
           "source_used": "yfinance",
           "metrics": {
-            "price": null,
+            "price": 45.24,
             "as_of": "2026-06-01",
-            "d1": null,
-            "w1": null,
-            "mtd": null,
-            "ytd": null,
-            "m1": null,
-            "m3": null,
-            "m6": null,
-            "y1": null,
-            "history_days": 253
+            "d1": -0.7,
+            "w1": -0.04,
+            "mtd": -0.7,
+            "ytd": -1.93,
+            "m1": -0.7,
+            "m3": -1.78,
+            "m6": -1.99,
+            "y1": -0.07,
+            "history_days": 251
           },
           "note": null
         },
@@ -414,17 +414,17 @@
           "proxy_note": null,
           "source_used": "ft",
           "metrics": {
-            "price": 100.61,
-            "as_of": "2026-05-29",
-            "d1": 0.14,
-            "w1": 0.84,
-            "mtd": null,
+            "price": 100.32,
+            "as_of": "2026-06-01",
+            "d1": -0.29,
+            "w1": 0.49,
+            "mtd": -0.29,
             "ytd": null,
             "m1": null,
             "m3": null,
             "m6": null,
             "y1": null,
-            "history_days": 18
+            "history_days": 19
           },
           "note": "New SICAV launched ~early May 2026 \u2014 only a few trading days of history. Using FT for the deepest available daily window."
         },
@@ -438,17 +438,17 @@
           "proxy_note": null,
           "source_used": "ft",
           "metrics": {
-            "price": 39.67,
-            "as_of": "2026-05-29",
-            "d1": 0.1,
-            "w1": 0.53,
-            "mtd": null,
+            "price": 39.66,
+            "as_of": "2026-06-01",
+            "d1": -0.03,
+            "w1": 0.41,
+            "mtd": -0.03,
             "ytd": null,
             "m1": null,
             "m3": null,
             "m6": null,
             "y1": null,
-            "history_days": 18
+            "history_days": 19
           },
           "note": "yfinance has no series \u2014 using FT fallback (21-day window)"
         },
@@ -462,17 +462,17 @@
           "proxy_note": null,
           "source_used": "ft",
           "metrics": {
-            "price": 47.74,
-            "as_of": "2026-05-29",
-            "d1": 0.23,
-            "w1": 1.12,
-            "mtd": null,
+            "price": 47.75,
+            "as_of": "2026-06-01",
+            "d1": 0.02,
+            "w1": 1.02,
+            "mtd": 0.02,
             "ytd": null,
             "m1": null,
             "m3": null,
             "m6": null,
             "y1": null,
-            "history_days": 18
+            "history_days": 19
           },
           "note": "yfinance has no series \u2014 using FT fallback (21-day window)"
         },
