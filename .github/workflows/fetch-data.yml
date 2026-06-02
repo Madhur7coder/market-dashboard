@@ -33,6 +33,28 @@ jobs:
         # data should still get committed even if this step has issues.
         continue-on-error: true
 
+      - name: Validate generated JSON
+        # Strict gate: reject NaN/Infinity (which json.load accepts but the
+        # browser's JSON.parse does not) and any malformed file. If this fails,
+        # the workflow stops before committing, so the last-good data stays live
+        # instead of a broken file taking down the dashboard.
+        run: |
+          python - <<'PY'
+          import json, sys
+          def strict(path):
+              try:
+                  with open(path) as f:
+                      json.load(f, parse_constant=lambda c: (_ for _ in ()).throw(
+                          ValueError(f"invalid JSON token {c!r}")))
+              except FileNotFoundError:
+                  print(f"⚠ {path} not found — skipping"); return
+              except Exception as e:
+                  sys.exit(f"✗ {path} is not valid JSON: {e}")
+              print(f"✓ {path} is valid JSON")
+          strict('data/data.json')
+          strict('data/funds.json')
+          PY
+
       - name: Commit & push generated data
         run: |
           git config user.name  "github-actions[bot]"

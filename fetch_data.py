@@ -117,9 +117,21 @@ def fetch_treasury_2y():
 def _safe_float(val):
     try:
         f = float(val)
-        return None if math.isnan(f) else f
+        return f if math.isfinite(f) else None
     except Exception:
         return None
+
+def _sanitize(obj):
+    """Recursively replace non-finite floats (NaN/Infinity) with None so the
+    output is always valid JSON — the browser's JSON.parse rejects NaN, and a
+    single bad value would break the entire dashboard."""
+    if isinstance(obj, float):
+        return obj if math.isfinite(obj) else None
+    if isinstance(obj, dict):
+        return {k: _sanitize(v) for k, v in obj.items()}
+    if isinstance(obj, (list, tuple)):
+        return [_sanitize(v) for v in obj]
+    return obj
 
 def _pct_from_val(val):
     f = _safe_float(val)
@@ -640,7 +652,10 @@ if __name__ == '__main__':
     out_path = Path('data/data.json')
     out_path.parent.mkdir(exist_ok=True)
     with open(out_path, 'w') as f:
-        json.dump(data, f, indent=2)
+        # allow_nan=False guarantees we never write invalid JSON (NaN/Infinity),
+        # which the browser's JSON.parse rejects; _sanitize clears any that slip
+        # through so this won't raise.
+        json.dump(_sanitize(data), f, indent=2, allow_nan=False)
     total = sum(len(v) for v in data.values() if isinstance(v, list))
     print(f"\n✓ Wrote {total} records to {out_path}")
     print(f"  Yields: {[x['sym'] for x in data['yields']]}")
