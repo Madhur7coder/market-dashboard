@@ -59,7 +59,7 @@
         },
         {
           "name": "Bloomberg Global High Yield TR Hedged USD",
-          "share_class": "ETF proxy: iShares US & Intl High Yield Corp Bond ETF (USD)",
+          "share_class": "ETF proxy: iShares US & Intl High Yield Corp Bond ETF (USD) · UNHEDGED",
           "isin": "US4642886794",
           "currency": "USD",
           "bloomberg": "Bloomberg Global HY TR Hedged (proxy: GHYG US Equity)",
