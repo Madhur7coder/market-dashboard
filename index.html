@@ -8,14 +8,16 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <title>Market Command Centre</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<!-- The font FILES come from gstatic; preconnecting only to googleapis left a
+     second connection to set up on the critical path. -->
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;1,300&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 <style>
 :root {
   --bg:      #07090d;
   --bg2:     #0c0f15;
   --bg3:     #111520;
-  --bg4:     #161b26;h
+  --bg4:     #161b26;
   --border:  #1c2535;
   --border2: #243044;
   --accent:  #00c8ff;
@@ -28,32 +30,43 @@
   --amber:   #ffb300;
   --adim2:   rgba(255,179,0,0.09);
   --text:    #ffffff;
-  --text2:   #b8b8b8;
-  --text3:   #808080;
+  --text2:   #c4c4c4;   /* was #b8b8b8 — lifted for 4.5:1 on --bg2 */
+  --text3:   #949494;   /* was #808080 — 3.0:1 was failing on small text */
   --mono:    'IBM Plex Mono', monospace;
   --sans:    'DM Sans', sans-serif;
+  /* Tell the UA this is a dark page so native scrollbars, form controls and
+     autofill don't render light-on-dark. */
+  color-scheme: dark;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
+/* Visible keyboard focus everywhere — previously only :hover was styled, so
+   keyboard users had no indication of position at all. */
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:2px}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+}
 body{background:var(--bg);color:var(--text);font-family:var(--mono);font-size:13px;overflow-x:hidden}
 body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(0,200,255,0.015) 1px,transparent 1px),linear-gradient(90deg,rgba(0,200,255,0.015) 1px,transparent 1px);background-size:48px 48px;pointer-events:none;z-index:0}
-.wrap{position:relative;z-index:1;max-width:1680px;margin:0 auto;padding:14px}
+.wrap{position:relative;z-index:1;max-width:1920px;margin:0 auto;padding:5px 8px}
 
 /* ── HEADER ── */
-.hdr{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;background:var(--bg2);border:1px solid var(--border);border-radius:4px;margin-bottom:10px;position:relative;overflow:hidden}
+.hdr{display:flex;align-items:center;justify-content:space-between;padding:5px 13px;background:var(--bg2);border:1px solid var(--border);border-radius:4px;margin-bottom:4px;position:relative;overflow:hidden}
 .hdr::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent 0%,var(--accent) 40%,var(--green) 70%,transparent 100%)}
 .hdr-l{display:flex;align-items:center;gap:14px}
 .logo{font-size:18px;font-weight:600;letter-spacing:3px;color:var(--accent)}
 .logo em{color:var(--text3);font-style:normal}
-.hdr-meta{font-size:11px;color:var(--text2);letter-spacing:1px;line-height:1.9}
+.hdr-meta{font-size:11px;color:var(--text2);letter-spacing:1px;line-height:1.45}
 .hdr-meta strong{font-size:14px;color:var(--text);display:block;letter-spacing:0}
 .live{display:flex;align-items:center;gap:5px;font-size:10px;color:var(--text3);letter-spacing:1px}
 .dot{width:5px;height:5px;border-radius:50%;background:var(--green);box-shadow:0 0 6px var(--green);animation:blink 2s infinite}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
-.hdr-r{display:flex;gap:7px;align-items:center}
+.hdr-r{display:flex;gap:7px;align-items:center;flex-wrap:wrap}
+.dstat{font-size:10px;letter-spacing:.6px;color:var(--text2);white-space:nowrap}
 
 /* ── BUTTONS ── */
-.btn{display:flex;align-items:center;gap:5px;padding:7px 13px;border:1px solid var(--border2);border-radius:3px;background:var(--bg3);color:var(--text2);font-family:var(--mono);font-size:11px;letter-spacing:1px;cursor:pointer;transition:all .15s;text-transform:uppercase;white-space:nowrap}
+.btn{display:flex;align-items:center;gap:5px;padding:5px 11px;border:1px solid var(--border2);border-radius:3px;background:var(--bg3);color:var(--text2);font-family:var(--mono);font-size:11px;letter-spacing:1px;cursor:pointer;transition:all .15s;text-transform:uppercase;white-space:nowrap}
 .btn:hover{border-color:var(--accent);color:var(--accent);background:var(--adim)}
 .btn-pri{background:rgba(0,200,255,.12);border-color:var(--accent);color:var(--accent);font-weight:600}
 .btn-pri:hover{background:rgba(0,200,255,.2)}
@@ -70,56 +83,57 @@ tr.bench-row:hover{background:linear-gradient(90deg,rgba(255,51,85,0.14) 0%,rgba
 tr.bench-row td{border-bottom:1px solid rgba(255,51,85,0.12)!important}
 
 
-.quote-bar{display:flex;align-items:center;justify-content:center;gap:14px;padding:10px 20px;background:linear-gradient(90deg,var(--bg2) 0%,rgba(0,200,255,0.05) 50%,var(--bg2) 100%);border:1px solid rgba(0,200,255,0.15);border-radius:4px;margin-bottom:10px;position:relative;overflow:hidden}
-.quote-bar::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent,transparent 200px,rgba(0,200,255,0.015) 200px,rgba(0,200,255,0.015) 201px);pointer-events:none}
-.quote-text{font-size:12px;color:var(--text);letter-spacing:1.5px;font-style:italic;text-align:center;font-family:var(--sans)}
-.quote-author{font-size:10px;color:var(--accent);letter-spacing:2px;text-transform:uppercase;white-space:nowrap}
-.quote-icon{color:rgba(0,200,255,0.3);font-size:12px}
-
 /* ── API BANNER ── */
-.api-bar{display:flex;align-items:center;gap:10px;padding:7px 12px;background:rgba(255,179,0,.05);border:1px solid rgba(255,179,0,.18);border-radius:3px;margin-bottom:10px;font-size:11px;color:var(--amber);letter-spacing:.5px}
-.api-bar input{flex:1;padding:5px 9px;background:var(--bg3);border:1px solid var(--border2);border-radius:2px;color:var(--text);font-family:var(--mono);font-size:11px;outline:none;transition:border .15s}
-.api-bar input:focus{border-color:var(--accent)}
-.api-bar label{color:var(--text3);white-space:nowrap}
+.api-bar{display:flex;align-items:center;gap:10px;padding:4px 11px;background:rgba(255,179,0,.05);border:1px solid rgba(255,179,0,.18);border-radius:3px;margin-bottom:5px;font-size:11px;color:var(--amber);letter-spacing:.5px}
 
 /* ── SECTION ── */
-.sec{margin-bottom:22px}
-.sec-hdr{display:flex;align-items:center;gap:10px;padding:8px 0 7px;border-bottom:1px solid var(--border);margin-bottom:9px}
-.sec-n{font-size:10px;color:var(--accent);letter-spacing:2px;padding:2px 7px;border:1px solid rgba(0,200,255,.25);border-radius:2px}
-.sec-t{font-size:13px;font-weight:600;color:var(--text);letter-spacing:2px;text-transform:uppercase}
+.sec{margin-bottom:4px}
+.sec-hdr{display:flex;align-items:center;gap:10px;padding:1px 0 2px;border-bottom:1px solid var(--border);margin-bottom:4px}
+.sec-n{font-size:10px;color:var(--accent);letter-spacing:2px;padding:1px 6px;border:1px solid rgba(0,200,255,.25);border-radius:2px}
+h2.sec-t{font-size:13px;font-weight:600;color:var(--text);letter-spacing:2px;text-transform:uppercase}
 .sec-sub{font-size:10px;color:var(--text3);letter-spacing:1px;margin-left:auto}
-.divider{height:1px;background:linear-gradient(90deg,var(--accent),transparent);opacity:.2;margin:18px 0}
 
 /* ── TABLE CARD ── */
 .card{background:var(--bg2);border:1px solid var(--border);border-radius:4px;overflow:hidden;margin-bottom:9px}
-.card-lbl{padding:7px 11px;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--accent);background:var(--bg3);border-bottom:1px solid var(--border);font-weight:500}
+.card-lbl{padding:2px 8px;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--accent);background:var(--bg3);border-bottom:1px solid var(--border);font-weight:500}
 table{width:100%;border-collapse:collapse}
-thead th{padding:6px 10px;text-align:right;font-size:9.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text3);background:var(--bg3);border-bottom:1px solid var(--border);font-weight:500}
+thead th{padding:2px 6px;text-align:right;font-size:9.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text3);background:var(--bg3);border-bottom:1px solid var(--border);font-weight:500}
 thead th:first-child,thead th.l{text-align:left}
 tbody tr{border-bottom:1px solid rgba(28,37,53,.6);transition:background .1s}
 tbody tr:hover{background:rgba(0,200,255,.025)}
 tbody tr:last-child{border-bottom:none}
-td{padding:6px 10px;text-align:right;font-size:12px}
+td{padding:1px 6px;text-align:right;font-size:12px;line-height:1.25}
 td:first-child,td.l{text-align:left}
-.tn{color:var(--text);font-weight:500;font-size:12px}
-.ts{color:var(--text3);font-size:10px;display:block;letter-spacing:.5px}
+td.l{white-space:nowrap}
+.tn{color:var(--text);font-weight:500;font-size:12px;white-space:nowrap}
+.ts{color:var(--text3);font-size:10px;display:inline;letter-spacing:.5px;margin-left:5px;white-space:nowrap}
 .up{color:var(--green)}
 .dn{color:var(--red)}
 .neu{color:var(--text3)}
 .up-b{background:var(--gdim);color:var(--green);padding:1px 5px;border-radius:2px;font-size:10.5px}
 .dn-b{background:var(--rdim);color:var(--red);padding:1px 5px;border-radius:2px;font-size:10.5px}
 .neu-b{background:rgba(61,90,120,.15);color:var(--text3);padding:1px 5px;border-radius:2px;font-size:10.5px}
-.rank{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:2px;font-size:9.5px;font-weight:600;background:var(--bg4);color:var(--text3)}
+.rank{display:inline-flex;align-items:center;justify-content:center;width:16px;height:15px;border-radius:2px;font-size:9.5px;font-weight:600;background:var(--bg4);color:var(--text3)}
 .rank.g{background:rgba(255,179,0,.1);color:var(--amber)}
 
 /* ── GRIDS ── */
-.g2{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:5px}
 .g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:9px}
-.mg{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:9px}
+.mg{display:grid;grid-template-columns:1fr 1fr;gap:5px;margin-bottom:5px}
 .mg3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:9px;margin-bottom:9px}
 
-/* ── SPARKLINE ── */
-.sp{display:inline-block;vertical-align:middle}
+/* ── DENSE MACRO GRID ── */
+/* Four balanced columns so the whole macro block lands in one screen without
+   scrolling. Column contents are grouped by theme, and their row counts are
+   matched so no column runs much longer than its neighbours. */
+.mgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:5px;align-items:start}
+.mcol{display:flex;flex-direction:column;gap:5px;min-width:0}
+.mcol .card{margin-bottom:0}
+/* Trend strip + the four index ETFs share one row; neither fills a row alone. */
+.topgrid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:5px;align-items:stretch}
+.topgrid .card{margin-bottom:0}
+.eq2{display:grid;grid-template-columns:1fr 1fr;gap:5px;align-items:start}
+.eq2 .card{margin-bottom:0}
 
 /* ── TRADINGVIEW MODAL ── */
 #tv-modal{display:none;position:fixed;inset:0;z-index:9990;background:rgba(0,0,0,0.82);align-items:center;justify-content:center}
@@ -132,66 +146,26 @@ td:first-child,td.l{text-align:left}
 #tv-frame-wrap{flex:1;overflow:hidden}
 #tv-frame{width:100%;height:100%;border:none}
 /* ── PCT BAR ── */
-.pct-wrap{display:inline-flex;flex-direction:column;align-items:flex-end;gap:2px;min-width:52px}
-.pct-bar{height:4px;border-radius:2px;opacity:0.75;min-width:2px}
+.pct-wrap{display:inline-block;position:relative;min-width:38px;text-align:right}
+.pct-bar{position:absolute;right:0;bottom:-3px;height:2px;border-radius:1px;opacity:.8;min-width:2px}
 /* ── TICKER LINK ── */
 .tn-link{cursor:pointer;border-bottom:1px dotted rgba(120,150,180,0.4);transition:color .15s}
 .tn-link:hover{color:var(--accent)!important;border-bottom-color:var(--accent)}
 
 /* ── HOLDINGS DROPDOWN ── */
-.expand-btn{display:inline-flex;align-items:center;gap:4px;background:none;border:none;color:var(--text3);font-family:var(--mono);font-size:10px;cursor:pointer;padding:0;letter-spacing:.5px;transition:color .15s}
+.expand-btn{display:inline-flex;align-items:center;gap:4px;background:none;border:none;color:var(--text3);font-family:var(--mono);font-size:10px;line-height:1.2;cursor:pointer;padding:0;letter-spacing:.5px;transition:color .15s}
 .expand-btn:hover{color:var(--accent)}
 .expand-btn .arr{transition:transform .2s;display:inline-block}
 .expand-btn.open .arr{transform:rotate(90deg)}
 .holdings-row{display:none}
 .holdings-row.show{display:table-row}
-.holdings-inner{padding:8px 11px 10px 28px;background:var(--bg4)}
+.holdings-inner{padding:6px 10px 7px 22px;background:var(--bg4)}
 .h-title{font-size:10px;color:var(--text3);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:6px}
 .h-list{display:flex;flex-wrap:wrap;gap:5px}
 .h-item{display:flex;align-items:center;gap:5px;background:var(--bg3);border:1px solid var(--border);border-radius:2px;padding:3px 7px;font-size:11px}
 .h-w{color:var(--accent);font-size:10px;min-width:30px;text-align:right}
 .h-sym{color:var(--text);font-weight:500}
 .h-nm{color:var(--text3);font-size:10px}
-
-/* ── POSITION CALC ── */
-.calc-wrap{display:grid;grid-template-columns:320px 1fr;gap:10px}
-.cpanel{background:var(--bg2);border:1px solid var(--border);border-radius:4px;padding:15px}
-.c-ttl{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--accent);margin-bottom:13px;font-weight:500}
-.dir-tog{display:flex;border:1px solid var(--border2);border-radius:3px;overflow:hidden;margin-bottom:14px}
-.dir-b{flex:1;padding:8px;border:none;background:var(--bg3);color:var(--text3);font-family:var(--mono);font-size:11px;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:all .15s;font-weight:500}
-.dir-b.long.on{background:var(--gdim);color:var(--green)}
-.dir-b.short.on{background:var(--rdim);color:var(--red)}
-.fg{margin-bottom:11px}
-.fl{font-size:9.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text3);margin-bottom:4px;display:block}
-.fi{width:100%;padding:8px 10px;background:var(--bg3);border:1px solid var(--border2);border-radius:2px;color:var(--text);font-family:var(--mono);font-size:13px;outline:none;transition:border .15s}
-.fi:focus{border-color:var(--accent)}
-.fi::placeholder{color:var(--text3)}
-.fr{display:grid;grid-template-columns:1fr 1fr;gap:7px}
-.res{background:var(--bg3);border:1px solid var(--border);border-radius:3px;padding:13px;margin-top:13px}
-.res-big{font-size:31px;font-weight:600;color:var(--accent);letter-spacing:-1px;line-height:1}
-.res-lbl{font-size:9.5px;color:var(--text3);letter-spacing:2px;text-transform:uppercase;margin-top:3px}
-.res-sub{display:flex;gap:18px;margin-top:11px;padding-top:11px;border-top:1px solid var(--border)}
-.ri{display:flex;flex-direction:column;gap:2px}
-.rv{font-size:13px;font-weight:500}
-.rl{font-size:9.5px;color:var(--text3);letter-spacing:1px;text-transform:uppercase}
-.stops-panel{background:var(--bg2);border:1px solid var(--border);border-radius:4px;overflow:hidden}
-.stops-hdr{display:flex;align-items:center;padding:9px 13px;background:var(--bg3);border-bottom:1px solid var(--border);gap:7px}
-.s-tab{padding:4px 11px;border:1px solid var(--border2);border-radius:2px;background:transparent;color:var(--text3);font-family:var(--mono);font-size:10.5px;letter-spacing:1px;cursor:pointer;transition:all .15s;text-transform:uppercase}
-.s-tab.on{border-color:var(--accent);color:var(--accent);background:var(--adim)}
-.stops-body{padding:11px}
-.sr-hdr{display:grid;grid-template-columns:100px 90px 1fr 1fr 1fr;gap:6px;padding:4px 0;font-size:9.5px;color:var(--text3);letter-spacing:1px;text-transform:uppercase;border-bottom:1px solid var(--border)}
-.sr{display:grid;grid-template-columns:100px 90px 1fr 1fr 1fr;gap:6px;padding:7px 0;border-bottom:1px solid rgba(28,37,53,.4);align-items:center}
-.sr:last-child{border-bottom:none}
-.sr-lbl{font-size:11px;color:var(--text2)}
-.sr-price{font-size:14px;font-weight:600}
-.sr-entry{color:var(--accent)}
-.sr-mid{color:var(--amber)}
-.sr-fin{color:var(--red)}
-.sr-shares{font-size:11px;color:var(--text2)}
-.sr-pct{font-size:11px}
-.sr-pnl{font-size:11px}
-.scale-viz{position:relative;height:48px;margin:10px 0 4px;border-top:1px solid var(--border)}
-.viz-note{font-size:10px;color:var(--text3);letter-spacing:1px;text-transform:uppercase;margin-bottom:6px}
 
 /* ── TOAST ── */
 .toast{position:fixed;bottom:20px;right:20px;background:var(--bg2);border:1px solid var(--accent);border-radius:3px;padding:10px 16px;font-size:11px;color:var(--accent);letter-spacing:1px;z-index:9999;transform:translateY(10px);opacity:0;transition:all .25s;pointer-events:none}
@@ -201,35 +175,55 @@ td:first-child,td.l{text-align:left}
 
 /* ── EMA TREND INDICATOR ── */
 .ema-up{color:var(--green);font-size:13px;font-weight:600}
-.ema-dn{color:var(--text3);font-size:12px;opacity:0.5}
+/* was --text3 at opacity .5 → roughly 2:1 contrast, effectively invisible */
+.ema-dn{color:var(--red);font-size:13px;font-weight:600}
+.ema-na{color:var(--text3);font-size:12px}
 
-/* ── TREND IDENTIFICATION PANEL ── */
-.trend-grid{display:grid;grid-template-columns:120px repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:3px;overflow:hidden}
-.trend-cell{background:var(--bg2);padding:14px 12px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;min-height:78px}
-.trend-cell.head{background:var(--bg3);font-size:9.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text3);min-height:32px;padding:8px 12px}
-.trend-cell.row-lbl{background:var(--bg3);align-items:flex-start;justify-content:center;padding-left:16px}
-.trend-sym{font-size:16px;font-weight:600;color:var(--text);letter-spacing:1px}
-.trend-sublbl{font-size:9px;color:var(--text3);letter-spacing:1px;text-transform:uppercase}
-.trend-bull{font-size:18px;font-weight:700;color:var(--green);letter-spacing:1px}
-.trend-bear{font-size:18px;font-weight:700;color:var(--red);letter-spacing:1px}
-.trend-na{font-size:18px;color:var(--text3)}
-.trend-meta{font-size:9.5px;color:var(--text3);letter-spacing:.5px;font-family:var(--mono)}
-.trend-row-sublbl{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text2);font-weight:500}
-.trend-days-num{font-size:20px;font-weight:600;color:var(--text);letter-spacing:.5px;font-family:var(--mono)}
-.trend-days-lbl{font-size:9.5px;color:var(--text3);letter-spacing:1px;text-transform:uppercase;margin-top:2px}
+/* ── STALE ROW ── */
+/* Values carried over from a previous run because today's fetch failed for
+   this ticker. Shown, but visibly not-today. */
+tbody tr.stale td{opacity:.6}
+tbody tr.stale .tn::after{content:' ·stale';font-size:8.5px;color:var(--amber);letter-spacing:.5px}
+
+/* ── WARNING BANNER ── */
+.warn-bar{padding:6px 11px;background:rgba(255,179,0,.06);border:1px solid rgba(255,179,0,.28);border-radius:3px;margin-bottom:10px;font-size:11px;color:var(--amber);line-height:1.7}
+.warn-bar ul{margin:4px 0 0;padding-left:18px}
+
+/* ── EXPAND-ALL TOGGLE ── */
+.more-bar{padding:3px 9px;border-top:1px solid var(--border);text-align:center}
+.more-btn{background:none;border:1px solid var(--border2);color:var(--text2);font-family:var(--mono);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;padding:2px 12px;border-radius:2px;cursor:pointer;transition:all .15s}
+.more-btn:hover{border-color:var(--accent);color:var(--accent);background:var(--adim)}
+
+/* ── TREND IDENTIFICATION STRIP ── */
+/* Was a 4-column x 3-row grid roughly 230px tall. Same information, one row. */
+.trend-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;height:100%}
+.trend-cell{background:var(--bg2);border:1px solid var(--border);border-radius:3px;
+  padding:6px 12px;display:flex;flex-direction:column;justify-content:center;gap:7px}
+.trend-head{font-size:9.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text2);font-weight:500}
+.trend-head span{color:var(--text3);letter-spacing:1px}
+.trend-body{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;min-height:22px}
+.trend-bull{font-size:17px;font-weight:700;color:var(--green);letter-spacing:1px}
+.trend-bear{font-size:17px;font-weight:700;color:var(--red);letter-spacing:1px}
+.trend-na{font-size:17px;color:var(--text3)}
+.trend-meta{font-size:10.5px;color:var(--text3);letter-spacing:.5px;font-family:var(--mono)}
+.trend-days{font-size:10.5px;color:var(--text2);letter-spacing:.5px;margin-left:auto;white-space:nowrap}
+.trend-days b{font-size:15px;font-weight:600;color:var(--text);font-family:var(--mono)}
 
 /* ── LOADING STATE ── */
 .loading{color:var(--text3);font-size:11px;letter-spacing:1px;padding:14px;text-align:center;animation:fade .8s infinite alternate}
 @keyframes fade{from{opacity:.4}to{opacity:1}}
 
 /* ── RESPONSIVE ── */
+@media(max-width:1250px){
+  .mgrid{grid-template-columns:repeat(2,1fr)}
+}
 @media(max-width:1100px){
-  .mg,.mg3,.g2,.g3{grid-template-columns:1fr}
-  .calc-wrap{grid-template-columns:1fr}
-  #breadthGrid{grid-template-columns:repeat(3,1fr)!important}
+  .mg,.mg3,.g2,.g3,.eq2,.topgrid{grid-template-columns:1fr}
+  .trend-grid{grid-template-columns:1fr}
 }
 
 @media(max-width:780px){
+  .mgrid{grid-template-columns:1fr}
   /* Layout & typography */
   .wrap{padding:8px;max-width:100%}
   body{font-size:12px}
@@ -244,7 +238,7 @@ td:first-child,td.l{text-align:left}
   #lastUpdatedBadge{font-size:8.5px!important}
 
   /* Section headers */
-  .sec-t{font-size:11px;letter-spacing:1.5px}
+  h2.sec-t{font-size:11px;letter-spacing:1.5px}
   .sec-sub{display:none}
   .sec-n{font-size:9px;padding:2px 5px}
 
@@ -256,31 +250,6 @@ td:first-child,td.l{text-align:left}
   .ts{font-size:9px}
   .pct-wrap{min-width:44px}
 
-  /* Trend Identification grid */
-  .trend-grid{grid-template-columns:84px repeat(3,1fr)}
-  .trend-cell{padding:10px 6px;min-height:64px}
-  .trend-cell.head{min-height:38px;padding:6px 4px;font-size:8.5px;line-height:1.3}
-  .trend-cell.row-lbl{padding-left:10px}
-  .trend-sym{font-size:13px;letter-spacing:.5px}
-  .trend-sublbl{font-size:8px}
-  .trend-bull,.trend-bear{font-size:14px;letter-spacing:.5px}
-  .trend-meta{font-size:8.5px}
-
-  /* Breadth grid */
-  #breadthGrid{grid-template-columns:repeat(2,1fr)!important;gap:6px!important}
-
-  /* Position calc */
-  .cpanel{padding:12px}
-  .fr{grid-template-columns:1fr}
-  .res{padding:11px}
-  .res-big{font-size:24px}
-  .res-sub{flex-wrap:wrap;gap:10px;row-gap:8px}
-  .stops-body{padding:9px}
-  .stops-hdr{padding:8px 10px;flex-wrap:wrap;gap:5px}
-  .sr-hdr,.sr{grid-template-columns:80px 68px 1fr 50px 1fr;gap:4px;font-size:9.5px}
-  .sr-price{font-size:12px}
-  .sr-shares,.sr-pct,.sr-pnl{font-size:9.5px}
-  #rrTargets{grid-template-columns:repeat(2,1fr)!important;gap:5px!important}
 
   /* Holdings dropdown */
   .holdings-inner{padding:8px 10px 10px 18px}
@@ -294,10 +263,6 @@ td:first-child,td.l{text-align:left}
 
 @media(max-width:480px){
   .logo{font-size:13px;letter-spacing:1.5px}
-  .trend-grid{grid-template-columns:64px repeat(3,1fr)}
-  .trend-cell.row-lbl{padding-left:8px}
-  .trend-sym{font-size:12px}
-  .trend-sublbl{display:none}
   table{min-width:480px}
 }
 </style>
@@ -308,29 +273,32 @@ td:first-child,td.l{text-align:left}
 <div class="wrap" id="root">
 
 <!-- ══ HEADER ══════════════════════════════════════════ -->
-<div class="hdr">
+<header class="hdr">
   <div class="hdr-l">
-    <div class="logo">Market Command Centre</div>
+    <h1 class="logo">Market Command Centre</h1>
     <div class="hdr-meta">
       <div id="hdr-date" style="letter-spacing:1px">—</div>
       <strong id="hdr-time">—</strong>
     </div>
-    <div class="live"><span class="dot"></span>EST LIVE</div>
+    <div class="live"><span class="dot" aria-hidden="true"></span><span id="tzLabel">ET</span> LIVE</div>
   </div>
   <div class="hdr-r">
     <a href="https://stockbee.blogspot.com/p/mm.html" target="_blank" rel="noopener" class="btn btn-pri" title="Stockbee Market Monitor (Pradeep Bonde) — opens in new tab">▸ Stockbee MM</a>
     <a href="funds.html" target="_blank" rel="noopener" class="btn btn-pri" title="Fixed Income Funds — performance table — opens in new tab">▸ FI Funds</a>
     <a href="position-calc.html" target="_blank" rel="noopener" class="btn btn-pri" title="Position Size Calculator — opens in new tab">▸ Position Calc</a>
-    <span id="lastUpdatedBadge" style="font-size:9px;color:var(--text3);letter-spacing:1px;padding:4px 8px;background:var(--bg3);border:1px solid var(--border);border-radius:2px">LOADING DATA...</span>
+    <button type="button" class="btn btn-snap" onclick="captureSnap()" title="Save the dashboard as a PNG">▸ Snapshot</button>
+    <button type="button" class="btn btn-copy" onclick="copyClip()" title="Copy a text summary to the clipboard">▸ Copy</button>
+    <!-- aria-live so a screen reader hears the state change from loading →
+         loaded / stale / demo, which was previously silent. -->
+    <span id="dataStatus" class="dstat" role="status" aria-live="polite">Loading market data…</span>
+    <span id="lastUpdatedBadge" title="" style="font-size:9px;color:var(--text3);letter-spacing:1px;padding:3px 8px;background:var(--bg3);border:1px solid var(--border);border-radius:2px">LOADING DATA...</span>
       </div>
-</div>
+</header>
 
-<!-- ══ DATA STATUS BAR ═══════════════════════════════════ -->
-<div class="api-bar" id="dataStatusBar">
-  ⬤ &nbsp;
-  <span id="dataStatus" style="color:var(--text2)">Loading market data...</span>
-  <span id="dataAge" style="color:var(--text3);font-size:9px;margin-left:auto">Auto-refreshed weekday post-close (~17:00 EST) via GitHub Actions · Yahoo Finance</span>
-</div>
+<!-- Populated from data.json's `warnings` array when a fetch ran degraded. -->
+<div class="warn-bar" id="warnBar" hidden></div>
+
+<main>
 
 <!-- ══════════════════════════════════════════════════════ -->
 <!-- SECTION 0: TREND IDENTIFICATION                       -->
@@ -338,90 +306,85 @@ td:first-child,td.l{text-align:left}
 <div class="sec" id="s-trend">
   <div class="sec-hdr">
     <div class="sec-n">00</div>
-    <div class="sec-t">Trend Identification</div>
-    <div class="sec-sub">SPY · PRICE vs 21 / 50 / 200-DAY EMA</div>
+    <h2 class="sec-t">Trend Identification</h2>
+    <div class="sec-sub">SPY &middot; PRICE vs 21 / 50 / 200-DAY EMA</div>
   </div>
-  <div class="card" style="padding:14px 16px">
+  <div class="topgrid">
     <div id="trendGrid" class="trend-grid">
-      <div class="trend-cell head"></div>
-      <div class="trend-cell head">Short-term<br><span style="color:var(--text2)">21 EMA</span></div>
-      <div class="trend-cell head">Intermediate<br><span style="color:var(--text2)">50 EMA</span></div>
-      <div class="trend-cell head">Long-term<br><span style="color:var(--text2)">200 EMA</span></div>
-      <div class="trend-cell row-lbl"><div class="trend-sym">SPY</div><div class="trend-sublbl">S&amp;P 500 ETF</div></div>
-      <div class="trend-cell" id="trend-spy-21"><span class="trend-na">—</span></div>
-      <div class="trend-cell" id="trend-spy-50"><span class="trend-na">—</span></div>
-      <div class="trend-cell" id="trend-spy-200"><span class="trend-na">—</span></div>
-      <div class="trend-cell row-lbl"><div class="trend-row-sublbl">No. of days</div></div>
-      <div class="trend-cell" id="trend-spy-days-21"><span class="trend-na">—</span></div>
-      <div class="trend-cell" id="trend-spy-days-50"><span class="trend-na">—</span></div>
-      <div class="trend-cell" id="trend-spy-days-200"><span class="trend-na">—</span></div>
+      <div class="trend-cell">
+        <div class="trend-head">Short-term <span>&middot; 21 EMA</span></div>
+        <div class="trend-body" id="trend-21"><span class="trend-na">&mdash;</span></div>
+      </div>
+      <div class="trend-cell">
+        <div class="trend-head">Intermediate <span>&middot; 50 EMA</span></div>
+        <div class="trend-body" id="trend-50"><span class="trend-na">&mdash;</span></div>
+      </div>
+      <div class="trend-cell">
+        <div class="trend-head">Long-term <span>&middot; 200 EMA</span></div>
+        <div class="trend-body" id="trend-200"><span class="trend-na">&mdash;</span></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-lbl">&#9656; Major ETF Stats</div>
+      <table><thead><tr><th scope="col" class="l">ETF</th><th scope="col">Price</th><th scope="col">1D%</th><th scope="col">1W%</th><th scope="col">52W Hi%</th><th scope="col">YTD%</th><th scope="col">Trend</th><th scope="col" class="l">Hold.</th></tr></thead>
+      <tbody id="t-etfmain"><tr><td colspan="8" class="loading">Loading...</td></tr></tbody></table>
     </div>
   </div>
 </div>
 
-<div class="divider"></div>
-
-<!-- ══════════════════════════════════════════════════════ -->
-<!-- SECTION 1: MACRO OVERVIEW                             -->
-<!-- ══════════════════════════════════════════════════════ -->
 <div class="sec" id="s1">
   <div class="sec-hdr">
     <div class="sec-n">01</div>
-    <div class="sec-t">Macro Overview</div>
-    <div class="sec-sub">EOD SNAPSHOT · PREV CLOSE · RANKED BY CATEGORY</div>
+    <h2 class="sec-t">Macro Overview</h2>
+    <div class="sec-sub">EOD SNAPSHOT &middot; PREV CLOSE</div>
   </div>
-
-  <!-- Futures + DXY/VIX -->
-  <div class="mg">
-    <div class="card">
-      <div class="card-lbl">▸ US Index Futures</div>
-      <table><thead><tr><th class="l">Contract</th><th>Price</th><th>1D%</th><th>1W%</th><th>52W Hi%</th><th>YTD%</th></tr></thead>
-      <tbody id="t-futures"><tr><td colspan="6" class="loading">Loading...</td></tr></tbody></table>
+  <div class="mgrid">
+    <div class="mcol">
+      <div class="card">
+        <div class="card-lbl">&#9656; US Index Futures</div>
+        <table><thead><tr><th scope="col" class="l">Contract</th><th scope="col">Price</th><th scope="col">1D%</th><th scope="col">1W%</th><th scope="col">52W Hi%</th><th scope="col">YTD%</th></tr></thead>
+        <tbody id="t-futures"><tr><td colspan="6" class="loading">Loading...</td></tr></tbody></table>
+      </div>
+      <div class="card">
+        <div class="card-lbl">&#9656; US Treasury Yields</div>
+        <table><thead><tr><th scope="col" class="l">Tenor</th><th scope="col">Yield%</th><th scope="col">1D bps</th><th scope="col">1W bps</th><th scope="col">52W Hi%</th><th scope="col">YTD bps</th></tr></thead>
+        <tbody id="t-yields"><tr><td colspan="6" class="loading">Loading...</td></tr></tbody></table>
+      </div>
     </div>
-    <div class="card">
-      <div class="card-lbl">▸ Volatility & Dollar</div>
-      <table><thead><tr><th class="l">Instrument</th><th>Price</th><th>1D%</th><th>1W%</th><th>52W Hi%</th><th>YTD%</th></tr></thead>
-      <tbody id="t-dxvix"><tr><td colspan="6" class="loading">Loading...</td></tr></tbody></table>
+    <div class="mcol">
+      <div class="card">
+        <div class="card-lbl">&#9656; Volatility &amp; Dollar</div>
+        <table><thead><tr><th scope="col" class="l">Instrument</th><th scope="col">Price</th><th scope="col">1D%</th><th scope="col">1W%</th><th scope="col">52W Hi%</th><th scope="col">YTD%</th></tr></thead>
+        <tbody id="t-dxvix"><tr><td colspan="6" class="loading">Loading...</td></tr></tbody></table>
+      </div>
+      <div class="card">
+        <div class="card-lbl">&#9656; Precious &amp; Base Metals</div>
+        <table><thead><tr><th scope="col" class="l">Metal</th><th scope="col">Price</th><th scope="col">1D%</th><th scope="col">1W%</th><th scope="col">52W Hi%</th><th scope="col">YTD%</th></tr></thead>
+        <tbody id="t-metals"><tr><td colspan="6" class="loading">Loading...</td></tr></tbody></table>
+      </div>
     </div>
-  </div>
-
-  <!-- Crypto -->
-  <div class="card" style="margin-bottom:9px">
-    <div class="card-lbl">▸ Crypto</div>
-    <table><thead><tr><th class="l">Asset</th><th>Price (USD)</th><th>1D%</th><th>1W%</th><th>52W Hi%</th><th>YTD%</th></tr></thead>
-    <tbody id="t-crypto"><tr><td colspan="6" class="loading">Loading...</td></tr></tbody></table>
-  </div>
-
-  <!-- Metals + Commodities -->
-  <div class="mg">
-    <div class="card">
-      <div class="card-lbl">▸ Precious & Base Metals</div>
-      <table><thead><tr><th class="l">Metal</th><th>Price</th><th>1D%</th><th>1W%</th><th>52W Hi%</th><th>YTD%</th></tr></thead>
-      <tbody id="t-metals"><tr><td colspan="6" class="loading">Loading...</td></tr></tbody></table>
+    <div class="mcol">
+      <div class="card">
+        <div class="card-lbl">&#9656; Crypto</div>
+        <table><thead><tr><th scope="col" class="l">Asset</th><th scope="col">Price (USD)</th><th scope="col">1D%</th><th scope="col">1W%</th><th scope="col">52W Hi%</th><th scope="col">YTD%</th></tr></thead>
+        <tbody id="t-crypto"><tr><td colspan="6" class="loading">Loading...</td></tr></tbody></table>
+      </div>
+      <div class="card">
+        <div class="card-lbl">&#9656; Energy Commodities</div>
+        <table><thead><tr><th scope="col" class="l">Commodity</th><th scope="col">Price</th><th scope="col">1D%</th><th scope="col">1W%</th><th scope="col">52W Hi%</th><th scope="col">YTD%</th></tr></thead>
+        <tbody id="t-commod"><tr><td colspan="6" class="loading">Loading...</td></tr></tbody></table>
+      </div>
     </div>
-    <div class="card">
-      <div class="card-lbl">▸ Energy Commodities</div>
-      <table><thead><tr><th class="l">Commodity</th><th>Price</th><th>1D%</th><th>1W%</th><th>52W Hi%</th><th>YTD%</th></tr></thead>
-      <tbody id="t-commod"><tr><td colspan="6" class="loading">Loading...</td></tr></tbody></table>
-    </div>
-  </div>
-
-  <!-- Yields + Global -->
-  <div class="mg">
-    <div class="card">
-      <div class="card-lbl">▸ US Treasury Yields</div>
-      <table><thead><tr><th class="l">Tenor</th><th>Yield%</th><th>1D (bps)</th><th>1W%</th><th>52W Hi%</th><th>YTD%</th></tr></thead>
-      <tbody id="t-yields"><tr><td colspan="6" class="loading">Loading...</td></tr></tbody></table>
-    </div>
-    <div class="card">
-      <div class="card-lbl">▸ Global Market Indices</div>
-      <table><thead><tr><th class="l">Index</th><th>Price</th><th>1D%</th><th>1W%</th><th>52W Hi%</th><th>YTD%</th></tr></thead>
-      <tbody id="t-global"><tr><td colspan="6" class="loading">Loading...</td></tr></tbody></table>
+    <div class="mcol">
+      <div class="card">
+        <div class="card-lbl">&#9656; Global Market Indices</div>
+        <table><thead><tr><th scope="col" class="l">Index</th><th scope="col">Price</th><th scope="col">1D%</th><th scope="col">1W%</th><th scope="col">52W Hi%</th><th scope="col">YTD%</th></tr></thead>
+        <tbody id="t-global"><tr><td colspan="6" class="loading">Loading...</td></tr></tbody></table>
+      </div>
     </div>
   </div>
 </div>
 
-<div class="divider"></div>
 
 <!-- ══════════════════════════════════════════════════════ -->
 <!-- SECTION 2: EQUITIES OVERVIEW                          -->
@@ -429,76 +392,36 @@ td:first-child,td.l{text-align:left}
 <div class="sec" id="s2">
   <div class="sec-hdr">
     <div class="sec-n">02</div>
-    <div class="sec-t">Equities Overview</div>
-    <div class="sec-sub">RANKED BY 1W PERFORMANCE</div>
+    <h2 class="sec-t">Equities Overview</h2>
+    <div class="sec-sub">RANKED BY 1W PERFORMANCE &middot; HOLDINGS EXPANDABLE &#9656;</div>
   </div>
 
-  <!-- Major ETF stats -->
-  <div class="card" style="margin-bottom:9px">
-    <div class="card-lbl">▸ Major ETF Stats</div>
-    <table><thead><tr><th class="l">ETF</th><th>Price</th><th>1D%</th><th>1W%</th><th>52W Hi%</th><th>YTD%</th><th>Trend</th></tr></thead>
-    <tbody id="t-etfmain"><tr><td colspan="8" class="loading">Loading...</td></tr></tbody></table>
-  </div>
-
-  <!-- Sub-market -->
-  <div class="card" style="margin-bottom:9px">
-    <div class="card-lbl">▸ S&P 500 Sub-Market Performance — Ranked by 1W</div>
-    <table><thead><tr><th class="l">#</th><th class="l">Sub-Market / ETF</th><th>Price</th><th>1D%</th><th>1W%</th><th>52W Hi%</th><th>YTD%</th><th>Trend</th></tr></thead>
-    <tbody id="t-submarket"><tr><td colspan="8" class="loading">Loading...</td></tr></tbody></table>
-  </div>
-
-  <!-- Sectors -->
-  <div class="card" style="margin-bottom:9px">
-    <div class="card-lbl">▸ S&P 500 Sub-Sector — Ranked by 1W</div>
-    <table><thead><tr><th class="l">#</th><th class="l">Sector</th><th>1D%</th><th>1W%</th><th>52W Hi%</th><th>YTD%</th><th>Trend</th><th class="l">Holdings</th></tr></thead>
-    <tbody id="t-sector"><tr><td colspan="8" class="loading">Loading...</td></tr></tbody></table>
-  </div>
-
-  <!-- Thematic Top 10 -->
-  <div class="card" style="margin-bottom:9px">
-    <div class="card-lbl">▸ Top 10 Thematic Sectors — Ranked by 1W (Holdings expandable ▸)</div>
-    <table><thead><tr><th class="l">#</th><th class="l">Theme / ETF</th><th>Price</th><th>1D%</th><th>1W%</th><th>52W Hi%</th><th>YTD%</th><th>Trend</th><th class="l">Holdings</th></tr></thead>
-    <tbody id="t-thematic"><tr><td colspan="9" class="loading">Loading...</td></tr></tbody></table>
-  </div>
-
-  <!-- Country ETFs -->
-  <div class="card">
-    <div class="card-lbl">▸ Country ETFs — Top 10 by 1W Performance (Holdings expandable ▸)</div>
-    <table><thead><tr><th class="l">#</th><th class="l">Country / ETF</th><th>Price</th><th>1D%</th><th>1W%</th><th>52W Hi%</th><th>YTD%</th><th>Trend</th><th class="l">Holdings</th></tr></thead>
-    <tbody id="t-country"><tr><td colspan="9" class="loading">Loading...</td></tr></tbody></table>
-  </div>
-</div>
-
-<div class="divider"></div>
-
-<!-- ══════════════════════════════════════════════════════ -->
-<!-- ══════════════════════════════════════════════════════ -->
-<!-- SECTION 3: MARKET BREADTH & SENTIMENT                 -->
-<!-- ══════════════════════════════════════════════════════ -->
-<div class="sec" id="s-breadth">
-  <div class="sec-hdr">
-    <div class="sec-n">03</div>
-    <div class="sec-t">Market Breadth &amp; Sentiment</div>
-    <div class="sec-sub">S&amp;P 500 INTERNALS &middot; SENTIMENT INDICATORS &middot; UPDATED DAILY</div>
-  </div>
-  <div class="card" style="padding:16px 18px">
-    <div class="card-lbl" style="margin-bottom:14px">&#9658; Market Internals Dashboard</div>
-    <div id="breadthGrid" style="display:grid;grid-template-columns:repeat(7,1fr);gap:10px">
-      <div style="color:var(--text3);font-size:11px;grid-column:span 7;text-align:center;padding:20px 0">Loading breadth data&hellip;</div>
+  <div class="eq2">
+    <div class="card">
+      <div class="card-lbl">&#9656; S&amp;P 500 Sub-Sector &mdash; Ranked by 1W</div>
+      <table><thead><tr><th scope="col" class="l">#</th><th scope="col" class="l">Sector</th><th scope="col">1D%</th><th scope="col">1W%</th><th scope="col">52W Hi%</th><th scope="col">YTD%</th><th scope="col">Trend</th><th scope="col" class="l">Hold.</th></tr></thead>
+      <tbody id="t-sector"><tr><td colspan="8" class="loading">Loading...</td></tr></tbody></table>
+    </div>
+    <div class="card">
+      <div class="card-lbl">&#9656; Top 10 Thematic Sectors &mdash; Ranked by 1W</div>
+      <table><thead><tr><th scope="col" class="l">#</th><th scope="col" class="l">Theme / ETF</th><th scope="col">Price</th><th scope="col">1D%</th><th scope="col">1W%</th><th scope="col">52W Hi%</th><th scope="col">YTD%</th><th scope="col">Trend</th><th scope="col" class="l">Hold.</th></tr></thead>
+      <tbody id="t-thematic"><tr><td colspan="9" class="loading">Loading...</td></tr></tbody></table>
+      <div class="more-bar" id="more-thematic" hidden></div>
     </div>
   </div>
 </div>
 
+</main>
 </div><!-- /wrap -->
 <!-- ══ TRADINGVIEW CHART MODAL ════════════════════ -->
 <div id="tv-modal" onclick="if(event.target===this)closeChart()">
-  <div id="tv-modal-box">
+  <div id="tv-modal-box" role="dialog" aria-modal="true" aria-labelledby="tv-modal-title">
     <div id="tv-modal-hdr">
-      <div id="tv-modal-title">—</div>
-      <button onclick="closeChart()">✕ &nbsp;CLOSE</button>
+      <h2 id="tv-modal-title" style="font-weight:600">—</h2>
+      <button type="button" id="tv-close" onclick="closeChart()">✕ &nbsp;CLOSE</button>
     </div>
     <div id="tv-frame-wrap">
-      <iframe id="tv-frame" frameborder="0" allowtransparency="true" scrolling="no" allowfullscreen></iframe>
+      <iframe id="tv-frame" title="TradingView chart" frameborder="0" allowtransparency="true" scrolling="no" allowfullscreen></iframe>
     </div>
   </div>
 </div>
@@ -510,29 +433,14 @@ td:first-child,td.l{text-align:left}
 // ═══════════════════════════════════════════════════════
 // DATA DEFINITIONS
 // ═══════════════════════════════════════════════════════
-const FINNHUB_SYMBOLS = {
-  futures:   ['ES1!','NQ1!','RTY1!','YM1!'],
-  dxvix:     ['DX-Y.NYB','CBOE:VIX'],
-  metals:    ['GC1!','SI1!','HG1!','PL1!','PA1!','ALI1!'],
-  commod:    ['CL1!','NG1!'],
-  yields:    ['US2Y','US10Y','US30Y'],
-  global:    ['^N225','^KS11','^NSEI','000001.SS','000300.SS','^HSI','^FTSE','^FCHI','^GDAXI'],
-  etfmain:   ['SPY','QQQ','DIA','IWM'],
-  submarket: ['IVW','IVE','IJK','IJJ','IJT','IJS','MGK','VUG','VTV'],
-  sector:    ['XLK','XLV','XLF','XLE','XLY','XLI','XLB','XLU','XLRE','XLC','XLP'],
-  sectorew:  ['RYT','RYH','RYF','RYE','RCD','RGI','RTM','RYU','EWRE','EWCO','RHS'],
-  thematic:  ['BOTZ','HACK','SOXX','ICLN','SKYY','XBI','ITA','FINX','ARKG','URA','AIQ','CIBR','ROBO','ARKK','DRIV','OGIG','ACES','PAVE','HERO','CLOU'],
-  country:   ['EWJ','EWY','INDA','MCHI','GXC','EWH','EWU','EWQ','EWG','EWZ','EWT','EWA','EWC','EWL','EWP','EWS','TUR','EWM','EPHE','THD','VNM','EWI','EWN','EWD','EWK','EWO'],
-};
-
 const META = {
   // Futures
-  'ES1!':   { name:'S&P 500 Futures',     sym:'ES1!' },
-  'NQ1!':   { name:'Nasdaq Futures',       sym:'NQ1!' },
-  'RTY1!':  { name:'Russell 2000 Futures', sym:'RTY1!' },
-  'YM1!':   { name:'Dow Jones Futures',    sym:'YM1!' },
+  'ES1!':   { name:'S&P 500 Fut',      sym:'ES1!' },
+  'NQ1!':   { name:'Nasdaq Fut',       sym:'NQ1!' },
+  'RTY1!':  { name:'Russell 2K Fut',   sym:'RTY1!' },
+  'YM1!':   { name:'Dow Jones Fut',    sym:'YM1!' },
   // DX/VIX
-  'DX-Y.NYB':{ name:'US Dollar Index',    sym:'DXY' },
+  'DX-Y.NYB':{ name:'US Dollar Idx',  sym:'DXY' },
   'CBOE:VIX':{ name:'CBOE VIX',           sym:'VIX' },
   // Metals
   'GC1!':   { name:'Gold',       sym:'GC1!', unit:'$/oz' },
@@ -542,7 +450,7 @@ const META = {
   'PA1!':   { name:'Palladium',  sym:'PA1!', unit:'$/oz' },
   'ALI1!':  { name:'Aluminum',   sym:'ALI1!', unit:'$/cwt' },
   // Commodities
-  'CL1!':   { name:'WTI Crude Oil', sym:'CL1!', unit:'$/bbl' },
+  'CL1!':   { name:'WTI Crude', sym:'CL1!', unit:'$/bbl' },
   'NG1!':   { name:'Natural Gas',   sym:'NG1!', unit:'$/mmBtu' },
   // Yields
   'US2Y':   { name:'2-Year Treasury', sym:'US02Y', isYield:true },
@@ -552,7 +460,7 @@ const META = {
   '^N225':  { name:'Nikkei 225',      sym:'N225' },
   '^KS11':  { name:'KOSPI',           sym:'KOSPI' },
   '^NSEI':  { name:'Nifty 50',        sym:'NIFTY' },
-  '000001.SS':{ name:'Shanghai Comp.',sym:'SHCOMP'},
+  '000001.SS':{ name:'Shanghai',sym:'SHCOMP'},
   '000300.SS':{ name:'CSI 300',       sym:'CSI300'},
   '^HSI':   { name:'Hang Seng',       sym:'HSI' },
   '^FTSE':  { name:'FTSE 100',        sym:'UKX' },
@@ -818,125 +726,159 @@ const CRYPTO_DEMO = [
 // ═══════════════════════════════════════════════════════
 // CLOCK
 // ═══════════════════════════════════════════════════════
+// New Date(d.toLocaleString(...)) is an unreliable round-trip, and the old
+// clock hardcoded "EST" — wrong from March to November. Intl gives us the
+// correct EST/EDT abbreviation, and the elements are looked up once instead of
+// twice a second.
+let _elDate, _elTime, _elTz;
 function tick() {
-  const now = new Date();
-  const est = new Date(now.toLocaleString('en-US',{timeZone:'America/New_York'}));
-  const D=['SUN','MON','TUE','WED','THU','FRI','SAT'];
-  const M=['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
-  document.getElementById('hdr-date').textContent=`${D[est.getDay()]} · ${est.getDate()} ${M[est.getMonth()]} ${est.getFullYear()}`;
-  const h=String(est.getHours()).padStart(2,'0');
-  const m=String(est.getMinutes()).padStart(2,'0');
-  const s=String(est.getSeconds()).padStart(2,'0');
-  document.getElementById('hdr-time').textContent=`${h}:${m}:${s} EST`;
-}
-setInterval(tick,1000); tick();
-
-// ═══════════════════════════════════════════════════════
-// SPARKLINE
-// ═══════════════════════════════════════════════════════
-function spark(data) {
-  const c=document.createElement('canvas');
-  c.width=66;c.height=26;c.className='sp';
-  const x=c.getContext('2d');
-  const mn=Math.min(...data),mx=Math.max(...data),rng=mx-mn||1;
-  const pos=data[data.length-1]>=0;
-  const col=pos?'#00e676':'#ff3355';
-  const pts=data.map((v,i)=>({x:(i/(data.length-1))*64+1,y:24-((v-mn)/rng)*22}));
-  x.beginPath();x.moveTo(pts[0].x,pts[0].y);
-  pts.slice(1).forEach(p=>x.lineTo(p.x,p.y));
-  x.strokeStyle=col;x.lineWidth=1.5;x.stroke();
-  x.lineTo(pts[pts.length-1].x,26);x.lineTo(pts[0].x,26);x.closePath();
-  const g=x.createLinearGradient(0,0,0,26);
-  g.addColorStop(0,pos?'rgba(0,230,118,.28)':'rgba(255,51,85,.28)');
-  g.addColorStop(1,'rgba(0,0,0,0)');
-  x.fillStyle=g;x.fill();
-  return c;
+  _elDate = _elDate || document.getElementById('hdr-date');
+  _elTime = _elTime || document.getElementById('hdr-time');
+  _elTz   = _elTz   || document.getElementById('tzLabel');
+  const p = etParts(new Date());
+  _elDate.textContent = `${p.weekday.toUpperCase()} · ${p.day} ${p.month.toUpperCase()} ${p.year}`;
+  _elTime.textContent = `${p.hour}:${p.minute}:${p.second} ${p.timeZoneName}`;
+  if(_elTz) _elTz.textContent = p.timeZoneName;
 }
 
 // ═══════════════════════════════════════════════════════
 // FORMAT
 // ═══════════════════════════════════════════════════════
-function fp(v,dec=2){return v.toLocaleString('en-US',{minimumFractionDigits:dec,maximumFractionDigits:dec})}
+// Every formatter below treats null/undefined/NaN as "no data" and renders an
+// em dash. Previously fp() called .toLocaleString on whatever it was given — a
+// null price threw inside renderAll(), which is itself inside loadData()'s try,
+// so the whole page silently fell back to demo data and blamed a missing file.
+const NA = '<span class="neu" title="No data">—</span>';
+const isNum = v => typeof v === 'number' && Number.isFinite(v);
+
+// Escapes for interpolation into element CONTENT (not just attributes). The old
+// helper escaped only & and ", so a "<" in any upstream name injected markup.
+function esc(s){
+  return String(s ?? '').replace(/[&<>"']/g, c => (
+    {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+function fp(v,dec=2){
+  if(!isNum(v)) return '—';
+  return v.toLocaleString('en-US',{minimumFractionDigits:dec,maximumFractionDigits:dec});
+}
+
+// One rule for price decimals everywhere, instead of the two slightly different
+// ladders the main tables and the crypto table used to apply.
+function priceDecimals(v){
+  const a = Math.abs(v);
+  if(a < 1)    return 4;
+  if(a < 10)   return 3;
+  if(a < 1000) return 2;
+  return 0;
+}
+function fpPrice(v){ return isNum(v) ? fp(v, priceDecimals(v)) : '—'; }
+
 function pct(v,badge=false){
-  if(v===null||v===undefined)return'<span class="neu">—</span>';
+  if(!isNum(v)) return NA;
   const p=v>0?'+':'',cls=v>0?'up':v<0?'dn':'neu';
   if(badge){const bc=v>0?'up-b':v<0?'dn-b':'neu-b';return`<span class="${bc}">${p}${v.toFixed(2)}%</span>`}
   return`<span class="${cls}">${p}${v.toFixed(2)}%</span>`;
 }
-function pctBar(v,badge=false,maxPct=15){
+
+// Bar scales, per column. 1D and 1W both used ±15%, which made a normal day's
+// move a 3-pixel stub; 52W-from-high and YTD need much wider ranges.
+const BAR_SCALE = { d1: 3, w1: 8, hi52: 30, ytd: 25 };
+
+function pctBar(v,badge=false,maxPct=BAR_SCALE.d1,neutralBar=false){
   const inner=pct(v,badge);
-  if(v===null||v===undefined)return inner;
+  if(!isNum(v)) return inner;
   const w=Math.min(Math.abs(v)/maxPct*100,100);
-  const col=v>0?'var(--green)':v<0?'var(--red)':'var(--text3)';
+  // 52W-from-high is <= 0 by construction (it's distance below the high, not a
+  // loss), so painting it red on every single row said nothing. Amber instead.
+  const col=neutralBar?'var(--amber)':v>0?'var(--green)':v<0?'var(--red)':'var(--text3)';
   return`<div class="pct-wrap">${inner}<div class="pct-bar" style="width:${w.toFixed(1)}%;background:${col}"></div></div>`;
 }
+
 function bps(v){
-  if(v===null||v===undefined)return'<span class="neu">—</span>';
+  if(!isNum(v)) return NA;
   const p=v>0?'+':'',cls=v>0?'up':v<0?'dn':'neu';
   return`<span class="${cls}">${p}${v.toFixed(1)}bps</span>`;
 }
 
-// ═══════════════════════════════════════════════════════
-// HOLDINGS BUTTON
-// ═══════════════════════════════════════════════════════
 let holdingIdx=0;
-function holdBtn(sym){
-  const h=HOLDINGS[sym];
-  if(!h)return'<span style="color:var(--text3);font-size:9px">—</span>';
-  const id='hr'+holdingIdx++;
-  return`<button class="expand-btn" id="btn${id}" onclick="toggleHoldings('${id}','${sym}')"><span class="arr">▸</span> TOP 10</button>`;
-}
-function toggleHoldings(id,sym){
-  const btn=document.getElementById('btn'+id);
-  const row=document.getElementById('hold'+id);
-  const open=btn.classList.toggle('open');
-  row.classList.toggle('show',open);
-}
-
-function holdRow(id,sym){
-  const h=HOLDINGS[sym]||[];
-  return`<tr class="holdings-row" id="hold${id}"><td colspan="9" style="padding:0"><div class="holdings-inner">
-    <div class="h-title">TOP 10 HOLDINGS BY WEIGHT</div>
-    <div class="h-list">${h.map(x=>`<div class="h-item"><span class="h-w">${x.w.toFixed(1)}%</span><span class="h-sym">${x.s}</span><span class="h-nm">${x.n}</span></div>`).join('')}</div>
-  </div></td></tr>`;
-}
 
 // ═══════════════════════════════════════════════════════
 // TABLE BUILDERS
 // ═══════════════════════════════════════════════════════
+// Basis-point move of a yield. The fetcher now ships d1_bps/w1_bps/ytd_bps
+// directly; for data files written before that, derive it exactly from the
+// percent change and the level (prev = price / (1 + pct/100)) rather than
+// printing a percent change under a column headed "bps", which is what the
+// page used to do — for a 4.796% 10-year, a "+0.80" reading was a 3.8bp move.
+function yieldBps(item, field){
+  const direct = item[field + '_bps'];
+  if(isNum(direct)) return direct;
+  const p = item.price, c = item[field];
+  if(!isNum(p) || !isNum(c) || c === -100) return null;
+  const prev = p / (1 + c/100);
+  return Math.round((p - prev) * 100 * 10) / 10;
+}
+
 function buildRows(data, tbodyId, opts={}) {
   const {rank=false, hasPrice=true, isYield=false, hasHoldings=false, benchmarkSym=null, showEma=false} = opts;
   const tbody = document.getElementById(tbodyId);
+  if(!tbody) return;
   tbody.innerHTML='';
+  // Build off-DOM: appending ~200 rows one at a time to a live tbody forced a
+  // layout on every insert.
+  const frag = document.createDocumentFragment();
 
-
-  data.forEach((item, i) => {
+  (data||[]).forEach((item, i) => {
+    if(!item) return;
     const m = META[item.sym]||{name:item.sym,sym:item.sym};
     const displayName = item.name || m.name;
     const displayFlag = item.flag || m.flag || '';
-    const flagStr = displayFlag ? displayFlag+' ' : '';
-    const _sa = s => String(s).replace(/&/g,'&amp;').replace(/"/g,'&quot;');
-    const nameHTML = `<td class="l"><span class="tn tn-link" data-sym="${_sa(item.sym)}" data-nm="${_sa(displayName)}">${flagStr}${displayName}</span><span class="ts">${m.sym||item.sym}</span></td>`;
+    const flagStr = displayFlag ? esc(displayFlag)+' ' : '';
+    // Ticker names are focusable buttons now, not click-only spans — the charts
+    // were unreachable by keyboard.
+    const nameHTML = `<td class="l"><span class="tn tn-link" role="button" tabindex="0" data-sym="${esc(item.sym)}" data-nm="${esc(displayName)}">${flagStr}${esc(displayName)}</span><span class="ts">${esc(m.sym||item.sym)}</span></td>`;
     const rankHTML = rank ? `<td class="l"><span class="rank ${i<3?'g':''}">${i+1}</span></td>` : '';
-    const priceHTML = hasPrice && item.price!==undefined ? `<td>${fp(item.price, item.price<10?3:item.price<100?2:item.price>1000?0:2)}</td>` : '';
-    const d1HTML = isYield ? `<td>${bps(item.d1)}</td>` : `<td>${pctBar(item.d1)}</td>`;
-    
+    const priceHTML = hasPrice ? `<td>${fpPrice(item.price)}</td>` : '';
+
+    // Yields: show the actual basis-point move the header promises. The fetcher
+    // supplies d1_bps/w1_bps/ytd_bps; fall back to the percent change (clearly
+    // labelled) for records written before that field existed.
+    let d1HTML, w1HTML, ytdHTML;
+    if(isYield){
+      d1HTML  = `<td>${bps(yieldBps(item,'d1'))}</td>`;
+      w1HTML  = `<td>${bps(yieldBps(item,'w1'))}</td>`;
+      ytdHTML = `<td>${bps(yieldBps(item,'ytd'))}</td>`;
+    } else {
+      d1HTML  = `<td>${pctBar(item.d1,false,BAR_SCALE.d1)}</td>`;
+      w1HTML  = `<td>${pctBar(item.w1,true,BAR_SCALE.w1)}</td>`;
+      ytdHTML = `<td>${pctBar(item.ytd,false,BAR_SCALE.ytd)}</td>`;
+    }
+    const hi52HTML = `<td>${pctBar(item.hi52,false,BAR_SCALE.hi52,true)}</td>`;
+
     const tr = document.createElement('tr');
     if(benchmarkSym && item.sym===benchmarkSym) tr.classList.add('bench-row');
-    tr.innerHTML = `${rankHTML}${nameHTML}${priceHTML}${d1HTML}<td>${pctBar(item.w1,true)}</td><td>${pctBar(item.hi52,false,30)}</td><td>${pctBar(item.ytd,false,20)}</td>`;
-    // EMA trend indicator column (equity ETFs only)
+    // Carried over from a previous run because today's fetch failed for this
+    // ticker — dimmed and badged rather than passed off as current.
+    if(item.stale){ tr.classList.add('stale'); tr.title = 'Carried over from the previous run — today\'s fetch failed for this ticker'; }
+    tr.innerHTML = `${rankHTML}${nameHTML}${priceHTML}${d1HTML}${w1HTML}${hi52HTML}${ytdHTML}`;
+
+    // Short-term trend column. NOTE this is 10-EMA vs 20-EMA — a different
+    // measure from the price-vs-21/50/200-EMA panel in section 00. Labelled so
+    // the two aren't read as the same "trend".
     if(showEma){
       const emaTd=document.createElement('td');
       emaTd.style.cssText='text-align:center;padding:3px 8px';
       if(item.ema_uptrend===true){
-        emaTd.innerHTML='<span class="ema-up" title="10-EMA > 20-EMA · Short-term uptrend">✓</span>';
+        emaTd.innerHTML='<span class="ema-up" title="10-EMA above 20-EMA — short-term uptrend">✓</span>';
       } else if(item.ema_uptrend===false){
-        emaTd.innerHTML='<span class="ema-dn" title="10-EMA ≤ 20-EMA">✗</span>';
+        emaTd.innerHTML='<span class="ema-dn" title="10-EMA at or below 20-EMA — no short-term uptrend">✗</span>';
       } else {
-        emaTd.innerHTML='<span style="color:var(--text3);font-size:11px">—</span>';
+        emaTd.innerHTML='<span class="ema-na" title="Not enough history">—</span>';
       }
       tr.appendChild(emaTd);
     }
+
     if(hasHoldings){
       const hTd=document.createElement('td');
       hTd.className='l';
@@ -944,35 +886,38 @@ function buildRows(data, tbodyId, opts={}) {
       const sym=item.sym;
       const h=HOLDINGS[sym];
       if(h){
-        hTd.innerHTML=`<button class="expand-btn" id="btn${hid}" onclick="toggleH('${hid}','${sym}')"><span class="arr">▸</span> TOP 10</button>`;
+        hTd.innerHTML=`<button type="button" class="expand-btn" id="btn${hid}" aria-expanded="false" aria-controls="hold${hid}" onclick="toggleH('${esc(hid)}')"><span class="arr" aria-hidden="true">▸</span> TOP 10</button>`;
       } else {
-        hTd.innerHTML='<span style="color:var(--text3);font-size:9px">—</span>';
+        hTd.innerHTML='<span style="color:var(--text3);font-size:9.5px">—</span>';
       }
       tr.appendChild(hTd);
-      tbody.appendChild(tr);
+      frag.appendChild(tr);
       if(h){
         const holdTr=document.createElement('tr');
         holdTr.className='holdings-row';
         holdTr.id='hold'+hid;
         const colspan = (rank?1:0)+1+(hasPrice?1:0)+4+(showEma?1:0)+(hasHoldings?1:0);
         holdTr.innerHTML=`<td colspan="${colspan}" style="padding:0"><div class="holdings-inner">
-          <div class="h-title">TOP 10 HOLDINGS BY WEIGHT — ${META[sym]?.name||sym}</div>
-          <div class="h-list">${h.map(x=>`<div class="h-item"><span class="h-w">${x.w.toFixed(1)}%</span><span class="h-sym">${x.s}</span><span class="h-nm">${x.n}</span></div>`).join('')}</div>
+          <div class="h-title">TOP 10 HOLDINGS BY WEIGHT — ${esc(META[sym]?.name||sym)}</div>
+          <div class="h-list">${h.map(x=>`<div class="h-item"><span class="h-w">${isNum(x.w)?x.w.toFixed(1)+'%':'—'}</span><span class="h-sym">${esc(x.s)}</span><span class="h-nm">${esc(x.n)}</span></div>`).join('')}</div>
         </div></td>`;
-        tbody.appendChild(holdTr);
+        frag.appendChild(holdTr);
       }
     } else {
-      tbody.appendChild(tr);
+      frag.appendChild(tr);
     }
   });
+
+  tbody.appendChild(frag);
 }
 
-function toggleH(id,sym){
+function toggleH(id){
   const btn=document.getElementById('btn'+id);
   const row=document.getElementById('hold'+id);
-  if(!row)return;
+  if(!row||!btn)return;
   const open=btn.classList.toggle('open');
   row.classList.toggle('show',open);
+  btn.setAttribute('aria-expanded', String(open));
 }
 
 // ═══════════════════════════════════════════════════════
@@ -980,7 +925,27 @@ function toggleH(id,sym){
 // ═══════════════════════════════════════════════════════
 let DATA = null;
 
+// How many rows each "top N" table shows before the SHOW ALL toggle.
+const TOP_N = 10;
+const expanded = { thematic:false };
+
+function renderList(key, tbodyId, all, opts){
+  const rows = expanded[key] ? all : all.slice(0, TOP_N);
+  buildRows(rows, tbodyId, opts);
+  const bar = document.getElementById('more-'+key);
+  if(!bar) return;
+  if(all.length <= TOP_N){ bar.hidden = true; return; }
+  bar.hidden = false;
+  bar.innerHTML = `<button type="button" class="more-btn" aria-expanded="${expanded[key]}" onclick="toggleMore('${key}')">` +
+    (expanded[key] ? `▴ Show top ${TOP_N}` : `▾ Show all ${all.length}`) + `</button>`;
+}
+function toggleMore(key){
+  expanded[key] = !expanded[key];
+  if(DATA) renderAll(DATA);
+}
+
 function renderAll(d) {
+  if(!d) return;
   buildRows(d.futures,   't-futures',  {hasPrice:true});
   buildRows(d.dxvix,     't-dxvix',    {hasPrice:true});
   buildRows(d.metals,    't-metals',   {hasPrice:true});
@@ -988,57 +953,109 @@ function renderAll(d) {
   buildRows(d.yields,    't-yields',   {hasPrice:true,isYield:true});
   buildRows(d.global,    't-global',   {hasPrice:true});
   buildRows(d.etfmain,   't-etfmain',  {hasPrice:true,hasHoldings:true,showEma:true});
-  buildRows(d.submarket, 't-submarket',{rank:true,hasPrice:true,showEma:true});
+
   const _spySec = d.etfmain ? d.etfmain.find(e=>e.sym==='SPY') : null;
   let _secData = d.sector ? [...d.sector] : [];
   if(_spySec && !_secData.find(e=>e.sym==='SPY')) _secData.push({..._spySec});
-  _secData.sort((a,b)=>(b.w1||0)-(a.w1||0));
+  // Records with no 1W value sort last rather than being treated as flat.
+  const byW1 = (a,b)=>(isNum(b.w1)?b.w1:-Infinity)-(isNum(a.w1)?a.w1:-Infinity);
+  _secData.sort(byW1);
   buildRows(_secData, 't-sector', {rank:true,hasPrice:false,hasHoldings:true,benchmarkSym:'SPY',showEma:true});
-  buildRows((d.thematic||[]).slice(0,10), 't-thematic', {rank:true,hasPrice:true,hasHoldings:true,showEma:true});
-  buildRows(d.country,   't-country',  {rank:true,hasPrice:true,hasHoldings:true,showEma:true});
 
-  // Crypto
-  const cb=document.getElementById('t-crypto');
-  cb.innerHTML='';
-  (d.crypto||[]).forEach(item=>{
-    const tr=document.createElement('tr');
-    tr.innerHTML=`<td class="l"><span class="tn tn-link" data-sym="${String(item.sym).replace(/&/g,'&amp;').replace(/"/g,'&quot;')}" data-nm="${String(item.name||item.sym).replace(/&/g,'&amp;').replace(/"/g,'&quot;')}">${item.name||item.sym}</span><span class="ts">${item.sym}</span></td>
-      <td>${fp(item.price,item.price<10?4:item.price<1000?2:0)}</td>
-      <td>${pctBar(item.d1)}</td><td>${pctBar(item.w1,true)}</td><td>${pctBar(item.hi52,false,30)}</td><td>${pctBar(item.ytd,false,20)}</td>`;
-    cb.appendChild(tr);
-  });
+  // The fetcher pulls 81 thematic ETFs; the table shows the top 10 with a
+  // toggle to the full list rather than silently discarding the other 71.
+  renderList('thematic', 't-thematic', d.thematic||[], {rank:true,hasPrice:true,hasHoldings:true,showEma:true});
 
-  // Update freshness badge
-  if(d.generated_at){
-    const dt=new Date(d.generated_at);
-    const est=new Date(dt.toLocaleString('en-US',{timeZone:'America/New_York'}));
-    const M=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-    const label=`DATA: ${est.getDate()} ${M[est.getMonth()]} ${est.getFullYear()} · ${String(est.getHours()).padStart(2,'0')}:${String(est.getMinutes()).padStart(2,'0')} EST`;
-    document.getElementById('lastUpdatedBadge').textContent=label;
-    document.getElementById('lastUpdatedBadge').style.color='var(--green)';
-    document.getElementById('dataStatus').textContent='✓ Market data loaded — EOD prices';
-    document.getElementById('dataStatus').style.color='var(--green)';
+  // Crypto — same builder as everything else now, so it gets the same null
+  // guards, escaping and decimal rules instead of its own copy.
+  buildRows(d.crypto, 't-crypto', {hasPrice:true});
 
-    // How stale?
-    const ageHrs=Math.round((Date.now()-dt.getTime())/3600000);
-    document.getElementById('dataAge').textContent=`Updated ${ageHrs}h ago · Refreshes weekday post-close (~17:00 EST)`;
+  renderWarnings(d);
+  renderFreshness(d);
+}
+
+// ═══════════════════════════════════════════════════════
+// FRESHNESS
+// ═══════════════════════════════════════════════════════
+// Eastern-time formatting via Intl, not the `new Date(d.toLocaleString(...))`
+// string-reparse hack, and with the correct EST/EDT abbreviation instead of a
+// hardcoded "EST" that was wrong from March to November.
+const ET_PARTS = new Intl.DateTimeFormat('en-US', {
+  timeZone:'America/New_York', weekday:'short', day:'numeric', month:'short',
+  year:'numeric', hour:'2-digit', minute:'2-digit', second:'2-digit',
+  hour12:false, timeZoneName:'short'
+});
+function etParts(date){
+  const out = {};
+  for(const p of ET_PARTS.formatToParts(date)) out[p.type] = p.value;
+  return out;
+}
+
+// Data older than this is called out rather than shown under a green tick.
+const STALE_AFTER_HOURS = 30;
+
+function renderFreshness(d){
+  const badge  = document.getElementById('lastUpdatedBadge');
+  const status = document.getElementById('dataStatus');
+  const ageEl  = null;   // the age line is now the badge's tooltip
+  if(!d.generated_at){
+    // Previously this branch did nothing, leaving "Loading market data…" on
+    // screen forever above fully rendered tables.
+    status.textContent = '⚠ Data file has no timestamp — age unknown';
+    status.style.color = 'var(--amber)';
+    badge.textContent  = 'DATA: UNKNOWN AGE';
+    badge.style.color  = 'var(--amber)';
+    return;
   }
+  const dt = new Date(d.generated_at);
+  const p  = etParts(dt);
+  badge.textContent = `DATA: ${p.day} ${p.month} ${p.year} · ${p.hour}:${p.minute} ${p.timeZoneName}`;
+
+  const ageHrs = (Date.now() - dt.getTime()) / 3600000;
+  const stale  = ageHrs > STALE_AFTER_HOURS;
+  const ageTxt = ageHrs < 1 ? `${Math.round(ageHrs*60)}m` :
+                 ageHrs < 48 ? `${Math.round(ageHrs)}h` :
+                 `${Math.round(ageHrs/24)}d`;
+
+  if(stale){
+    status.textContent = `⚠ Data is ${ageTxt} old — the refresh job may not have run`;
+    status.style.color = 'var(--amber)';
+    badge.style.color  = 'var(--amber)';
+  } else {
+    status.textContent = '✓ Market data loaded — EOD prices';
+    status.style.color = 'var(--green)';
+    badge.style.color  = 'var(--green)';
+  }
+  // `data_asof` is the date the PRICES are for, which is what actually matters:
+  // a holiday run refreshes the timestamp while committing Friday's closes.
+  const asof = d.data_asof ? ` · prices as of ${d.data_asof}` : '';
+  badge.title = `Updated ${ageTxt} ago${asof} · refreshes weekday post-close (~17:00 ET) via GitHub Actions · Yahoo Finance`;
+}
+
+function renderWarnings(d){
+  const bar = document.getElementById('warnBar');
+  if(!bar) return;
+  const ws = (d.warnings||[]).slice(0, 8);
+  if(!ws.length){ bar.hidden = true; return; }
+  bar.hidden = false;
+  bar.innerHTML = `<strong>⚠ Last refresh ran degraded — some values may be carried over:</strong>` +
+    `<ul>${ws.map(w=>`<li>${esc(w)}</li>`).join('')}</ul>`;
 }
 
 async function loadData(){
   try {
-    // Try live data.json first (works on GitHub Pages)
-    const resp = await fetch('data/data.json?_='+Date.now());
+    // cache:'no-cache' revalidates with the server (so an unchanged file comes
+    // back as a 304 instead of a fresh 180KB download) — the old `?_=<now>`
+    // cache-buster made every hourly refresh a full re-download.
+    const resp = await fetch('data/data.json', {cache:'no-cache'});
     if(!resp.ok) throw new Error('No data.json yet');
     DATA = await resp.json();
     renderAll(DATA);
   } catch(e) {
-    // Fallback: render DEMO data with a warning banner
-    console.warn('data/data.json not found, showing demo data:', e.message);
-    DATA = DEMO;
-    DATA.crypto = CRYPTO_DEMO;
+    console.warn('data/data.json not available, showing demo data:', e.message);
+    DATA = {...DEMO, crypto: CRYPTO_DEMO};
     renderAll(DATA);
-    document.getElementById('dataStatus').textContent='⚠ Demo data shown — data/data.json not yet generated (run GitHub Action first)';
+    document.getElementById('dataStatus').textContent='⚠ Demo data shown — data/data.json not yet generated (run the GitHub Action first)';
     document.getElementById('dataStatus').style.color='var(--amber)';
     document.getElementById('lastUpdatedBadge').textContent='DEMO DATA';
     document.getElementById('lastUpdatedBadge').style.color='var(--amber)';
@@ -1135,16 +1152,31 @@ function openChart(rawSym, name) {
   document.getElementById('tv-frame').src = url;
   document.getElementById('tv-modal').classList.add('open');
   document.body.style.overflow = 'hidden';
+  // Remember where focus came from so Escape returns the user to their place.
+  _chartOpener = document.activeElement;
+  const closeBtn = document.getElementById('tv-close');
+  if(closeBtn) closeBtn.focus();
 }
+let _chartOpener = null;
 function closeChart() {
   document.getElementById('tv-modal').classList.remove('open');
   document.getElementById('tv-frame').src = '';
   document.body.style.overflow = '';
+  if(_chartOpener && _chartOpener.focus) _chartOpener.focus();
+  _chartOpener = null;
 }
-document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeChart(); });
+document.addEventListener('keydown', function(e){
+  if(e.key==='Escape' && document.getElementById('tv-modal').classList.contains('open')) closeChart();
+});
 document.addEventListener('click', function(e){
   const t = e.target.closest('.tn-link');
   if(t){ const s=t.getAttribute('data-sym'), n=t.getAttribute('data-nm')||s; openChart(s,n); }
+});
+// Ticker names are role="button" — make Enter and Space work like a click.
+document.addEventListener('keydown', function(e){
+  if(e.key!=='Enter' && e.key!==' ') return;
+  const t = e.target.closest('.tn-link');
+  if(t){ e.preventDefault(); openChart(t.getAttribute('data-sym'), t.getAttribute('data-nm')||t.getAttribute('data-sym')); }
 });
 
 
@@ -1159,97 +1191,29 @@ function toast(msg){
 // ═══════════════════════════════════════════════════════
 function renderTrend(d) {
   const spy = d && d.etfmain ? d.etfmain.find(x => x.sym === 'SPY') : null;
-  const cells = [
-    {id:'trend-spy-21',  daysId:'trend-spy-days-21',  flag: spy ? spy.above_ema21  : null, ema: spy ? spy.ema21_val  : null, streak: spy ? spy.streak_21  : null},
-    {id:'trend-spy-50',  daysId:'trend-spy-days-50',  flag: spy ? spy.above_ema50  : null, ema: spy ? spy.ema50_val  : null, streak: spy ? spy.streak_50  : null},
-    {id:'trend-spy-200', daysId:'trend-spy-days-200', flag: spy ? spy.above_ema200 : null, ema: spy ? spy.ema200_val : null, streak: spy ? spy.streak_200 : null},
-  ];
-  cells.forEach(c => {
-    const el = document.getElementById(c.id);
-    if (el) {
-      if (c.flag === true) {
-        const meta = (spy && c.ema) ? `<div class="trend-meta">${spy.price.toFixed(2)} &gt; ${c.ema.toFixed(2)}</div>` : '';
-        el.innerHTML = `<span class="trend-bull">BULLISH</span>${meta}`;
-      } else if (c.flag === false) {
-        const meta = (spy && c.ema) ? `<div class="trend-meta">${spy.price.toFixed(2)} &le; ${c.ema.toFixed(2)}</div>` : '';
-        el.innerHTML = `<span class="trend-bear">BEARISH</span>${meta}`;
-      } else {
-        el.innerHTML = '<span class="trend-na">—</span>';
-      }
+  [['21', 'above_ema21', 'ema21_val', 'streak_21'],
+   ['50', 'above_ema50', 'ema50_val', 'streak_50'],
+   ['200','above_ema200','ema200_val','streak_200']].forEach(([n, flagK, emaK, streakK]) => {
+    const el = document.getElementById('trend-' + n);
+    if(!el) return;
+    const flag = spy ? spy[flagK] : null;
+    const ema  = spy ? spy[emaK] : null;
+    const streak = spy ? spy[streakK] : null;
+
+    if(flag !== true && flag !== false){
+      el.innerHTML = '<span class="trend-na" title="Not enough price history">—</span>';
+      return;
     }
-    const daysEl = document.getElementById(c.daysId);
-    if (daysEl) {
-      if (typeof c.streak === 'number' && c.streak >= 1) {
-        const word = c.streak === 1 ? 'day' : 'days';
-        const dirLbl = c.flag === true ? 'above' : c.flag === false ? 'below' : '';
-        const meta = dirLbl ? `<div class="trend-days-lbl">${dirLbl} EMA</div>` : '';
-        daysEl.innerHTML = `<span class="trend-days-num">${c.streak}</span><span class="trend-days-lbl">${word}</span>${meta}`;
-      } else {
-        daysEl.innerHTML = '<span class="trend-na">—</span>';
-      }
-    }
-  });
-}
-
-// ═══════════════════════════════════════════════════════
-// MARKET BREADTH & SENTIMENT
-// ═══════════════════════════════════════════════════════
-function renderBreadth(d) {
-  const br = d ? d.breadth : null;
-  const grid = document.getElementById('breadthGrid');
-  if (!grid) return;
-  if (!br) {
-    grid.innerHTML = '<div style="color:var(--text3);font-size:11px;grid-column:span 7;text-align:center;padding:20px 0">Breadth data unavailable — run fetch_data.py to generate</div>';
-    return;
-  }
-  grid.innerHTML = '';
-
-  const fg = br.fear_greed || {};
-  const fgScore = typeof fg.score === 'number' ? fg.score : 50;
-  const fgRating = (fg.rating || 'Neutral').replace(/_/g,' ');
-  const fgCol = fgScore >= 60 ? 'var(--green)' : fgScore <= 40 ? 'var(--red)' : 'var(--amber)';
-
-  const nm = br.naaim || {};
-  const nmVal = typeof nm.value === 'number' ? nm.value : 0;
-  const nmCol = nmVal >= 80 ? 'var(--red)' : nmVal <= 30 ? 'var(--green)' : 'var(--amber)';
-  const nmLbl = nmVal >= 80 ? 'OVEREXPOSED' : nmVal >= 50 ? 'BULLISH' : nmVal >= 30 ? 'NEUTRAL' : 'DEFENSIVE';
-
-  const ad = br.advance_decline || {};
-  const adv = ad.advancers ?? 0, dec = ad.decliners ?? 0, adNet = adv - dec;
-  const adCol = adNet >= 0 ? 'var(--green)' : 'var(--red)';
-
-  const hl = br.new_high_low || {};
-  const nH = hl.new_highs ?? 0, nL = hl.new_lows ?? 0, hlNet = nH - nL;
-  const hlCol = hlNet >= 0 ? 'var(--green)' : 'var(--red)';
-
-  const p20  = br.pct_above_sma20  ?? 0;
-  const p50  = br.pct_above_sma50  ?? 0;
-  const p200 = br.pct_above_sma200 ?? 0;
-  const pCol = p => p >= 60 ? 'var(--green)' : p <= 40 ? 'var(--red)' : 'var(--amber)';
-  const pLbl = p => p >= 60 ? 'BROAD STRENGTH' : p <= 40 ? 'WEAK BREADTH'  : 'MIXED';
-
-  const fmt = n => n >= 1000 ? n.toLocaleString() : String(n);
-  const netStr = n => (n >= 0 ? '▲ +' : '▼ ') + fmt(Math.abs(n)) + ' net';
-
-  const cards = [
-    { lbl:'Fear & Greed',   val:fgScore.toFixed(0),     sub:fgRating.toUpperCase(), col:fgCol,    note:'CNN Index · 0=Extreme Fear, 100=Extreme Greed' },
-    { lbl:'NAAIM Exposure', val:nmVal.toFixed(0)+'%',   sub:nmLbl,                  col:nmCol,    note:'Active mgr equity exposure · ' + (nm.date || 'weekly') },
-    { lbl:'Advancers',      val:fmt(adv),               sub:netStr(adNet),           col:adCol,    note:'vs ' + fmt(dec) + ' decliners · session' },
-    { lbl:'New Highs',      val:fmt(nH),                sub:netStr(hlNet),           col:hlCol,    note:'vs ' + fmt(nL) + ' new lows · 52-wk' },
-    { lbl:'% > SMA 20', val:p20.toFixed(1)+'%',  sub:pLbl(p20),              col:pCol(p20), note:'S&P 500 stocks above 20-day MA' },
-    { lbl:'% > SMA 50', val:p50.toFixed(1)+'%',  sub:pLbl(p50),              col:pCol(p50), note:'S&P 500 stocks above 50-day MA' },
-    { lbl:'% > SMA 200',    val:p200.toFixed(1)+'%',   sub:pLbl(p200),             col:pCol(p200),note:'S&P 500 stocks above 200-day MA' },
-  ];
-
-  cards.forEach(c => {
-    const el = document.createElement('div');
-    el.style.cssText = 'background:var(--bg3);border:1px solid var(--border);border-radius:4px;padding:12px 8px;text-align:center;display:flex;flex-direction:column;gap:4px;min-height:100px;justify-content:space-between';
-    el.innerHTML =
-      '<div style="font-size:8.5px;color:var(--text3);letter-spacing:1.2px;text-transform:uppercase">'   + c.lbl + '</div>'
-    + '<div style="font-size:20px;font-weight:700;color:' + c.col + ';font-family:var(--mono);line-height:1.1">' + c.val + '</div>'
-    + '<div style="font-size:8.5px;color:' + c.col + ';letter-spacing:0.5px;font-weight:500">'            + c.sub + '</div>'
-    + '<div style="font-size:7.5px;color:var(--text3);line-height:1.3">'                                  + c.note + '</div>';
-    grid.appendChild(el);
+    const verdict = flag
+      ? '<span class="trend-bull">BULLISH</span>'
+      : '<span class="trend-bear">BEARISH</span>';
+    // isNum, not truthiness: an EMA of exactly 0 used to blank the caption.
+    const meta = (isNum(ema) && isNum(spy.price))
+      ? `<span class="trend-meta">${spy.price.toFixed(2)} ${flag ? '&gt;' : '&le;'} ${ema.toFixed(2)}</span>` : '';
+    // >= 0, not >= 1: a legitimate zero-day streak was showing as "—".
+    const days = isNum(streak) && streak >= 0
+      ? `<span class="trend-days"><b>${streak}</b> ${streak === 1 ? 'day' : 'days'} ${flag ? 'above' : 'below'}</span>` : '';
+    el.innerHTML = verdict + meta + days;
   });
 }
 
@@ -1257,6 +1221,7 @@ function renderBreadth(d) {
 // INIT
 // ═══════════════════════════════════════════════════════
 window.addEventListener('load',()=>{
+  tick(); setInterval(tick,1000);
   loadData();
   // Silent re-fetch every 60 min in case the daily data has refreshed
   setInterval(loadData, 60 * 60 * 1000);
@@ -1265,37 +1230,55 @@ window.addEventListener('load',()=>{
 // ═══════════════════════════════════════════════════════
 // SNAPSHOT + SHARE
 // ═══════════════════════════════════════════════════════
+// html2canvas is ~110KB and was loaded synchronously in <head> on every page
+// view for a feature almost nobody triggers. Fetch it on first use instead.
+let _h2cPromise = null;
+function loadHtml2Canvas(){
+  if(window.html2canvas) return Promise.resolve(window.html2canvas);
+  if(_h2cPromise) return _h2cPromise;
+  _h2cPromise = new Promise((res, rej) => {
+    const sc = document.createElement('script');
+    sc.src = 'https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js';
+    sc.onload = () => res(window.html2canvas);
+    sc.onerror = () => rej(new Error('could not load html2canvas'));
+    document.head.appendChild(sc);
+  });
+  return _h2cPromise;
+}
+
 function captureSnap(){
   const fl=document.getElementById('snapFlash');
   fl.classList.add('on');setTimeout(()=>fl.classList.remove('on'),150);
   toast('Generating snapshot...');
-  html2canvas(document.getElementById('root'),{
+  loadHtml2Canvas().then(h2c => h2c(document.getElementById('root'),{
     backgroundColor:'#07090d',scale:1.4,useCORS:true,logging:false,
     ignoreElements:el=>el.tagName==='IFRAME'
-  }).then(c=>{
+  })).then(c=>{
     c.toBlob(b=>{
       const u=URL.createObjectURL(b);
       const a=document.createElement('a');
       a.href=u;
       a.download=`MCC-${new Date().toISOString().slice(0,10)}.png`;
       a.click();URL.revokeObjectURL(u);
-      toast('PNG saved — attach to X or paste into OneNote');
+      toast('PNG saved');
     });
-  });
+  }).catch(err=>toast('Snapshot failed: '+err.message));
 }
-
 
 </script>
 <script>
-Object.assign(META, {
+// Merge per key rather than replacing whole entries — a plain Object.assign
+// here was overwriting the earlier definitions wholesale, dropping fields like
+// isYield and quietly renaming BOTZ / AIQ / DRIV / SKYY.
+const META_EXTRA = {
   'RSPG':{name:'Energy EW',sym:'RSPG'},'RSPT':{name:'Technology EW',sym:'RSPT'},
   'RSPF':{name:'Financials EW',sym:'RSPF'},'RSPN':{name:'Industrials EW',sym:'RSPN'},
   'RSPD':{name:'Cons Discr EW',sym:'RSPD'},'RSP':{name:'S&P 500 EW',sym:'RSP'},
   'RSPU':{name:'Utilities EW',sym:'RSPU'},'RSPM':{name:'Materials EW',sym:'RSPM'},
   'RSPH':{name:'Health Care EW',sym:'RSPH'},'RSPR':{name:'Real Estate EW',sym:'RSPR'},
   'RSPS':{name:'Cons Staples EW',sym:'RSPS'},'RSPC':{name:'Comm Svcs EW',sym:'RSPC'},
-  'US2Y':{name:'2Y Treasury Yield',sym:'US2Y'},
-  'US10Y':{name:'10Y Treasury Yield',sym:'US10Y'},'US30Y':{name:'30Y Treasury Yield',sym:'US30Y'},
+  'US2Y':{name:'2Y Treasury',sym:'US2Y'},
+  'US10Y':{name:'10Y Treasury',sym:'US10Y'},'US30Y':{name:'30Y Treasury',sym:'US30Y'},
   'GREK':{name:'Greece',sym:'GREK',flag:'🇬🇷'},'ARGT':{name:'Argentina',sym:'ARGT',flag:'🇦🇷'},
   'EWS':{name:'Singapore',sym:'EWS',flag:'🇸🇬'},'EWP':{name:'Spain',sym:'EWP',flag:'🇪🇸'},
   'EUFN':{name:'Europe Financials',sym:'EUFN'},'MCHI':{name:'China',sym:'MCHI',flag:'🇨🇳'},
@@ -1353,7 +1336,10 @@ Object.assign(META, {
   'KRE':{name:'SPDR S&P Regional Banking',sym:'KRE'},'IGV':{name:'iShares Expanded Tech-SW',sym:'IGV'},
   'XSW':{name:'SPDR S&P Software & Svcs',sym:'XSW'},'BTF':{name:'CoinShares BTC & Ether',sym:'BTF'},
   'SKYY':{name:'First Trust Cloud Computing',sym:'SKYY'},
-});
+};
+for (const [k, v] of Object.entries(META_EXTRA)) {
+  META[k] = Object.assign({}, META[k], v);
+}
 
 const __origRenderAll = renderAll;
 renderAll = function(d) {
@@ -1362,68 +1348,10 @@ renderAll = function(d) {
       if (rows && rows.length > 0) HOLDINGS[sym] = rows;
     }
   }
-  if (typeof renderBreadth === 'function') renderBreadth(d);
   if (typeof renderTrend === 'function') renderTrend(d);
   return __origRenderAll(d);
 };
 
-if (typeof DATA !== 'undefined' && DATA && DATA.generated_at) renderAll(DATA);
-</script>
-<script>
-// ── SHARE BUTTON OVERRIDE ────────────────────────────────────────────────────
-shareX = function() {
-  var target = document.querySelector('.wrap') || document.body;
-  showToast('📸 Capturing screenshot…', 8000);
-  html2canvas(target, {
-    backgroundColor: '#07090d',
-    scale: window.devicePixelRatio || 1,
-    useCORS: true,
-    allowTaint: true,
-    logging: false,
-    windowWidth: document.documentElement.scrollWidth,
-    windowHeight: document.documentElement.scrollHeight
-  }).then(function(canvas) {
-    canvas.toBlob(function(blob) {
-      var tweetUrl = 'https://twitter.com/intent/tweet?text=' +
-        encodeURIComponent('Market Dashboard — ' + new Date().toLocaleDateString('en-HK',{day:'2-digit',month:'short',year:'numeric'}) + ' #markets #trading');
-      if (navigator.clipboard && navigator.clipboard.write) {
-        navigator.clipboard.write([new ClipboardItem({'image/png': blob})])
-          .then(function() {
-            showToast('✅ Screenshot copied — paste with Ctrl+V in X / OneNote');
-            window.open(tweetUrl, '_blank');
-          })
-          .catch(function() {
-            showToast('⚠ Clipboard blocked — opening X anyway');
-            window.open(tweetUrl, '_blank');
-          });
-      } else {
-        var url = canvas.toDataURL('image/png');
-        var a = document.createElement('a');
-        a.href = url; a.download = 'market-snapshot-' + new Date().toISOString().slice(0,10) + '.png';
-        a.click();
-        showToast('💾 Image downloaded — attach it to your X post');
-        window.open(tweetUrl, '_blank');
-      }
-    }, 'image/png');
-  }).catch(function(err) {
-    showToast('❌ Screenshot failed: ' + err.message);
-  });
-};
-
-function showToast(msg, ms) {
-  ms = ms || 3500;
-  var t = document.getElementById('_snap_toast');
-  if (!t) {
-    t = document.createElement('div');
-    t.id = '_snap_toast';
-    t.style.cssText = 'position:fixed;bottom:32px;left:50%;transform:translateX(-50%);background:#0c1a2a;color:#00c8ff;border:1px solid #1c3550;padding:13px 24px;border-radius:8px;font-size:13px;z-index:9999;pointer-events:none;transition:opacity .4s;white-space:nowrap;box-shadow:0 4px 20px rgba(0,0,0,.5)';
-    document.body.appendChild(t);
-  }
-  t.textContent = msg;
-  t.style.opacity = '1';
-  clearTimeout(t._tid);
-  t._tid = setTimeout(function(){ t.style.opacity = '0'; }, ms);
-}
 </script>
 </body>
 </html>

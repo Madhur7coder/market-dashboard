@@ -17,7 +17,9 @@ Live URL (after deploy): `https://madhur7coder.github.io/market-dashboard/`
 market-dashboard/
 ├── index.html              ← The dashboard (GitHub Pages serves this)
 ├── fetch_data.py           ← Yahoo Finance fetcher
+├── fetch_funds.py          ← Fixed-income fund fetcher
 ├── tickers.json            ← Ticker config (edit this to change the universe)
+├── requirements.txt        ← Pinned deps — bump deliberately, not on latest
 ├── README.md
 ├── data/
 │   └── data.json           ← Generated daily — do NOT edit manually
@@ -66,9 +68,33 @@ The action runs Mon–Fri at 22:00 UTC (about 17:00 EST / 18:00 EDT, after the U
 - **S&P 500 component breadth**: tickers from Wikipedia, prices from Yahoo Finance.
 - **2-Year Treasury fallback**: FRED CSV endpoint.
 
+## Data integrity
+
+The fetcher is written so that a bad day degrades visibly instead of silently:
+
+- **Per-symbol merge.** If Yahoo returns only part of a section, the missing
+  tickers keep their previous values and are flagged `stale` — the dashboard
+  dims those rows and appends a `·stale` badge. Previously a partial response
+  counted as a success and the missing tickers just vanished from the page.
+- **Nothing is faked.** A metric that can't be computed is `null`, and the
+  dashboard renders `—`. It never substitutes `0`, which reads as a real
+  (and usually bearish) value: a failed NAAIM scrape used to display a green
+  "0% DEFENSIVE", and a failed breadth run "0.0% WEAK BREADTH".
+- **Coverage gate.** The workflow refuses to commit a `data.json` that has lost
+  most of its rows or its whole breadth block, so the last good file stays live.
+- **Warnings surface.** Anything degraded is written to `data.json`'s
+  `warnings` array, shown as `::warning::` annotations on the Actions run, and
+  rendered in an amber banner at the top of the dashboard.
+- **Failures are announced.** A failed workflow opens (or comments on) a
+  `data-refresh` issue rather than going unnoticed.
+- **`data_asof`** records the date the *prices* are for, separately from
+  `generated_at` — so a holiday run that re-commits Friday's closes is visible.
+
 ## Troubleshooting
 
 - **"Demo data" banner**: `data/data.json` doesn't exist yet. Trigger the action manually.
 - **Some tickers missing**: Yahoo occasionally has gaps; check the Action's run log.
-- **Action failed**: usually a transient Yahoo outage — re-run from the Actions tab.
+- **Action failed**: usually a transient Yahoo outage — re-run from the Actions tab. A tracking issue labelled `data-refresh` is opened automatically.
+- **Amber banner on the dashboard**: the last refresh ran degraded; the banner lists what failed. Rows marked `·stale` are carried over from the previous run.
+- **Rows show `—`**: that metric genuinely has no data. It is never filled in with a zero.
 - **Dashboard not updating after a code change**: GitHub Pages caches aggressively. Hard-refresh (Ctrl+F5) or wait ~1 minute.

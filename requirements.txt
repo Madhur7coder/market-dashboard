@@ -1,0 +1,12 @@
+# Pinned so a breaking upstream release can't silently take the dashboard down.
+# yfinance in particular changes column shapes, `funds_data`, and `auto_adjust`
+# defaults across minor versions — it is the single most breakage-prone package
+# here. Bump these deliberately (and re-run the workflow manually to check)
+# rather than floating on latest.
+yfinance~=1.7.0
+pandas~=3.0.2
+numpy~=2.4.0
+requests~=2.33.0
+beautifulsoup4~=4.14.0
+lxml~=6.1.0
+html5lib~=1.1

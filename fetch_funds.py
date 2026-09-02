@@ -76,6 +76,16 @@ def _last_trading_day_of_year(history_index, year):
     return matches[-1]
 
 
+
+def _close_at(df, date):
+    """Close on `date`. df.loc[date, 'Close'] returns a Series when the index
+    contains that date more than once (it happens with some FT/yfinance feeds),
+    and float() on a Series raises — take the last matching row instead."""
+    v = df.loc[date, 'Close']
+    if hasattr(v, 'iloc'):
+        v = v.iloc[-1]
+    return float(v)
+
 def compute_metrics(closes_dict_or_df, name=''):
     """Given an object with a DatetimeIndex and a Close series (DataFrame or
     DataFrame-like), compute return metrics. Returns a dict of metrics, with
@@ -117,13 +127,13 @@ def compute_metrics(closes_dict_or_df, name=''):
     # MTD: relative to the close of the last trading day of the previous month
     pm = _last_trading_day_of_prev_month(df.index)
     if pm is not None:
-        out['mtd'] = _pct(last, df.loc[pm, 'Close'])
+        out['mtd'] = _pct(last, _close_at(df, pm))
 
     # YTD: relative to the close of the last trading day of the previous year
     prev_year = last_date.year - 1
     py = _last_trading_day_of_year(df.index, prev_year)
     if py is not None:
-        out['ytd'] = _pct(last, df.loc[py, 'Close'])
+        out['ytd'] = _pct(last, _close_at(df, py))
 
     # Trailing 1M / 3M / 6M / 1Y by calendar date — find the trading day on or
     # before (last_date - N days). If history doesn't reach back that far (e.g.,
@@ -346,8 +356,9 @@ def main():
         'sections':     sections_out,
     }
     out = _sanitize(out)
-    out_path = Path('data/funds.json')
-    out_path.parent.mkdir(exist_ok=True)
+    # Resolve relative to this file, not the working directory.
+    out_path = Path(__file__).resolve().parent / 'data' / 'funds.json'
+    out_path.parent.mkdir(parents=True, exist_ok=True)
     with open(out_path, 'w') as f:
         # allow_nan=False guarantees we never emit invalid JSON (NaN/Infinity),
         # which the browser's JSON.parse rejects — _sanitize has already
