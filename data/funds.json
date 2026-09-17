@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-15T23:55:05Z",
+  "generated_at": "2026-09-17T00:02:37Z",
   "sections": [
     {
       "title": "Watchlist",
@@ -26,7 +26,7 @@
             "m3": 0.95,
             "m6": 1.81,
             "y1": 3.35,
-            "history_days": 244
+            "history_days": 243
           },
           "note": null
         },
@@ -49,8 +49,8 @@
             "m1": -1.16,
             "m3": -1.73,
             "m6": -0.29,
-            "y1": 0.24,
-            "history_days": 239
+            "y1": 0.37,
+            "history_days": 238
           },
           "note": null
         },
@@ -64,16 +64,16 @@
           "proxy_note": "Bloomberg ticker JPIAUIU LX = I2 share class. Yahoo and FT label ISIN LU2114516292 as 'C2 (acc) USD' \u2014 likely a class rename their databases haven't reflected yet. NAVs and returns are accurate.",
           "source_used": "yfinance",
           "metrics": {
-            "price": 118.09,
-            "as_of": "2026-09-14",
-            "d1": -0.24,
-            "w1": -0.66,
-            "mtd": -0.69,
-            "ytd": 1.35,
-            "m1": -0.83,
-            "m3": -0.28,
-            "m6": 1.11,
-            "y1": 2.6,
+            "price": 118.01,
+            "as_of": "2026-09-15",
+            "d1": -0.07,
+            "w1": -0.73,
+            "mtd": -0.76,
+            "ytd": 1.28,
+            "m1": -0.9,
+            "m3": -0.35,
+            "m6": 0.88,
+            "y1": 2.54,
             "history_days": 243
           },
           "note": null
@@ -97,8 +97,8 @@
             "m1": -1.61,
             "m3": -1.09,
             "m6": 0.73,
-            "y1": 2.98,
-            "history_days": 245
+            "y1": 3.06,
+            "history_days": 244
           },
           "note": "Shares its ISIN with PIMCSII (also in Universe section) \u2014 same underlying fund/class."
         }
@@ -131,7 +131,7 @@
           "proxy_note": "No free ETF tracks the Bloomberg Global HY index directly \u2014 using GHYG (iShares US & Intl High Yield Corp Bond ETF), which tracks the Markit iBoxx Global Developed Markets Liquid High Yield index: a genuinely global HY universe, USD-denominated, and US-listed so it resolves reliably on Yahoo. Index families (Markit iBoxx vs Bloomberg) differ by ~10-30 bps/yr depending on the credit cycle, and GHYG is USD-unhedged (its underlying is largely USD-issued global HY). JNK (SPDR Bloomberg HY Bond ETF) tracks the Bloomberg family directly but is US-only.",
           "source_used": "yfinance",
           "metrics": {
-            "price": 44.4002,
+            "price": 44.4,
             "as_of": "2026-09-15",
             "d1": -0.29,
             "w1": -1.27,
@@ -140,7 +140,7 @@
             "m1": -2.01,
             "m3": -2.22,
             "m6": -1.92,
-            "y1": -4.8,
+            "y1": -4.68,
             "history_days": 251
           },
           "note": null
@@ -164,7 +164,7 @@
             "m1": -2.34,
             "m3": -4.2,
             "m6": -2.83,
-            "y1": -3.44,
+            "y1": -3.4,
             "history_days": 251
           },
           "note": null
@@ -195,8 +195,8 @@
             "m1": 0.39,
             "m3": 1.13,
             "m6": 2.67,
-            "y1": 4.96,
-            "history_days": 233
+            "y1": 4.95,
+            "history_days": 232
           },
           "note": null
         },
@@ -210,16 +210,16 @@
           "proxy_note": null,
           "source_used": "yfinance",
           "metrics": {
-            "price": 12.6,
-            "as_of": "2026-09-14",
-            "d1": 0.0,
-            "w1": -0.4,
-            "mtd": -0.4,
-            "ytd": 0.8,
-            "m1": -0.47,
-            "m3": 0.0,
-            "m6": 0.72,
-            "y1": 2.02,
+            "price": 12.59,
+            "as_of": "2026-09-15",
+            "d1": -0.08,
+            "w1": -0.47,
+            "mtd": -0.47,
+            "ytd": 0.72,
+            "m1": -0.55,
+            "m3": -0.08,
+            "m6": 0.64,
+            "y1": 1.94,
             "history_days": 241
           },
           "note": null
@@ -243,8 +243,8 @@
             "m1": -1.78,
             "m3": -2.22,
             "m6": -0.55,
-            "y1": 1.12,
-            "history_days": 248
+            "y1": 1.17,
+            "history_days": 247
           },
           "note": null
         },
@@ -267,8 +267,8 @@
             "m1": -0.9,
             "m3": -0.52,
             "m6": 1.9,
-            "y1": 2.82,
-            "history_days": 233
+            "y1": 2.76,
+            "history_days": 232
           },
           "note": null
         },
@@ -291,8 +291,8 @@
             "m1": -0.95,
             "m3": -0.64,
             "m6": 0.86,
-            "y1": 1.23,
-            "history_days": 238
+            "y1": 1.19,
+            "history_days": 237
           },
           "note": null
         },
@@ -306,17 +306,17 @@
           "proxy_note": null,
           "source_used": "ft (fallback)",
           "metrics": {
-            "price": 146.07,
-            "as_of": "2026-09-15",
-            "d1": -0.07,
-            "w1": -0.79,
-            "mtd": -0.79,
+            "price": 146.01,
+            "as_of": "2026-09-16",
+            "d1": -0.04,
+            "w1": -0.76,
+            "mtd": -0.83,
             "ytd": null,
-            "m1": null,
+            "m1": -0.93,
             "m3": null,
             "m6": null,
             "y1": null,
-            "history_days": 21
+            "history_days": 22
           },
           "note": null
         },
@@ -330,16 +330,16 @@
           "proxy_note": null,
           "source_used": "yfinance",
           "metrics": {
-            "price": 154.56,
-            "as_of": "2026-09-14",
-            "d1": -0.37,
-            "w1": -1.18,
-            "mtd": -1.33,
-            "ytd": -0.81,
-            "m1": -1.82,
-            "m3": -2.47,
-            "m6": 0.21,
-            "y1": 0.05,
+            "price": 154.35,
+            "as_of": "2026-09-15",
+            "d1": -0.14,
+            "w1": -1.44,
+            "mtd": -1.47,
+            "ytd": -0.95,
+            "m1": -1.96,
+            "m3": -2.67,
+            "m6": -0.32,
+            "y1": -0.17,
             "history_days": 243
           },
           "note": null
@@ -364,7 +364,7 @@
             "m3": -2.79,
             "m6": -2.24,
             "y1": -3.96,
-            "history_days": 249
+            "history_days": 248
           },
           "note": null
         },
@@ -387,8 +387,8 @@
             "m1": -1.61,
             "m3": -1.09,
             "m6": 0.73,
-            "y1": 2.98,
-            "history_days": 245
+            "y1": 3.06,
+            "history_days": 244
           },
           "note": null
         },
@@ -402,17 +402,17 @@
           "proxy_note": null,
           "source_used": "ft",
           "metrics": {
-            "price": 100.65,
-            "as_of": "2026-09-14",
+            "price": 100.51,
+            "as_of": "2026-09-15",
             "d1": -0.14,
-            "w1": -0.84,
-            "mtd": -0.83,
+            "w1": -0.91,
+            "mtd": -0.97,
             "ytd": null,
             "m1": null,
             "m3": null,
             "m6": null,
             "y1": null,
-            "history_days": 21
+            "history_days": 22
           },
           "note": "New SICAV launched ~early May 2026 \u2014 only a few trading days of history. Using FT for the deepest available daily window."
         },
@@ -426,17 +426,17 @@
           "proxy_note": null,
           "source_used": "ft",
           "metrics": {
-            "price": 39.65,
-            "as_of": "2026-09-14",
-            "d1": -0.18,
-            "w1": -0.7,
-            "mtd": -0.78,
+            "price": 39.63,
+            "as_of": "2026-09-16",
+            "d1": 0.1,
+            "w1": -0.55,
+            "mtd": -0.83,
             "ytd": null,
-            "m1": null,
+            "m1": -0.85,
             "m3": null,
             "m6": null,
             "y1": null,
-            "history_days": 21
+            "history_days": 23
           },
           "note": "yfinance has no series \u2014 using FT fallback (21-day window)"
         },
@@ -450,17 +450,17 @@
           "proxy_note": null,
           "source_used": "ft",
           "metrics": {
-            "price": 47.34,
-            "as_of": "2026-09-14",
-            "d1": -0.34,
-            "w1": -1.17,
-            "mtd": -1.0,
+            "price": 47.24,
+            "as_of": "2026-09-15",
+            "d1": -0.21,
+            "w1": -1.27,
+            "mtd": -1.21,
             "ytd": null,
             "m1": null,
             "m3": null,
             "m6": null,
             "y1": null,
-            "history_days": 21
+            "history_days": 22
           },
           "note": "yfinance has no series \u2014 using FT fallback (21-day window)"
         },
@@ -474,16 +474,16 @@
           "proxy_note": null,
           "source_used": "yfinance",
           "metrics": {
-            "price": 18.97,
-            "as_of": "2026-09-14",
+            "price": 18.94,
+            "as_of": "2026-09-15",
             "d1": -0.16,
-            "w1": -0.42,
-            "mtd": -0.52,
-            "ytd": 1.66,
-            "m1": -0.63,
-            "m3": -0.21,
-            "m6": 1.5,
-            "y1": 2.76,
+            "w1": -0.63,
+            "mtd": -0.68,
+            "ytd": 1.5,
+            "m1": -0.79,
+            "m3": -0.37,
+            "m6": 1.45,
+            "y1": 2.49,
             "history_days": 243
           },
           "note": null
