@@ -1,619 +1,619 @@
 {
-  "generated_at": "2026-09-18T23:48:15Z",
+  "generated_at": "2026-09-22T00:29:59Z",
   "futures": [
     {
       "sym": "ES1!",
-      "price": 7725.0,
-      "d1": 1.11,
-      "w1": 0.86,
-      "hi52": -1.45,
-      "ytd": 12.08,
+      "price": 7835.5,
+      "d1": 2.33,
+      "w1": 2.76,
+      "hi52": -0.06,
+      "ytd": 13.68,
       "spark": [
-        -0.45,
         -0.47,
         -0.43,
         1.11,
-        1.11
+        0.23,
+        2.33
       ],
-      "asof": "2026-09-18",
-      "ema_uptrend": false,
+      "asof": "2026-09-21",
+      "ema_uptrend": true,
       "above_ema21": true,
-      "ema21_val": 7661.0174,
-      "streak_21": 1,
+      "ema21_val": 7671.2885,
+      "streak_21": 2,
       "above_ema50": true,
-      "ema50_val": 7625.5175,
-      "streak_50": 2,
+      "ema50_val": 7631.2032,
+      "streak_50": 3,
       "above_ema200": true,
-      "ema200_val": 7248.7577,
-      "streak_200": 116
+      "ema200_val": 7253.7792,
+      "streak_200": 117
     },
     {
       "sym": "NQ1!",
-      "price": 29955.0,
-      "d1": 1.73,
-      "w1": 1.93,
-      "hi52": -3.27,
-      "ytd": 17.67,
+      "price": 30873.25,
+      "d1": 4.25,
+      "w1": 5.9,
+      "hi52": -0.31,
+      "ytd": 21.28,
       "spark": [
-        -0.8,
         -0.68,
         0.03,
         1.67,
-        1.73
+        0.57,
+        4.25
       ],
-      "asof": "2026-09-18",
+      "asof": "2026-09-21",
       "ema_uptrend": true,
       "above_ema21": true,
-      "ema21_val": 29379.1007,
-      "streak_21": 2,
+      "ema21_val": 29486.7242,
+      "streak_21": 3,
       "above_ema50": true,
-      "ema50_val": 29313.6515,
-      "streak_50": 2,
+      "ema50_val": 29361.952,
+      "streak_50": 3,
       "above_ema200": true,
-      "ema200_val": 27605.7909,
-      "streak_200": 116
+      "ema200_val": 27634.2593,
+      "streak_200": 117
     },
     {
       "sym": "RTY1!",
-      "price": 2880.5,
-      "d1": 0.16,
-      "w1": -0.83,
-      "hi52": -6.47,
-      "ytd": 15.31,
+      "price": 2899.2,
+      "d1": 0.9,
+      "w1": 0.18,
+      "hi52": -5.87,
+      "ytd": 16.06,
       "spark": [
-        -0.36,
         -0.73,
         -0.4,
         0.5,
-        0.16
+        -0.09,
+        0.9
       ],
-      "asof": "2026-09-18",
+      "asof": "2026-09-21",
       "ema_uptrend": false,
       "above_ema21": false,
-      "ema21_val": 2933.9469,
-      "streak_21": 15,
+      "ema21_val": 2930.1873,
+      "streak_21": 16,
       "above_ema50": false,
-      "ema50_val": 2953.1734,
-      "streak_50": 15,
+      "ema50_val": 2950.7829,
+      "streak_50": 16,
       "above_ema200": true,
-      "ema200_val": 2789.5676,
-      "streak_200": 119
+      "ema200_val": 2790.5059,
+      "streak_200": 120
     },
     {
       "sym": "YM1!",
-      "price": 52138.0,
-      "d1": 0.64,
-      "w1": -0.85,
-      "hi52": -5.0,
-      "ytd": 7.87,
+      "price": 52455.0,
+      "d1": 1.34,
+      "w1": 0.03,
+      "hi52": -4.43,
+      "ytd": 8.52,
       "spark": [
-        -0.28,
         -0.62,
         -1.17,
         0.58,
-        0.64
+        -0.09,
+        1.34
       ],
-      "asof": "2026-09-18",
+      "asof": "2026-09-21",
       "ema_uptrend": false,
       "above_ema21": false,
-      "ema21_val": 52673.223,
-      "streak_21": 9,
+      "ema21_val": 52622.2275,
+      "streak_21": 10,
       "above_ema50": false,
-      "ema50_val": 52687.0476,
-      "streak_50": 9,
+      "ema50_val": 52663.7432,
+      "streak_50": 10,
       "above_ema200": true,
-      "ema200_val": 50414.0484,
-      "streak_200": 114
+      "ema200_val": 50430.0757,
+      "streak_200": 115
     }
   ],
   "dxvix": [
     {
       "sym": "DX-Y.NYB",
-      "price": 100.215,
-      "d1": -0.0,
-      "w1": 1.1,
-      "hi52": -1.56,
-      "ytd": 1.97,
+      "price": 100.404,
+      "d1": 0.18,
+      "w1": 0.95,
+      "hi52": -1.37,
+      "ytd": 2.16,
       "spark": [
-        0.34,
         0.19,
         0.66,
         -0.09,
-        0.0
+        0.0,
+        0.18
       ],
-      "asof": "2026-09-18",
+      "asof": "2026-09-21",
       "ema_uptrend": true,
       "above_ema21": true,
-      "ema21_val": 99.5841,
-      "streak_21": 5,
+      "ema21_val": 99.6591,
+      "streak_21": 6,
       "above_ema50": true,
-      "ema50_val": 99.726,
-      "streak_50": 3,
+      "ema50_val": 99.7528,
+      "streak_50": 4,
       "above_ema200": true,
-      "ema200_val": 99.6289,
-      "streak_200": 4
+      "ema200_val": 99.6433,
+      "streak_200": 5
     },
     {
       "sym": "CBOE:VIX",
-      "price": 14.81,
-      "d1": -4.08,
-      "w1": -6.5,
-      "hi52": -58.05,
-      "ytd": -0.94,
+      "price": 14.87,
+      "d1": 0.41,
+      "w1": -13.04,
+      "hi52": -57.88,
+      "ytd": -0.54,
       "spark": [
-        7.95,
         0.58,
         2.97,
         -12.82,
-        -4.08
+        -4.08,
+        0.41
       ],
-      "asof": "2026-09-18",
+      "asof": "2026-09-21",
       "ema_uptrend": true,
       "above_ema21": false,
-      "ema21_val": 15.9298,
-      "streak_21": 2,
+      "ema21_val": 15.8334,
+      "streak_21": 3,
       "above_ema50": false,
-      "ema50_val": 16.1799,
-      "streak_50": 2,
+      "ema50_val": 16.1285,
+      "streak_50": 3,
       "above_ema200": false,
-      "ema200_val": 17.6174,
-      "streak_200": 2
+      "ema200_val": 17.5946,
+      "streak_200": 3
     }
   ],
   "metals": [
     {
       "sym": "GC1!",
-      "price": 4415.8999,
-      "d1": 0.37,
-      "w1": 0.16,
-      "hi52": -20.95,
-      "ytd": 1.72,
+      "price": 4398.0,
+      "d1": -0.61,
+      "w1": 1.06,
+      "hi52": -21.27,
+      "ytd": 1.31,
       "spark": [
-        -1.29,
         -0.44,
         1.26,
         0.28,
-        0.37
+        0.57,
+        -0.61
       ],
-      "asof": "2026-09-18",
+      "asof": "2026-09-21",
       "ema_uptrend": false,
       "above_ema21": false,
-      "ema21_val": 4428.0973,
-      "streak_21": 9,
+      "ema21_val": 4426.105,
+      "streak_21": 10,
       "above_ema50": true,
-      "ema50_val": 4392.2896,
-      "streak_50": 2,
+      "ema50_val": 4392.8526,
+      "streak_50": 3,
       "above_ema200": true,
-      "ema200_val": 4340.4824,
-      "streak_200": 3
+      "ema200_val": 4341.1056,
+      "streak_200": 4
     },
     {
       "sym": "SI1!",
-      "price": 66.785,
-      "d1": 2.01,
-      "w1": 3.46,
-      "hi52": -44.94,
-      "ytd": -4.78,
+      "price": 67.04,
+      "d1": 0.73,
+      "w1": 5.55,
+      "hi52": -44.73,
+      "ytd": -4.41,
       "spark": [
-        -1.61,
         -0.44,
         1.66,
         1.84,
-        2.01
+        1.66,
+        0.73
       ],
-      "asof": "2026-09-18",
+      "asof": "2026-09-21",
       "ema_uptrend": true,
       "above_ema21": true,
-      "ema21_val": 65.3106,
-      "streak_21": 2,
+      "ema21_val": 65.4489,
+      "streak_21": 3,
       "above_ema50": true,
-      "ema50_val": 64.9959,
-      "streak_50": 2,
+      "ema50_val": 65.0674,
+      "streak_50": 3,
       "above_ema200": true,
-      "ema200_val": 65.3726,
-      "streak_200": 2
+      "ema200_val": 65.3852,
+      "streak_200": 3
     },
     {
       "sym": "HG1!",
-      "price": 6.7155,
-      "d1": 1.96,
-      "w1": 3.8,
-      "hi52": -1.32,
-      "ytd": 19.28,
+      "price": 6.8025,
+      "d1": 2.83,
+      "w1": 7.46,
+      "hi52": -0.09,
+      "ytd": 20.83,
       "spark": [
-        -2.16,
         0.61,
         0.99,
         2.41,
-        1.96
+        0.43,
+        2.83
       ],
-      "asof": "2026-09-18",
+      "asof": "2026-09-21",
       "ema_uptrend": true,
       "above_ema21": true,
-      "ema21_val": 6.5436,
-      "streak_21": 2,
+      "ema21_val": 6.5588,
+      "streak_21": 3,
       "above_ema50": true,
-      "ema50_val": 6.4848,
-      "streak_50": 2,
+      "ema50_val": 6.4935,
+      "streak_50": 3,
       "above_ema200": true,
-      "ema200_val": 6.0377,
-      "streak_200": 248
+      "ema200_val": 6.0438,
+      "streak_200": 249
     },
     {
       "sym": "PL1!",
-      "price": 1804.6,
-      "d1": 0.74,
-      "w1": 0.62,
-      "hi52": -36.73,
-      "ytd": -11.3,
+      "price": 1814.5,
+      "d1": 0.61,
+      "w1": 2.17,
+      "hi52": -36.39,
+      "ytd": -10.81,
       "spark": [
-        -0.98,
         -0.15,
         0.56,
         0.46,
-        0.74
+        0.68,
+        0.61
       ],
-      "asof": "2026-09-18",
+      "asof": "2026-09-21",
       "ema_uptrend": true,
       "above_ema21": true,
-      "ema21_val": 1796.3268,
-      "streak_21": 1,
+      "ema21_val": 1797.888,
+      "streak_21": 2,
       "above_ema50": true,
-      "ema50_val": 1775.4249,
-      "streak_50": 33,
+      "ema50_val": 1776.9159,
+      "streak_50": 34,
       "above_ema200": true,
-      "ema200_val": 1787.9631,
-      "streak_200": 2
+      "ema200_val": 1787.9804,
+      "streak_200": 3
     },
     {
       "sym": "PA1!",
-      "price": 1314.5,
-      "d1": 1.88,
-      "w1": 0.27,
-      "hi52": -39.42,
-      "ytd": -19.32,
+      "price": 1324.5,
+      "d1": 1.4,
+      "w1": 2.31,
+      "hi52": -38.96,
+      "ytd": -18.7,
       "spark": [
-        -1.24,
         -0.42,
         0.85,
         -0.76,
-        1.88
+        1.24,
+        1.4
       ],
-      "asof": "2026-09-18",
+      "asof": "2026-09-21",
       "ema_uptrend": false,
       "above_ema21": false,
-      "ema21_val": 1325.7523,
-      "streak_21": 7,
+      "ema21_val": 1324.9525,
+      "streak_21": 8,
       "above_ema50": false,
-      "ema50_val": 1327.185,
-      "streak_50": 7,
+      "ema50_val": 1326.767,
+      "streak_50": 8,
       "above_ema200": false,
-      "ema200_val": 1381.4164,
-      "streak_200": 9
+      "ema200_val": 1380.5927,
+      "streak_200": 10
     }
   ],
   "commod": [
     {
       "sym": "CL1!",
-      "price": 95.47,
-      "d1": -6.32,
-      "w1": -4.58,
-      "hi52": -20.1,
-      "ytd": 66.27,
+      "price": 92.44,
+      "d1": -7.84,
+      "w1": -8.83,
+      "hi52": -22.63,
+      "ytd": 60.99,
       "spark": [
-        1.34,
         4.38,
         -3.21,
         -0.51,
-        -6.32
+        -1.58,
+        -7.84
       ],
-      "asof": "2026-09-18",
+      "asof": "2026-09-21",
       "ema_uptrend": true,
-      "above_ema21": true,
-      "ema21_val": 94.0292,
-      "streak_21": 16,
+      "above_ema21": false,
+      "ema21_val": 94.2839,
+      "streak_21": 1,
       "above_ema50": true,
-      "ema50_val": 88.9169,
-      "streak_50": 16,
+      "ema50_val": 89.2371,
+      "streak_50": 17,
       "above_ema200": true,
-      "ema200_val": 81.9227,
-      "streak_200": 29
+      "ema200_val": 82.0729,
+      "streak_200": 30
     },
     {
       "sym": "NG1!",
-      "price": 2.899,
-      "d1": -0.07,
-      "w1": 2.4,
-      "hi52": -62.96,
-      "ytd": -21.35,
+      "price": 2.835,
+      "d1": -2.64,
+      "w1": -2.11,
+      "hi52": -63.78,
+      "ytd": -23.09,
       "spark": [
-        2.3,
         0.79,
         -0.96,
         0.35,
-        -0.07
+        0.38,
+        -2.64
       ],
-      "asof": "2026-09-18",
+      "asof": "2026-09-21",
       "ema_uptrend": true,
-      "above_ema21": true,
-      "ema21_val": 2.8714,
-      "streak_21": 5,
-      "above_ema50": true,
-      "ema50_val": 2.8803,
-      "streak_50": 5,
+      "above_ema21": false,
+      "ema21_val": 2.8692,
+      "streak_21": 1,
+      "above_ema50": false,
+      "ema50_val": 2.879,
+      "streak_50": 1,
       "above_ema200": false,
-      "ema200_val": 3.0984,
-      "streak_200": 59
+      "ema200_val": 3.0968,
+      "streak_200": 60
     }
   ],
   "yields": [
     {
       "sym": "US10Y",
-      "price": 4.998,
-      "d1": 1.03,
-      "w1": 0.46,
-      "hi52": -0.36,
-      "ytd": 20.06,
+      "price": 4.963,
+      "d1": -0.7,
+      "w1": 0.04,
+      "hi52": -1.06,
+      "ytd": 19.22,
       "spark": [
-        -0.28,
         0.71,
         0.2,
         -1.18,
-        1.03
+        1.03,
+        -0.7
       ],
-      "asof": "2026-09-18",
-      "d1_bps": 5.1,
-      "w1_bps": 2.3,
-      "ytd_bps": 83.5,
+      "asof": "2026-09-21",
+      "d1_bps": -3.5,
+      "w1_bps": 0.2,
+      "ytd_bps": 80.0,
       "ema_uptrend": true,
       "above_ema21": true,
-      "ema21_val": 4.8513,
-      "streak_21": 16,
+      "ema21_val": 4.8615,
+      "streak_21": 17,
       "above_ema50": true,
-      "ema50_val": 4.7361,
-      "streak_50": 56,
+      "ema50_val": 4.745,
+      "streak_50": 57,
       "above_ema200": true,
-      "ema200_val": 4.4811,
-      "streak_200": 133
+      "ema200_val": 4.4863,
+      "streak_200": 134
     },
     {
       "sym": "US30Y",
-      "price": 5.331,
-      "d1": 0.66,
-      "w1": -0.43,
-      "hi52": -1.71,
-      "ytd": 10.14,
+      "price": 5.296,
+      "d1": -0.66,
+      "w1": -0.62,
+      "hi52": -2.36,
+      "ytd": 9.42,
       "spark": [
-        -0.47,
         0.66,
         -0.28,
         -0.99,
-        0.66
+        0.66,
+        -0.66
       ],
-      "asof": "2026-09-18",
-      "d1_bps": 3.5,
-      "w1_bps": -2.3,
-      "ytd_bps": 49.1,
+      "asof": "2026-09-21",
+      "d1_bps": -3.5,
+      "w1_bps": -3.3,
+      "ytd_bps": 45.6,
       "ema_uptrend": true,
       "above_ema21": true,
-      "ema21_val": 5.2841,
-      "streak_21": 15,
+      "ema21_val": 5.2852,
+      "streak_21": 16,
       "above_ema50": true,
-      "ema50_val": 5.2136,
-      "streak_50": 56,
+      "ema50_val": 5.2169,
+      "streak_50": 57,
       "above_ema200": true,
-      "ema200_val": 5.0101,
-      "streak_200": 57
+      "ema200_val": 5.0132,
+      "streak_200": 58
     }
   ],
   "global": [
     {
       "sym": "^N225",
-      "price": 64136.25,
-      "d1": 0.33,
-      "w1": -1.74,
-      "hi52": -11.94,
-      "ytd": 27.41,
+      "price": 65018.9492,
+      "d1": 1.38,
+      "w1": 1.57,
+      "hi52": -10.73,
+      "ytd": 29.16,
       "spark": [
-        -1.93,
         -0.81,
         -0.01,
         0.69,
-        0.33
+        0.33,
+        1.38
       ],
-      "asof": "2026-09-17",
+      "asof": "2026-09-18",
       "ema_uptrend": false,
-      "above_ema21": false,
-      "ema21_val": 65008.5804,
-      "streak_21": 8,
+      "above_ema21": true,
+      "ema21_val": 65009.5231,
+      "streak_21": 1,
       "above_ema50": false,
-      "ema50_val": 65445.3023,
-      "streak_50": 8,
+      "ema50_val": 65428.5825,
+      "streak_50": 9,
       "above_ema200": true,
-      "ema200_val": 59996.7958,
-      "streak_200": 289
+      "ema200_val": 60046.7674,
+      "streak_200": 290
     },
     {
       "sym": "^KS11",
-      "price": 6715.4102,
-      "d1": -0.04,
-      "w1": -4.53,
-      "hi52": -28.45,
-      "ytd": 59.35,
+      "price": 7160.3701,
+      "d1": 3.86,
+      "w1": 7.12,
+      "hi52": -23.71,
+      "ytd": 69.91,
       "spark": [
-        -1.76,
-        -3.26,
         -0.85,
         1.37,
-        -0.04
+        -0.04,
+        2.66,
+        3.86
       ],
-      "asof": "2026-09-17",
-      "ema_uptrend": false,
-      "above_ema21": false,
-      "ema21_val": 6778.1995,
-      "streak_21": 4,
-      "above_ema50": false,
-      "ema50_val": 6871.9243,
-      "streak_50": 4,
+      "asof": "2026-09-22",
+      "ema_uptrend": true,
+      "above_ema21": true,
+      "ema21_val": 6822.5316,
+      "streak_21": 2,
+      "above_ema50": true,
+      "ema50_val": 6884.0764,
+      "streak_50": 2,
       "above_ema200": true,
-      "ema200_val": 6198.2745,
-      "streak_200": 34
+      "ema200_val": 6214.3953,
+      "streak_200": 36
     },
     {
       "sym": "^NSEI",
-      "price": 23270.5996,
-      "d1": 0.23,
-      "w1": -0.69,
-      "hi52": -11.76,
-      "ytd": -10.94,
+      "price": 23346.4004,
+      "d1": 0.33,
+      "w1": -0.56,
+      "hi52": -11.48,
+      "ytd": -10.65,
       "spark": [
-        0.2,
         -0.34,
         -1.19,
         0.43,
-        0.23
+        0.23,
+        0.33
       ],
-      "asof": "2026-09-17",
+      "asof": "2026-09-18",
       "ema_uptrend": false,
       "above_ema21": false,
-      "ema21_val": 23735.3487,
-      "streak_21": 16,
+      "ema21_val": 23699.9898,
+      "streak_21": 17,
       "above_ema50": false,
-      "ema50_val": 23945.0373,
-      "streak_50": 15,
+      "ema50_val": 23921.5614,
+      "streak_50": 16,
       "above_ema200": false,
-      "ema200_val": 24280.8114,
-      "streak_200": 24
+      "ema200_val": 24269.4039,
+      "streak_200": 25
     },
     {
       "sym": "000001.SS",
-      "price": 3875.604,
-      "d1": -0.41,
-      "w1": -1.49,
-      "hi52": -9.0,
-      "ytd": -2.35,
+      "price": 3911.8711,
+      "d1": 0.94,
+      "w1": 0.61,
+      "hi52": -8.15,
+      "ytd": -1.44,
       "spark": [
-        -1.18,
         -0.07,
         -0.54,
         0.71,
-        -0.41
+        -0.41,
+        0.94
       ],
-      "asof": "2026-09-17",
+      "asof": "2026-09-18",
       "ema_uptrend": false,
       "above_ema21": false,
-      "ema21_val": 3913.8891,
-      "streak_21": 5,
+      "ema21_val": 3913.7057,
+      "streak_21": 6,
       "above_ema50": false,
-      "ema50_val": 3931.8501,
-      "streak_50": 6,
-      "above_ema200": false,
-      "ema200_val": 3939.5651,
-      "streak_200": 6
-    },
-    {
-      "sym": "^HSI",
-      "price": 24604.2891,
-      "d1": -0.44,
-      "w1": -1.4,
-      "hi52": -12.3,
-      "ytd": -4.0,
-      "spark": [
-        -0.6,
-        0.45,
-        -1.0,
-        0.19,
-        -0.44
-      ],
-      "asof": "2026-09-17",
-      "ema_uptrend": false,
-      "above_ema21": false,
-      "ema21_val": 25140.1897,
-      "streak_21": 9,
-      "above_ema50": false,
-      "ema50_val": 25181.6545,
+      "ema50_val": 3931.0666,
       "streak_50": 7,
       "above_ema200": false,
-      "ema200_val": 25209.5962,
-      "streak_200": 6
-    },
-    {
-      "sym": "^FTSE",
-      "price": 10816.0996,
-      "d1": 1.19,
-      "w1": 1.95,
-      "hi52": -1.58,
-      "ytd": 8.91,
-      "spark": [
-        0.39,
-        0.44,
-        -0.37,
-        0.29,
-        1.19
-      ],
-      "asof": "2026-09-17",
-      "ema_uptrend": false,
-      "above_ema21": true,
-      "ema21_val": 10749.1063,
-      "streak_21": 1,
-      "above_ema50": true,
-      "ema50_val": 10717.0225,
-      "streak_50": 1,
-      "above_ema200": true,
-      "ema200_val": 10337.6541,
-      "streak_200": 307
-    },
-    {
-      "sym": "^FCHI",
-      "price": 8186.9302,
-      "d1": 0.57,
-      "w1": 0.86,
-      "hi52": -6.49,
-      "ytd": 0.46,
-      "spark": [
-        0.78,
-        -0.76,
-        -0.34,
-        0.62,
-        0.57
-      ],
-      "asof": "2026-09-17",
-      "ema_uptrend": false,
-      "above_ema21": false,
-      "ema21_val": 8274.2136,
-      "streak_21": 23,
-      "above_ema50": false,
-      "ema50_val": 8347.6341,
-      "streak_50": 16,
-      "above_ema200": false,
-      "ema200_val": 8234.1238,
+      "ema200_val": 3939.6107,
       "streak_200": 7
     },
     {
-      "sym": "^GDAXI",
-      "price": 25716.7109,
-      "d1": 0.7,
-      "w1": 1.4,
-      "hi52": -3.39,
-      "ytd": 5.01,
+      "sym": "^HSI",
+      "price": 24750.7793,
+      "d1": 0.6,
+      "w1": -0.22,
+      "hi52": -11.78,
+      "ytd": -3.43,
       "spark": [
-        0.82,
+        0.45,
+        -1.0,
+        0.19,
+        -0.44,
+        0.6
+      ],
+      "asof": "2026-09-18",
+      "ema_uptrend": false,
+      "above_ema21": false,
+      "ema21_val": 25104.7888,
+      "streak_21": 10,
+      "above_ema50": false,
+      "ema50_val": 25164.7574,
+      "streak_50": 8,
+      "above_ema200": false,
+      "ema200_val": 25205.5102,
+      "streak_200": 7
+    },
+    {
+      "sym": "^FTSE",
+      "price": 10659.0996,
+      "d1": -1.45,
+      "w1": 0.08,
+      "hi52": -3.01,
+      "ytd": 7.33,
+      "spark": [
+        0.44,
+        -0.37,
+        0.29,
+        1.19,
+        -1.45
+      ],
+      "asof": "2026-09-18",
+      "ema_uptrend": false,
+      "above_ema21": false,
+      "ema21_val": 10740.9238,
+      "streak_21": 1,
+      "above_ema50": false,
+      "ema50_val": 10714.751,
+      "streak_50": 1,
+      "above_ema200": true,
+      "ema200_val": 10340.7261,
+      "streak_200": 305
+    },
+    {
+      "sym": "^FCHI",
+      "price": 8065.02,
+      "d1": -1.49,
+      "w1": -1.4,
+      "hi52": -7.88,
+      "ytd": -1.04,
+      "spark": [
+        -0.76,
+        -0.34,
+        0.62,
+        0.57,
+        -1.49
+      ],
+      "asof": "2026-09-18",
+      "ema_uptrend": false,
+      "above_ema21": false,
+      "ema21_val": 8255.196,
+      "streak_21": 24,
+      "above_ema50": false,
+      "ema50_val": 8336.5512,
+      "streak_50": 17,
+      "above_ema200": false,
+      "ema200_val": 8232.4714,
+      "streak_200": 8
+    },
+    {
+      "sym": "^GDAXI",
+      "price": 25304.0605,
+      "d1": -1.6,
+      "w1": -1.03,
+      "hi52": -4.94,
+      "ytd": 3.32,
+      "spark": [
         -0.5,
         -0.15,
         0.53,
-        0.7
+        0.7,
+        -1.6
       ],
-      "asof": "2026-09-17",
+      "asof": "2026-09-18",
       "ema_uptrend": false,
       "above_ema21": false,
-      "ema21_val": 25800.1912,
-      "streak_21": 13,
-      "above_ema50": true,
-      "ema50_val": 25703.9976,
+      "ema21_val": 25755.0884,
+      "streak_21": 14,
+      "above_ema50": false,
+      "ema50_val": 25688.3138,
       "streak_50": 1,
       "above_ema200": true,
-      "ema200_val": 24814.4185,
-      "streak_200": 116
+      "ema200_val": 24819.1809,
+      "streak_200": 117
     },
     {
       "sym": "000300.SS",
@@ -647,27 +647,27 @@
     {
       "sym": "SPY",
       "price": 761.69,
-      "d1": -0.12,
-      "w1": -0.34,
-      "hi52": -2.27,
-      "ytd": 12.29,
+      "d1": 0.13,
+      "w1": -0.09,
+      "hi52": -2.03,
+      "ytd": 12.57,
       "spark": [
         -0.45,
         -0.46,
         -0.44,
         1.13,
-        -0.12
+        0.13
       ],
       "asof": "2026-09-18",
       "ema_uptrend": false,
-      "above_ema21": false,
-      "ema21_val": 762.836,
-      "streak_21": 9,
+      "above_ema21": true,
+      "ema21_val": 761.1179,
+      "streak_21": 1,
       "above_ema50": true,
-      "ema50_val": 758.4709,
+      "ema50_val": 756.6661,
       "streak_50": 2,
       "above_ema200": true,
-      "ema200_val": 718.2456,
+      "ema200_val": 716.4719,
       "streak_200": 118
     },
     {
@@ -693,33 +693,33 @@
       "ema50_val": 711.0925,
       "streak_50": 2,
       "above_ema200": true,
-      "ema200_val": 668.1522,
+      "ema200_val": 668.1384,
       "streak_200": 116
     },
     {
       "sym": "DIA",
       "price": 515.88,
-      "d1": -0.48,
-      "w1": -1.88,
-      "hi52": -5.57,
-      "ytd": 8.27,
+      "d1": -0.25,
+      "w1": -1.66,
+      "hi52": -5.35,
+      "ytd": 8.52,
       "spark": [
         -0.25,
         -0.62,
         -1.15,
         0.61,
-        -0.48
+        -0.25
       ],
       "asof": "2026-09-18",
       "ema_uptrend": false,
       "above_ema21": false,
-      "ema21_val": 525.7043,
+      "ema21_val": 524.6032,
       "streak_21": 9,
       "above_ema50": false,
-      "ema50_val": 525.2276,
+      "ema50_val": 524.0663,
       "streak_50": 8,
       "above_ema200": true,
-      "ema200_val": 500.4385,
+      "ema200_val": 499.2937,
       "streak_200": 118
     },
     {
@@ -745,7 +745,7 @@
       "ema50_val": 292.2271,
       "streak_50": 9,
       "above_ema200": true,
-      "ema200_val": 274.9929,
+      "ema200_val": 274.9861,
       "streak_200": 119
     }
   ],
@@ -773,7 +773,7 @@
       "ema50_val": 88.8809,
       "streak_50": 34,
       "above_ema200": true,
-      "ema200_val": 84.397,
+      "ema200_val": 84.3951,
       "streak_200": 113
     },
     {
@@ -799,7 +799,7 @@
       "ema50_val": 87.2629,
       "streak_50": 2,
       "above_ema200": true,
-      "ema200_val": 83.1787,
+      "ema200_val": 83.177,
       "streak_200": 113
     },
     {
@@ -825,7 +825,7 @@
       "ema50_val": 138.0592,
       "streak_50": 2,
       "above_ema200": true,
-      "ema200_val": 130.0155,
+      "ema200_val": 130.0127,
       "streak_200": 114
     },
     {
@@ -851,8 +851,8 @@
       "ema50_val": 232.8011,
       "streak_50": 1,
       "above_ema200": true,
-      "ema200_val": 222.0084,
-      "streak_200": 302
+      "ema200_val": 222.0045,
+      "streak_200": 300
     },
     {
       "sym": "VTV",
@@ -877,8 +877,8 @@
       "ema50_val": 222.2089,
       "streak_50": 3,
       "above_ema200": true,
-      "ema200_val": 208.376,
-      "streak_200": 302
+      "ema200_val": 208.373,
+      "streak_200": 300
     },
     {
       "sym": "IJK",
@@ -903,7 +903,7 @@
       "ema50_val": 112.9257,
       "streak_50": 15,
       "above_ema200": true,
-      "ema200_val": 108.0488,
+      "ema200_val": 108.0467,
       "streak_200": 119
     },
     {
@@ -929,7 +929,7 @@
       "ema50_val": 169.5708,
       "streak_50": 15,
       "above_ema200": true,
-      "ema200_val": 160.1515,
+      "ema200_val": 160.1474,
       "streak_200": 119
     },
     {
@@ -955,7 +955,7 @@
       "ema50_val": 134.9838,
       "streak_50": 9,
       "above_ema200": true,
-      "ema200_val": 126.8422,
+      "ema200_val": 126.8398,
       "streak_200": 206
     },
     {
@@ -981,7 +981,7 @@
       "ema50_val": 145.7873,
       "streak_50": 9,
       "above_ema200": true,
-      "ema200_val": 140.0707,
+      "ema200_val": 140.0688,
       "streak_200": 119
     }
   ],
@@ -1009,7 +1009,7 @@
       "ema50_val": 166.2,
       "streak_50": 5,
       "above_ema200": true,
-      "ema200_val": 155.9259,
+      "ema200_val": 155.9228,
       "streak_200": 75
     },
     {
@@ -1035,7 +1035,7 @@
       "ema50_val": 183.6775,
       "streak_50": 18,
       "above_ema200": true,
-      "ema200_val": 166.1482,
+      "ema200_val": 166.1424,
       "streak_200": 117
     },
     {
@@ -1061,7 +1061,7 @@
       "ema50_val": 84.5547,
       "streak_50": 10,
       "above_ema200": false,
-      "ema200_val": 82.9287,
+      "ema200_val": 82.9277,
       "streak_200": 1
     },
     {
@@ -1087,7 +1087,7 @@
       "ema50_val": 61.7198,
       "streak_50": 49,
       "above_ema200": true,
-      "ema200_val": 55.8139,
+      "ema200_val": 55.8135,
       "streak_200": 189
     },
     {
@@ -1113,7 +1113,7 @@
       "ema50_val": 176.6868,
       "streak_50": 21,
       "above_ema200": false,
-      "ema200_val": 170.5363,
+      "ema200_val": 170.5313,
       "streak_200": 5
     },
     {
@@ -1139,7 +1139,7 @@
       "ema50_val": 111.6803,
       "streak_50": 1,
       "above_ema200": false,
-      "ema200_val": 111.7549,
+      "ema200_val": 111.7552,
       "streak_200": 1
     },
     {
@@ -1165,7 +1165,7 @@
       "ema50_val": 115.0555,
       "streak_50": 14,
       "above_ema200": false,
-      "ema200_val": 115.4055,
+      "ema200_val": 115.4066,
       "streak_200": 10
     },
     {
@@ -1191,7 +1191,7 @@
       "ema50_val": 51.6884,
       "streak_50": 9,
       "above_ema200": true,
-      "ema200_val": 49.9683,
+      "ema200_val": 49.9662,
       "streak_200": 194
     },
     {
@@ -1217,7 +1217,7 @@
       "ema50_val": 44.1625,
       "streak_50": 16,
       "above_ema200": false,
-      "ema200_val": 43.1349,
+      "ema200_val": 43.134,
       "streak_200": 5
     },
     {
@@ -1243,7 +1243,7 @@
       "ema50_val": 56.6526,
       "streak_50": 3,
       "above_ema200": true,
-      "ema200_val": 53.9559,
+      "ema200_val": 53.9561,
       "streak_200": 74
     },
     {
@@ -1269,7 +1269,7 @@
       "ema50_val": 43.387,
       "streak_50": 37,
       "above_ema200": false,
-      "ema200_val": 43.7786,
+      "ema200_val": 43.7778,
       "streak_200": 23
     }
   ],
@@ -1277,8 +1277,8 @@
   "thematic": [
     {
       "sym": "BTF",
-      "price": 22.8476,
-      "d1": 6.8,
+      "price": 22.848,
+      "d1": 6.81,
       "w1": 6.39,
       "hi52": -42.36,
       "ytd": -11.68,
@@ -1287,7 +1287,7 @@
         -4.03,
         0.78,
         1.31,
-        6.8
+        6.81
       ],
       "asof": "2026-09-18",
       "ema_uptrend": true,
@@ -1298,7 +1298,7 @@
       "ema50_val": 19.8664,
       "streak_50": 22,
       "above_ema200": true,
-      "ema200_val": 21.1455,
+      "ema200_val": 21.1454,
       "streak_200": 2
     },
     {
@@ -1324,7 +1324,7 @@
       "ema50_val": 81.9394,
       "streak_50": 30,
       "above_ema200": true,
-      "ema200_val": 77.5514,
+      "ema200_val": 77.547,
       "streak_200": 33
     },
     {
@@ -1350,7 +1350,7 @@
       "ema50_val": 48.8274,
       "streak_50": 1,
       "above_ema200": true,
-      "ema200_val": 48.1942,
+      "ema200_val": 48.1932,
       "streak_200": 1
     },
     {
@@ -1376,7 +1376,7 @@
       "ema50_val": 36.7393,
       "streak_50": 69,
       "above_ema200": true,
-      "ema200_val": 31.5275,
+      "ema200_val": 31.5265,
       "streak_200": 277
     },
     {
@@ -1402,7 +1402,7 @@
       "ema50_val": 4.753,
       "streak_50": 28,
       "above_ema200": true,
-      "ema200_val": 4.5135,
+      "ema200_val": 4.5124,
       "streak_200": 28
     },
     {
@@ -1428,7 +1428,7 @@
       "ema50_val": 58.6123,
       "streak_50": 2,
       "above_ema200": true,
-      "ema200_val": 59.1924,
+      "ema200_val": 59.1906,
       "streak_200": 1
     },
     {
@@ -1454,7 +1454,7 @@
       "ema50_val": 100.9069,
       "streak_50": 38,
       "above_ema200": true,
-      "ema200_val": 96.6193,
+      "ema200_val": 96.6195,
       "streak_200": 35
     },
     {
@@ -1480,7 +1480,7 @@
       "ema50_val": 26.6471,
       "streak_50": 40,
       "above_ema200": true,
-      "ema200_val": 23.7835,
+      "ema200_val": 23.7847,
       "streak_200": 59
     },
     {
@@ -1506,7 +1506,7 @@
       "ema50_val": 10.4326,
       "streak_50": 3,
       "above_ema200": false,
-      "ema200_val": 11.5385,
+      "ema200_val": 11.5405,
       "streak_200": 159
     },
     {
@@ -1532,12 +1532,38 @@
       "ema50_val": 154.0876,
       "streak_50": 39,
       "above_ema200": true,
-      "ema200_val": 136.7321,
+      "ema200_val": 136.7355,
       "streak_200": 97
     },
     {
+      "sym": "SPPP",
+      "price": 14.48,
+      "d1": -0.14,
+      "w1": 2.12,
+      "hi52": -39.19,
+      "ytd": -14.01,
+      "spark": [
+        1.06,
+        -2.23,
+        1.57,
+        1.9,
+        -0.14
+      ],
+      "asof": "2026-09-21",
+      "ema_uptrend": false,
+      "above_ema21": true,
+      "ema21_val": 14.4509,
+      "streak_21": 2,
+      "above_ema50": true,
+      "ema50_val": 14.2758,
+      "streak_50": 2,
+      "above_ema200": false,
+      "ema200_val": 14.5113,
+      "streak_200": 8
+    },
+    {
       "sym": "BBH",
-      "price": 234.1394,
+      "price": 234.14,
       "d1": -1.09,
       "w1": 2.07,
       "hi52": -4.18,
@@ -1552,13 +1578,13 @@
       "asof": "2026-09-18",
       "ema_uptrend": true,
       "above_ema21": true,
-      "ema21_val": 232.5031,
+      "ema21_val": 232.5032,
       "streak_21": 2,
       "above_ema50": true,
       "ema50_val": 223.6797,
       "streak_50": 69,
       "above_ema200": true,
-      "ema200_val": 200.8569,
+      "ema200_val": 200.8472,
       "streak_200": 69
     },
     {
@@ -1584,7 +1610,7 @@
       "ema50_val": 36.3484,
       "streak_50": 12,
       "above_ema200": true,
-      "ema200_val": 34.5876,
+      "ema200_val": 34.5863,
       "streak_200": 34
     },
     {
@@ -1610,7 +1636,7 @@
       "ema50_val": 52.8675,
       "streak_50": 9,
       "above_ema200": false,
-      "ema200_val": 54.3455,
+      "ema200_val": 54.3457,
       "streak_200": 13
     },
     {
@@ -1636,7 +1662,7 @@
       "ema50_val": 111.2125,
       "streak_50": 1,
       "above_ema200": true,
-      "ema200_val": 105.0315,
+      "ema200_val": 105.0281,
       "streak_200": 244
     },
     {
@@ -1662,7 +1688,7 @@
       "ema50_val": 62.2145,
       "streak_50": 1,
       "above_ema200": true,
-      "ema200_val": 60.1875,
+      "ema200_val": 60.185,
       "streak_200": 22
     },
     {
@@ -1688,7 +1714,7 @@
       "ema50_val": 28.1444,
       "streak_50": 5,
       "above_ema200": true,
-      "ema200_val": 27.7723,
+      "ema200_val": 27.7735,
       "streak_200": 148
     },
     {
@@ -1714,7 +1740,7 @@
       "ema50_val": 26.1565,
       "streak_50": 26,
       "above_ema200": false,
-      "ema200_val": 28.8476,
+      "ema200_val": 28.8499,
       "streak_200": 158
     },
     {
@@ -1740,7 +1766,7 @@
       "ema50_val": 192.6455,
       "streak_50": 40,
       "above_ema200": true,
-      "ema200_val": 178.4185,
+      "ema200_val": 178.4228,
       "streak_200": 40
     },
     {
@@ -1766,8 +1792,8 @@
       "ema50_val": 564.3847,
       "streak_50": 1,
       "above_ema200": true,
-      "ema200_val": 497.2638,
-      "streak_200": 302
+      "ema200_val": 497.2423,
+      "streak_200": 300
     },
     {
       "sym": "GLD",
@@ -1792,7 +1818,7 @@
       "ema50_val": 398.5938,
       "streak_50": 1,
       "above_ema200": true,
-      "ema200_val": 396.0243,
+      "ema200_val": 396.0213,
       "streak_200": 2
     },
     {
@@ -1818,7 +1844,7 @@
       "ema50_val": 41.7624,
       "streak_50": 1,
       "above_ema200": true,
-      "ema200_val": 41.4764,
+      "ema200_val": 41.4761,
       "streak_200": 2
     },
     {
@@ -1844,7 +1870,7 @@
       "ema50_val": 82.3233,
       "streak_50": 17,
       "above_ema200": false,
-      "ema200_val": 83.803,
+      "ema200_val": 83.8002,
       "streak_200": 56
     },
     {
@@ -1870,7 +1896,7 @@
       "ema50_val": 53.514,
       "streak_50": 8,
       "above_ema200": true,
-      "ema200_val": 50.8839,
+      "ema200_val": 50.8833,
       "streak_200": 111
     },
     {
@@ -1896,7 +1922,7 @@
       "ema50_val": 34.3239,
       "streak_50": 23,
       "above_ema200": true,
-      "ema200_val": 33.7621,
+      "ema200_val": 33.7634,
       "streak_200": 1
     },
     {
@@ -1922,7 +1948,7 @@
       "ema50_val": 105.665,
       "streak_50": 15,
       "above_ema200": false,
-      "ema200_val": 106.1767,
+      "ema200_val": 106.1744,
       "streak_200": 17
     },
     {
@@ -1948,7 +1974,7 @@
       "ema50_val": 156.6995,
       "streak_50": 2,
       "above_ema200": true,
-      "ema200_val": 138.1921,
+      "ema200_val": 138.1863,
       "streak_200": 277
     },
     {
@@ -1974,7 +2000,7 @@
       "ema50_val": 147.9765,
       "streak_50": 8,
       "above_ema200": true,
-      "ema200_val": 134.1705,
+      "ema200_val": 134.1701,
       "streak_200": 119
     },
     {
@@ -2000,7 +2026,7 @@
       "ema50_val": 62.8152,
       "streak_50": 33,
       "above_ema200": true,
-      "ema200_val": 57.4755,
+      "ema200_val": 57.4748,
       "streak_200": 115
     },
     {
@@ -2026,34 +2052,8 @@
       "ema50_val": 506.8306,
       "streak_50": 23,
       "above_ema200": true,
-      "ema200_val": 456.9934,
+      "ema200_val": 456.9778,
       "streak_200": 119
-    },
-    {
-      "sym": "SPPP",
-      "price": 14.5,
-      "d1": 1.9,
-      "w1": 0.21,
-      "hi52": -39.1,
-      "ytd": -13.9,
-      "spark": [
-        -2.0,
-        1.06,
-        -2.23,
-        1.57,
-        1.9
-      ],
-      "asof": "2026-09-18",
-      "ema_uptrend": false,
-      "above_ema21": true,
-      "ema21_val": 14.448,
-      "streak_21": 1,
-      "above_ema50": true,
-      "ema50_val": 14.2675,
-      "streak_50": 1,
-      "above_ema200": false,
-      "ema200_val": 14.5129,
-      "streak_200": 7
     },
     {
       "sym": "FFTY",
@@ -2078,7 +2078,7 @@
       "ema50_val": 36.9721,
       "streak_50": 50,
       "above_ema200": false,
-      "ema200_val": 37.2479,
+      "ema200_val": 37.2476,
       "streak_200": 23
     },
     {
@@ -2104,7 +2104,7 @@
       "ema50_val": 29.5165,
       "streak_50": 24,
       "above_ema200": false,
-      "ema200_val": 28.3638,
+      "ema200_val": 28.3642,
       "streak_200": 9
     },
     {
@@ -2151,13 +2151,13 @@
       "ema_uptrend": true,
       "above_ema21": true,
       "ema21_val": 110.0747,
-      "streak_21": 481,
+      "streak_21": 479,
       "above_ema50": true,
       "ema50_val": 109.8582,
-      "streak_50": 452,
+      "streak_50": 450,
       "above_ema200": true,
       "ema200_val": 108.6898,
-      "streak_200": 302
+      "streak_200": 300
     },
     {
       "sym": "AGG",
@@ -2182,7 +2182,7 @@
       "ema50_val": 96.8987,
       "streak_50": 15,
       "above_ema200": false,
-      "ema200_val": 96.9625,
+      "ema200_val": 96.9609,
       "streak_200": 13
     },
     {
@@ -2208,8 +2208,8 @@
       "ema50_val": 78.8856,
       "streak_50": 8,
       "above_ema200": true,
-      "ema200_val": 78.0017,
-      "streak_200": 302
+      "ema200_val": 78.0009,
+      "streak_200": 300
     },
     {
       "sym": "UFO",
@@ -2234,7 +2234,7 @@
       "ema50_val": 45.5062,
       "streak_50": 23,
       "above_ema200": false,
-      "ema200_val": 45.1342,
+      "ema200_val": 45.1328,
       "streak_200": 19
     },
     {
@@ -2260,7 +2260,7 @@
       "ema50_val": 92.2706,
       "streak_50": 15,
       "above_ema200": false,
-      "ema200_val": 92.7762,
+      "ema200_val": 92.7742,
       "streak_200": 16
     },
     {
@@ -2286,7 +2286,7 @@
       "ema50_val": 115.604,
       "streak_50": 15,
       "above_ema200": false,
-      "ema200_val": 115.7438,
+      "ema200_val": 115.7421,
       "streak_200": 15
     },
     {
@@ -2312,7 +2312,7 @@
       "ema50_val": 283.551,
       "streak_50": 38,
       "above_ema200": true,
-      "ema200_val": 269.9107,
+      "ema200_val": 269.9134,
       "streak_200": 39
     },
     {
@@ -2338,8 +2338,34 @@
       "ema50_val": 57.9146,
       "streak_50": 15,
       "above_ema200": false,
-      "ema200_val": 58.0192,
+      "ema200_val": 58.0182,
       "streak_200": 15
+    },
+    {
+      "sym": "BOUT",
+      "price": 43.4929,
+      "d1": 0.79,
+      "w1": -0.38,
+      "hi52": -11.98,
+      "ytd": 19.82,
+      "spark": [
+        -1.44,
+        -0.21,
+        1.02,
+        -0.53,
+        0.79
+      ],
+      "asof": "2026-09-21",
+      "ema_uptrend": false,
+      "above_ema21": false,
+      "ema21_val": 44.0186,
+      "streak_21": 32,
+      "above_ema50": false,
+      "ema50_val": 44.8111,
+      "streak_50": 30,
+      "above_ema200": true,
+      "ema200_val": 43.2577,
+      "streak_200": 1
     },
     {
       "sym": "ESPO",
@@ -2364,7 +2390,7 @@
       "ema50_val": 95.7828,
       "streak_50": 6,
       "above_ema200": true,
-      "ema200_val": 95.4956,
+      "ema200_val": 95.4953,
       "streak_200": 6
     },
     {
@@ -2390,7 +2416,7 @@
       "ema50_val": 69.9122,
       "streak_50": 9,
       "above_ema200": false,
-      "ema200_val": 69.5281,
+      "ema200_val": 69.5254,
       "streak_200": 8
     },
     {
@@ -2416,7 +2442,7 @@
       "ema50_val": 35.938,
       "streak_50": 23,
       "above_ema200": false,
-      "ema200_val": 36.2802,
+      "ema200_val": 36.28,
       "streak_200": 22
     },
     {
@@ -2442,7 +2468,7 @@
       "ema50_val": 34.9761,
       "streak_50": 9,
       "above_ema200": false,
-      "ema200_val": 35.6808,
+      "ema200_val": 35.6822,
       "streak_200": 9
     },
     {
@@ -2468,7 +2494,7 @@
       "ema50_val": 62.8101,
       "streak_50": 3,
       "above_ema200": true,
-      "ema200_val": 59.9588,
+      "ema200_val": 59.96,
       "streak_200": 70
     },
     {
@@ -2494,34 +2520,8 @@
       "ema50_val": 30.9127,
       "streak_50": 31,
       "above_ema200": true,
-      "ema200_val": 27.993,
+      "ema200_val": 27.9929,
       "streak_200": 272
-    },
-    {
-      "sym": "BOUT",
-      "price": 43.1481,
-      "d1": -0.53,
-      "w1": -0.69,
-      "hi52": -12.67,
-      "ytd": 18.87,
-      "spark": [
-        0.48,
-        -1.44,
-        -0.21,
-        1.02,
-        -0.53
-      ],
-      "asof": "2026-09-18",
-      "ema_uptrend": false,
-      "above_ema21": false,
-      "ema21_val": 44.071,
-      "streak_21": 31,
-      "above_ema50": false,
-      "ema50_val": 44.8648,
-      "streak_50": 29,
-      "above_ema200": false,
-      "ema200_val": 43.2543,
-      "streak_200": 1
     },
     {
       "sym": "USO",
@@ -2546,7 +2546,7 @@
       "ema50_val": 136.2112,
       "streak_50": 29,
       "above_ema200": true,
-      "ema200_val": 115.7818,
+      "ema200_val": 115.7803,
       "streak_200": 55
     },
     {
@@ -2572,7 +2572,7 @@
       "ema50_val": 118.6823,
       "streak_50": 2,
       "above_ema200": true,
-      "ema200_val": 111.2913,
+      "ema200_val": 111.2872,
       "streak_200": 32
     },
     {
@@ -2598,7 +2598,7 @@
       "ema50_val": 25.3612,
       "streak_50": 5,
       "above_ema200": true,
-      "ema200_val": 24.8936,
+      "ema200_val": 24.8926,
       "streak_200": 119
     },
     {
@@ -2650,8 +2650,8 @@
       "ema50_val": 56.8227,
       "streak_50": 49,
       "above_ema200": true,
-      "ema200_val": 51.7612,
-      "streak_200": 302
+      "ema200_val": 51.7602,
+      "streak_200": 300
     },
     {
       "sym": "LIT",
@@ -2676,7 +2676,7 @@
       "ema50_val": 73.7152,
       "streak_50": 13,
       "above_ema200": false,
-      "ema200_val": 71.5855,
+      "ema200_val": 71.5873,
       "streak_200": 6
     },
     {
@@ -2702,7 +2702,7 @@
       "ema50_val": 375.6823,
       "streak_50": 15,
       "above_ema200": true,
-      "ema200_val": 356.5921,
+      "ema200_val": 356.5855,
       "streak_200": 117
     },
     {
@@ -2728,7 +2728,7 @@
       "ema50_val": 86.7677,
       "streak_50": 1,
       "above_ema200": true,
-      "ema200_val": 78.7626,
+      "ema200_val": 78.7597,
       "streak_200": 43
     },
     {
@@ -2754,7 +2754,7 @@
       "ema50_val": 25.4855,
       "streak_50": 27,
       "above_ema200": true,
-      "ema200_val": 23.6821,
+      "ema200_val": 23.6822,
       "streak_200": 54
     },
     {
@@ -2780,7 +2780,7 @@
       "ema50_val": 33.0519,
       "streak_50": 62,
       "above_ema200": false,
-      "ema200_val": 33.4316,
+      "ema200_val": 33.4298,
       "streak_200": 23
     },
     {
@@ -2806,7 +2806,7 @@
       "ema50_val": 93.7816,
       "streak_50": 17,
       "above_ema200": false,
-      "ema200_val": 96.6098,
+      "ema200_val": 96.6011,
       "streak_200": 21
     },
     {
@@ -2832,12 +2832,12 @@
       "ema50_val": 74.3251,
       "streak_50": 9,
       "above_ema200": true,
-      "ema200_val": 70.169,
+      "ema200_val": 70.1678,
       "streak_200": 119
     },
     {
       "sym": "NANR",
-      "price": 88.3483,
+      "price": 88.348,
       "d1": -1.18,
       "w1": -1.66,
       "hi52": -4.19,
@@ -2858,8 +2858,8 @@
       "ema50_val": 86.2321,
       "streak_50": 43,
       "above_ema200": true,
-      "ema200_val": 78.9534,
-      "streak_200": 302
+      "ema200_val": 78.9508,
+      "streak_200": 300
     },
     {
       "sym": "GDX",
@@ -2884,7 +2884,7 @@
       "ema50_val": 91.4177,
       "streak_50": 32,
       "above_ema200": true,
-      "ema200_val": 85.3694,
+      "ema200_val": 85.3665,
       "streak_200": 32
     },
     {
@@ -2910,15 +2910,15 @@
       "ema50_val": 101.8901,
       "streak_50": 16,
       "above_ema200": false,
-      "ema200_val": 99.557,
+      "ema200_val": 99.5544,
       "streak_200": 5
     },
     {
       "sym": "DRIV",
-      "price": 33.5233,
+      "price": 33.523,
       "d1": -0.97,
       "w1": -2.02,
-      "hi52": -21.44,
+      "hi52": -21.45,
       "ytd": 13.55,
       "spark": [
         -2.41,
@@ -2930,13 +2930,13 @@
       "asof": "2026-09-18",
       "ema_uptrend": false,
       "above_ema21": false,
-      "ema21_val": 34.1325,
+      "ema21_val": 34.1324,
       "streak_21": 8,
       "above_ema50": false,
-      "ema50_val": 34.8164,
+      "ema50_val": 34.8163,
       "streak_50": 23,
       "above_ema200": false,
-      "ema200_val": 33.7542,
+      "ema200_val": 33.7535,
       "streak_200": 1
     },
     {
@@ -2962,7 +2962,7 @@
       "ema50_val": 84.3731,
       "streak_50": 14,
       "above_ema200": false,
-      "ema200_val": 80.8276,
+      "ema200_val": 80.8255,
       "streak_200": 3
     },
     {
@@ -2988,7 +2988,7 @@
       "ema50_val": 55.5497,
       "streak_50": 22,
       "above_ema200": false,
-      "ema200_val": 53.7356,
+      "ema200_val": 53.7341,
       "streak_200": 5
     },
     {
@@ -3014,7 +3014,7 @@
       "ema50_val": 68.2645,
       "streak_50": 9,
       "above_ema200": true,
-      "ema200_val": 64.557,
+      "ema200_val": 64.5558,
       "streak_200": 119
     },
     {
@@ -3040,7 +3040,7 @@
       "ema50_val": 103.7744,
       "streak_50": 21,
       "above_ema200": false,
-      "ema200_val": 105.8156,
+      "ema200_val": 105.8073,
       "streak_200": 21
     },
     {
@@ -3066,7 +3066,7 @@
       "ema50_val": 76.2703,
       "streak_50": 18,
       "above_ema200": false,
-      "ema200_val": 79.9654,
+      "ema200_val": 79.9646,
       "streak_200": 53
     },
     {
@@ -3092,7 +3092,7 @@
       "ema50_val": 84.0956,
       "streak_50": 23,
       "above_ema200": true,
-      "ema200_val": 80.4694,
+      "ema200_val": 80.4656,
       "streak_200": 60
     },
     {
@@ -3118,7 +3118,7 @@
       "ema50_val": 262.8607,
       "streak_50": 21,
       "above_ema200": false,
-      "ema200_val": 259.8328,
+      "ema200_val": 259.8226,
       "streak_200": 14
     },
     {
@@ -3144,7 +3144,7 @@
       "ema50_val": 182.4423,
       "streak_50": 31,
       "above_ema200": true,
-      "ema200_val": 163.4157,
+      "ema200_val": 163.4125,
       "streak_200": 172
     },
     {
@@ -3170,7 +3170,7 @@
       "ema50_val": 28.2967,
       "streak_50": 1,
       "above_ema200": true,
-      "ema200_val": 27.2286,
+      "ema200_val": 27.2296,
       "streak_200": 66
     },
     {
@@ -3196,7 +3196,7 @@
       "ema50_val": 188.3327,
       "streak_50": 5,
       "above_ema200": true,
-      "ema200_val": 179.7333,
+      "ema200_val": 179.7298,
       "streak_200": 114
     },
     {
@@ -3222,7 +3222,7 @@
       "ema50_val": 36.7276,
       "streak_50": 66,
       "above_ema200": false,
-      "ema200_val": 37.6996,
+      "ema200_val": 37.6987,
       "streak_200": 62
     },
     {
@@ -3248,7 +3248,7 @@
       "ema50_val": 50.3733,
       "streak_50": 66,
       "above_ema200": false,
-      "ema200_val": 52.5994,
+      "ema200_val": 52.5942,
       "streak_200": 46
     },
     {
@@ -3274,7 +3274,7 @@
       "ema50_val": 86.5179,
       "streak_50": 16,
       "above_ema200": false,
-      "ema200_val": 85.1962,
+      "ema200_val": 85.1936,
       "streak_200": 4
     },
     {
@@ -3300,7 +3300,7 @@
       "ema50_val": 44.3229,
       "streak_50": 6,
       "above_ema200": false,
-      "ema200_val": 45.5864,
+      "ema200_val": 45.5837,
       "streak_200": 7
     },
     {
@@ -3326,7 +3326,7 @@
       "ema50_val": 113.3186,
       "streak_50": 6,
       "above_ema200": false,
-      "ema200_val": 108.7783,
+      "ema200_val": 108.7731,
       "streak_200": 1
     },
     {
@@ -3352,7 +3352,7 @@
       "ema50_val": 116.4259,
       "streak_50": 7,
       "above_ema200": false,
-      "ema200_val": 123.137,
+      "ema200_val": 123.1326,
       "streak_200": 15
     },
     {
@@ -3378,7 +3378,7 @@
       "ema50_val": 407.8954,
       "streak_50": 3,
       "above_ema200": true,
-      "ema200_val": 378.4263,
+      "ema200_val": 378.4183,
       "streak_200": 53
     }
   ],
@@ -3406,8 +3406,8 @@
       "ema50_val": 105.3691,
       "streak_50": 33,
       "above_ema200": true,
-      "ema200_val": 89.5625,
-      "streak_200": 302
+      "ema200_val": 89.5597,
+      "streak_200": 300
     },
     {
       "sym": "MCHI",
@@ -3432,7 +3432,7 @@
       "ema50_val": 54.2376,
       "streak_50": 9,
       "above_ema200": false,
-      "ema200_val": 55.7995,
+      "ema200_val": 55.8018,
       "streak_200": 28
     },
     {
@@ -3458,7 +3458,7 @@
       "ema50_val": 22.5868,
       "streak_50": 4,
       "above_ema200": true,
-      "ema200_val": 22.0405,
+      "ema200_val": 22.0399,
       "streak_200": 48
     },
     {
@@ -3484,7 +3484,7 @@
       "ema50_val": 62.2585,
       "streak_50": 9,
       "above_ema200": false,
-      "ema200_val": 60.354,
+      "ema200_val": 60.3516,
       "streak_200": 4
     },
     {
@@ -3510,8 +3510,8 @@
       "ema50_val": 60.4959,
       "streak_50": 5,
       "above_ema200": true,
-      "ema200_val": 56.8729,
-      "streak_200": 302
+      "ema200_val": 56.8713,
+      "streak_200": 300
     },
     {
       "sym": "ACWI",
@@ -3536,7 +3536,7 @@
       "ema50_val": 158.7988,
       "streak_50": 2,
       "above_ema200": true,
-      "ema200_val": 150.2386,
+      "ema200_val": 150.2349,
       "streak_200": 119
     },
     {
@@ -3562,7 +3562,7 @@
       "ema50_val": 49.0908,
       "streak_50": 9,
       "above_ema200": false,
-      "ema200_val": 50.0448,
+      "ema200_val": 50.0415,
       "streak_200": 29
     },
     {
@@ -3588,8 +3588,8 @@
       "ema50_val": 66.3787,
       "streak_50": 2,
       "above_ema200": true,
-      "ema200_val": 62.0825,
-      "streak_200": 302
+      "ema200_val": 62.0809,
+      "streak_200": 300
     },
     {
       "sym": "IEUR",
@@ -3614,7 +3614,7 @@
       "ema50_val": 76.3467,
       "streak_50": 8,
       "above_ema200": true,
-      "ema200_val": 72.8477,
+      "ema200_val": 72.8439,
       "streak_200": 119
     },
     {
@@ -3640,8 +3640,8 @@
       "ema50_val": 95.3754,
       "streak_50": 36,
       "above_ema200": true,
-      "ema200_val": 89.2347,
-      "streak_200": 302
+      "ema200_val": 89.2326,
+      "streak_200": 300
     },
     {
       "sym": "IEV",
@@ -3666,7 +3666,7 @@
       "ema50_val": 73.839,
       "streak_50": 8,
       "above_ema200": true,
-      "ema200_val": 70.4872,
+      "ema200_val": 70.4838,
       "streak_200": 119
     },
     {
@@ -3692,8 +3692,8 @@
       "ema50_val": 106.0648,
       "streak_50": 5,
       "above_ema200": true,
-      "ema200_val": 100.725,
-      "streak_200": 302
+      "ema200_val": 100.7209,
+      "streak_200": 300
     },
     {
       "sym": "EWG",
@@ -3718,7 +3718,7 @@
       "ema50_val": 42.9716,
       "streak_50": 8,
       "above_ema200": true,
-      "ema200_val": 41.6523,
+      "ema200_val": 41.6505,
       "streak_200": 40
     },
     {
@@ -3744,7 +3744,7 @@
       "ema50_val": 36.3488,
       "streak_50": 18,
       "above_ema200": true,
-      "ema200_val": 34.9227,
+      "ema200_val": 34.9207,
       "streak_200": 20
     },
     {
@@ -3770,7 +3770,7 @@
       "ema50_val": 29.3746,
       "streak_50": 7,
       "above_ema200": true,
-      "ema200_val": 28.2627,
+      "ema200_val": 28.2612,
       "streak_200": 200
     },
     {
@@ -3796,7 +3796,7 @@
       "ema50_val": 69.5526,
       "streak_50": 8,
       "above_ema200": true,
-      "ema200_val": 66.1022,
+      "ema200_val": 66.099,
       "streak_200": 119
     },
     {
@@ -3822,7 +3822,7 @@
       "ema50_val": 41.3397,
       "streak_50": 1,
       "above_ema200": true,
-      "ema200_val": 37.6778,
+      "ema200_val": 37.6763,
       "streak_200": 119
     },
     {
@@ -3848,7 +3848,7 @@
       "ema50_val": 61.2787,
       "streak_50": 5,
       "above_ema200": true,
-      "ema200_val": 57.002,
+      "ema200_val": 56.9995,
       "streak_200": 125
     },
     {
@@ -3874,7 +3874,7 @@
       "ema50_val": 94.0132,
       "streak_50": 3,
       "above_ema200": true,
-      "ema200_val": 91.2915,
+      "ema200_val": 91.2982,
       "streak_200": 22
     },
     {
@@ -3900,8 +3900,8 @@
       "ema50_val": 178.0035,
       "streak_50": 2,
       "above_ema200": true,
-      "ema200_val": 153.2738,
-      "streak_200": 302
+      "ema200_val": 153.2648,
+      "streak_200": 300
     },
     {
       "sym": "TUR",
@@ -3926,177 +3926,125 @@
       "ema50_val": 39.3399,
       "streak_50": 4,
       "above_ema200": false,
-      "ema200_val": 38.4322,
+      "ema200_val": 38.4308,
       "streak_200": 3
     }
   ],
   "crypto": [
     {
       "sym": "BTC",
-      "price": 80862.4375,
-      "d1": 5.84,
-      "w1": 5.24,
-      "hi52": -17.37,
-      "ytd": -7.6,
+      "price": 86374.9609,
+      "d1": 6.45,
+      "w1": 13.43,
+      "hi52": -11.74,
+      "ytd": -1.3,
       "spark": [
-        1.72,
-        -3.26,
-        0.71,
         0.33,
-        5.84
+        5.89,
+        0.41,
+        -0.11,
+        6.45
       ],
-      "asof": "2026-09-18",
+      "asof": "2026-09-22",
       "ema_uptrend": true,
       "above_ema21": true,
-      "ema21_val": 77136.992,
-      "streak_21": 1,
+      "ema21_val": 78618.3057,
+      "streak_21": 4,
       "above_ema50": true,
-      "ema50_val": 73957.5098,
-      "streak_50": 33,
+      "ema50_val": 74979.944,
+      "streak_50": 36,
       "above_ema200": true,
-      "ema200_val": 73204.799,
-      "streak_200": 30,
+      "ema200_val": 73495.8324,
+      "streak_200": 33,
       "id": "bitcoin",
       "name": "Bitcoin"
     },
     {
       "sym": "ETH",
-      "price": 2608.97,
-      "d1": 6.61,
-      "w1": 5.33,
-      "hi52": -23.22,
-      "ytd": -12.07,
+      "price": 2770.77,
+      "d1": 4.83,
+      "w1": 14.68,
+      "hi52": -18.46,
+      "ytd": -6.61,
       "spark": [
-        1.51,
-        -4.59,
-        0.71,
         1.28,
-        6.61
+        6.71,
+        0.79,
+        0.42,
+        4.83
       ],
-      "asof": "2026-09-18",
+      "asof": "2026-09-22",
       "ema_uptrend": true,
       "above_ema21": true,
-      "ema21_val": 2446.1227,
-      "streak_21": 2,
+      "ema21_val": 2506.0315,
+      "streak_21": 5,
       "above_ema50": true,
-      "ema50_val": 2294.887,
-      "streak_50": 48,
+      "ema50_val": 2338.9501,
+      "streak_50": 51,
       "above_ema200": true,
-      "ema200_val": 2213.7823,
-      "streak_200": 31,
+      "ema200_val": 2227.8097,
+      "streak_200": 34,
       "id": "ethereum",
       "name": "Ethereum"
     },
     {
       "sym": "SOL",
-      "price": 112.73,
-      "d1": 10.95,
-      "w1": 13.59,
-      "hi52": -23.94,
-      "ytd": -9.44,
+      "price": 118.97,
+      "d1": 7.05,
+      "w1": 20.61,
+      "hi52": -19.73,
+      "ytd": -4.43,
       "spark": [
-        3.27,
-        -5.47,
-        1.81,
         3.0,
-        10.95
+        10.82,
+        -1.41,
+        0.11,
+        7.05
       ],
-      "asof": "2026-09-18",
+      "asof": "2026-09-22",
       "ema_uptrend": true,
       "above_ema21": true,
-      "ema21_val": 100.6829,
-      "streak_21": 2,
+      "ema21_val": 103.9763,
+      "streak_21": 5,
       "above_ema50": true,
-      "ema50_val": 93.8801,
-      "streak_50": 33,
+      "ema50_val": 96.1298,
+      "streak_50": 36,
       "above_ema200": true,
-      "ema200_val": 92.2679,
-      "streak_200": 29,
+      "ema200_val": 92.912,
+      "streak_200": 32,
       "id": "solana",
       "name": "Solana"
     },
     {
       "sym": "XRP",
-      "price": 1.3962,
-      "d1": 7.74,
-      "w1": 4.15,
-      "hi52": -36.13,
-      "ytd": -24.12,
+      "price": 1.5319,
+      "d1": 8.66,
+      "w1": 17.9,
+      "hi52": -29.92,
+      "ytd": -16.74,
       "spark": [
-        6.0,
-        -9.59,
-        1.14,
         -0.27,
-        7.74
+        7.74,
+        1.02,
+        -0.04,
+        8.66
       ],
-      "asof": "2026-09-18",
+      "asof": "2026-09-22",
       "ema_uptrend": true,
       "above_ema21": true,
-      "ema21_val": 1.3483,
-      "streak_21": 1,
+      "ema21_val": 1.3748,
+      "streak_21": 4,
       "above_ema50": true,
-      "ema50_val": 1.2881,
-      "streak_50": 31,
+      "ema50_val": 1.3067,
+      "streak_50": 34,
       "above_ema200": true,
-      "ema200_val": 1.3534,
-      "streak_200": 1,
+      "ema200_val": 1.3564,
+      "streak_200": 4,
       "id": "ripple",
       "name": "Ripple"
     }
   ],
   "holdings": {
-    "QQQ": [
-      {
-        "s": "NVDA",
-        "n": "NVIDIA Corp",
-        "w": 8.51
-      },
-      {
-        "s": "AAPL",
-        "n": "Apple Inc",
-        "w": 7.41
-      },
-      {
-        "s": "MSFT",
-        "n": "Microsoft Corp",
-        "w": 6.0
-      },
-      {
-        "s": "MU",
-        "n": "Micron Technology Inc",
-        "w": 4.75
-      },
-      {
-        "s": "AMZN",
-        "n": "Amazon.com Inc",
-        "w": 4.45
-      },
-      {
-        "s": "AMD",
-        "n": "Advanced Micro Devices Inc",
-        "w": 3.37
-      },
-      {
-        "s": "GOOGL",
-        "n": "Alphabet Inc Class A",
-        "w": 3.15
-      },
-      {
-        "s": "TSLA",
-        "n": "Tesla Inc",
-        "w": 2.93
-      },
-      {
-        "s": "GOOG",
-        "n": "Alphabet Inc Class C",
-        "w": 2.91
-      },
-      {
-        "s": "AVGO",
-        "n": "Broadcom Inc",
-        "w": 2.8
-      }
-    ],
     "IVE": [
       {
         "s": "AAPL",
@@ -4199,6 +4147,58 @@
         "s": "SHW",
         "n": "Sherwin-Williams Co",
         "w": 3.78
+      }
+    ],
+    "QQQ": [
+      {
+        "s": "NVDA",
+        "n": "NVIDIA Corp",
+        "w": 8.51
+      },
+      {
+        "s": "AAPL",
+        "n": "Apple Inc",
+        "w": 7.41
+      },
+      {
+        "s": "MSFT",
+        "n": "Microsoft Corp",
+        "w": 6.0
+      },
+      {
+        "s": "MU",
+        "n": "Micron Technology Inc",
+        "w": 4.75
+      },
+      {
+        "s": "AMZN",
+        "n": "Amazon.com Inc",
+        "w": 4.45
+      },
+      {
+        "s": "AMD",
+        "n": "Advanced Micro Devices Inc",
+        "w": 3.37
+      },
+      {
+        "s": "GOOGL",
+        "n": "Alphabet Inc Class A",
+        "w": 3.15
+      },
+      {
+        "s": "TSLA",
+        "n": "Tesla Inc",
+        "w": 2.93
+      },
+      {
+        "s": "GOOG",
+        "n": "Alphabet Inc Class C",
+        "w": 2.91
+      },
+      {
+        "s": "AVGO",
+        "n": "Broadcom Inc",
+        "w": 2.8
       }
     ],
     "IWM": [
@@ -4409,6 +4409,58 @@
         "w": 1.17
       }
     ],
+    "IJT": [
+      {
+        "s": "CORT",
+        "n": "Corcept Therapeutics Inc",
+        "w": 1.24
+      },
+      {
+        "s": "EAT",
+        "n": "Brinker International Inc",
+        "w": 1.13
+      },
+      {
+        "s": "VSAT",
+        "n": "Viasat Inc",
+        "w": 1.05
+      },
+      {
+        "s": "RHP",
+        "n": "Ryman Hospitality Properties Inc",
+        "w": 1.01
+      },
+      {
+        "s": "PTGX",
+        "n": "Protagonist Therapeutics Inc",
+        "w": 1.0
+      },
+      {
+        "s": "ETSY",
+        "n": "Etsy Inc",
+        "w": 0.91
+      },
+      {
+        "s": "FORM",
+        "n": "FormFactor Inc",
+        "w": 0.91
+      },
+      {
+        "s": "ALKS",
+        "n": "Alkermes PLC",
+        "w": 0.9
+      },
+      {
+        "s": "AWI",
+        "n": "Armstrong World Industries Inc",
+        "w": 0.85
+      },
+      {
+        "s": "GKOS",
+        "n": "Glaukos Corp",
+        "w": 0.83
+      }
+    ],
     "IJJ": [
       {
         "s": "USFD",
@@ -4459,6 +4511,58 @@
         "s": "PFGC",
         "n": "Performance Food Group Co",
         "w": 0.91
+      }
+    ],
+    "VUG": [
+      {
+        "s": "NVDA",
+        "n": "NVIDIA Corp",
+        "w": 13.62
+      },
+      {
+        "s": "AAPL",
+        "n": "Apple Inc",
+        "w": 12.49
+      },
+      {
+        "s": "MSFT",
+        "n": "Microsoft Corp",
+        "w": 10.12
+      },
+      {
+        "s": "GOOGL",
+        "n": "Alphabet Inc Class A",
+        "w": 5.34
+      },
+      {
+        "s": "AMZN",
+        "n": "Amazon.com Inc",
+        "w": 4.76
+      },
+      {
+        "s": "GOOG",
+        "n": "Alphabet Inc Class C",
+        "w": 4.21
+      },
+      {
+        "s": "AVGO",
+        "n": "Broadcom Inc",
+        "w": 4.1
+      },
+      {
+        "s": "META",
+        "n": "Meta Platforms Inc Class A",
+        "w": 3.39
+      },
+      {
+        "s": "TSLA",
+        "n": "Tesla Inc",
+        "w": 2.79
+      },
+      {
+        "s": "LLY",
+        "n": "Eli Lilly and Co",
+        "w": 2.64
       }
     ],
     "MGK": [
@@ -4565,110 +4669,6 @@
         "w": 0.79
       }
     ],
-    "IJT": [
-      {
-        "s": "CORT",
-        "n": "Corcept Therapeutics Inc",
-        "w": 1.24
-      },
-      {
-        "s": "EAT",
-        "n": "Brinker International Inc",
-        "w": 1.13
-      },
-      {
-        "s": "VSAT",
-        "n": "Viasat Inc",
-        "w": 1.05
-      },
-      {
-        "s": "RHP",
-        "n": "Ryman Hospitality Properties Inc",
-        "w": 1.01
-      },
-      {
-        "s": "PTGX",
-        "n": "Protagonist Therapeutics Inc",
-        "w": 1.0
-      },
-      {
-        "s": "ETSY",
-        "n": "Etsy Inc",
-        "w": 0.91
-      },
-      {
-        "s": "FORM",
-        "n": "FormFactor Inc",
-        "w": 0.91
-      },
-      {
-        "s": "ALKS",
-        "n": "Alkermes PLC",
-        "w": 0.9
-      },
-      {
-        "s": "AWI",
-        "n": "Armstrong World Industries Inc",
-        "w": 0.85
-      },
-      {
-        "s": "GKOS",
-        "n": "Glaukos Corp",
-        "w": 0.83
-      }
-    ],
-    "VUG": [
-      {
-        "s": "NVDA",
-        "n": "NVIDIA Corp",
-        "w": 13.62
-      },
-      {
-        "s": "AAPL",
-        "n": "Apple Inc",
-        "w": 12.49
-      },
-      {
-        "s": "MSFT",
-        "n": "Microsoft Corp",
-        "w": 10.12
-      },
-      {
-        "s": "GOOGL",
-        "n": "Alphabet Inc Class A",
-        "w": 5.34
-      },
-      {
-        "s": "AMZN",
-        "n": "Amazon.com Inc",
-        "w": 4.76
-      },
-      {
-        "s": "GOOG",
-        "n": "Alphabet Inc Class C",
-        "w": 4.21
-      },
-      {
-        "s": "AVGO",
-        "n": "Broadcom Inc",
-        "w": 4.1
-      },
-      {
-        "s": "META",
-        "n": "Meta Platforms Inc Class A",
-        "w": 3.39
-      },
-      {
-        "s": "TSLA",
-        "n": "Tesla Inc",
-        "w": 2.79
-      },
-      {
-        "s": "LLY",
-        "n": "Eli Lilly and Co",
-        "w": 2.64
-      }
-    ],
     "VTV": [
       {
         "s": "MU",
@@ -4719,58 +4719,6 @@
         "s": "CVX",
         "n": "Chevron Corp",
         "w": 1.42
-      }
-    ],
-    "XLV": [
-      {
-        "s": "LLY",
-        "n": "Eli Lilly and Co",
-        "w": 14.87
-      },
-      {
-        "s": "JNJ",
-        "n": "Johnson & Johnson",
-        "w": 10.4
-      },
-      {
-        "s": "ABBV",
-        "n": "AbbVie Inc",
-        "w": 7.36
-      },
-      {
-        "s": "MRK",
-        "n": "Merck & Co Inc",
-        "w": 5.93
-      },
-      {
-        "s": "UNH",
-        "n": "UnitedHealth Group Inc",
-        "w": 5.75
-      },
-      {
-        "s": "AMGN",
-        "n": "Amgen Inc",
-        "w": 3.77
-      },
-      {
-        "s": "TMO",
-        "n": "Thermo Fisher Scientific Inc",
-        "w": 3.73
-      },
-      {
-        "s": "ABT",
-        "n": "Abbott Laboratories",
-        "w": 3.12
-      },
-      {
-        "s": "GILD",
-        "n": "Gilead Sciences Inc",
-        "w": 2.95
-      },
-      {
-        "s": "PFE",
-        "n": "Pfizer Inc",
-        "w": 2.64
       }
     ],
     "XLK": [
@@ -4825,160 +4773,56 @@
         "w": 2.47
       }
     ],
-    "XLE": [
+    "XLV": [
       {
-        "s": "XOM",
-        "n": "ExxonMobil Holdings Corp",
-        "w": 19.86
+        "s": "LLY",
+        "n": "Eli Lilly and Co",
+        "w": 14.87
       },
       {
-        "s": "CVX",
-        "n": "Chevron Corp",
-        "w": 14.89
+        "s": "JNJ",
+        "n": "Johnson & Johnson",
+        "w": 10.4
       },
       {
-        "s": "COP",
-        "n": "ConocoPhillips",
-        "w": 6.23
+        "s": "ABBV",
+        "n": "AbbVie Inc",
+        "w": 7.36
       },
       {
-        "s": "MPC",
-        "n": "Marathon Petroleum Corp",
-        "w": 5.42
+        "s": "MRK",
+        "n": "Merck & Co Inc",
+        "w": 5.93
       },
       {
-        "s": "PSX",
-        "n": "Phillips 66",
-        "w": 5.33
+        "s": "UNH",
+        "n": "UnitedHealth Group Inc",
+        "w": 5.75
       },
       {
-        "s": "VLO",
-        "n": "Valero Energy Corp",
-        "w": 5.07
+        "s": "AMGN",
+        "n": "Amgen Inc",
+        "w": 3.77
       },
       {
-        "s": "SLB",
-        "n": "SLB Ltd",
-        "w": 4.88
+        "s": "TMO",
+        "n": "Thermo Fisher Scientific Inc",
+        "w": 3.73
       },
       {
-        "s": "EOG",
-        "n": "EOG Resources Inc",
-        "w": 4.13
+        "s": "ABT",
+        "n": "Abbott Laboratories",
+        "w": 3.12
       },
       {
-        "s": "WMB",
-        "n": "Williams Companies Inc",
-        "w": 3.78
+        "s": "GILD",
+        "n": "Gilead Sciences Inc",
+        "w": 2.95
       },
       {
-        "s": "KMI",
-        "n": "Kinder Morgan Inc Class P",
-        "w": 3.65
-      }
-    ],
-    "XLI": [
-      {
-        "s": "CAT",
-        "n": "Caterpillar Inc",
-        "w": 6.67
-      },
-      {
-        "s": "GE",
-        "n": "GE Aerospace",
-        "w": 6.36
-      },
-      {
-        "s": "RTX",
-        "n": "RTX Corp",
-        "w": 5.08
-      },
-      {
-        "s": "GEV",
-        "n": "GE Vernova Inc",
-        "w": 4.39
-      },
-      {
-        "s": "UNP",
-        "n": "Union Pacific Corp",
-        "w": 3.24
-      },
-      {
-        "s": "DE",
-        "n": "Deere & Co",
-        "w": 2.99
-      },
-      {
-        "s": "BA",
-        "n": "Boeing Co",
-        "w": 2.98
-      },
-      {
-        "s": "ETN",
-        "n": "Eaton Corp PLC",
-        "w": 2.84
-      },
-      {
-        "s": "UBER",
-        "n": "Uber Technologies Inc",
-        "w": 2.8
-      },
-      {
-        "s": "PH",
-        "n": "Parker Hannifin Corp",
-        "w": 2.24
-      }
-    ],
-    "XLF": [
-      {
-        "s": "JPM",
-        "n": "JPMorgan Chase & Co",
-        "w": 11.69
-      },
-      {
-        "s": "BRK-B",
-        "n": "Berkshire Hathaway Inc Class B",
-        "w": 11.32
-      },
-      {
-        "s": "V",
-        "n": "Visa Inc Class A",
-        "w": 7.71
-      },
-      {
-        "s": "MA",
-        "n": "Mastercard Inc Class A",
-        "w": 5.83
-      },
-      {
-        "s": "BAC",
-        "n": "Bank of America Corp",
-        "w": 4.96
-      },
-      {
-        "s": "GS",
-        "n": "The Goldman Sachs Group Inc",
-        "w": 3.71
-      },
-      {
-        "s": "WFC",
-        "n": "Wells Fargo & Co",
-        "w": 3.24
-      },
-      {
-        "s": "MS",
-        "n": "Morgan Stanley",
-        "w": 3.13
-      },
-      {
-        "s": "C",
-        "n": "Citigroup Inc",
-        "w": 2.75
-      },
-      {
-        "s": "SCHW",
-        "n": "Charles Schwab Corp",
-        "w": 2.2
+        "s": "PFE",
+        "n": "Pfizer Inc",
+        "w": 2.64
       }
     ],
     "XLY": [
@@ -5033,6 +4877,110 @@
         "w": 1.95
       }
     ],
+    "XLF": [
+      {
+        "s": "JPM",
+        "n": "JPMorgan Chase & Co",
+        "w": 11.69
+      },
+      {
+        "s": "BRK-B",
+        "n": "Berkshire Hathaway Inc Class B",
+        "w": 11.32
+      },
+      {
+        "s": "V",
+        "n": "Visa Inc Class A",
+        "w": 7.71
+      },
+      {
+        "s": "MA",
+        "n": "Mastercard Inc Class A",
+        "w": 5.83
+      },
+      {
+        "s": "BAC",
+        "n": "Bank of America Corp",
+        "w": 4.96
+      },
+      {
+        "s": "GS",
+        "n": "The Goldman Sachs Group Inc",
+        "w": 3.71
+      },
+      {
+        "s": "WFC",
+        "n": "Wells Fargo & Co",
+        "w": 3.24
+      },
+      {
+        "s": "MS",
+        "n": "Morgan Stanley",
+        "w": 3.13
+      },
+      {
+        "s": "C",
+        "n": "Citigroup Inc",
+        "w": 2.75
+      },
+      {
+        "s": "SCHW",
+        "n": "Charles Schwab Corp",
+        "w": 2.2
+      }
+    ],
+    "XLI": [
+      {
+        "s": "CAT",
+        "n": "Caterpillar Inc",
+        "w": 6.67
+      },
+      {
+        "s": "GE",
+        "n": "GE Aerospace",
+        "w": 6.36
+      },
+      {
+        "s": "RTX",
+        "n": "RTX Corp",
+        "w": 5.08
+      },
+      {
+        "s": "GEV",
+        "n": "GE Vernova Inc",
+        "w": 4.39
+      },
+      {
+        "s": "UNP",
+        "n": "Union Pacific Corp",
+        "w": 3.24
+      },
+      {
+        "s": "DE",
+        "n": "Deere & Co",
+        "w": 2.99
+      },
+      {
+        "s": "BA",
+        "n": "Boeing Co",
+        "w": 2.98
+      },
+      {
+        "s": "ETN",
+        "n": "Eaton Corp PLC",
+        "w": 2.84
+      },
+      {
+        "s": "UBER",
+        "n": "Uber Technologies Inc",
+        "w": 2.8
+      },
+      {
+        "s": "PH",
+        "n": "Parker Hannifin Corp",
+        "w": 2.24
+      }
+    ],
     "XLB": [
       {
         "s": "LIN",
@@ -5083,6 +5031,110 @@
         "s": "CRH",
         "n": "CRH PLC",
         "w": 4.07
+      }
+    ],
+    "XLE": [
+      {
+        "s": "XOM",
+        "n": "ExxonMobil Holdings Corp",
+        "w": 19.86
+      },
+      {
+        "s": "CVX",
+        "n": "Chevron Corp",
+        "w": 14.89
+      },
+      {
+        "s": "COP",
+        "n": "ConocoPhillips",
+        "w": 6.23
+      },
+      {
+        "s": "MPC",
+        "n": "Marathon Petroleum Corp",
+        "w": 5.42
+      },
+      {
+        "s": "PSX",
+        "n": "Phillips 66",
+        "w": 5.33
+      },
+      {
+        "s": "VLO",
+        "n": "Valero Energy Corp",
+        "w": 5.07
+      },
+      {
+        "s": "SLB",
+        "n": "SLB Ltd",
+        "w": 4.88
+      },
+      {
+        "s": "EOG",
+        "n": "EOG Resources Inc",
+        "w": 4.13
+      },
+      {
+        "s": "WMB",
+        "n": "Williams Companies Inc",
+        "w": 3.78
+      },
+      {
+        "s": "KMI",
+        "n": "Kinder Morgan Inc Class P",
+        "w": 3.65
+      }
+    ],
+    "XLU": [
+      {
+        "s": "NEE",
+        "n": "NextEra Energy Inc",
+        "w": 13.05
+      },
+      {
+        "s": "SO",
+        "n": "Southern Co",
+        "w": 7.54
+      },
+      {
+        "s": "DUK",
+        "n": "Duke Energy Corp",
+        "w": 7.1
+      },
+      {
+        "s": "CEG",
+        "n": "Constellation Energy Corp",
+        "w": 6.68
+      },
+      {
+        "s": "AEP",
+        "n": "American Electric Power Co Inc",
+        "w": 5.06
+      },
+      {
+        "s": "D",
+        "n": "Dominion Energy Inc",
+        "w": 4.41
+      },
+      {
+        "s": "SRE",
+        "n": "Sempra",
+        "w": 4.06
+      },
+      {
+        "s": "ETR",
+        "n": "Entergy Corp",
+        "w": 3.7
+      },
+      {
+        "s": "XEL",
+        "n": "Xcel Energy Inc",
+        "w": 3.59
+      },
+      {
+        "s": "EXC",
+        "n": "Exelon Corp",
+        "w": 3.4
       }
     ],
     "XLRE": [
@@ -5189,56 +5241,56 @@
         "w": 4.59
       }
     ],
-    "XLU": [
+    "XLP": [
       {
-        "s": "NEE",
-        "n": "NextEra Energy Inc",
-        "w": 13.05
+        "s": "WMT",
+        "n": "Walmart Inc",
+        "w": 9.82
       },
       {
-        "s": "SO",
-        "n": "Southern Co",
-        "w": 7.54
+        "s": "COST",
+        "n": "Costco Wholesale Corp",
+        "w": 8.94
       },
       {
-        "s": "DUK",
-        "n": "Duke Energy Corp",
-        "w": 7.1
+        "s": "KO",
+        "n": "Coca-Cola Co",
+        "w": 7.33
       },
       {
-        "s": "CEG",
-        "n": "Constellation Energy Corp",
-        "w": 6.68
+        "s": "PG",
+        "n": "Procter & Gamble Co",
+        "w": 7.22
       },
       {
-        "s": "AEP",
-        "n": "American Electric Power Co Inc",
-        "w": 5.06
+        "s": "PM",
+        "n": "Philip Morris International Inc",
+        "w": 6.24
       },
       {
-        "s": "D",
-        "n": "Dominion Energy Inc",
-        "w": 4.41
+        "s": "TGT",
+        "n": "Target Corp",
+        "w": 4.66
       },
       {
-        "s": "SRE",
-        "n": "Sempra",
-        "w": 4.06
+        "s": "CL",
+        "n": "Colgate-Palmolive Co",
+        "w": 4.52
       },
       {
-        "s": "ETR",
-        "n": "Entergy Corp",
-        "w": 3.7
+        "s": "PEP",
+        "n": "PepsiCo Inc",
+        "w": 4.4
       },
       {
-        "s": "XEL",
-        "n": "Xcel Energy Inc",
-        "w": 3.59
+        "s": "MDLZ",
+        "n": "Mondelez International Inc Class A",
+        "w": 4.38
       },
       {
-        "s": "EXC",
-        "n": "Exelon Corp",
-        "w": 3.4
+        "s": "MO",
+        "n": "Altria Group Inc",
+        "w": 4.24
       }
     ],
     "GDX": [
@@ -5343,58 +5395,6 @@
         "s": "AG.TO",
         "n": "First Majestic Silver Corp",
         "w": 2.51
-      }
-    ],
-    "XLP": [
-      {
-        "s": "WMT",
-        "n": "Walmart Inc",
-        "w": 9.82
-      },
-      {
-        "s": "COST",
-        "n": "Costco Wholesale Corp",
-        "w": 8.94
-      },
-      {
-        "s": "KO",
-        "n": "Coca-Cola Co",
-        "w": 7.33
-      },
-      {
-        "s": "PG",
-        "n": "Procter & Gamble Co",
-        "w": 7.22
-      },
-      {
-        "s": "PM",
-        "n": "Philip Morris International Inc",
-        "w": 6.24
-      },
-      {
-        "s": "TGT",
-        "n": "Target Corp",
-        "w": 4.66
-      },
-      {
-        "s": "CL",
-        "n": "Colgate-Palmolive Co",
-        "w": 4.52
-      },
-      {
-        "s": "PEP",
-        "n": "PepsiCo Inc",
-        "w": 4.4
-      },
-      {
-        "s": "MDLZ",
-        "n": "Mondelez International Inc Class A",
-        "w": 4.38
-      },
-      {
-        "s": "MO",
-        "n": "Altria Group Inc",
-        "w": 4.24
       }
     ],
     "IDNA": [
@@ -5553,58 +5553,6 @@
         "w": 4.61
       }
     ],
-    "XBI": [
-      {
-        "s": "MRNA",
-        "n": "Moderna Inc",
-        "w": 2.81
-      },
-      {
-        "s": "TWST",
-        "n": "Twist Bioscience Corp",
-        "w": 1.89
-      },
-      {
-        "s": "APGE",
-        "n": "Apogee Therapeutics Inc",
-        "w": 1.5
-      },
-      {
-        "s": "KYMR",
-        "n": "Kymera Therapeutics Inc Ordinary Shares",
-        "w": 1.4
-      },
-      {
-        "s": "HALO",
-        "n": "Halozyme Therapeutics Inc",
-        "w": 1.39
-      },
-      {
-        "s": "NTRA",
-        "n": "Natera Inc",
-        "w": 1.37
-      },
-      {
-        "s": "PRAX",
-        "n": "Praxis Precision Medicines Inc Ordinary Shares",
-        "w": 1.34
-      },
-      {
-        "s": "ORKA",
-        "n": "Oruka Therapeutics Inc",
-        "w": 1.33
-      },
-      {
-        "s": "RVMD",
-        "n": "Revolution Medicines Inc Ordinary Shares",
-        "w": 1.31
-      },
-      {
-        "s": "TVTX",
-        "n": "Travere Therapeutics Inc Ordinary Shares",
-        "w": 1.3
-      }
-    ],
     "COPX": [
       {
         "s": "HBM.TO",
@@ -5707,6 +5655,58 @@
         "s": "AUGO",
         "n": "Aura Minerals Inc",
         "w": 3.33
+      }
+    ],
+    "XBI": [
+      {
+        "s": "MRNA",
+        "n": "Moderna Inc",
+        "w": 2.81
+      },
+      {
+        "s": "TWST",
+        "n": "Twist Bioscience Corp",
+        "w": 1.89
+      },
+      {
+        "s": "APGE",
+        "n": "Apogee Therapeutics Inc",
+        "w": 1.5
+      },
+      {
+        "s": "KYMR",
+        "n": "Kymera Therapeutics Inc Ordinary Shares",
+        "w": 1.4
+      },
+      {
+        "s": "HALO",
+        "n": "Halozyme Therapeutics Inc",
+        "w": 1.39
+      },
+      {
+        "s": "NTRA",
+        "n": "Natera Inc",
+        "w": 1.37
+      },
+      {
+        "s": "PRAX",
+        "n": "Praxis Precision Medicines Inc Ordinary Shares",
+        "w": 1.34
+      },
+      {
+        "s": "ORKA",
+        "n": "Oruka Therapeutics Inc",
+        "w": 1.33
+      },
+      {
+        "s": "RVMD",
+        "n": "Revolution Medicines Inc Ordinary Shares",
+        "w": 1.31
+      },
+      {
+        "s": "TVTX",
+        "n": "Travere Therapeutics Inc Ordinary Shares",
+        "w": 1.3
       }
     ],
     "LIT": [
@@ -5939,58 +5939,6 @@
         "w": 1.86
       }
     ],
-    "TAN": [
-      {
-        "s": "FSLR",
-        "n": "First Solar Inc",
-        "w": 9.89
-      },
-      {
-        "s": "NXT",
-        "n": "Nextpower Inc",
-        "w": 8.81
-      },
-      {
-        "s": "ENLT.TA",
-        "n": "Enlight Renewable Energy Ltd",
-        "w": 7.22
-      },
-      {
-        "s": "ENPH",
-        "n": "Enphase Energy Inc",
-        "w": 6.55
-      },
-      {
-        "s": "DORL.TA",
-        "n": "Doral Group Renewable Eneryy Resources Ltd Ordinary Shares",
-        "w": 4.68
-      },
-      {
-        "s": "HASI",
-        "n": "HA Sustainable Infrastructure Capital Inc",
-        "w": 4.62
-      },
-      {
-        "s": "3800.HK",
-        "n": "GCL Technology Holdings Ltd",
-        "w": 4.05
-      },
-      {
-        "s": "RUN",
-        "n": "Sunrun Inc",
-        "w": 3.8
-      },
-      {
-        "s": "CWEN",
-        "n": "Clearway Energy Inc Class C",
-        "w": 3.66
-      },
-      {
-        "s": "SEDG",
-        "n": "SolarEdge Technologies Inc",
-        "w": 3.5
-      }
-    ],
     "PPH": [
       {
         "s": "LLY",
@@ -6041,6 +5989,58 @@
         "s": "GSK",
         "n": "GSK PLC ADR",
         "w": 4.13
+      }
+    ],
+    "TAN": [
+      {
+        "s": "FSLR",
+        "n": "First Solar Inc",
+        "w": 9.89
+      },
+      {
+        "s": "NXT",
+        "n": "Nextpower Inc",
+        "w": 8.81
+      },
+      {
+        "s": "ENLT.TA",
+        "n": "Enlight Renewable Energy Ltd",
+        "w": 7.22
+      },
+      {
+        "s": "ENPH",
+        "n": "Enphase Energy Inc",
+        "w": 6.55
+      },
+      {
+        "s": "DORL.TA",
+        "n": "Doral Group Renewable Eneryy Resources Ltd Ordinary Shares",
+        "w": 4.68
+      },
+      {
+        "s": "HASI",
+        "n": "HA Sustainable Infrastructure Capital Inc",
+        "w": 4.62
+      },
+      {
+        "s": "3800.HK",
+        "n": "GCL Technology Holdings Ltd",
+        "w": 4.05
+      },
+      {
+        "s": "RUN",
+        "n": "Sunrun Inc",
+        "w": 3.8
+      },
+      {
+        "s": "CWEN",
+        "n": "Clearway Energy Inc Class C",
+        "w": 3.66
+      },
+      {
+        "s": "SEDG",
+        "n": "SolarEdge Technologies Inc",
+        "w": 3.5
       }
     ],
     "IHI": [
@@ -6095,13 +6095,6 @@
         "w": 4.07
       }
     ],
-    "AGG": [
-      {
-        "s": "BISXX",
-        "n": "BlackRock Cash Funds Instl SL Agency",
-        "w": 3.01
-      }
-    ],
     "XME": [
       {
         "s": "HL",
@@ -6152,6 +6145,13 @@
         "s": "BTU",
         "n": "Peabody Energy Corp",
         "w": 3.91
+      }
+    ],
+    "AGG": [
+      {
+        "s": "BISXX",
+        "n": "BlackRock Cash Funds Instl SL Agency",
+        "w": 3.01
       }
     ],
     "XHS": [
@@ -6376,6 +6376,13 @@
         "w": 3.34
       }
     ],
+    "HYG": [
+      {
+        "s": "XTSLA",
+        "n": "BlackRock Cash Funds Treasury SL Agency",
+        "w": 1.35
+      }
+    ],
     "DBA": [
       {
         "s": "AGPXX",
@@ -6386,13 +6393,6 @@
         "s": "TBLL",
         "n": "Invesco Short Term Treasury ETF",
         "w": 4.45
-      }
-    ],
-    "HYG": [
-      {
-        "s": "XTSLA",
-        "n": "BlackRock Cash Funds Treasury SL Agency",
-        "w": 1.35
       }
     ],
     "ESPO": [
@@ -6445,6 +6445,58 @@
         "s": "RBLX",
         "n": "Roblox Corp Ordinary Shares - Class A",
         "w": 4.9
+      }
+    ],
+    "IDRV": [
+      {
+        "s": "006400.KQ",
+        "n": "Samsung SDI Co Ltd",
+        "w": 5.15
+      },
+      {
+        "s": "373220.KQ",
+        "n": "LG Energy Solution Ltd",
+        "w": 4.63
+      },
+      {
+        "s": "RIVN",
+        "n": "Rivian Automotive Inc Class A",
+        "w": 4.42
+      },
+      {
+        "s": "01211",
+        "n": "BYD Co Ltd Class H",
+        "w": 4.37
+      },
+      {
+        "s": "TSLA",
+        "n": "Tesla Inc",
+        "w": 4.24
+      },
+      {
+        "s": "PLS.AX",
+        "n": "PLS Group Ltd",
+        "w": 4.16
+      },
+      {
+        "s": "051910.KQ",
+        "n": "LG Chem Ltd",
+        "w": 4.07
+      },
+      {
+        "s": "VOW3.DE",
+        "n": "Volkswagen AG Participating Preferred",
+        "w": 4.0
+      },
+      {
+        "s": "ALB",
+        "n": "Albemarle Corp",
+        "w": 3.91
+      },
+      {
+        "s": "2015.HK",
+        "n": "Li Auto Inc Ordinary Shares - Class A",
+        "w": 3.8
       }
     ],
     "ASHR": [
@@ -6551,214 +6603,6 @@
         "w": 1.96
       }
     ],
-    "FXI": [
-      {
-        "s": "9988.HK",
-        "n": "Alibaba Group Holding Ltd Ordinary Shares",
-        "w": 9.52
-      },
-      {
-        "s": "00939",
-        "n": "China Construction Bank Corp Class H",
-        "w": 9.37
-      },
-      {
-        "s": "0700.HK",
-        "n": "Tencent Holdings Ltd",
-        "w": 8.65
-      },
-      {
-        "s": "01398",
-        "n": "Industrial And Commercial Bank Of China Ltd Class H",
-        "w": 6.37
-      },
-      {
-        "s": "1810.HK",
-        "n": "Xiaomi Corp Class B",
-        "w": 5.01
-      },
-      {
-        "s": "3690.HK",
-        "n": "Meituan Class B",
-        "w": 4.49
-      },
-      {
-        "s": "03988",
-        "n": "Bank Of China Ltd Class H",
-        "w": 4.15
-      },
-      {
-        "s": "02318",
-        "n": "Ping An Insurance (Group) Co. of China Ltd Class H",
-        "w": 3.81
-      },
-      {
-        "s": "9999.HK",
-        "n": "NetEase Inc Ordinary Shares",
-        "w": 3.64
-      },
-      {
-        "s": "01211",
-        "n": "BYD Co Ltd Class H",
-        "w": 3.35
-      }
-    ],
-    "IDRV": [
-      {
-        "s": "006400.KQ",
-        "n": "Samsung SDI Co Ltd",
-        "w": 5.15
-      },
-      {
-        "s": "373220.KQ",
-        "n": "LG Energy Solution Ltd",
-        "w": 4.63
-      },
-      {
-        "s": "RIVN",
-        "n": "Rivian Automotive Inc Class A",
-        "w": 4.42
-      },
-      {
-        "s": "01211",
-        "n": "BYD Co Ltd Class H",
-        "w": 4.37
-      },
-      {
-        "s": "TSLA",
-        "n": "Tesla Inc",
-        "w": 4.24
-      },
-      {
-        "s": "PLS.AX",
-        "n": "PLS Group Ltd",
-        "w": 4.16
-      },
-      {
-        "s": "051910.KQ",
-        "n": "LG Chem Ltd",
-        "w": 4.07
-      },
-      {
-        "s": "VOW3.DE",
-        "n": "Volkswagen AG Participating Preferred",
-        "w": 4.0
-      },
-      {
-        "s": "ALB",
-        "n": "Albemarle Corp",
-        "w": 3.91
-      },
-      {
-        "s": "2015.HK",
-        "n": "Li Auto Inc Ordinary Shares - Class A",
-        "w": 3.8
-      }
-    ],
-    "XSD": [
-      {
-        "s": "PI",
-        "n": "Impinj Inc",
-        "w": 3.92
-      },
-      {
-        "s": "AMBA",
-        "n": "Ambarella Inc",
-        "w": 3.06
-      },
-      {
-        "s": "NVDA",
-        "n": "NVIDIA Corp",
-        "w": 3.04
-      },
-      {
-        "s": "MU",
-        "n": "Micron Technology Inc",
-        "w": 2.96
-      },
-      {
-        "s": "AMD",
-        "n": "Advanced Micro Devices Inc",
-        "w": 2.87
-      },
-      {
-        "s": "QRVO",
-        "n": "Qorvo Inc",
-        "w": 2.79
-      },
-      {
-        "s": "SLAB",
-        "n": "Silicon Laboratories Inc",
-        "w": 2.77
-      },
-      {
-        "s": "AVGO",
-        "n": "Broadcom Inc",
-        "w": 2.74
-      },
-      {
-        "s": "SWKS",
-        "n": "Skyworks Solutions Inc",
-        "w": 2.63
-      },
-      {
-        "s": "OLED",
-        "n": "Universal Display Corp",
-        "w": 2.62
-      }
-    ],
-    "BOUT": [
-      {
-        "s": "HNGE",
-        "n": "Hinge Health Inc Ordinary Shares - Class A",
-        "w": 7.33
-      },
-      {
-        "s": "TVTX",
-        "n": "Travere Therapeutics Inc Ordinary Shares",
-        "w": 7.06
-      },
-      {
-        "s": "TGTX",
-        "n": "TG Therapeutics Inc",
-        "w": 7.01
-      },
-      {
-        "s": "TX",
-        "n": "Ternium SA ADR",
-        "w": 6.92
-      },
-      {
-        "s": "ELVN",
-        "n": "Enliven Therapeutics Inc",
-        "w": 6.78
-      },
-      {
-        "s": "NESR",
-        "n": "National Energy Services Reunited Corp",
-        "w": 6.38
-      },
-      {
-        "s": "UBSG.SW",
-        "n": "UBS Group AG Registered Shares",
-        "w": 6.28
-      },
-      {
-        "s": "BAC",
-        "n": "Bank of America Corp",
-        "w": 6.03
-      },
-      {
-        "s": "EMR",
-        "n": "Emerson Electric Co",
-        "w": 5.82
-      },
-      {
-        "s": "EMBJ",
-        "n": "Embraer SA ADR",
-        "w": 5.66
-      }
-    ],
     "SMH": [
       {
         "s": "NVDA",
@@ -6811,56 +6655,56 @@
         "w": 4.3
       }
     ],
-    "PHO": [
+    "FXI": [
       {
-        "s": "ROP",
-        "n": "Roper Technologies Inc",
-        "w": 9.71
+        "s": "9988.HK",
+        "n": "Alibaba Group Holding Ltd Ordinary Shares",
+        "w": 9.52
       },
       {
-        "s": "ECL",
-        "n": "Ecolab Inc",
-        "w": 8.23
+        "s": "00939",
+        "n": "China Construction Bank Corp Class H",
+        "w": 9.37
       },
       {
-        "s": "WAT",
-        "n": "Waters Corp",
-        "w": 7.28
+        "s": "0700.HK",
+        "n": "Tencent Holdings Ltd",
+        "w": 8.65
       },
       {
-        "s": "FERG",
-        "n": "Ferguson Enterprises Inc",
-        "w": 6.49
+        "s": "01398",
+        "n": "Industrial And Commercial Bank Of China Ltd Class H",
+        "w": 6.37
       },
       {
-        "s": "IDXX",
-        "n": "IDEXX Laboratories Inc",
-        "w": 6.33
+        "s": "1810.HK",
+        "n": "Xiaomi Corp Class B",
+        "w": 5.01
       },
       {
-        "s": "VLTO",
-        "n": "Veralto Corp",
-        "w": 4.46
+        "s": "3690.HK",
+        "n": "Meituan Class B",
+        "w": 4.49
       },
       {
-        "s": "A",
-        "n": "Agilent Technologies Inc",
-        "w": 4.22
+        "s": "03988",
+        "n": "Bank Of China Ltd Class H",
+        "w": 4.15
       },
       {
-        "s": "AWK",
-        "n": "American Water Works Co Inc",
-        "w": 4.17
+        "s": "02318",
+        "n": "Ping An Insurance (Group) Co. of China Ltd Class H",
+        "w": 3.81
       },
       {
-        "s": "XYL",
-        "n": "Xylem Inc",
-        "w": 3.74
-      },
-      {
-        "s": "J",
-        "n": "Jacobs Solutions Inc",
+        "s": "9999.HK",
+        "n": "NetEase Inc Ordinary Shares",
         "w": 3.64
+      },
+      {
+        "s": "01211",
+        "n": "BYD Co Ltd Class H",
+        "w": 3.35
       }
     ],
     "XAR": [
@@ -6915,56 +6759,108 @@
         "w": 2.88
       }
     ],
-    "ITB": [
+    "BOUT": [
       {
-        "s": "DHI",
-        "n": "D.R. Horton Inc",
-        "w": 16.62
+        "s": "HNGE",
+        "n": "Hinge Health Inc Ordinary Shares - Class A",
+        "w": 7.33
       },
       {
-        "s": "PHM",
-        "n": "PulteGroup Inc",
-        "w": 10.49
+        "s": "TVTX",
+        "n": "Travere Therapeutics Inc Ordinary Shares",
+        "w": 7.06
       },
       {
-        "s": "LEN",
-        "n": "Lennar Corp Class A",
-        "w": 7.89
+        "s": "TGTX",
+        "n": "TG Therapeutics Inc",
+        "w": 7.01
       },
       {
-        "s": "NVR",
-        "n": "NVR Inc",
-        "w": 7.43
+        "s": "TX",
+        "n": "Ternium SA ADR",
+        "w": 6.92
       },
       {
-        "s": "SHW",
-        "n": "Sherwin-Williams Co",
-        "w": 5.32
+        "s": "ELVN",
+        "n": "Enliven Therapeutics Inc",
+        "w": 6.78
       },
       {
-        "s": "TOL",
-        "n": "Toll Brothers Inc",
-        "w": 5.22
+        "s": "NESR",
+        "n": "National Energy Services Reunited Corp",
+        "w": 6.38
       },
       {
-        "s": "HD",
-        "n": "The Home Depot Inc",
-        "w": 4.9
+        "s": "UBSG.SW",
+        "n": "UBS Group AG Registered Shares",
+        "w": 6.28
       },
       {
-        "s": "LOW",
-        "n": "Lowe's Companies Inc",
-        "w": 4.52
+        "s": "BAC",
+        "n": "Bank of America Corp",
+        "w": 6.03
       },
       {
-        "s": "MAS",
-        "n": "Masco Corp",
-        "w": 3.19
+        "s": "EMR",
+        "n": "Emerson Electric Co",
+        "w": 5.82
       },
       {
-        "s": "LII",
-        "n": "Lennox International Inc",
-        "w": 2.66
+        "s": "EMBJ",
+        "n": "Embraer SA ADR",
+        "w": 5.66
+      }
+    ],
+    "PHO": [
+      {
+        "s": "ROP",
+        "n": "Roper Technologies Inc",
+        "w": 9.71
+      },
+      {
+        "s": "ECL",
+        "n": "Ecolab Inc",
+        "w": 8.23
+      },
+      {
+        "s": "WAT",
+        "n": "Waters Corp",
+        "w": 7.28
+      },
+      {
+        "s": "FERG",
+        "n": "Ferguson Enterprises Inc",
+        "w": 6.49
+      },
+      {
+        "s": "IDXX",
+        "n": "IDEXX Laboratories Inc",
+        "w": 6.33
+      },
+      {
+        "s": "VLTO",
+        "n": "Veralto Corp",
+        "w": 4.46
+      },
+      {
+        "s": "A",
+        "n": "Agilent Technologies Inc",
+        "w": 4.22
+      },
+      {
+        "s": "AWK",
+        "n": "American Water Works Co Inc",
+        "w": 4.17
+      },
+      {
+        "s": "XYL",
+        "n": "Xylem Inc",
+        "w": 3.74
+      },
+      {
+        "s": "J",
+        "n": "Jacobs Solutions Inc",
+        "w": 3.64
       }
     ],
     "BOTZ": [
@@ -7019,58 +6915,6 @@
         "w": 2.27
       }
     ],
-    "MOO": [
-      {
-        "s": "BAYN.DE",
-        "n": "Bayer AG",
-        "w": 8.82
-      },
-      {
-        "s": "CTVA",
-        "n": "Corteva Inc",
-        "w": 8.24
-      },
-      {
-        "s": "DE",
-        "n": "Deere & Co",
-        "w": 8.23
-      },
-      {
-        "s": "NTR.TO",
-        "n": "Nutrien Ltd",
-        "w": 6.72
-      },
-      {
-        "s": "ZTS",
-        "n": "Zoetis Inc Class A",
-        "w": 5.22
-      },
-      {
-        "s": "ADM",
-        "n": "Archer-Daniels-Midland Co",
-        "w": 5.05
-      },
-      {
-        "s": "CF",
-        "n": "CF Industries Holdings Inc",
-        "w": 4.74
-      },
-      {
-        "s": "6326.T",
-        "n": "Kubota Corp",
-        "w": 4.6
-      },
-      {
-        "s": "TSN",
-        "n": "Tyson Foods Inc Class A",
-        "w": 3.93
-      },
-      {
-        "s": "BG",
-        "n": "Bunge Global SA",
-        "w": 3.4
-      }
-    ],
     "UFO": [
       {
         "s": "GRMN",
@@ -7121,6 +6965,117 @@
         "s": "GSAT",
         "n": "Globalstar Inc",
         "w": 3.59
+      }
+    ],
+    "XSD": [
+      {
+        "s": "PI",
+        "n": "Impinj Inc",
+        "w": 3.92
+      },
+      {
+        "s": "AMBA",
+        "n": "Ambarella Inc",
+        "w": 3.06
+      },
+      {
+        "s": "NVDA",
+        "n": "NVIDIA Corp",
+        "w": 3.04
+      },
+      {
+        "s": "MU",
+        "n": "Micron Technology Inc",
+        "w": 2.96
+      },
+      {
+        "s": "AMD",
+        "n": "Advanced Micro Devices Inc",
+        "w": 2.87
+      },
+      {
+        "s": "QRVO",
+        "n": "Qorvo Inc",
+        "w": 2.79
+      },
+      {
+        "s": "SLAB",
+        "n": "Silicon Laboratories Inc",
+        "w": 2.77
+      },
+      {
+        "s": "AVGO",
+        "n": "Broadcom Inc",
+        "w": 2.74
+      },
+      {
+        "s": "SWKS",
+        "n": "Skyworks Solutions Inc",
+        "w": 2.63
+      },
+      {
+        "s": "OLED",
+        "n": "Universal Display Corp",
+        "w": 2.62
+      }
+    ],
+    "WEAT": [
+      {
+        "s": "FGTXX",
+        "n": "Goldman Sachs FS Government Instl",
+        "w": 29.27
+      }
+    ],
+    "ITB": [
+      {
+        "s": "DHI",
+        "n": "D.R. Horton Inc",
+        "w": 16.62
+      },
+      {
+        "s": "PHM",
+        "n": "PulteGroup Inc",
+        "w": 10.49
+      },
+      {
+        "s": "LEN",
+        "n": "Lennar Corp Class A",
+        "w": 7.89
+      },
+      {
+        "s": "NVR",
+        "n": "NVR Inc",
+        "w": 7.43
+      },
+      {
+        "s": "SHW",
+        "n": "Sherwin-Williams Co",
+        "w": 5.32
+      },
+      {
+        "s": "TOL",
+        "n": "Toll Brothers Inc",
+        "w": 5.22
+      },
+      {
+        "s": "HD",
+        "n": "The Home Depot Inc",
+        "w": 4.9
+      },
+      {
+        "s": "LOW",
+        "n": "Lowe's Companies Inc",
+        "w": 4.52
+      },
+      {
+        "s": "MAS",
+        "n": "Masco Corp",
+        "w": 3.19
+      },
+      {
+        "s": "LII",
+        "n": "Lennox International Inc",
+        "w": 2.66
       }
     ],
     "IWO": [
@@ -7175,11 +7130,56 @@
         "w": 0.56
       }
     ],
-    "WEAT": [
+    "KWEB": [
       {
-        "s": "FGTXX",
-        "n": "Goldman Sachs FS Government Instl",
-        "w": 29.27
+        "s": "0700.HK",
+        "n": "Tencent Holdings Ltd",
+        "w": 10.25
+      },
+      {
+        "s": "9988.HK",
+        "n": "Alibaba Group Holding Ltd Ordinary Shares",
+        "w": 8.65
+      },
+      {
+        "s": "PDD",
+        "n": "PDD Holdings Inc ADR",
+        "w": 8.27
+      },
+      {
+        "s": "3690.HK",
+        "n": "Meituan Class B",
+        "w": 7.29
+      },
+      {
+        "s": "9999.HK",
+        "n": "NetEase Inc Ordinary Shares",
+        "w": 6.25
+      },
+      {
+        "s": "0992.HK",
+        "n": "Lenovo Group Ltd",
+        "w": 5.04
+      },
+      {
+        "s": "2423.HK",
+        "n": "KE Holdings Inc Class A",
+        "w": 4.35
+      },
+      {
+        "s": "9618.HK",
+        "n": "JD.com Inc Ordinary Shares - Class A",
+        "w": 3.94
+      },
+      {
+        "s": "9961.HK",
+        "n": "Trip.com Group Ltd",
+        "w": 3.82
+      },
+      {
+        "s": "9888.HK",
+        "n": "Baidu Inc",
+        "w": 3.38
       }
     ],
     "NLR": [
@@ -7234,58 +7234,6 @@
         "w": 5.12
       }
     ],
-    "KWEB": [
-      {
-        "s": "0700.HK",
-        "n": "Tencent Holdings Ltd",
-        "w": 10.25
-      },
-      {
-        "s": "9988.HK",
-        "n": "Alibaba Group Holding Ltd Ordinary Shares",
-        "w": 8.65
-      },
-      {
-        "s": "PDD",
-        "n": "PDD Holdings Inc ADR",
-        "w": 8.27
-      },
-      {
-        "s": "3690.HK",
-        "n": "Meituan Class B",
-        "w": 7.29
-      },
-      {
-        "s": "9999.HK",
-        "n": "NetEase Inc Ordinary Shares",
-        "w": 6.25
-      },
-      {
-        "s": "0992.HK",
-        "n": "Lenovo Group Ltd",
-        "w": 5.04
-      },
-      {
-        "s": "2423.HK",
-        "n": "KE Holdings Inc Class A",
-        "w": 4.35
-      },
-      {
-        "s": "9618.HK",
-        "n": "JD.com Inc Ordinary Shares - Class A",
-        "w": 3.94
-      },
-      {
-        "s": "9961.HK",
-        "n": "Trip.com Group Ltd",
-        "w": 3.82
-      },
-      {
-        "s": "9888.HK",
-        "n": "Baidu Inc",
-        "w": 3.38
-      }
-    ],
     "PAVE": [
       {
         "s": "DE",
@@ -7338,56 +7286,56 @@
         "w": 3.01
       }
     ],
-    "BUZZ": [
+    "MOO": [
       {
-        "s": "AAPL",
-        "n": "Apple Inc",
-        "w": 3.24
+        "s": "BAYN.DE",
+        "n": "Bayer AG",
+        "w": 8.82
       },
       {
-        "s": "PLTR",
-        "n": "Palantir Technologies Inc Ordinary Shares - Class A",
-        "w": 3.22
+        "s": "CTVA",
+        "n": "Corteva Inc",
+        "w": 8.24
       },
       {
-        "s": "MSFT",
-        "n": "Microsoft Corp",
-        "w": 3.19
+        "s": "DE",
+        "n": "Deere & Co",
+        "w": 8.23
       },
       {
-        "s": "TSLA",
-        "n": "Tesla Inc",
-        "w": 3.17
+        "s": "NTR.TO",
+        "n": "Nutrien Ltd",
+        "w": 6.72
       },
       {
-        "s": "MU",
-        "n": "Micron Technology Inc",
-        "w": 3.03
+        "s": "ZTS",
+        "n": "Zoetis Inc Class A",
+        "w": 5.22
       },
       {
-        "s": "GOOGL",
-        "n": "Alphabet Inc Class A",
-        "w": 3.01
+        "s": "ADM",
+        "n": "Archer-Daniels-Midland Co",
+        "w": 5.05
       },
       {
-        "s": "SNDK",
-        "n": "SanDisk Corp Ordinary Shares",
-        "w": 3.01
+        "s": "CF",
+        "n": "CF Industries Holdings Inc",
+        "w": 4.74
       },
       {
-        "s": "META",
-        "n": "Meta Platforms Inc Class A",
-        "w": 3.0
+        "s": "6326.T",
+        "n": "Kubota Corp",
+        "w": 4.6
       },
       {
-        "s": "ORCL",
-        "n": "Oracle Corp",
-        "w": 2.98
+        "s": "TSN",
+        "n": "Tyson Foods Inc Class A",
+        "w": 3.93
       },
       {
-        "s": "NVDA",
-        "n": "NVIDIA Corp",
-        "w": 2.98
+        "s": "BG",
+        "n": "Bunge Global SA",
+        "w": 3.4
       }
     ],
     "XOP": [
@@ -7442,51 +7390,56 @@
         "w": 2.52
       }
     ],
-    "URA": [
+    "BUZZ": [
       {
-        "s": "CCO.TO",
-        "n": "Cameco Corp",
-        "w": 21.95
+        "s": "AAPL",
+        "n": "Apple Inc",
+        "w": 3.24
       },
       {
-        "s": "NXE.TO",
-        "n": "NexGen Energy Ltd",
-        "w": 6.01
+        "s": "PLTR",
+        "n": "Palantir Technologies Inc Ordinary Shares - Class A",
+        "w": 3.22
       },
       {
-        "s": "OKLO",
-        "n": "Oklo Inc Class A Shares",
-        "w": 5.5
+        "s": "MSFT",
+        "n": "Microsoft Corp",
+        "w": 3.19
       },
       {
-        "s": "UEC",
-        "n": "Uranium Energy Corp",
-        "w": 5.3
+        "s": "TSLA",
+        "n": "Tesla Inc",
+        "w": 3.17
       },
       {
-        "s": "KAP",
-        "n": "National Atomic Co Kazatomprom JSC GDR - Regulation S",
-        "w": 4.48
+        "s": "MU",
+        "n": "Micron Technology Inc",
+        "w": 3.03
       },
       {
-        "s": "PDN.AX",
-        "n": "Paladin Energy Ltd",
-        "w": 3.42
+        "s": "GOOGL",
+        "n": "Alphabet Inc Class A",
+        "w": 3.01
       },
       {
-        "s": "EFR.TO",
-        "n": "Energy Fuels Inc",
-        "w": 3.37
+        "s": "SNDK",
+        "n": "SanDisk Corp Ordinary Shares",
+        "w": 3.01
       },
       {
-        "s": "XE",
-        "n": "X-Energy Inc Class A",
-        "w": 2.96
+        "s": "META",
+        "n": "Meta Platforms Inc Class A",
+        "w": 3.0
       },
       {
-        "s": "LEU",
-        "n": "Centrus Energy Corp Class A",
-        "w": 2.89
+        "s": "ORCL",
+        "n": "Oracle Corp",
+        "w": 2.98
+      },
+      {
+        "s": "NVDA",
+        "n": "NVIDIA Corp",
+        "w": 2.98
       }
     ],
     "QTUM": [
@@ -7539,6 +7492,53 @@
         "s": "MDB",
         "n": "MongoDB Inc Class A",
         "w": 1.54
+      }
+    ],
+    "URA": [
+      {
+        "s": "CCO.TO",
+        "n": "Cameco Corp",
+        "w": 21.95
+      },
+      {
+        "s": "NXE.TO",
+        "n": "NexGen Energy Ltd",
+        "w": 6.01
+      },
+      {
+        "s": "OKLO",
+        "n": "Oklo Inc Class A Shares",
+        "w": 5.5
+      },
+      {
+        "s": "UEC",
+        "n": "Uranium Energy Corp",
+        "w": 5.3
+      },
+      {
+        "s": "KAP",
+        "n": "National Atomic Co Kazatomprom JSC GDR - Regulation S",
+        "w": 4.48
+      },
+      {
+        "s": "PDN.AX",
+        "n": "Paladin Energy Ltd",
+        "w": 3.42
+      },
+      {
+        "s": "EFR.TO",
+        "n": "Energy Fuels Inc",
+        "w": 3.37
+      },
+      {
+        "s": "XE",
+        "n": "X-Energy Inc Class A",
+        "w": 2.96
+      },
+      {
+        "s": "LEU",
+        "n": "Centrus Energy Corp Class A",
+        "w": 2.89
       }
     ],
     "IPO": [
@@ -7645,56 +7645,56 @@
         "w": 2.04
       }
     ],
-    "XHB": [
+    "ARKK": [
       {
-        "s": "IBP",
-        "n": "Installed Building Products Inc",
-        "w": 4.42
+        "s": "TSLA",
+        "n": "Tesla Inc",
+        "w": 9.58
       },
       {
-        "s": "OC",
-        "n": "Owens-Corning Inc",
-        "w": 4.27
+        "s": "SPCX",
+        "n": "Space Exploration Technologies Corp Class A",
+        "w": 6.14
       },
       {
-        "s": "ALLE",
-        "n": "Allegion PLC",
-        "w": 4.27
+        "s": "CRCL",
+        "n": "Circle Internet Group Inc Ordinary Shares - Class A",
+        "w": 5.71
       },
       {
-        "s": "SKY",
-        "n": "Champion Homes Inc",
-        "w": 4.05
+        "s": "TEM",
+        "n": "Tempus AI Inc Class A common stock",
+        "w": 5.55
       },
       {
-        "s": "WSM",
-        "n": "Williams-Sonoma Inc",
-        "w": 3.93
+        "s": "COIN",
+        "n": "Coinbase Global Inc Ordinary Shares - Class A",
+        "w": 4.74
       },
       {
-        "s": "PHM",
-        "n": "PulteGroup Inc",
-        "w": 3.79
+        "s": "CRSP",
+        "n": "CRISPR Therapeutics AG",
+        "w": 4.68
       },
       {
-        "s": "CSL",
-        "n": "Carlisle Companies Inc",
-        "w": 3.76
-      },
-      {
-        "s": "WMS",
-        "n": "Advanced Drainage Systems Inc",
-        "w": 3.73
-      },
-      {
-        "s": "TOL",
-        "n": "Toll Brothers Inc",
-        "w": 3.68
-      },
-      {
-        "s": "HD",
-        "n": "The Home Depot Inc",
+        "s": "TWST",
+        "n": "Twist Bioscience Corp",
         "w": 3.66
+      },
+      {
+        "s": "HOOD",
+        "n": "Robinhood Markets Inc Class A",
+        "w": 3.66
+      },
+      {
+        "s": "SHOP",
+        "n": "Shopify Inc Registered Shs -A- Subord Vtg",
+        "w": 3.65
+      },
+      {
+        "s": "PLTR",
+        "n": "Palantir Technologies Inc Ordinary Shares - Class A",
+        "w": 3.3
       }
     ],
     "XRT": [
@@ -7749,56 +7749,68 @@
         "w": 1.66
       }
     ],
-    "ARKK": [
+    "MSOS": [
       {
-        "s": "TSLA",
-        "n": "Tesla Inc",
-        "w": 9.58
+        "s": "TRLV",
+        "n": "Trulieve Cannabis Corp Ordinary Shares (Sub Voting)",
+        "w": 11.35
       },
       {
-        "s": "SPCX",
-        "n": "Space Exploration Technologies Corp Class A",
-        "w": 6.14
+        "s": "CURA.TO",
+        "n": "Curaleaf Holdings Inc",
+        "w": 11.3
+      }
+    ],
+    "XHB": [
+      {
+        "s": "IBP",
+        "n": "Installed Building Products Inc",
+        "w": 4.42
       },
       {
-        "s": "CRCL",
-        "n": "Circle Internet Group Inc Ordinary Shares - Class A",
-        "w": 5.71
+        "s": "OC",
+        "n": "Owens-Corning Inc",
+        "w": 4.27
       },
       {
-        "s": "TEM",
-        "n": "Tempus AI Inc Class A common stock",
-        "w": 5.55
+        "s": "ALLE",
+        "n": "Allegion PLC",
+        "w": 4.27
       },
       {
-        "s": "COIN",
-        "n": "Coinbase Global Inc Ordinary Shares - Class A",
-        "w": 4.74
+        "s": "SKY",
+        "n": "Champion Homes Inc",
+        "w": 4.05
       },
       {
-        "s": "CRSP",
-        "n": "CRISPR Therapeutics AG",
-        "w": 4.68
+        "s": "WSM",
+        "n": "Williams-Sonoma Inc",
+        "w": 3.93
       },
       {
-        "s": "TWST",
-        "n": "Twist Bioscience Corp",
+        "s": "PHM",
+        "n": "PulteGroup Inc",
+        "w": 3.79
+      },
+      {
+        "s": "CSL",
+        "n": "Carlisle Companies Inc",
+        "w": 3.76
+      },
+      {
+        "s": "WMS",
+        "n": "Advanced Drainage Systems Inc",
+        "w": 3.73
+      },
+      {
+        "s": "TOL",
+        "n": "Toll Brothers Inc",
+        "w": 3.68
+      },
+      {
+        "s": "HD",
+        "n": "The Home Depot Inc",
         "w": 3.66
-      },
-      {
-        "s": "HOOD",
-        "n": "Robinhood Markets Inc Class A",
-        "w": 3.66
-      },
-      {
-        "s": "SHOP",
-        "n": "Shopify Inc Registered Shs -A- Subord Vtg",
-        "w": 3.65
-      },
-      {
-        "s": "PLTR",
-        "n": "Palantir Technologies Inc Ordinary Shares - Class A",
-        "w": 3.3
       }
     ],
     "BLOK": [
@@ -7851,18 +7863,6 @@
         "s": "8473.T",
         "n": "SBI Holdings Inc",
         "w": 2.68
-      }
-    ],
-    "MSOS": [
-      {
-        "s": "TRLV",
-        "n": "Trulieve Cannabis Corp Ordinary Shares (Sub Voting)",
-        "w": 11.35
-      },
-      {
-        "s": "CURA.TO",
-        "n": "Curaleaf Holdings Inc",
-        "w": 11.3
       }
     ],
     "AIQ": [
@@ -8125,58 +8125,6 @@
         "w": 3.17
       }
     ],
-    "IBUY": [
-      {
-        "s": "W",
-        "n": "Wayfair Inc Class A",
-        "w": 3.39
-      },
-      {
-        "s": "DASH",
-        "n": "DoorDash Inc Ordinary Shares - Class A",
-        "w": 3.1
-      },
-      {
-        "s": "ABNB",
-        "n": "Airbnb Inc Ordinary Shares - Class A",
-        "w": 2.95
-      },
-      {
-        "s": "EXPE",
-        "n": "Expedia Group Inc",
-        "w": 2.89
-      },
-      {
-        "s": "SPOT",
-        "n": "Spotify Technology SA",
-        "w": 2.88
-      },
-      {
-        "s": "CART",
-        "n": "Maplebear Inc",
-        "w": 2.83
-      },
-      {
-        "s": "ETSY",
-        "n": "Etsy Inc",
-        "w": 2.82
-      },
-      {
-        "s": "LYFT",
-        "n": "Lyft Inc Class A",
-        "w": 2.67
-      },
-      {
-        "s": "BKNG",
-        "n": "Booking Holdings Inc",
-        "w": 2.66
-      },
-      {
-        "s": "PYPL",
-        "n": "PayPal Holdings Inc",
-        "w": 2.56
-      }
-    ],
     "CLOU": [
       {
         "s": "SNOW",
@@ -8333,6 +8281,58 @@
         "w": 1.38
       }
     ],
+    "IBUY": [
+      {
+        "s": "W",
+        "n": "Wayfair Inc Class A",
+        "w": 3.39
+      },
+      {
+        "s": "DASH",
+        "n": "DoorDash Inc Ordinary Shares - Class A",
+        "w": 3.1
+      },
+      {
+        "s": "ABNB",
+        "n": "Airbnb Inc Ordinary Shares - Class A",
+        "w": 2.95
+      },
+      {
+        "s": "EXPE",
+        "n": "Expedia Group Inc",
+        "w": 2.89
+      },
+      {
+        "s": "SPOT",
+        "n": "Spotify Technology SA",
+        "w": 2.88
+      },
+      {
+        "s": "CART",
+        "n": "Maplebear Inc",
+        "w": 2.83
+      },
+      {
+        "s": "ETSY",
+        "n": "Etsy Inc",
+        "w": 2.82
+      },
+      {
+        "s": "LYFT",
+        "n": "Lyft Inc Class A",
+        "w": 2.67
+      },
+      {
+        "s": "BKNG",
+        "n": "Booking Holdings Inc",
+        "w": 2.66
+      },
+      {
+        "s": "PYPL",
+        "n": "PayPal Holdings Inc",
+        "w": 2.56
+      }
+    ],
     "IGV": [
       {
         "s": "PLTR",
@@ -8437,110 +8437,6 @@
         "w": 1.06
       }
     ],
-    "ARGT": [
-      {
-        "s": "MELI",
-        "n": "MercadoLibre Inc",
-        "w": 25.38
-      },
-      {
-        "s": "YPF",
-        "n": "YPF SA ADR",
-        "w": 9.51
-      },
-      {
-        "s": "VIST",
-        "n": "Vista Energy SAB de CV ADR",
-        "w": 6.25
-      },
-      {
-        "s": "GGAL",
-        "n": "Grupo Financiero Galicia SA ADR",
-        "w": 5.62
-      },
-      {
-        "s": "BMA",
-        "n": "Banco Macro SA ADR",
-        "w": 4.32
-      },
-      {
-        "s": "PAM",
-        "n": "Pampa Energia SA ADR",
-        "w": 4.17
-      },
-      {
-        "s": "FVI.TO",
-        "n": "Fortuna Mining Corp",
-        "w": 4.07
-      },
-      {
-        "s": "SSRM.TO",
-        "n": "SSR Mining Inc",
-        "w": 3.92
-      },
-      {
-        "s": "TGS",
-        "n": "Transportadora de Gas del Sur SA ADR",
-        "w": 3.66
-      },
-      {
-        "s": "CEPU",
-        "n": "Central Puerto SA ADR rep 10 Shs",
-        "w": 3.19
-      }
-    ],
-    "EUFN": [
-      {
-        "s": "HSBA.L",
-        "n": "HSBC Holdings PLC",
-        "w": 9.6
-      },
-      {
-        "s": "SAN.MC",
-        "n": "Banco Santander SA",
-        "w": 5.66
-      },
-      {
-        "s": "ALV.DE",
-        "n": "Allianz SE",
-        "w": 5.37
-      },
-      {
-        "s": "UBSG.SW",
-        "n": "UBS Group AG Registered Shares",
-        "w": 4.6
-      },
-      {
-        "s": "BBVA.MC",
-        "n": "Banco Bilbao Vizcaya Argentaria SA",
-        "w": 4.37
-      },
-      {
-        "s": "UCG.MI",
-        "n": "UniCredit SpA",
-        "w": 3.57
-      },
-      {
-        "s": "BNP.PA",
-        "n": "BNP Paribas Act. Cat.A",
-        "w": 3.19
-      },
-      {
-        "s": "ISP.MI",
-        "n": "Intesa Sanpaolo",
-        "w": 3.01
-      },
-      {
-        "s": "ZURN.SW",
-        "n": "Zurich Insurance Group AG",
-        "w": 2.91
-      },
-      {
-        "s": "INGA.AS",
-        "n": "ING Groep NV",
-        "w": 2.74
-      }
-    ],
     "BTF": [
       {
         "s": "FXFXX",
@@ -8598,6 +8494,58 @@
         "s": "IBM",
         "n": "International Business Machines Corp",
         "w": 2.51
+      }
+    ],
+    "EUFN": [
+      {
+        "s": "HSBA.L",
+        "n": "HSBC Holdings PLC",
+        "w": 9.6
+      },
+      {
+        "s": "SAN.MC",
+        "n": "Banco Santander SA",
+        "w": 5.66
+      },
+      {
+        "s": "ALV.DE",
+        "n": "Allianz SE",
+        "w": 5.37
+      },
+      {
+        "s": "UBSG.SW",
+        "n": "UBS Group AG Registered Shares",
+        "w": 4.6
+      },
+      {
+        "s": "BBVA.MC",
+        "n": "Banco Bilbao Vizcaya Argentaria SA",
+        "w": 4.37
+      },
+      {
+        "s": "UCG.MI",
+        "n": "UniCredit SpA",
+        "w": 3.57
+      },
+      {
+        "s": "BNP.PA",
+        "n": "BNP Paribas Act. Cat.A",
+        "w": 3.19
+      },
+      {
+        "s": "ISP.MI",
+        "n": "Intesa Sanpaolo",
+        "w": 3.01
+      },
+      {
+        "s": "ZURN.SW",
+        "n": "Zurich Insurance Group AG",
+        "w": 2.91
+      },
+      {
+        "s": "INGA.AS",
+        "n": "ING Groep NV",
+        "w": 2.74
       }
     ],
     "MCHI": [
@@ -8756,58 +8704,6 @@
         "w": 1.29
       }
     ],
-    "EWH": [
-      {
-        "s": "1299.HK",
-        "n": "AIA Group Ltd",
-        "w": 23.2
-      },
-      {
-        "s": "0388.HK",
-        "n": "Hong Kong Exchanges and Clearing Ltd",
-        "w": 15.65
-      },
-      {
-        "s": "0001.HK",
-        "n": "CK Hutchison Holdings Ltd",
-        "w": 5.74
-      },
-      {
-        "s": "2388.HK",
-        "n": "BOC Hong Kong Holdings Ltd",
-        "w": 4.66
-      },
-      {
-        "s": "0002.HK",
-        "n": "CLP Holdings Ltd",
-        "w": 4.39
-      },
-      {
-        "s": "0669.HK",
-        "n": "Techtronic Industries Co Ltd",
-        "w": 4.3
-      },
-      {
-        "s": "0016.HK",
-        "n": "Sun Hung Kai Properties Ltd",
-        "w": 4.29
-      },
-      {
-        "s": "0823.HK",
-        "n": "Link Real Estate Investment Trust",
-        "w": 3.5
-      },
-      {
-        "s": "0006.HK",
-        "n": "Power Assets Holdings Ltd",
-        "w": 2.94
-      },
-      {
-        "s": "0003.HK",
-        "n": "Hong Kong and China Gas Co Ltd",
-        "w": 2.87
-      }
-    ],
     "EWI": [
       {
         "s": "UCG.MI",
@@ -8860,6 +8756,110 @@
         "w": 3.54
       }
     ],
+    "ARGT": [
+      {
+        "s": "MELI",
+        "n": "MercadoLibre Inc",
+        "w": 25.38
+      },
+      {
+        "s": "YPF",
+        "n": "YPF SA ADR",
+        "w": 9.51
+      },
+      {
+        "s": "VIST",
+        "n": "Vista Energy SAB de CV ADR",
+        "w": 6.25
+      },
+      {
+        "s": "GGAL",
+        "n": "Grupo Financiero Galicia SA ADR",
+        "w": 5.62
+      },
+      {
+        "s": "BMA",
+        "n": "Banco Macro SA ADR",
+        "w": 4.32
+      },
+      {
+        "s": "PAM",
+        "n": "Pampa Energia SA ADR",
+        "w": 4.17
+      },
+      {
+        "s": "FVI.TO",
+        "n": "Fortuna Mining Corp",
+        "w": 4.07
+      },
+      {
+        "s": "SSRM.TO",
+        "n": "SSR Mining Inc",
+        "w": 3.92
+      },
+      {
+        "s": "TGS",
+        "n": "Transportadora de Gas del Sur SA ADR",
+        "w": 3.66
+      },
+      {
+        "s": "CEPU",
+        "n": "Central Puerto SA ADR rep 10 Shs",
+        "w": 3.19
+      }
+    ],
+    "EWH": [
+      {
+        "s": "1299.HK",
+        "n": "AIA Group Ltd",
+        "w": 23.2
+      },
+      {
+        "s": "0388.HK",
+        "n": "Hong Kong Exchanges and Clearing Ltd",
+        "w": 15.65
+      },
+      {
+        "s": "0001.HK",
+        "n": "CK Hutchison Holdings Ltd",
+        "w": 5.74
+      },
+      {
+        "s": "2388.HK",
+        "n": "BOC Hong Kong Holdings Ltd",
+        "w": 4.66
+      },
+      {
+        "s": "0002.HK",
+        "n": "CLP Holdings Ltd",
+        "w": 4.39
+      },
+      {
+        "s": "0669.HK",
+        "n": "Techtronic Industries Co Ltd",
+        "w": 4.3
+      },
+      {
+        "s": "0016.HK",
+        "n": "Sun Hung Kai Properties Ltd",
+        "w": 4.29
+      },
+      {
+        "s": "0823.HK",
+        "n": "Link Real Estate Investment Trust",
+        "w": 3.5
+      },
+      {
+        "s": "0006.HK",
+        "n": "Power Assets Holdings Ltd",
+        "w": 2.94
+      },
+      {
+        "s": "0003.HK",
+        "n": "Hong Kong and China Gas Co Ltd",
+        "w": 2.87
+      }
+    ],
     "EWC": [
       {
         "s": "RY",
@@ -8910,58 +8910,6 @@
         "s": "CP.TO",
         "n": "Canadian Pacific Kansas City Ltd",
         "w": 2.61
-      }
-    ],
-    "EWA": [
-      {
-        "s": "BHP.AX",
-        "n": "BHP Group Ltd",
-        "w": 16.35
-      },
-      {
-        "s": "CBA.AX",
-        "n": "Commonwealth Bank of Australia",
-        "w": 13.0
-      },
-      {
-        "s": "NAB.AX",
-        "n": "National Australia Bank Ltd",
-        "w": 5.85
-      },
-      {
-        "s": "WBC.AX",
-        "n": "Westpac Banking Corp",
-        "w": 5.74
-      },
-      {
-        "s": "ANZ.AX",
-        "n": "ANZ Group Holdings Ltd",
-        "w": 5.45
-      },
-      {
-        "s": "MQG.AX",
-        "n": "Macquarie Group Ltd",
-        "w": 4.44
-      },
-      {
-        "s": "WES.AX",
-        "n": "Wesfarmers Ltd",
-        "w": 4.32
-      },
-      {
-        "s": "CSL.AX",
-        "n": "CSL Ltd",
-        "w": 3.99
-      },
-      {
-        "s": "RIO.AX",
-        "n": "Rio Tinto Ltd",
-        "w": 3.16
-      },
-      {
-        "s": "WDS.AX",
-        "n": "Woodside Energy Group Ltd",
-        "w": 2.99
       }
     ],
     "EWL": [
@@ -9068,6 +9016,58 @@
         "w": 1.53
       }
     ],
+    "EWA": [
+      {
+        "s": "BHP.AX",
+        "n": "BHP Group Ltd",
+        "w": 16.35
+      },
+      {
+        "s": "CBA.AX",
+        "n": "Commonwealth Bank of Australia",
+        "w": 13.0
+      },
+      {
+        "s": "NAB.AX",
+        "n": "National Australia Bank Ltd",
+        "w": 5.85
+      },
+      {
+        "s": "WBC.AX",
+        "n": "Westpac Banking Corp",
+        "w": 5.74
+      },
+      {
+        "s": "ANZ.AX",
+        "n": "ANZ Group Holdings Ltd",
+        "w": 5.45
+      },
+      {
+        "s": "MQG.AX",
+        "n": "Macquarie Group Ltd",
+        "w": 4.44
+      },
+      {
+        "s": "WES.AX",
+        "n": "Wesfarmers Ltd",
+        "w": 4.32
+      },
+      {
+        "s": "CSL.AX",
+        "n": "CSL Ltd",
+        "w": 3.99
+      },
+      {
+        "s": "RIO.AX",
+        "n": "Rio Tinto Ltd",
+        "w": 3.16
+      },
+      {
+        "s": "WDS.AX",
+        "n": "Woodside Energy Group Ltd",
+        "w": 2.99
+      }
+    ],
     "IEUR": [
       {
         "s": "ASML.AS",
@@ -9120,56 +9120,56 @@
         "w": 1.3
       }
     ],
-    "INDA": [
+    "EZU": [
       {
-        "s": "HDFCBANK.NS",
-        "n": "HDFC Bank Ltd",
-        "w": 6.42
+        "s": "ASML.AS",
+        "n": "ASML Holding NV",
+        "w": 8.39
       },
       {
-        "s": "RELIANCE.NS",
-        "n": "Reliance Industries Ltd",
-        "w": 5.99
+        "s": "SIE.DE",
+        "n": "Siemens AG",
+        "w": 3.07
       },
       {
-        "s": "ICICIBANK.NS",
-        "n": "ICICI Bank Ltd",
-        "w": 5.68
+        "s": "SAP.DE",
+        "n": "SAP SE",
+        "w": 2.88
       },
       {
-        "s": "BHARTIARTL.NS",
-        "n": "Bharti Airtel Ltd",
-        "w": 4.07
+        "s": "SAN.MC",
+        "n": "Banco Santander SA",
+        "w": 2.69
       },
       {
-        "s": "INFY.NS",
-        "n": "Infosys Ltd",
-        "w": 2.59
+        "s": "ALV.DE",
+        "n": "Allianz SE",
+        "w": 2.55
       },
       {
-        "s": "XTSLA",
-        "n": "BlackRock Cash Funds Treasury SL Agency",
-        "w": 2.44
+        "s": "SU.PA",
+        "n": "Schneider Electric SE",
+        "w": 2.41
       },
       {
-        "s": "M&M.NS",
-        "n": "Mahindra & Mahindra Ltd",
-        "w": 2.22
+        "s": "TTE.PA",
+        "n": "TotalEnergies SE",
+        "w": 2.18
       },
       {
-        "s": "AXISBANK.BO",
-        "n": "Axis Bank Ltd",
-        "w": 2.15
+        "s": "BBVA.MC",
+        "n": "Banco Bilbao Vizcaya Argentaria SA",
+        "w": 2.08
       },
       {
-        "s": "500034",
-        "n": "Bajaj Finance Ltd",
-        "w": 2.14
+        "s": "IBE.MC",
+        "n": "Iberdrola SA",
+        "w": 1.85
       },
       {
-        "s": "LT.NS",
-        "n": "Larsen & Toubro Ltd",
-        "w": 2.0
+        "s": "AIR.PA",
+        "n": "Airbus SE",
+        "w": 1.74
       }
     ],
     "EWG": [
@@ -9276,58 +9276,6 @@
         "w": 0.78
       }
     ],
-    "EZU": [
-      {
-        "s": "ASML.AS",
-        "n": "ASML Holding NV",
-        "w": 8.39
-      },
-      {
-        "s": "SIE.DE",
-        "n": "Siemens AG",
-        "w": 3.07
-      },
-      {
-        "s": "SAP.DE",
-        "n": "SAP SE",
-        "w": 2.88
-      },
-      {
-        "s": "SAN.MC",
-        "n": "Banco Santander SA",
-        "w": 2.69
-      },
-      {
-        "s": "ALV.DE",
-        "n": "Allianz SE",
-        "w": 2.55
-      },
-      {
-        "s": "SU.PA",
-        "n": "Schneider Electric SE",
-        "w": 2.41
-      },
-      {
-        "s": "TTE.PA",
-        "n": "TotalEnergies SE",
-        "w": 2.18
-      },
-      {
-        "s": "BBVA.MC",
-        "n": "Banco Bilbao Vizcaya Argentaria SA",
-        "w": 2.08
-      },
-      {
-        "s": "IBE.MC",
-        "n": "Iberdrola SA",
-        "w": 1.85
-      },
-      {
-        "s": "AIR.PA",
-        "n": "Airbus SE",
-        "w": 1.74
-      }
-    ],
     "EFA": [
       {
         "s": "ASML.AS",
@@ -9378,6 +9326,58 @@
         "s": "SIE.DE",
         "n": "Siemens AG",
         "w": 1.07
+      }
+    ],
+    "INDA": [
+      {
+        "s": "HDFCBANK.NS",
+        "n": "HDFC Bank Ltd",
+        "w": 6.42
+      },
+      {
+        "s": "RELIANCE.NS",
+        "n": "Reliance Industries Ltd",
+        "w": 5.99
+      },
+      {
+        "s": "ICICIBANK.NS",
+        "n": "ICICI Bank Ltd",
+        "w": 5.68
+      },
+      {
+        "s": "BHARTIARTL.NS",
+        "n": "Bharti Airtel Ltd",
+        "w": 4.07
+      },
+      {
+        "s": "INFY.NS",
+        "n": "Infosys Ltd",
+        "w": 2.59
+      },
+      {
+        "s": "XTSLA",
+        "n": "BlackRock Cash Funds Treasury SL Agency",
+        "w": 2.44
+      },
+      {
+        "s": "M&M.NS",
+        "n": "Mahindra & Mahindra Ltd",
+        "w": 2.22
+      },
+      {
+        "s": "AXISBANK.BO",
+        "n": "Axis Bank Ltd",
+        "w": 2.15
+      },
+      {
+        "s": "500034",
+        "n": "Bajaj Finance Ltd",
+        "w": 2.14
+      },
+      {
+        "s": "LT.NS",
+        "n": "Larsen & Toubro Ltd",
+        "w": 2.0
       }
     ],
     "TUR": [
@@ -9432,56 +9432,56 @@
         "w": 2.74
       }
     ],
-    "EWT": [
+    "ACWI": [
+      {
+        "s": "NVDA",
+        "n": "NVIDIA Corp",
+        "w": 4.87
+      },
+      {
+        "s": "AAPL",
+        "n": "Apple Inc",
+        "w": 4.46
+      },
+      {
+        "s": "MSFT",
+        "n": "Microsoft Corp",
+        "w": 3.43
+      },
+      {
+        "s": "AMZN",
+        "n": "Amazon.com Inc",
+        "w": 2.41
+      },
+      {
+        "s": "GOOGL",
+        "n": "Alphabet Inc Class A",
+        "w": 1.91
+      },
       {
         "s": "2330.TW",
         "n": "Taiwan Semiconductor Manufacturing Co Ltd",
-        "w": 22.13
+        "w": 1.79
       },
       {
-        "s": "2454.TW",
-        "n": "MediaTek Inc",
-        "w": 5.97
+        "s": "AVGO",
+        "n": "Broadcom Inc",
+        "w": 1.61
       },
       {
-        "s": "2308.TW",
-        "n": "Delta Electronics Inc",
-        "w": 3.96
+        "s": "GOOG",
+        "n": "Alphabet Inc Class C",
+        "w": 1.5
       },
       {
-        "s": "2317.TW",
-        "n": "Hon Hai Precision Industry Co Ltd",
-        "w": 3.34
+        "s": "META",
+        "n": "Meta Platforms Inc Class A",
+        "w": 1.2
       },
       {
-        "s": "3711.TW",
-        "n": "ASE Technology Holding Co Ltd",
-        "w": 2.56
-      },
-      {
-        "s": "2383.TW",
-        "n": "Elite Material Co Ltd",
-        "w": 2.17
-      },
-      {
-        "s": "1303.TW",
-        "n": "Nan Ya Plastics Corp",
-        "w": 2.07
-      },
-      {
-        "s": "3037.TW",
-        "n": "Unimicron Technology Corp",
-        "w": 1.99
-      },
-      {
-        "s": "2303.TW",
-        "n": "United Microelectronics Corp",
-        "w": 1.93
-      },
-      {
-        "s": "3017.TW",
-        "n": "Asia Vital Components Co Ltd",
-        "w": 1.88
+        "s": "MU",
+        "n": "Micron Technology Inc",
+        "w": 1.04
       }
     ],
     "EWJ": [
@@ -9536,90 +9536,90 @@
         "w": 2.27
       }
     ],
-    "ACWI": [
-      {
-        "s": "NVDA",
-        "n": "NVIDIA Corp",
-        "w": 4.87
-      },
-      {
-        "s": "AAPL",
-        "n": "Apple Inc",
-        "w": 4.46
-      },
-      {
-        "s": "MSFT",
-        "n": "Microsoft Corp",
-        "w": 3.43
-      },
-      {
-        "s": "AMZN",
-        "n": "Amazon.com Inc",
-        "w": 2.41
-      },
-      {
-        "s": "GOOGL",
-        "n": "Alphabet Inc Class A",
-        "w": 1.91
-      },
+    "EWT": [
       {
         "s": "2330.TW",
         "n": "Taiwan Semiconductor Manufacturing Co Ltd",
-        "w": 1.79
+        "w": 22.13
       },
       {
-        "s": "AVGO",
-        "n": "Broadcom Inc",
-        "w": 1.61
+        "s": "2454.TW",
+        "n": "MediaTek Inc",
+        "w": 5.97
       },
       {
-        "s": "GOOG",
-        "n": "Alphabet Inc Class C",
-        "w": 1.5
+        "s": "2308.TW",
+        "n": "Delta Electronics Inc",
+        "w": 3.96
       },
       {
-        "s": "META",
-        "n": "Meta Platforms Inc Class A",
-        "w": 1.2
+        "s": "2317.TW",
+        "n": "Hon Hai Precision Industry Co Ltd",
+        "w": 3.34
       },
       {
-        "s": "MU",
-        "n": "Micron Technology Inc",
-        "w": 1.04
+        "s": "3711.TW",
+        "n": "ASE Technology Holding Co Ltd",
+        "w": 2.56
+      },
+      {
+        "s": "2383.TW",
+        "n": "Elite Material Co Ltd",
+        "w": 2.17
+      },
+      {
+        "s": "1303.TW",
+        "n": "Nan Ya Plastics Corp",
+        "w": 2.07
+      },
+      {
+        "s": "3037.TW",
+        "n": "Unimicron Technology Corp",
+        "w": 1.99
+      },
+      {
+        "s": "2303.TW",
+        "n": "United Microelectronics Corp",
+        "w": 1.93
+      },
+      {
+        "s": "3017.TW",
+        "n": "Asia Vital Components Co Ltd",
+        "w": 1.88
       }
     ]
   },
   "breadth": {
     "fear_greed": {
-      "score": 29.1,
+      "score": 33.7,
       "rating": "Fear",
-      "asof": "2026-09-18T23:32:25+00:00"
+      "asof": "2026-09-21T23:59:56+00:00"
     },
     "naaim": null,
     "advance_decline": {
-      "advancers": 156,
-      "decliners": 346,
-      "unchanged": 1
+      "advancers": 0,
+      "decliners": 0,
+      "unchanged": 503
     },
     "new_high_low": {
       "new_highs": 2,
-      "new_lows": 23,
+      "new_lows": 22,
       "near_highs": 8,
-      "near_lows": 39
+      "near_lows": 37
     },
-    "pct_above_sma20": 19.7,
-    "pct_above_sma50": 28.6,
-    "pct_above_sma200": 52.5,
+    "pct_above_sma20": 20.5,
+    "pct_above_sma50": 29.0,
+    "pct_above_sma200": 53.1,
     "universe": {
       "expected": 503,
       "covered": 503
     },
-    "asof": "2026-09-18"
+    "asof": "2026-09-21"
   },
   "warnings": [
     "US2Y: no source returned a value",
     "yields: no data for ['US2Y']",
     "NAAIM unavailable"
   ],
-  "data_asof": "2026-09-18"
+  "data_asof": "2026-09-22"
 }
