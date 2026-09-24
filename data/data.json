@@ -1,408 +1,408 @@
 {
-  "generated_at": "2026-09-22T23:57:18Z",
+  "generated_at": "2026-09-24T00:10:42Z",
   "futures": [
     {
       "sym": "ES1!",
-      "price": 7831.75,
-      "d1": -0.02,
-      "w1": 3.2,
-      "hi52": -0.2,
-      "ytd": 13.63,
+      "price": 7768.25,
+      "d1": -0.81,
+      "w1": 2.8,
+      "hi52": -1.02,
+      "ytd": 12.71,
       "spark": [
-        -0.43,
         1.11,
         0.23,
         2.3,
-        -0.02
+        -0.02,
+        -0.81
       ],
-      "asof": "2026-09-22",
+      "asof": "2026-09-23",
       "ema_uptrend": true,
       "above_ema21": true,
-      "ema21_val": 7685.7106,
-      "streak_21": 3,
+      "ema21_val": 7693.2142,
+      "streak_21": 4,
       "above_ema50": true,
-      "ema50_val": 7638.9924,
-      "streak_50": 4,
+      "ema50_val": 7644.0613,
+      "streak_50": 5,
       "above_ema200": true,
-      "ema200_val": 7259.5105,
-      "streak_200": 118
+      "ema200_val": 7264.5726,
+      "streak_200": 119
     },
     {
       "sym": "NQ1!",
-      "price": 31045.75,
-      "d1": 0.85,
-      "w1": 7.22,
-      "hi52": -0.05,
-      "ytd": 21.95,
+      "price": 30753.25,
+      "d1": -0.89,
+      "w1": 6.18,
+      "hi52": -1.01,
+      "ytd": 20.81,
       "spark": [
-        0.03,
         1.67,
         0.57,
         3.95,
-        0.85
+        0.79,
+        -0.89
       ],
-      "asof": "2026-09-22",
+      "asof": "2026-09-23",
       "ema_uptrend": true,
       "above_ema21": true,
-      "ema21_val": 29621.1398,
-      "streak_21": 4,
+      "ema21_val": 29722.6333,
+      "streak_21": 5,
       "above_ema50": true,
-      "ema50_val": 29424.6488,
-      "streak_50": 4,
+      "ema50_val": 29476.1009,
+      "streak_50": 5,
       "above_ema200": true,
-      "ema200_val": 27667.3326,
-      "streak_200": 118
+      "ema200_val": 27697.8684,
+      "streak_200": 119
     },
     {
       "sym": "RTY1!",
-      "price": 2913.6001,
-      "d1": 0.56,
-      "w1": 1.41,
-      "hi52": -5.4,
-      "ytd": 16.64,
+      "price": 2858.0,
+      "d1": -1.93,
+      "w1": -0.13,
+      "hi52": -7.2,
+      "ytd": 14.41,
       "spark": [
-        -0.4,
         0.5,
         -0.09,
         0.84,
-        0.56
+        0.58,
+        -1.93
       ],
-      "asof": "2026-09-22",
+      "asof": "2026-09-23",
       "ema_uptrend": false,
       "above_ema21": false,
-      "ema21_val": 2928.5306,
-      "streak_21": 17,
+      "ema21_val": 2922.16,
+      "streak_21": 18,
       "above_ema50": false,
-      "ema50_val": 2949.2569,
-      "streak_50": 17,
+      "ema50_val": 2945.697,
+      "streak_50": 18,
       "above_ema200": true,
-      "ema200_val": 2791.713,
-      "streak_200": 121
+      "ema200_val": 2792.3775,
+      "streak_200": 122
     },
     {
       "sym": "YM1!",
-      "price": 52264.0,
-      "d1": -0.4,
-      "w1": 0.29,
-      "hi52": -4.77,
-      "ytd": 8.13,
+      "price": 51840.0,
+      "d1": -0.84,
+      "w1": 0.65,
+      "hi52": -5.55,
+      "ytd": 7.25,
       "spark": [
-        -1.17,
         0.58,
         -0.09,
         1.38,
-        -0.4
+        -0.37,
+        -0.84
       ],
-      "asof": "2026-09-22",
+      "asof": "2026-09-23",
       "ema_uptrend": false,
       "above_ema21": false,
-      "ema21_val": 52591.3142,
-      "streak_21": 11,
+      "ema21_val": 52524.2526,
+      "streak_21": 12,
       "above_ema50": false,
-      "ema50_val": 52648.8205,
-      "streak_50": 11,
+      "ema50_val": 52617.6672,
+      "streak_50": 12,
       "above_ema200": true,
-      "ema200_val": 50448.5208,
-      "streak_200": 116
+      "ema200_val": 50462.5141,
+      "streak_200": 117
     }
   ],
   "dxvix": [
     {
       "sym": "DX-Y.NYB",
-      "price": 100.548,
-      "d1": 0.12,
-      "w1": 0.9,
-      "hi52": -1.23,
-      "ytd": 2.31,
+      "price": 101.123,
+      "d1": 0.69,
+      "w1": 1.48,
+      "hi52": -0.67,
+      "ytd": 2.89,
       "spark": [
         0.66,
         -0.09,
         0.0,
         0.21,
-        0.12
+        0.69
       ],
-      "asof": "2026-09-22",
+      "asof": "2026-09-23",
       "ema_uptrend": true,
       "above_ema21": true,
-      "ema21_val": 99.742,
+      "ema21_val": 99.7943,
       "streak_21": 7,
       "above_ema50": true,
-      "ema50_val": 99.7849,
+      "ema50_val": 99.8075,
       "streak_50": 5,
       "above_ema200": true,
-      "ema200_val": 99.6525,
+      "ema200_val": 99.6583,
       "streak_200": 6
     },
     {
       "sym": "CBOE:VIX",
-      "price": 14.21,
-      "d1": -4.44,
-      "w1": -17.38,
-      "hi52": -59.75,
-      "ytd": -4.95,
+      "price": 15.18,
+      "d1": 2.08,
+      "w1": -11.74,
+      "hi52": -57.0,
+      "ytd": 1.54,
       "spark": [
         2.97,
         -12.82,
         -4.08,
         0.41,
-        -4.44
+        2.08
       ],
-      "asof": "2026-09-22",
+      "asof": "2026-09-23",
       "ema_uptrend": false,
       "above_ema21": false,
-      "ema21_val": 15.6858,
+      "ema21_val": 15.774,
       "streak_21": 4,
       "above_ema50": false,
-      "ema50_val": 16.0533,
+      "ema50_val": 16.0913,
       "streak_50": 4,
       "above_ema200": false,
-      "ema200_val": 17.561,
+      "ema200_val": 17.5706,
       "streak_200": 4
     }
   ],
   "metals": [
     {
       "sym": "GC1!",
-      "price": 4399.2002,
-      "d1": 0.35,
-      "w1": 1.53,
-      "hi52": -21.25,
-      "ytd": 1.34,
+      "price": 4325.5,
+      "d1": -1.16,
+      "w1": -1.41,
+      "hi52": -22.57,
+      "ytd": -0.36,
       "spark": [
-        1.26,
         0.28,
         0.57,
         -0.93,
-        0.35
+        -0.17,
+        -1.16
       ],
-      "asof": "2026-09-22",
+      "asof": "2026-09-23",
       "ema_uptrend": false,
       "above_ema21": false,
-      "ema21_val": 4422.4938,
-      "streak_21": 11,
-      "above_ema50": true,
-      "ema50_val": 4392.5703,
-      "streak_50": 1,
-      "above_ema200": true,
-      "ema200_val": 4341.5447,
-      "streak_200": 5
+      "ema21_val": 4411.7918,
+      "streak_21": 12,
+      "above_ema50": false,
+      "ema50_val": 4389.081,
+      "streak_50": 3,
+      "above_ema200": false,
+      "ema200_val": 4341.1605,
+      "streak_200": 1
     },
     {
       "sym": "SI1!",
-      "price": 67.905,
-      "d1": 3.16,
-      "w1": 7.38,
-      "hi52": -44.02,
-      "ytd": -3.18,
+      "price": 64.775,
+      "d1": -1.75,
+      "w1": 0.76,
+      "hi52": -46.6,
+      "ytd": -7.64,
       "spark": [
-        1.66,
         1.84,
         1.66,
         -1.1,
-        3.16
+        0.16,
+        -1.75
       ],
-      "asof": "2026-09-22",
+      "asof": "2026-09-23",
       "ema_uptrend": true,
-      "above_ema21": true,
-      "ema21_val": 65.5718,
-      "streak_21": 4,
-      "above_ema50": true,
-      "ema50_val": 65.1329,
-      "streak_50": 4,
-      "above_ema200": true,
-      "ema200_val": 65.3983,
-      "streak_200": 4
+      "above_ema21": false,
+      "ema21_val": 65.3363,
+      "streak_21": 1,
+      "above_ema50": false,
+      "ema50_val": 65.0445,
+      "streak_50": 1,
+      "above_ema200": false,
+      "ema200_val": 65.3727,
+      "streak_200": 1
     },
     {
       "sym": "HG1!",
-      "price": 6.9065,
-      "d1": 3.29,
-      "w1": 8.45,
-      "hi52": -0.08,
-      "ytd": 22.67,
+      "price": 6.7745,
+      "d1": 0.22,
+      "w1": 5.33,
+      "hi52": -0.81,
+      "ytd": 20.33,
       "spark": [
-        0.99,
         2.41,
         0.43,
         1.08,
-        3.29
+        1.09,
+        0.22
       ],
-      "asof": "2026-09-22",
+      "asof": "2026-09-23",
       "ema_uptrend": true,
       "above_ema21": true,
-      "ema21_val": 6.5809,
-      "streak_21": 4,
+      "ema21_val": 6.5863,
+      "streak_21": 5,
       "above_ema50": true,
-      "ema50_val": 6.5053,
-      "streak_50": 4,
+      "ema50_val": 6.5103,
+      "streak_50": 5,
       "above_ema200": true,
-      "ema200_val": 6.0513,
-      "streak_200": 250
+      "ema200_val": 6.057,
+      "streak_200": 251
     },
     {
       "sym": "PL1!",
-      "price": 1842.1,
-      "d1": 2.42,
-      "w1": 3.89,
-      "hi52": -35.42,
-      "ytd": -9.46,
+      "price": 1753.1,
+      "d1": -3.81,
+      "w1": -1.69,
+      "hi52": -38.54,
+      "ytd": -13.83,
       "spark": [
-        0.56,
         0.46,
         0.68,
         -0.28,
-        2.42
+        1.34,
+        -3.81
       ],
-      "asof": "2026-09-22",
-      "ema_uptrend": true,
-      "above_ema21": true,
-      "ema21_val": 1800.585,
-      "streak_21": 3,
-      "above_ema50": true,
-      "ema50_val": 1778.8692,
-      "streak_50": 35,
-      "above_ema200": true,
-      "ema200_val": 1788.3613,
-      "streak_200": 4
+      "asof": "2026-09-23",
+      "ema_uptrend": false,
+      "above_ema21": false,
+      "ema21_val": 1794.6566,
+      "streak_21": 1,
+      "above_ema50": false,
+      "ema50_val": 1777.124,
+      "streak_50": 1,
+      "above_ema200": false,
+      "ema200_val": 1787.8184,
+      "streak_200": 1
     },
     {
       "sym": "PA1!",
-      "price": 1321.5,
-      "d1": 1.43,
-      "w1": 2.51,
-      "hi52": -39.1,
-      "ytd": -18.89,
+      "price": 1270.0,
+      "d1": -1.77,
+      "w1": -2.32,
+      "hi52": -41.47,
+      "ytd": -22.05,
       "spark": [
-        0.85,
         -0.76,
         1.24,
         -0.25,
-        1.43
+        -0.77,
+        -1.77
       ],
-      "asof": "2026-09-22",
+      "asof": "2026-09-23",
       "ema_uptrend": false,
       "above_ema21": false,
-      "ema21_val": 1322.8535,
-      "streak_21": 9,
+      "ema21_val": 1315.685,
+      "streak_21": 10,
       "above_ema50": false,
-      "ema50_val": 1325.7466,
-      "streak_50": 9,
+      "ema50_val": 1322.4829,
+      "streak_50": 10,
       "above_ema200": false,
-      "ema200_val": 1379.7919,
-      "streak_200": 11
+      "ema200_val": 1378.4177,
+      "streak_200": 12
     }
   ],
   "commod": [
     {
       "sym": "CL1!",
-      "price": 89.69,
-      "d1": -6.36,
-      "w1": -15.25,
-      "hi52": -24.93,
-      "ytd": 56.2,
+      "price": 92.04,
+      "d1": -2.7,
+      "w1": -10.14,
+      "hi52": -22.97,
+      "ytd": 60.29,
       "spark": [
-        -3.21,
         -0.51,
         -1.58,
         -4.51,
-        -6.36
+        -1.24,
+        -2.7
       ],
-      "asof": "2026-09-22",
+      "asof": "2026-09-23",
       "ema_uptrend": true,
       "above_ema21": false,
-      "ema21_val": 94.1423,
+      "ema21_val": 94.3561,
       "streak_21": 1,
       "above_ema50": true,
-      "ema50_val": 89.3807,
-      "streak_50": 18,
+      "ema50_val": 89.6696,
+      "streak_50": 19,
       "above_ema200": true,
-      "ema200_val": 82.1815,
-      "streak_200": 31
+      "ema200_val": 82.3279,
+      "streak_200": 32
     },
     {
       "sym": "NG1!",
-      "price": 3.173,
-      "d1": 11.88,
-      "w1": 8.7,
-      "hi52": -59.46,
-      "ytd": -13.92,
+      "price": 3.174,
+      "d1": 7.05,
+      "w1": 9.79,
+      "hi52": -59.45,
+      "ytd": -13.89,
       "spark": [
-        -0.96,
         0.35,
         0.38,
         -2.61,
-        11.88
+        4.55,
+        7.05
       ],
-      "asof": "2026-09-22",
+      "asof": "2026-09-23",
       "ema_uptrend": true,
       "above_ema21": true,
-      "ema21_val": 2.8969,
-      "streak_21": 1,
+      "ema21_val": 2.9049,
+      "streak_21": 2,
       "above_ema50": true,
-      "ema50_val": 2.8906,
-      "streak_50": 1,
+      "ema50_val": 2.8939,
+      "streak_50": 2,
       "above_ema200": true,
-      "ema200_val": 3.0975,
+      "ema200_val": 3.0962,
       "streak_200": 1
     }
   ],
   "yields": [
     {
       "sym": "US10Y",
-      "price": 4.968,
-      "d1": 0.1,
-      "w1": -0.56,
-      "hi52": -0.96,
-      "ytd": 19.34,
+      "price": 5.114,
+      "d1": 3.04,
+      "w1": 2.36,
+      "hi52": -0.41,
+      "ytd": 22.84,
       "spark": [
         0.2,
         -1.18,
         1.03,
         -0.7,
-        0.1
+        3.04
       ],
-      "asof": "2026-09-22",
-      "d1_bps": 0.5,
-      "w1_bps": -2.8,
-      "ytd_bps": 80.5,
+      "asof": "2026-09-23",
+      "d1_bps": 15.1,
+      "w1_bps": 11.8,
+      "ytd_bps": 95.1,
       "ema_uptrend": true,
       "above_ema21": true,
-      "ema21_val": 4.8712,
+      "ema21_val": 4.8844,
       "streak_21": 18,
       "above_ema50": true,
-      "ema50_val": 4.7537,
+      "ema50_val": 4.7594,
       "streak_50": 58,
       "above_ema200": true,
-      "ema200_val": 4.4911,
+      "ema200_val": 4.4926,
       "streak_200": 135
     },
     {
       "sym": "US30Y",
-      "price": 5.303,
-      "d1": 0.13,
-      "w1": -1.14,
-      "hi52": -2.23,
-      "ytd": 9.57,
+      "price": 5.401,
+      "d1": 1.98,
+      "w1": 0.69,
+      "hi52": -0.42,
+      "ytd": 11.59,
       "spark": [
         -0.28,
         -0.99,
         0.66,
         -0.66,
-        0.13
+        1.98
       ],
-      "asof": "2026-09-22",
-      "d1_bps": 0.7,
-      "w1_bps": -6.1,
-      "ytd_bps": 46.3,
+      "asof": "2026-09-23",
+      "d1_bps": 10.5,
+      "w1_bps": 3.7,
+      "ytd_bps": 56.1,
       "ema_uptrend": true,
       "above_ema21": true,
-      "ema21_val": 5.2868,
+      "ema21_val": 5.2957,
       "streak_21": 17,
       "above_ema50": true,
-      "ema50_val": 5.2202,
+      "ema50_val": 5.2241,
       "streak_50": 58,
       "above_ema200": true,
-      "ema200_val": 5.0161,
+      "ema200_val": 5.017,
       "streak_200": 59
     }
   ],
@@ -430,8 +430,8 @@
       "ema50_val": 65428.5825,
       "streak_50": 9,
       "above_ema200": true,
-      "ema200_val": 60046.7674,
-      "streak_200": 290
+      "ema200_val": 60046.2834,
+      "streak_200": 287
     },
     {
       "sym": "^KS11",
@@ -667,7 +667,7 @@
       "ema50_val": 757.9559,
       "streak_50": 4,
       "above_ema200": true,
-      "ema200_val": 717.5999,
+      "ema200_val": 717.5933,
       "streak_200": 120
     },
     {
@@ -693,34 +693,34 @@
       "ema50_val": 712.98,
       "streak_50": 4,
       "above_ema200": true,
-      "ema200_val": 668.9684,
+      "ema200_val": 668.9612,
       "streak_200": 118
     },
     {
       "sym": "DIA",
-      "price": 518.0,
-      "d1": -0.34,
-      "w1": -0.39,
-      "hi52": -4.96,
-      "ytd": 8.97,
+      "price": 519.78,
+      "d1": 0.76,
+      "w1": -0.67,
+      "hi52": -4.63,
+      "ytd": 9.34,
       "spark": [
+        -0.62,
         -1.15,
         0.61,
         -0.25,
-        0.76,
-        -0.34
+        0.76
       ],
-      "asof": "2026-09-22",
+      "asof": "2026-09-21",
       "ema_uptrend": false,
       "above_ema21": false,
-      "ema21_val": 523.6043,
-      "streak_21": 11,
+      "ema21_val": 524.1647,
+      "streak_21": 10,
       "above_ema50": false,
-      "ema50_val": 523.6669,
-      "streak_50": 10,
+      "ema50_val": 523.8982,
+      "streak_50": 9,
       "above_ema200": true,
-      "ema200_val": 499.6816,
-      "streak_200": 120
+      "ema200_val": 499.4946,
+      "streak_200": 119
     },
     {
       "sym": "IWM",
@@ -745,480 +745,480 @@
       "ema50_val": 291.7799,
       "streak_50": 11,
       "above_ema200": true,
-      "ema200_val": 275.2121,
+      "ema200_val": 275.2092,
       "streak_200": 121
     }
   ],
   "submarket": [
     {
       "sym": "MGK",
-      "price": 93.52,
-      "d1": 0.2,
-      "w1": 5.02,
-      "hi52": -0.26,
-      "ytd": 13.5,
+      "price": 93.33,
+      "d1": 2.68,
+      "w1": 4.15,
+      "hi52": -0.25,
+      "ytd": 13.27,
       "spark": [
+        -0.62,
         0.08,
         1.63,
         0.35,
-        2.68,
-        0.2
+        2.68
       ],
-      "asof": "2026-09-22",
+      "asof": "2026-09-21",
       "ema_uptrend": true,
       "above_ema21": true,
-      "ema21_val": 90.3044,
-      "streak_21": 4,
+      "ema21_val": 89.9828,
+      "streak_21": 3,
       "above_ema50": true,
-      "ema50_val": 89.2304,
-      "streak_50": 36,
+      "ema50_val": 89.0554,
+      "streak_50": 35,
       "above_ema200": true,
-      "ema200_val": 84.574,
-      "streak_200": 115
+      "ema200_val": 84.4831,
+      "streak_200": 114
     },
     {
       "sym": "VUG",
-      "price": 91.12,
-      "d1": 0.11,
-      "w1": 4.66,
-      "hi52": -0.34,
-      "ytd": 12.31,
+      "price": 91.02,
+      "d1": 2.56,
+      "w1": 3.77,
+      "hi52": -0.2,
+      "ytd": 12.19,
       "spark": [
+        -0.74,
         0.0,
         1.57,
         0.36,
-        2.56,
-        0.11
+        2.56
       ],
-      "asof": "2026-09-22",
+      "asof": "2026-09-21",
       "ema_uptrend": true,
       "above_ema21": true,
-      "ema21_val": 88.4057,
-      "streak_21": 4,
+      "ema21_val": 88.1342,
+      "streak_21": 3,
       "above_ema50": true,
-      "ema50_val": 87.5558,
-      "streak_50": 4,
+      "ema50_val": 87.4103,
+      "streak_50": 3,
       "above_ema200": true,
-      "ema200_val": 83.3333,
-      "streak_200": 115
+      "ema200_val": 83.2542,
+      "streak_200": 114
     },
     {
       "sym": "IVW",
-      "price": 143.56,
-      "d1": 0.13,
-      "w1": 4.45,
-      "hi52": -0.23,
-      "ytd": 16.79,
+      "price": 143.37,
+      "d1": 2.31,
+      "w1": 3.75,
+      "hi52": -0.22,
+      "ytd": 16.63,
       "spark": [
+        -0.54,
         -0.07,
         1.48,
         0.55,
-        2.31,
-        0.13
+        2.31
       ],
-      "asof": "2026-09-22",
+      "asof": "2026-09-21",
       "ema_uptrend": true,
       "above_ema21": true,
-      "ema21_val": 139.7312,
-      "streak_21": 4,
+      "ema21_val": 139.3484,
+      "streak_21": 3,
       "above_ema50": true,
-      "ema50_val": 138.4751,
-      "streak_50": 4,
+      "ema50_val": 138.2675,
+      "streak_50": 3,
       "above_ema200": true,
-      "ema200_val": 130.2791,
-      "streak_200": 116
+      "ema200_val": 130.1442,
+      "streak_200": 115
     },
     {
       "sym": "IJK",
-      "price": 111.33,
-      "d1": 0.55,
-      "w1": 1.85,
-      "hi52": -6.59,
-      "ytd": 15.37,
+      "price": 110.72,
+      "d1": 0.83,
+      "w1": 0.77,
+      "hi52": -7.1,
+      "ytd": 14.74,
       "spark": [
+        -0.52,
         -0.16,
         0.67,
         -0.05,
-        0.83,
-        0.55
+        0.83
       ],
-      "asof": "2026-09-22",
+      "asof": "2026-09-21",
       "ema_uptrend": false,
       "above_ema21": false,
-      "ema21_val": 111.7805,
-      "streak_21": 17,
+      "ema21_val": 111.8256,
+      "streak_21": 16,
       "above_ema50": false,
-      "ema50_val": 112.78,
-      "streak_50": 17,
+      "ema50_val": 112.8392,
+      "streak_50": 16,
       "above_ema200": true,
-      "ema200_val": 108.1057,
-      "streak_200": 121
-    },
-    {
-      "sym": "IJT",
-      "price": 164.38,
-      "d1": 0.26,
-      "w1": 0.7,
-      "hi52": -8.32,
-      "ytd": 17.06,
-      "spark": [
-        -0.02,
-        0.12,
-        -0.24,
-        0.58,
-        0.26
-      ],
-      "asof": "2026-09-22",
-      "ema_uptrend": false,
-      "above_ema21": false,
-      "ema21_val": 167.1165,
-      "streak_21": 25,
-      "above_ema50": false,
-      "ema50_val": 169.1554,
-      "streak_50": 17,
-      "above_ema200": true,
-      "ema200_val": 160.227,
-      "streak_200": 121
+      "ema200_val": 108.0721,
+      "streak_200": 120
     },
     {
       "sym": "IVE",
-      "price": 233.11,
-      "d1": -0.15,
-      "w1": -0.06,
-      "hi52": -2.46,
-      "ytd": 11.2,
+      "price": 233.45,
+      "d1": 0.67,
+      "w1": -0.25,
+      "hi52": -2.31,
+      "ytd": 11.36,
       "spark": [
+        -0.33,
         -0.86,
         0.73,
         -0.45,
-        0.67,
-        -0.15
+        0.67
       ],
-      "asof": "2026-09-22",
+      "asof": "2026-09-21",
       "ema_uptrend": false,
       "above_ema21": false,
-      "ema21_val": 233.8714,
-      "streak_21": 11,
+      "ema21_val": 233.9476,
+      "streak_21": 10,
       "above_ema50": true,
-      "ema50_val": 232.8376,
-      "streak_50": 2,
+      "ema50_val": 232.8265,
+      "streak_50": 1,
       "above_ema200": true,
-      "ema200_val": 222.2278,
-      "streak_200": 302
+      "ema200_val": 222.1164,
+      "streak_200": 300
+    },
+    {
+      "sym": "IJT",
+      "price": 163.95,
+      "d1": 0.58,
+      "w1": -0.38,
+      "hi52": -8.55,
+      "ytd": 16.75,
+      "spark": [
+        -0.81,
+        -0.02,
+        0.12,
+        -0.24,
+        0.58
+      ],
+      "asof": "2026-09-21",
+      "ema_uptrend": false,
+      "above_ema21": false,
+      "ema21_val": 167.3902,
+      "streak_21": 24,
+      "above_ema50": false,
+      "ema50_val": 169.3503,
+      "streak_50": 16,
+      "above_ema200": true,
+      "ema200_val": 160.1833,
+      "streak_200": 120
     },
     {
       "sym": "VTV",
-      "price": 221.66,
-      "d1": -0.13,
-      "w1": -0.47,
-      "hi52": -3.02,
-      "ytd": 17.28,
+      "price": 221.94,
+      "d1": 0.31,
+      "w1": -0.43,
+      "hi52": -2.9,
+      "ytd": 17.42,
       "spark": [
+        -0.09,
         -0.93,
         0.52,
         -0.24,
-        0.31,
-        -0.13
+        0.31
       ],
-      "asof": "2026-09-22",
+      "asof": "2026-09-21",
       "ema_uptrend": false,
       "above_ema21": false,
-      "ema21_val": 223.2898,
-      "streak_21": 11,
+      "ema21_val": 223.4527,
+      "streak_21": 10,
       "above_ema50": false,
-      "ema50_val": 222.1773,
-      "streak_50": 5,
+      "ema50_val": 222.1984,
+      "streak_50": 4,
       "above_ema200": true,
-      "ema200_val": 208.6389,
-      "streak_200": 302
-    },
-    {
-      "sym": "IJS",
-      "price": 131.74,
-      "d1": 0.34,
-      "w1": -1.08,
-      "hi52": -6.29,
-      "ytd": 17.01,
-      "spark": [
-        -0.71,
-        0.0,
-        -0.67,
-        -0.04,
-        0.34
-      ],
-      "asof": "2026-09-22",
-      "ema_uptrend": false,
-      "above_ema21": false,
-      "ema21_val": 134.1279,
-      "streak_21": 11,
-      "above_ema50": false,
-      "ema50_val": 134.7178,
-      "streak_50": 11,
-      "above_ema200": true,
-      "ema200_val": 126.9325,
-      "streak_200": 208
+      "ema200_val": 208.5065,
+      "streak_200": 300
     },
     {
       "sym": "IJJ",
-      "price": 141.6,
-      "d1": 0.07,
-      "w1": -1.26,
-      "hi52": -6.35,
-      "ytd": 8.78,
+      "price": 141.5,
+      "d1": -0.01,
+      "w1": -1.6,
+      "hi52": -6.41,
+      "ytd": 8.71,
       "spark": [
+        -0.28,
         -0.99,
         0.32,
         -0.64,
-        -0.01,
-        0.07
+        -0.01
       ],
-      "asof": "2026-09-22",
+      "asof": "2026-09-21",
       "ema_uptrend": false,
       "above_ema21": false,
-      "ema21_val": 144.4444,
-      "streak_21": 11,
+      "ema21_val": 144.7288,
+      "streak_21": 10,
       "above_ema50": false,
-      "ema50_val": 145.4616,
-      "streak_50": 11,
+      "ema50_val": 145.6192,
+      "streak_50": 10,
       "above_ema200": true,
-      "ema200_val": 140.0981,
-      "streak_200": 121
+      "ema200_val": 140.0821,
+      "streak_200": 120
+    },
+    {
+      "sym": "IJS",
+      "price": 131.3,
+      "d1": -0.04,
+      "w1": -1.7,
+      "hi52": -6.61,
+      "ytd": 16.62,
+      "spark": [
+        -0.29,
+        -0.71,
+        0.0,
+        -0.67,
+        -0.04
+      ],
+      "asof": "2026-09-21",
+      "ema_uptrend": false,
+      "above_ema21": false,
+      "ema21_val": 134.3667,
+      "streak_21": 10,
+      "above_ema50": false,
+      "ema50_val": 134.8394,
+      "streak_50": 10,
+      "above_ema200": true,
+      "ema200_val": 126.8833,
+      "streak_200": 207
     }
   ],
   "sector": [
     {
       "sym": "XLK",
-      "price": 196.27,
-      "d1": 0.73,
-      "w1": 6.94,
-      "hi52": -1.0,
-      "ytd": 36.82,
+      "price": 194.85,
+      "d1": 2.89,
+      "w1": 5.86,
+      "hi52": -1.72,
+      "ytd": 35.83,
       "spark": [
+        -0.29,
         0.1,
         2.25,
         0.82,
-        2.89,
-        0.73
+        2.89
       ],
-      "asof": "2026-09-22",
+      "asof": "2026-09-21",
       "ema_uptrend": true,
       "above_ema21": true,
-      "ema21_val": 187.255,
-      "streak_21": 4,
+      "ema21_val": 186.3535,
+      "streak_21": 3,
       "above_ema50": true,
-      "ema50_val": 184.3947,
-      "streak_50": 20,
+      "ema50_val": 183.91,
+      "streak_50": 19,
       "above_ema200": true,
-      "ema200_val": 166.5352,
-      "streak_200": 119
+      "ema200_val": 166.2337,
+      "streak_200": 118
     },
     {
       "sym": "XLV",
-      "price": 169.89,
-      "d1": 0.52,
-      "w1": 1.72,
-      "hi52": -3.43,
-      "ytd": 11.11,
+      "price": 169.01,
+      "d1": 0.75,
+      "w1": 1.14,
+      "hi52": -3.93,
+      "ytd": 10.53,
       "spark": [
+        -0.05,
         0.07,
         0.62,
         -0.25,
-        0.75,
-        0.52
+        0.75
       ],
-      "asof": "2026-09-22",
+      "asof": "2026-09-21",
       "ema_uptrend": false,
       "above_ema21": true,
-      "ema21_val": 168.3286,
-      "streak_21": 2,
+      "ema21_val": 168.1724,
+      "streak_21": 1,
       "above_ema50": true,
-      "ema50_val": 165.8657,
-      "streak_50": 7,
+      "ema50_val": 165.7014,
+      "streak_50": 6,
       "above_ema200": true,
-      "ema200_val": 155.608,
-      "streak_200": 77
-    },
-    {
-      "sym": "XLY",
-      "price": 112.33,
-      "d1": 0.09,
-      "w1": 1.53,
-      "hi52": -9.58,
-      "ytd": -5.34,
-      "spark": [
-        -0.63,
-        1.1,
-        -0.32,
-        1.3,
-        0.09
-      ],
-      "asof": "2026-09-22",
-      "ema_uptrend": false,
-      "above_ema21": false,
-      "ema21_val": 113.2986,
-      "streak_21": 16,
-      "above_ema50": false,
-      "ema50_val": 114.6088,
-      "streak_50": 16,
-      "above_ema200": false,
-      "ema200_val": 115.0961,
-      "streak_200": 12
+      "ema200_val": 155.4631,
+      "streak_200": 76
     },
     {
       "sym": "XLI",
-      "price": 170.27,
-      "d1": 0.17,
-      "w1": 1.11,
-      "hi52": -9.28,
-      "ytd": 10.64,
+      "price": 169.98,
+      "d1": 0.4,
+      "w1": 0.3,
+      "hi52": -9.43,
+      "ytd": 10.45,
       "spark": [
+        -0.64,
         -0.08,
         0.18,
         0.44,
-        0.4,
-        0.17
+        0.4
       ],
-      "asof": "2026-09-22",
+      "asof": "2026-09-21",
       "ema_uptrend": false,
       "above_ema21": false,
-      "ema21_val": 172.7749,
-      "streak_21": 25,
+      "ema21_val": 173.0254,
+      "streak_21": 24,
       "above_ema50": false,
-      "ema50_val": 175.7453,
-      "streak_50": 23,
-      "above_ema200": true,
-      "ema200_val": 170.0752,
-      "streak_200": 1
-    },
-    {
-      "sym": "XLB",
-      "price": 50.53,
-      "d1": 1.65,
-      "w1": 0.06,
-      "hi52": -6.32,
-      "ytd": 12.85,
-      "spark": [
-        -0.73,
-        0.69,
-        -1.42,
-        -0.1,
-        1.65
-      ],
-      "asof": "2026-09-22",
-      "ema_uptrend": false,
-      "above_ema21": false,
-      "ema21_val": 51.0812,
-      "streak_21": 13,
-      "above_ema50": false,
-      "ema50_val": 51.3499,
-      "streak_50": 11,
-      "above_ema200": true,
-      "ema200_val": 49.7449,
-      "streak_200": 1
+      "ema50_val": 175.9687,
+      "streak_50": 22,
+      "above_ema200": false,
+      "ema200_val": 170.0705,
+      "streak_200": 6
     },
     {
       "sym": "XLC",
-      "price": 113.53,
-      "d1": -1.06,
-      "w1": -0.11,
-      "hi52": -4.85,
-      "ytd": -2.68,
+      "price": 114.75,
+      "d1": 3.9,
+      "w1": 0.05,
+      "hi52": -3.83,
+      "ytd": -1.63,
       "spark": [
+        -0.9,
         -0.9,
         -0.58,
         -1.37,
-        3.9,
-        -1.06
+        3.9
       ],
-      "asof": "2026-09-22",
+      "asof": "2026-09-21",
       "ema_uptrend": true,
       "above_ema21": true,
-      "ema21_val": 112.1675,
-      "streak_21": 2,
+      "ema21_val": 112.0313,
+      "streak_21": 1,
       "above_ema50": true,
-      "ema50_val": 111.5299,
-      "streak_50": 2,
+      "ema50_val": 111.4482,
+      "streak_50": 1,
       "above_ema200": true,
-      "ema200_val": 111.4425,
-      "streak_200": 2
+      "ema200_val": 111.4215,
+      "streak_200": 1
+    },
+    {
+      "sym": "XLY",
+      "price": 112.23,
+      "d1": 1.3,
+      "w1": -0.33,
+      "hi52": -9.67,
+      "ytd": -5.43,
+      "spark": [
+        -1.75,
+        -0.63,
+        1.1,
+        -0.32,
+        1.3
+      ],
+      "asof": "2026-09-21",
+      "ema_uptrend": false,
+      "above_ema21": false,
+      "ema21_val": 113.3955,
+      "streak_21": 15,
+      "above_ema50": false,
+      "ema50_val": 114.7018,
+      "streak_50": 15,
+      "above_ema200": false,
+      "ema200_val": 115.1242,
+      "streak_200": 11
     },
     {
       "sym": "XLRE",
-      "price": 42.5,
-      "d1": -0.21,
-      "w1": -0.49,
-      "hi52": -7.74,
-      "ytd": 7.87,
+      "price": 42.59,
+      "d1": 0.98,
+      "w1": -0.4,
+      "hi52": -7.55,
+      "ytd": 8.09,
       "spark": [
+        -0.12,
         -0.6,
         0.3,
         -0.95,
-        0.98,
-        -0.21
+        0.98
       ],
-      "asof": "2026-09-22",
+      "asof": "2026-09-21",
       "ema_uptrend": false,
       "above_ema21": false,
-      "ema21_val": 43.2048,
-      "streak_21": 18,
+      "ema21_val": 43.2752,
+      "streak_21": 17,
       "above_ema50": false,
-      "ema50_val": 43.6978,
-      "streak_50": 18,
+      "ema50_val": 43.7466,
+      "streak_50": 17,
       "above_ema200": false,
-      "ema200_val": 42.7694,
-      "streak_200": 7
+      "ema200_val": 42.7714,
+      "streak_200": 6
     },
     {
-      "sym": "XLP",
-      "price": 82.73,
-      "d1": 0.99,
-      "w1": -0.54,
-      "hi52": -6.45,
-      "ytd": 8.55,
+      "sym": "XLB",
+      "price": 49.71,
+      "d1": -0.1,
+      "w1": -1.09,
+      "hi52": -7.85,
+      "ytd": 11.02,
       "spark": [
-        -0.48,
-        0.19,
-        -0.83,
-        -0.41,
-        0.99
+        0.48,
+        -0.73,
+        0.69,
+        -1.42,
+        -0.1
       ],
-      "asof": "2026-09-22",
+      "asof": "2026-09-21",
       "ema_uptrend": false,
       "above_ema21": false,
-      "ema21_val": 83.4906,
-      "streak_21": 13,
+      "ema21_val": 51.1363,
+      "streak_21": 12,
       "above_ema50": false,
-      "ema50_val": 83.8739,
-      "streak_50": 12,
-      "above_ema200": true,
-      "ema200_val": 82.3847,
+      "ema50_val": 51.3833,
+      "streak_50": 10,
+      "above_ema200": false,
+      "ema200_val": 49.736,
       "streak_200": 1
     },
     {
       "sym": "XLU",
-      "price": 40.53,
-      "d1": -0.32,
-      "w1": -1.19,
-      "hi52": -13.88,
-      "ytd": -3.08,
+      "price": 40.66,
+      "d1": -0.34,
+      "w1": -2.06,
+      "hi52": -13.6,
+      "ytd": -2.77,
       "spark": [
+        -1.2,
         0.0,
         0.9,
         -1.42,
-        -0.34,
-        -0.32
+        -0.34
       ],
-      "asof": "2026-09-22",
+      "asof": "2026-09-21",
       "ema_uptrend": false,
       "above_ema21": false,
-      "ema21_val": 41.9299,
-      "streak_21": 10,
+      "ema21_val": 42.0699,
+      "streak_21": 9,
       "above_ema50": false,
-      "ema50_val": 42.8799,
-      "streak_50": 39,
+      "ema50_val": 42.9758,
+      "streak_50": 38,
       "above_ema200": false,
-      "ema200_val": 43.4016,
-      "streak_200": 25
+      "ema200_val": 43.4298,
+      "streak_200": 24
+    },
+    {
+      "sym": "XLP",
+      "price": 81.92,
+      "d1": -0.41,
+      "w1": -2.32,
+      "hi52": -7.37,
+      "ytd": 7.49,
+      "spark": [
+        -0.82,
+        -0.48,
+        0.19,
+        -0.83,
+        -0.41
+      ],
+      "asof": "2026-09-21",
+      "ema_uptrend": false,
+      "above_ema21": false,
+      "ema21_val": 83.5667,
+      "streak_21": 12,
+      "above_ema50": false,
+      "ema50_val": 83.9206,
+      "streak_50": 11,
+      "above_ema200": false,
+      "ema200_val": 82.3806,
+      "streak_200": 2
     },
     {
       "sym": "XLF",
@@ -1243,7 +1243,7 @@
       "ema50_val": 56.3671,
       "streak_50": 5,
       "above_ema200": true,
-      "ema200_val": 53.7971,
+      "ema200_val": 53.7973,
       "streak_200": 76
     },
     {
@@ -1269,7 +1269,7 @@
       "ema50_val": 61.4134,
       "streak_50": 51,
       "above_ema200": true,
-      "ema200_val": 55.6151,
+      "ema200_val": 55.6149,
       "streak_200": 191
     }
   ],
@@ -1277,55 +1277,29 @@
   "thematic": [
     {
       "sym": "WGMI",
-      "price": 51.75,
-      "d1": 1.59,
-      "w1": 20.15,
-      "hi52": -32.74,
-      "ytd": 35.22,
+      "price": 50.94,
+      "d1": 2.91,
+      "w1": 13.53,
+      "hi52": -33.79,
+      "ytd": 33.11,
       "spark": [
+        -4.01,
         3.46,
         3.68,
         7.14,
-        2.91,
-        1.59
+        2.91
       ],
-      "asof": "2026-09-22",
+      "asof": "2026-09-21",
       "ema_uptrend": true,
       "above_ema21": true,
-      "ema21_val": 47.2568,
-      "streak_21": 4,
+      "ema21_val": 46.8075,
+      "streak_21": 3,
       "above_ema50": true,
-      "ema50_val": 49.0216,
-      "streak_50": 3,
+      "ema50_val": 48.9103,
+      "streak_50": 2,
       "above_ema200": true,
-      "ema200_val": 48.2556,
-      "streak_200": 3
-    },
-    {
-      "sym": "BTF",
-      "price": 24.0775,
-      "d1": -0.4,
-      "w1": 14.92,
-      "hi52": -39.25,
-      "ytd": -6.93,
-      "spark": [
-        0.78,
-        1.31,
-        6.81,
-        5.8,
-        -0.4
-      ],
-      "asof": "2026-09-22",
-      "ema_uptrend": true,
-      "above_ema21": true,
-      "ema21_val": 21.6009,
-      "streak_21": 25,
-      "above_ema50": true,
-      "ema50_val": 20.1938,
-      "streak_50": 24,
-      "above_ema200": true,
-      "ema200_val": 21.2044,
-      "streak_200": 4
+      "ema200_val": 48.2198,
+      "streak_200": 2
     },
     {
       "sym": "SMH",
@@ -1350,294 +1324,138 @@
       "ema50_val": 567.2662,
       "streak_50": 3,
       "above_ema200": true,
-      "ema200_val": 499.3121,
-      "streak_200": 302
+      "ema200_val": 499.3023,
+      "streak_200": 301
+    },
+    {
+      "sym": "BTF",
+      "price": 24.173,
+      "d1": 5.8,
+      "w1": 10.73,
+      "hi52": -39.01,
+      "ytd": -6.56,
+      "spark": [
+        -4.03,
+        0.78,
+        1.31,
+        6.81,
+        5.8
+      ],
+      "asof": "2026-09-21",
+      "ema_uptrend": true,
+      "above_ema21": true,
+      "ema21_val": 21.3533,
+      "streak_21": 24,
+      "above_ema50": true,
+      "ema50_val": 20.0353,
+      "streak_50": 23,
+      "above_ema200": true,
+      "ema200_val": 21.175,
+      "streak_200": 3
     },
     {
       "sym": "XSD",
-      "price": 534.45,
-      "d1": 1.89,
-      "w1": 11.27,
-      "hi52": -18.73,
-      "ytd": 66.4,
+      "price": 524.56,
+      "d1": 3.57,
+      "w1": 10.56,
+      "hi52": -20.24,
+      "ytd": 63.32,
       "spark": [
+        1.24,
         -0.14,
         4.06,
         1.48,
-        3.57,
-        1.89
+        3.57
       ],
-      "asof": "2026-09-22",
+      "asof": "2026-09-21",
       "ema_uptrend": true,
       "above_ema21": true,
-      "ema21_val": 500.6606,
-      "streak_21": 4,
-      "above_ema50": true,
-      "ema50_val": 508.4118,
-      "streak_50": 2,
-      "above_ema200": true,
-      "ema200_val": 458.2518,
-      "streak_200": 121
-    },
-    {
-      "sym": "BLOK",
-      "price": 67.12,
-      "d1": 0.49,
-      "w1": 10.06,
-      "hi52": -10.82,
-      "ytd": 18.13,
-      "spark": [
-        -0.42,
-        2.12,
-        4.58,
-        2.98,
-        0.49
-      ],
-      "asof": "2026-09-22",
-      "ema_uptrend": true,
-      "above_ema21": true,
-      "ema21_val": 63.4566,
+      "ema21_val": 497.2816,
       "streak_21": 3,
       "above_ema50": true,
-      "ema50_val": 62.5793,
-      "streak_50": 3,
+      "ema50_val": 507.349,
+      "streak_50": 1,
       "above_ema200": true,
-      "ema200_val": 60.3191,
-      "streak_200": 24
-    },
-    {
-      "sym": "ARKK",
-      "price": 91.61,
-      "d1": 0.98,
-      "w1": 9.73,
-      "hi52": -1.12,
-      "ytd": 19.1,
-      "spark": [
-        -0.37,
-        4.5,
-        1.51,
-        2.82,
-        0.98
-      ],
-      "asof": "2026-09-22",
-      "ema_uptrend": true,
-      "above_ema21": true,
-      "ema21_val": 85.4814,
-      "streak_21": 4,
-      "above_ema50": true,
-      "ema50_val": 82.6495,
-      "streak_50": 32,
-      "above_ema200": true,
-      "ema200_val": 77.8167,
-      "streak_200": 35
-    },
-    {
-      "sym": "BUZZ",
-      "price": 39.94,
-      "d1": 1.4,
-      "w1": 9.36,
-      "hi52": -3.13,
-      "ytd": 22.93,
-      "spark": [
-        0.14,
-        2.98,
-        0.9,
-        3.66,
-        1.4
-      ],
-      "asof": "2026-09-22",
-      "ema_uptrend": true,
-      "above_ema21": true,
-      "ema21_val": 37.3671,
-      "streak_21": 4,
-      "above_ema50": true,
-      "ema50_val": 36.6039,
-      "streak_50": 14,
-      "above_ema200": true,
-      "ema200_val": 34.6869,
-      "streak_200": 36
+      "ema200_val": 457.4796,
+      "streak_200": 120
     },
     {
       "sym": "QTUM",
-      "price": 154.43,
-      "d1": 0.91,
-      "w1": 8.19,
-      "hi52": -9.01,
-      "ytd": 41.35,
+      "price": 153.04,
+      "d1": 3.55,
+      "w1": 7.17,
+      "hi52": -9.83,
+      "ytd": 40.07,
       "spark": [
+        -0.04,
         0.37,
         2.43,
         0.71,
-        3.55,
-        0.91
+        3.55
       ],
-      "asof": "2026-09-22",
-      "ema_uptrend": true,
-      "above_ema21": true,
-      "ema21_val": 148.1788,
-      "streak_21": 3,
-      "above_ema50": true,
-      "ema50_val": 148.4204,
-      "streak_50": 2,
-      "above_ema200": true,
-      "ema200_val": 134.5576,
-      "streak_200": 121
-    },
-    {
-      "sym": "IDNA",
-      "price": 41.74,
-      "d1": 2.73,
-      "w1": 8.17,
-      "hi52": -0.29,
-      "ytd": 60.05,
-      "spark": [
-        0.29,
-        3.36,
-        -0.42,
-        2.01,
-        2.73
-      ],
-      "asof": "2026-09-22",
-      "ema_uptrend": true,
-      "above_ema21": true,
-      "ema21_val": 39.1257,
-      "streak_21": 7,
-      "above_ema50": true,
-      "ema50_val": 37.082,
-      "streak_50": 71,
-      "above_ema200": true,
-      "ema200_val": 31.7178,
-      "streak_200": 279
-    },
-    {
-      "sym": "MSOS",
-      "price": 5.33,
-      "d1": 7.89,
-      "w1": 8.11,
-      "hi52": -26.48,
-      "ytd": 12.92,
-      "spark": [
-        -0.2,
-        0.81,
-        -1.21,
-        0.82,
-        7.89
-      ],
-      "asof": "2026-09-22",
-      "ema_uptrend": true,
-      "above_ema21": true,
-      "ema21_val": 4.9176,
-      "streak_21": 7,
-      "above_ema50": true,
-      "ema50_val": 4.7827,
-      "streak_50": 30,
-      "above_ema200": true,
-      "ema200_val": 4.5248,
-      "streak_200": 30
-    },
-    {
-      "sym": "IPO",
-      "price": 54.65,
-      "d1": 1.41,
-      "w1": 6.95,
-      "hi52": -9.41,
-      "ytd": 19.87,
-      "spark": [
-        0.55,
-        1.44,
-        0.83,
-        2.55,
-        1.41
-      ],
-      "asof": "2026-09-22",
+      "asof": "2026-09-21",
       "ema_uptrend": false,
       "above_ema21": true,
-      "ema21_val": 53.1597,
+      "ema21_val": 147.5536,
       "streak_21": 2,
       "above_ema50": true,
-      "ema50_val": 53.5727,
-      "streak_50": 2,
+      "ema50_val": 148.1751,
+      "streak_50": 1,
       "above_ema200": true,
-      "ema200_val": 50.9504,
-      "streak_200": 113
+      "ema200_val": 134.3579,
+      "streak_200": 120
     },
     {
-      "sym": "GDXJ",
-      "price": 127.97,
-      "d1": 4.31,
-      "w1": 6.37,
-      "hi52": -18.74,
-      "ytd": 12.47,
+      "sym": "ARKK",
+      "price": 90.72,
+      "d1": 2.82,
+      "w1": 7.08,
+      "hi52": -2.08,
+      "ytd": 17.94,
       "spark": [
-        -1.9,
-        4.75,
-        0.66,
-        -1.41,
-        4.31
+        -1.45,
+        -0.37,
+        4.5,
+        1.51,
+        2.82
       ],
-      "asof": "2026-09-22",
+      "asof": "2026-09-21",
       "ema_uptrend": true,
       "above_ema21": true,
-      "ema21_val": 123.9475,
-      "streak_21": 1,
+      "ema21_val": 84.8686,
+      "streak_21": 3,
       "above_ema50": true,
-      "ema50_val": 119.1972,
-      "streak_50": 4,
+      "ema50_val": 82.2838,
+      "streak_50": 31,
       "above_ema200": true,
-      "ema200_val": 111.5655,
+      "ema200_val": 77.6758,
       "streak_200": 34
     },
     {
-      "sym": "COPX",
-      "price": 89.98,
-      "d1": 2.85,
-      "w1": 6.37,
-      "hi52": -9.71,
-      "ytd": 25.76,
+      "sym": "BUZZ",
+      "price": 39.39,
+      "d1": 3.66,
+      "w1": 6.17,
+      "hi52": -4.46,
+      "ytd": 21.24,
       "spark": [
-        -0.47,
-        2.87,
-        0.77,
-        0.24,
-        2.85
+        -1.56,
+        0.14,
+        2.98,
+        0.9,
+        3.66
       ],
-      "asof": "2026-09-22",
-      "ema_uptrend": false,
-      "above_ema21": true,
-      "ema21_val": 88.6377,
-      "streak_21": 1,
-      "above_ema50": true,
-      "ema50_val": 86.9209,
-      "streak_50": 3,
-      "above_ema200": true,
-      "ema200_val": 78.9573,
-      "streak_200": 45
-    },
-    {
-      "sym": "AIQ",
-      "price": 66.72,
-      "d1": 0.62,
-      "w1": 5.97,
-      "hi52": -5.04,
-      "ytd": 31.18,
-      "spark": [
-        0.08,
-        2.16,
-        -0.37,
-        3.4,
-        0.62
-      ],
-      "asof": "2026-09-22",
+      "asof": "2026-09-21",
       "ema_uptrend": true,
       "above_ema21": true,
-      "ema21_val": 64.0359,
-      "streak_21": 4,
+      "ema21_val": 37.1098,
+      "streak_21": 3,
       "above_ema50": true,
-      "ema50_val": 63.1,
-      "streak_50": 35,
+      "ema50_val": 36.4677,
+      "streak_50": 13,
       "above_ema200": true,
-      "ema200_val": 57.6538,
-      "streak_200": 117
+      "ema200_val": 34.6334,
+      "streak_200": 35
     },
     {
       "sym": "SLV",
@@ -1662,164 +1480,112 @@
       "ema50_val": 58.7337,
       "streak_50": 4,
       "above_ema200": true,
-      "ema200_val": 59.2103,
+      "ema200_val": 59.2094,
       "streak_200": 3
     },
     {
-      "sym": "XBI",
-      "price": 161.87,
-      "d1": 2.3,
-      "w1": 5.09,
-      "hi52": -4.72,
-      "ytd": 32.89,
+      "sym": "BLOK",
+      "price": 66.79,
+      "d1": 2.98,
+      "w1": 5.51,
+      "hi52": -11.26,
+      "ytd": 17.55,
       "spark": [
-        0.1,
-        2.64,
-        -0.97,
-        0.96,
-        2.3
+        -3.66,
+        -0.42,
+        2.12,
+        4.58,
+        2.98
       ],
-      "asof": "2026-09-22",
-      "ema_uptrend": false,
-      "above_ema21": true,
-      "ema21_val": 159.3388,
-      "streak_21": 1,
-      "above_ema50": true,
-      "ema50_val": 156.9599,
-      "streak_50": 4,
-      "above_ema200": true,
-      "ema200_val": 138.6194,
-      "streak_200": 279
-    },
-    {
-      "sym": "BBH",
-      "price": 242.03,
-      "d1": 1.81,
-      "w1": 4.91,
-      "hi52": -0.95,
-      "ytd": 27.88,
-      "spark": [
-        0.2,
-        2.4,
-        -1.09,
-        1.53,
-        1.81
-      ],
-      "asof": "2026-09-22",
+      "asof": "2026-09-21",
       "ema_uptrend": true,
       "above_ema21": true,
-      "ema21_val": 233.8004,
-      "streak_21": 4,
+      "ema21_val": 63.0903,
+      "streak_21": 2,
       "above_ema50": true,
-      "ema50_val": 224.9283,
-      "streak_50": 71,
+      "ema50_val": 62.3939,
+      "streak_50": 2,
       "above_ema200": true,
-      "ema200_val": 201.6202,
-      "streak_200": 71
+      "ema200_val": 60.2493,
+      "streak_200": 23
     },
     {
-      "sym": "URA",
-      "price": 43.74,
-      "d1": 1.77,
-      "w1": 4.72,
-      "hi52": -29.77,
-      "ytd": 2.36,
+      "sym": "IDNA",
+      "price": 40.63,
+      "d1": 2.01,
+      "w1": 4.88,
+      "hi52": -2.07,
+      "ytd": 55.79,
       "spark": [
-        -0.96,
-        3.17,
-        -2.41,
-        3.19,
-        1.77
-      ],
-      "asof": "2026-09-22",
-      "ema_uptrend": false,
-      "above_ema21": false,
-      "ema21_val": 43.8623,
-      "streak_21": 9,
-      "above_ema50": false,
-      "ema50_val": 44.2494,
-      "streak_50": 8,
-      "above_ema200": false,
-      "ema200_val": 45.5397,
-      "streak_200": 9
-    },
-    {
-      "sym": "PBW",
-      "price": 31.29,
-      "d1": 1.07,
-      "w1": 4.69,
-      "hi52": -32.75,
-      "ytd": 4.09,
-      "spark": [
-        -0.83,
-        2.84,
+        -0.39,
+        0.29,
+        3.36,
         -0.42,
-        1.99,
-        1.07
+        2.01
       ],
-      "asof": "2026-09-22",
-      "ema_uptrend": false,
+      "asof": "2026-09-21",
+      "ema_uptrend": true,
       "above_ema21": true,
-      "ema21_val": 31.249,
-      "streak_21": 1,
-      "above_ema50": false,
-      "ema50_val": 32.63,
-      "streak_50": 64,
-      "above_ema200": false,
-      "ema200_val": 33.09,
-      "streak_200": 25
-    },
-    {
-      "sym": "JETS",
-      "price": 29.12,
-      "d1": 0.38,
-      "w1": 4.45,
-      "hi52": -14.5,
-      "ytd": 3.74,
-      "spark": [
-        -0.29,
-        1.33,
-        0.18,
-        2.8,
-        0.38
-      ],
-      "asof": "2026-09-22",
-      "ema_uptrend": false,
-      "above_ema21": true,
-      "ema21_val": 28.8097,
-      "streak_21": 2,
-      "above_ema50": false,
-      "ema50_val": 29.4818,
-      "streak_50": 26,
-      "above_ema200": true,
-      "ema200_val": 28.3781,
-      "streak_200": 2
-    },
-    {
-      "sym": "BOTZ",
-      "price": 36.01,
-      "d1": 0.53,
-      "w1": 3.98,
-      "hi52": -13.62,
-      "ytd": -0.56,
-      "spark": [
-        0.26,
-        1.14,
-        -0.01,
-        2.02,
-        0.53
-      ],
-      "asof": "2026-09-22",
-      "ema_uptrend": false,
-      "above_ema21": true,
-      "ema21_val": 35.5086,
-      "streak_21": 2,
+      "ema21_val": 38.8643,
+      "streak_21": 6,
       "above_ema50": true,
-      "ema50_val": 35.9364,
+      "ema50_val": 36.8919,
+      "streak_50": 70,
+      "above_ema200": true,
+      "ema200_val": 31.6167,
+      "streak_200": 278
+    },
+    {
+      "sym": "AIQ",
+      "price": 66.31,
+      "d1": 3.4,
+      "w1": 4.47,
+      "hi52": -5.62,
+      "ytd": 30.38,
+      "spark": [
+        -0.8,
+        0.08,
+        2.16,
+        -0.37,
+        3.4
+      ],
+      "asof": "2026-09-21",
+      "ema_uptrend": true,
+      "above_ema21": true,
+      "ema21_val": 63.7675,
+      "streak_21": 3,
+      "above_ema50": true,
+      "ema50_val": 62.9522,
+      "streak_50": 34,
+      "above_ema200": true,
+      "ema200_val": 57.5623,
+      "streak_200": 116
+    },
+    {
+      "sym": "IPO",
+      "price": 53.89,
+      "d1": 2.55,
+      "w1": 4.14,
+      "hi52": -10.67,
+      "ytd": 18.2,
+      "spark": [
+        -1.26,
+        0.55,
+        1.44,
+        0.83,
+        2.55
+      ],
+      "asof": "2026-09-21",
+      "ema_uptrend": false,
+      "above_ema21": true,
+      "ema21_val": 53.0107,
+      "streak_21": 1,
+      "above_ema50": true,
+      "ema50_val": 53.5287,
       "streak_50": 1,
-      "above_ema200": false,
-      "ema200_val": 36.2728,
-      "streak_200": 24
+      "above_ema200": true,
+      "ema200_val": 50.9129,
+      "streak_200": 112
     },
     {
       "sym": "GDX",
@@ -1844,190 +1610,60 @@
       "ema50_val": 91.7826,
       "streak_50": 34,
       "above_ema200": true,
-      "ema200_val": 85.5798,
+      "ema200_val": 85.5782,
       "streak_200": 34
     },
     {
-      "sym": "REMX",
-      "price": 70.97,
-      "d1": 1.0,
-      "w1": 3.91,
-      "hi52": -36.38,
-      "ytd": -3.99,
-      "spark": [
-        -1.01,
-        2.2,
-        -0.06,
-        1.75,
-        1.0
-      ],
-      "asof": "2026-09-22",
-      "ema_uptrend": false,
-      "above_ema21": false,
-      "ema21_val": 72.6295,
-      "streak_21": 10,
-      "above_ema50": false,
-      "ema50_val": 75.8364,
-      "streak_50": 20,
-      "above_ema200": false,
-      "ema200_val": 79.7796,
-      "streak_200": 55
-    },
-    {
-      "sym": "KWEB",
-      "price": 25.37,
-      "d1": 0.75,
-      "w1": 3.64,
-      "hi52": -37.93,
-      "ytd": -25.49,
-      "spark": [
-        -0.98,
-        0.66,
-        1.76,
-        1.41,
-        0.75
-      ],
-      "asof": "2026-09-22",
-      "ema_uptrend": false,
-      "above_ema21": false,
-      "ema21_val": 25.3829,
-      "streak_21": 29,
-      "above_ema50": false,
-      "ema50_val": 26.0889,
-      "streak_50": 28,
-      "above_ema200": false,
-      "ema200_val": 28.7791,
-      "streak_200": 160
-    },
-    {
-      "sym": "DRIV",
-      "price": 34.3682,
-      "d1": 0.37,
-      "w1": 3.48,
-      "hi52": -19.46,
-      "ytd": 16.41,
-      "spark": [
-        -0.54,
-        2.47,
-        -0.97,
-        2.14,
-        0.37
-      ],
-      "asof": "2026-09-22",
-      "ema_uptrend": false,
-      "above_ema21": true,
-      "ema21_val": 34.1629,
-      "streak_21": 2,
-      "above_ema50": false,
-      "ema50_val": 34.7771,
-      "streak_50": 25,
-      "above_ema200": true,
-      "ema200_val": 33.7644,
-      "streak_200": 2
-    },
-    {
-      "sym": "NLR",
-      "price": 111.95,
-      "d1": 1.1,
-      "w1": 3.35,
-      "hi52": -32.24,
-      "ytd": -9.86,
-      "spark": [
-        -0.89,
-        2.99,
-        -2.6,
-        2.82,
-        1.1
-      ],
-      "asof": "2026-09-22",
-      "ema_uptrend": false,
-      "above_ema21": false,
-      "ema21_val": 114.0612,
-      "streak_21": 9,
-      "above_ema50": false,
-      "ema50_val": 116.0357,
-      "streak_50": 9,
-      "above_ema200": false,
-      "ema200_val": 122.8991,
-      "streak_200": 17
-    },
-    {
-      "sym": "UFO",
-      "price": 44.24,
-      "d1": 0.16,
-      "w1": 3.15,
-      "hi52": -35.06,
-      "ytd": 14.61,
-      "spark": [
-        0.16,
-        1.63,
-        -1.03,
-        2.22,
-        0.16
-      ],
-      "asof": "2026-09-22",
-      "ema_uptrend": false,
-      "above_ema21": true,
-      "ema21_val": 43.9956,
-      "streak_21": 2,
-      "above_ema50": false,
-      "ema50_val": 45.4062,
-      "streak_50": 25,
-      "above_ema200": false,
-      "ema200_val": 45.1144,
-      "streak_200": 21
-    },
-    {
-      "sym": "TAN",
-      "price": 46.5,
-      "d1": -0.45,
-      "w1": 3.13,
-      "hi52": -38.49,
-      "ytd": -5.33,
-      "spark": [
-        -1.04,
-        3.9,
-        -1.51,
-        2.3,
-        -0.45
-      ],
-      "asof": "2026-09-22",
-      "ema_uptrend": false,
-      "above_ema21": false,
-      "ema21_val": 47.4455,
-      "streak_21": 29,
-      "above_ema50": false,
-      "ema50_val": 50.0833,
-      "streak_50": 68,
-      "above_ema200": false,
-      "ema200_val": 52.4755,
-      "streak_200": 48
-    },
-    {
       "sym": "SKYY",
-      "price": 167.39,
-      "d1": -0.49,
-      "w1": 3.09,
-      "hi52": -1.19,
-      "ytd": 28.68,
+      "price": 168.21,
+      "d1": 3.82,
+      "w1": 3.34,
+      "hi52": -0.5,
+      "ytd": 29.31,
       "spark": [
+        -0.25,
         -0.3,
         1.54,
         -1.44,
-        3.82,
-        -0.49
+        3.82
       ],
-      "asof": "2026-09-22",
+      "asof": "2026-09-21",
       "ema_uptrend": true,
       "above_ema21": true,
-      "ema21_val": 161.6409,
-      "streak_21": 7,
+      "ema21_val": 161.066,
+      "streak_21": 6,
       "above_ema50": true,
-      "ema50_val": 155.1414,
-      "streak_50": 41,
+      "ema50_val": 154.6414,
+      "streak_50": 40,
       "above_ema200": true,
-      "ema200_val": 137.3505,
-      "streak_200": 99
+      "ema200_val": 137.0504,
+      "streak_200": 98
+    },
+    {
+      "sym": "BOTZ",
+      "price": 35.82,
+      "d1": 2.02,
+      "w1": 3.05,
+      "hi52": -14.08,
+      "ytd": -1.08,
+      "spark": [
+        -0.37,
+        0.26,
+        1.14,
+        -0.01,
+        2.02
+      ],
+      "asof": "2026-09-21",
+      "ema_uptrend": false,
+      "above_ema21": true,
+      "ema21_val": 35.4584,
+      "streak_21": 1,
+      "above_ema50": false,
+      "ema50_val": 35.9334,
+      "streak_50": 24,
+      "above_ema200": false,
+      "ema200_val": 36.2753,
+      "streak_200": 23
     },
     {
       "sym": "UNG",
@@ -2052,268 +1688,320 @@
       "ema50_val": 10.4429,
       "streak_50": 1,
       "above_ema200": false,
-      "ema200_val": 11.5211,
+      "ema200_val": 11.5217,
       "streak_200": 161
     },
     {
-      "sym": "FFTY",
-      "price": 35.56,
-      "d1": 0.14,
-      "w1": 3.01,
-      "hi52": -19.33,
-      "ytd": 2.15,
+      "sym": "JETS",
+      "price": 29.01,
+      "d1": 2.8,
+      "w1": 2.95,
+      "hi52": -14.83,
+      "ytd": 3.35,
       "spark": [
-        0.55,
-        1.3,
-        0.43,
-        0.57,
-        0.14
+        -1.06,
+        -0.29,
+        1.33,
+        0.18,
+        2.8
       ],
-      "asof": "2026-09-22",
+      "asof": "2026-09-21",
+      "ema_uptrend": false,
+      "above_ema21": true,
+      "ema21_val": 28.7786,
+      "streak_21": 1,
+      "above_ema50": false,
+      "ema50_val": 29.4966,
+      "streak_50": 25,
+      "above_ema200": true,
+      "ema200_val": 28.3709,
+      "streak_200": 1
+    },
+    {
+      "sym": "UFO",
+      "price": 44.17,
+      "d1": 2.22,
+      "w1": 2.82,
+      "hi52": -35.16,
+      "ytd": 14.43,
+      "spark": [
+        -0.16,
+        0.16,
+        1.63,
+        -1.03,
+        2.22
+      ],
+      "asof": "2026-09-21",
+      "ema_uptrend": false,
+      "above_ema21": true,
+      "ema21_val": 43.9711,
+      "streak_21": 1,
+      "above_ema50": false,
+      "ema50_val": 45.4538,
+      "streak_50": 24,
+      "above_ema200": false,
+      "ema200_val": 45.1225,
+      "streak_200": 20
+    },
+    {
+      "sym": "PBW",
+      "price": 30.96,
+      "d1": 1.99,
+      "w1": 2.76,
+      "hi52": -33.46,
+      "ytd": 2.99,
+      "spark": [
+        -0.79,
+        -0.83,
+        2.84,
+        -0.42,
+        1.99
+      ],
+      "asof": "2026-09-21",
       "ema_uptrend": false,
       "above_ema21": false,
-      "ema21_val": 35.8107,
-      "streak_21": 25,
+      "ema21_val": 31.2449,
+      "streak_21": 24,
       "above_ema50": false,
-      "ema50_val": 36.8617,
-      "streak_50": 52,
+      "ema50_val": 32.6847,
+      "streak_50": 63,
       "above_ema200": false,
-      "ema200_val": 37.2137,
-      "streak_200": 25
+      "ema200_val": 33.1072,
+      "streak_200": 24
+    },
+    {
+      "sym": "DRIV",
+      "price": 34.242,
+      "d1": 2.14,
+      "w1": 2.55,
+      "hi52": -19.76,
+      "ytd": 15.98,
+      "spark": [
+        -0.53,
+        -0.54,
+        2.47,
+        -0.97,
+        2.14
+      ],
+      "asof": "2026-09-21",
+      "ema_uptrend": false,
+      "above_ema21": true,
+      "ema21_val": 34.1424,
+      "streak_21": 1,
+      "above_ema50": false,
+      "ema50_val": 34.7938,
+      "streak_50": 24,
+      "above_ema200": true,
+      "ema200_val": 33.758,
+      "streak_200": 1
+    },
+    {
+      "sym": "BBH",
+      "price": 237.72,
+      "d1": 1.53,
+      "w1": 2.46,
+      "hi52": -2.71,
+      "ytd": 25.6,
+      "spark": [
+        -0.57,
+        0.2,
+        2.4,
+        -1.09,
+        1.53
+      ],
+      "asof": "2026-09-21",
+      "ema_uptrend": true,
+      "above_ema21": true,
+      "ema21_val": 232.9774,
+      "streak_21": 3,
+      "above_ema50": true,
+      "ema50_val": 224.2303,
+      "streak_50": 70,
+      "above_ema200": true,
+      "ema200_val": 201.2101,
+      "streak_200": 70
     },
     {
       "sym": "ASHR",
-      "price": 34.17,
-      "d1": -0.18,
-      "w1": 2.8,
-      "hi52": -8.47,
-      "ytd": 4.02,
+      "price": 34.23,
+      "d1": 1.36,
+      "w1": 2.33,
+      "hi52": -8.3,
+      "ytd": 4.2,
       "spark": [
+        -0.63,
         0.12,
         0.45,
         1.02,
-        1.36,
-        -0.18
+        1.36
       ],
-      "asof": "2026-09-22",
+      "asof": "2026-09-21",
       "ema_uptrend": false,
       "above_ema21": true,
-      "ema21_val": 33.9656,
-      "streak_21": 2,
+      "ema21_val": 33.9452,
+      "streak_21": 1,
       "above_ema50": false,
-      "ema50_val": 34.3143,
-      "streak_50": 25,
+      "ema50_val": 34.3202,
+      "streak_50": 24,
       "above_ema200": true,
-      "ema200_val": 33.7721,
-      "streak_200": 3
-    },
-    {
-      "sym": "CLOU",
-      "price": 28.95,
-      "d1": 0.07,
-      "w1": 2.7,
-      "hi52": -1.41,
-      "ytd": 27.98,
-      "spark": [
-        -0.6,
-        1.14,
-        -1.83,
-        3.99,
-        0.07
-      ],
-      "asof": "2026-09-22",
-      "ema_uptrend": true,
-      "above_ema21": true,
-      "ema21_val": 27.9371,
-      "streak_21": 7,
-      "above_ema50": true,
-      "ema50_val": 26.8234,
-      "streak_50": 42,
-      "above_ema200": true,
-      "ema200_val": 23.8868,
-      "streak_200": 61
-    },
-    {
-      "sym": "XME",
-      "price": 111.94,
-      "d1": 2.7,
-      "w1": 2.35,
-      "hi52": -17.33,
-      "ytd": 8.25,
-      "spark": [
-        -0.61,
-        2.34,
-        -2.37,
-        0.36,
-        2.7
-      ],
-      "asof": "2026-09-22",
-      "ema_uptrend": false,
-      "above_ema21": false,
-      "ema21_val": 113.264,
-      "streak_21": 9,
-      "above_ema50": false,
-      "ema50_val": 113.0316,
-      "streak_50": 8,
-      "above_ema200": true,
-      "ema200_val": 108.7352,
+      "ema200_val": 33.7687,
       "streak_200": 2
     },
     {
-      "sym": "XHB",
-      "price": 99.41,
-      "d1": 2.53,
-      "w1": 2.26,
-      "hi52": -18.45,
-      "ytd": -2.47,
+      "sym": "COPX",
+      "price": 87.49,
+      "d1": 0.24,
+      "w1": 2.18,
+      "hi52": -12.2,
+      "ytd": 22.28,
       "spark": [
-        -0.98,
-        0.28,
-        -0.7,
-        1.15,
-        2.53
+        -1.2,
+        -0.47,
+        2.87,
+        0.77,
+        0.24
       ],
-      "asof": "2026-09-22",
+      "asof": "2026-09-21",
       "ema_uptrend": false,
       "above_ema21": false,
-      "ema21_val": 99.932,
-      "streak_21": 26,
-      "above_ema50": false,
-      "ema50_val": 102.8138,
-      "streak_50": 23,
-      "above_ema200": false,
-      "ema200_val": 105.0798,
-      "streak_200": 23
+      "ema21_val": 88.5034,
+      "streak_21": 8,
+      "above_ema50": true,
+      "ema50_val": 86.796,
+      "streak_50": 2,
+      "above_ema200": true,
+      "ema200_val": 78.8452,
+      "streak_200": 44
     },
     {
-      "sym": "ITB",
-      "price": 91.03,
-      "d1": 3.21,
-      "w1": 2.14,
-      "hi52": -20.07,
-      "ytd": -4.34,
+      "sym": "CLOU",
+      "price": 28.93,
+      "d1": 3.99,
+      "w1": 2.05,
+      "hi52": -1.23,
+      "ytd": 27.9,
       "spark": [
-        -1.12,
-        0.49,
-        -1.29,
-        0.9,
-        3.21
+        -0.56,
+        -0.6,
+        1.14,
+        -1.83,
+        3.99
       ],
-      "asof": "2026-09-22",
+      "asof": "2026-09-21",
+      "ema_uptrend": true,
+      "above_ema21": true,
+      "ema21_val": 27.8359,
+      "streak_21": 6,
+      "above_ema50": true,
+      "ema50_val": 26.7366,
+      "streak_50": 41,
+      "above_ema200": true,
+      "ema200_val": 23.8365,
+      "streak_200": 60
+    },
+    {
+      "sym": "REMX",
+      "price": 70.27,
+      "d1": 1.75,
+      "w1": 1.94,
+      "hi52": -37.01,
+      "ytd": -4.94,
+      "spark": [
+        -0.91,
+        -1.01,
+        2.2,
+        -0.06,
+        1.75
+      ],
+      "asof": "2026-09-21",
       "ema_uptrend": false,
       "above_ema21": false,
-      "ema21_val": 91.1252,
-      "streak_21": 19,
+      "ema21_val": 72.7955,
+      "streak_21": 9,
       "above_ema50": false,
-      "ema50_val": 93.4634,
+      "ema50_val": 76.035,
       "streak_50": 19,
       "above_ema200": false,
-      "ema200_val": 96.4629,
-      "streak_200": 23
+      "ema200_val": 79.8674,
+      "streak_200": 54
     },
     {
-      "sym": "LIT",
-      "price": 71.33,
-      "d1": 0.71,
+      "sym": "URA",
+      "price": 42.98,
+      "d1": 3.19,
       "w1": 1.87,
-      "hi52": -22.12,
-      "ytd": 10.45,
+      "hi52": -30.99,
+      "ytd": 0.59,
       "spark": [
-        -0.24,
-        1.5,
-        -0.56,
-        0.47,
-        0.71
+        -1.0,
+        -0.96,
+        3.17,
+        -2.41,
+        3.19
       ],
-      "asof": "2026-09-22",
+      "asof": "2026-09-21",
       "ema_uptrend": false,
       "above_ema21": false,
-      "ema21_val": 72.3566,
-      "streak_21": 15,
+      "ema21_val": 43.8746,
+      "streak_21": 8,
       "above_ema50": false,
-      "ema50_val": 73.5129,
-      "streak_50": 15,
+      "ema50_val": 44.2702,
+      "streak_50": 7,
       "above_ema200": false,
-      "ema200_val": 71.5773,
+      "ema200_val": 45.5558,
       "streak_200": 8
     },
     {
-      "sym": "IWO",
-      "price": 367.92,
-      "d1": 0.76,
-      "w1": 1.86,
-      "hi52": -7.15,
-      "ytd": 14.2,
+      "sym": "FFTY",
+      "price": 35.51,
+      "d1": 0.57,
+      "w1": 1.82,
+      "hi52": -19.44,
+      "ytd": 2.01,
       "spark": [
-        -0.03,
-        0.71,
-        -0.43,
-        0.85,
-        0.76
+        -1.02,
+        0.55,
+        1.3,
+        0.43,
+        0.57
       ],
-      "asof": "2026-09-22",
+      "asof": "2026-09-21",
       "ema_uptrend": false,
       "above_ema21": false,
-      "ema21_val": 370.9188,
-      "streak_21": 17,
+      "ema21_val": 35.8357,
+      "streak_21": 24,
       "above_ema50": false,
-      "ema50_val": 374.9811,
-      "streak_50": 17,
-      "above_ema200": true,
-      "ema200_val": 356.7826,
-      "streak_200": 119
-    },
-    {
-      "sym": "FXI",
-      "price": 35.0,
-      "d1": 0.26,
-      "w1": 1.74,
-      "hi52": -15.13,
-      "ytd": -7.91,
-      "spark": [
-        -1.4,
-        0.8,
-        0.38,
-        1.72,
-        0.26
-      ],
-      "asof": "2026-09-22",
-      "ema_uptrend": false,
-      "above_ema21": true,
-      "ema21_val": 34.8683,
-      "streak_21": 2,
-      "above_ema50": true,
-      "ema50_val": 34.9745,
-      "streak_50": 1,
+      "ema50_val": 36.9148,
+      "streak_50": 51,
       "above_ema200": false,
-      "ema200_val": 35.6678,
-      "streak_200": 11
+      "ema200_val": 37.2301,
+      "streak_200": 24
     },
     {
-      "sym": "OUNZ",
-      "price": 41.92,
-      "d1": 0.41,
-      "w1": 1.53,
-      "hi52": -21.42,
-      "ytd": 1.06,
+      "sym": "KWEB",
+      "price": 25.18,
+      "d1": 1.41,
+      "w1": 1.82,
+      "hi52": -38.4,
+      "ytd": -26.05,
       "spark": [
-        -0.61,
-        1.73,
-        0.65,
-        -0.64,
-        0.41
+        -1.01,
+        -0.98,
+        0.66,
+        1.76,
+        1.41
       ],
-      "asof": "2026-09-22",
+      "asof": "2026-09-21",
       "ema_uptrend": false,
       "above_ema21": false,
-      "ema21_val": 41.9684,
-      "streak_21": 2,
-      "above_ema50": true,
-      "ema50_val": 41.7681,
-      "streak_50": 1,
-      "above_ema200": true,
-      "ema200_val": 41.4832,
-      "streak_200": 4
+      "ema21_val": 25.3841,
+      "streak_21": 28,
+      "above_ema50": false,
+      "ema50_val": 26.1182,
+      "streak_50": 27,
+      "above_ema200": false,
+      "ema200_val": 28.8144,
+      "streak_200": 159
     },
     {
       "sym": "GLD",
@@ -2338,60 +2026,86 @@
       "ema50_val": 398.6436,
       "streak_50": 1,
       "above_ema200": true,
-      "ema200_val": 396.0848,
+      "ema200_val": 396.083,
       "streak_200": 4
     },
     {
-      "sym": "SPPP",
-      "price": 14.54,
-      "d1": 0.41,
-      "w1": 1.47,
-      "hi52": -38.93,
-      "ytd": -13.66,
+      "sym": "GDXJ",
+      "price": 122.68,
+      "d1": -1.41,
+      "w1": 1.48,
+      "hi52": -22.1,
+      "ytd": 7.82,
       "spark": [
-        -2.23,
-        1.57,
-        1.9,
-        -0.14,
-        0.41
+        -0.48,
+        -1.9,
+        4.75,
+        0.66,
+        -1.41
       ],
-      "asof": "2026-09-22",
-      "ema_uptrend": false,
-      "above_ema21": true,
-      "ema21_val": 14.459,
-      "streak_21": 3,
-      "above_ema50": true,
-      "ema50_val": 14.2862,
-      "streak_50": 3,
-      "above_ema200": true,
-      "ema200_val": 14.5116,
-      "streak_200": 1
-    },
-    {
-      "sym": "PAVE",
-      "price": 53.57,
-      "d1": 0.92,
-      "w1": 1.38,
-      "hi52": -11.2,
-      "ytd": 12.29,
-      "spark": [
-        -0.17,
-        0.3,
-        0.09,
-        0.23,
-        0.92
-      ],
-      "asof": "2026-09-22",
+      "asof": "2026-09-21",
       "ema_uptrend": false,
       "above_ema21": false,
-      "ema21_val": 54.2464,
-      "streak_21": 25,
+      "ema21_val": 123.5452,
+      "streak_21": 1,
+      "above_ema50": true,
+      "ema50_val": 118.8391,
+      "streak_50": 3,
+      "above_ema200": true,
+      "ema200_val": 111.3986,
+      "streak_200": 33
+    },
+    {
+      "sym": "OUNZ",
+      "price": 41.75,
+      "d1": -0.64,
+      "w1": 1.43,
+      "hi52": -21.74,
+      "ytd": 0.65,
+      "spark": [
+        0.32,
+        -0.61,
+        1.73,
+        0.65,
+        -0.64
+      ],
+      "asof": "2026-09-21",
+      "ema_uptrend": false,
+      "above_ema21": false,
+      "ema21_val": 41.9733,
+      "streak_21": 1,
       "above_ema50": false,
-      "ema50_val": 55.379,
-      "streak_50": 24,
-      "above_ema200": false,
-      "ema200_val": 53.726,
-      "streak_200": 7
+      "ema50_val": 41.7619,
+      "streak_50": 1,
+      "above_ema200": true,
+      "ema200_val": 41.4786,
+      "streak_200": 3
+    },
+    {
+      "sym": "FDN",
+      "price": 296.85,
+      "d1": 3.02,
+      "w1": 1.41,
+      "hi52": -0.25,
+      "ytd": 10.28,
+      "spark": [
+        -0.96,
+        -0.43,
+        1.02,
+        -1.19,
+        3.02
+      ],
+      "asof": "2026-09-21",
+      "ema_uptrend": true,
+      "above_ema21": true,
+      "ema21_val": 289.2766,
+      "streak_21": 1,
+      "above_ema50": true,
+      "ema50_val": 284.0725,
+      "streak_50": 39,
+      "above_ema200": true,
+      "ema200_val": 270.1823,
+      "streak_200": 40
     },
     {
       "sym": "TLT",
@@ -2416,86 +2130,60 @@
       "ema50_val": 82.2811,
       "streak_50": 19,
       "above_ema200": false,
-      "ema200_val": 83.7601,
+      "ema200_val": 83.7589,
       "streak_200": 58
     },
     {
-      "sym": "PPH",
-      "price": 111.88,
-      "d1": 0.2,
-      "w1": 1.22,
-      "hi52": -5.19,
-      "ytd": 9.96,
+      "sym": "LIT",
+      "price": 70.83,
+      "d1": 0.47,
+      "w1": 1.23,
+      "hi52": -22.66,
+      "ytd": 9.67,
       "spark": [
-        -0.03,
-        1.06,
-        -0.45,
-        0.44,
-        0.2
+        0.07,
+        -0.24,
+        1.5,
+        -0.56,
+        0.47
       ],
-      "asof": "2026-09-22",
+      "asof": "2026-09-21",
       "ema_uptrend": false,
       "above_ema21": false,
-      "ema21_val": 111.9671,
-      "streak_21": 11,
-      "above_ema50": true,
-      "ema50_val": 111.2556,
-      "streak_50": 2,
-      "above_ema200": true,
-      "ema200_val": 105.1616,
-      "streak_200": 246
-    },
-    {
-      "sym": "FDN",
-      "price": 293.44,
-      "d1": -1.15,
-      "w1": 1.22,
-      "hi52": -1.86,
-      "ytd": 9.01,
-      "spark": [
-        -0.43,
-        1.02,
-        -1.19,
-        3.02,
-        -1.15
-      ],
-      "asof": "2026-09-22",
-      "ema_uptrend": true,
-      "above_ema21": true,
-      "ema21_val": 289.6551,
-      "streak_21": 2,
-      "above_ema50": true,
-      "ema50_val": 284.4399,
-      "streak_50": 40,
-      "above_ema200": true,
-      "ema200_val": 270.4129,
-      "streak_200": 41
-    },
-    {
-      "sym": "BOUT",
-      "price": 43.5253,
-      "d1": 0.08,
-      "w1": 1.15,
-      "hi52": -11.91,
-      "ytd": 19.9,
-      "spark": [
-        -0.21,
-        1.02,
-        -0.53,
-        0.79,
-        0.08
-      ],
-      "asof": "2026-09-22",
-      "ema_uptrend": false,
-      "above_ema21": false,
-      "ema21_val": 43.9735,
-      "streak_21": 33,
+      "ema21_val": 72.4592,
+      "streak_21": 14,
       "above_ema50": false,
-      "ema50_val": 44.7606,
-      "streak_50": 31,
-      "above_ema200": true,
-      "ema200_val": 43.2603,
-      "streak_200": 2
+      "ema50_val": 73.602,
+      "streak_50": 14,
+      "above_ema200": false,
+      "ema200_val": 71.5807,
+      "streak_200": 7
+    },
+    {
+      "sym": "NLR",
+      "price": 110.73,
+      "d1": 2.82,
+      "w1": 1.15,
+      "hi52": -32.98,
+      "ytd": -10.85,
+      "spark": [
+        -1.05,
+        -0.89,
+        2.99,
+        -2.6,
+        2.82
+      ],
+      "asof": "2026-09-21",
+      "ema_uptrend": false,
+      "above_ema21": false,
+      "ema21_val": 114.2724,
+      "streak_21": 8,
+      "above_ema50": false,
+      "ema50_val": 116.2025,
+      "streak_50": 8,
+      "above_ema200": false,
+      "ema200_val": 123.005,
+      "streak_200": 16
     },
     {
       "sym": "IGV",
@@ -2524,316 +2212,420 @@
       "streak_200": 37
     },
     {
-      "sym": "ESPO",
-      "price": 99.04,
-      "d1": 0.61,
-      "w1": 1.09,
-      "hi52": -18.48,
-      "ytd": -4.41,
-      "spark": [
-        -1.44,
-        1.11,
-        -0.85,
-        1.69,
-        0.61
-      ],
-      "asof": "2026-09-22",
-      "ema_uptrend": true,
-      "above_ema21": true,
-      "ema21_val": 97.3905,
-      "streak_21": 2,
-      "above_ema50": true,
-      "ema50_val": 96.0107,
-      "streak_50": 8,
-      "above_ema200": true,
-      "ema200_val": 95.5595,
-      "streak_200": 8
-    },
-    {
-      "sym": "IHI",
-      "price": 52.3,
-      "d1": 0.67,
-      "w1": 1.0,
-      "hi52": -18.87,
-      "ytd": -15.52,
-      "spark": [
-        0.23,
-        -0.39,
-        0.14,
-        0.35,
-        0.67
-      ],
-      "asof": "2026-09-22",
-      "ema_uptrend": false,
-      "above_ema21": false,
-      "ema21_val": 52.6815,
-      "streak_21": 15,
-      "above_ema50": false,
-      "ema50_val": 52.8106,
-      "streak_50": 11,
-      "above_ema200": false,
-      "ema200_val": 54.3017,
-      "streak_200": 15
-    },
-    {
       "sym": "UUP",
       "price": 28.48,
-      "d1": 0.0,
-      "w1": 0.92,
+      "d1": 0.32,
+      "w1": 1.1,
       "hi52": -0.42,
       "ytd": 5.36,
       "spark": [
+        0.18,
         0.64,
         -0.07,
         0.04,
-        0.32,
-        0.0
+        0.32
       ],
-      "asof": "2026-09-22",
+      "asof": "2026-09-21",
       "ema_uptrend": true,
       "above_ema21": true,
-      "ema21_val": 28.2239,
-      "streak_21": 7,
+      "ema21_val": 28.1983,
+      "streak_21": 6,
       "above_ema50": true,
-      "ema50_val": 28.1702,
-      "streak_50": 7,
+      "ema50_val": 28.1575,
+      "streak_50": 6,
       "above_ema200": true,
-      "ema200_val": 27.7875,
-      "streak_200": 150
+      "ema200_val": 27.781,
+      "streak_200": 149
+    },
+    {
+      "sym": "TAN",
+      "price": 46.71,
+      "d1": 2.3,
+      "w1": 1.06,
+      "hi52": -38.21,
+      "ytd": -4.91,
+      "spark": [
+        -2.44,
+        -1.04,
+        3.9,
+        -1.51,
+        2.3
+      ],
+      "asof": "2026-09-21",
+      "ema_uptrend": false,
+      "above_ema21": false,
+      "ema21_val": 47.5401,
+      "streak_21": 28,
+      "above_ema50": false,
+      "ema50_val": 50.2296,
+      "streak_50": 67,
+      "above_ema200": false,
+      "ema200_val": 52.533,
+      "streak_200": 47
     },
     {
       "sym": "LQD",
       "price": 105.09,
-      "d1": 0.0,
-      "w1": 0.78,
+      "d1": 0.37,
+      "w1": 0.76,
       "hi52": -3.52,
       "ytd": -1.63,
       "spark": [
+        -0.02,
         0.16,
         0.68,
         -0.44,
-        0.37,
-        0.0
+        0.37
       ],
-      "asof": "2026-09-22",
+      "asof": "2026-09-21",
       "ema_uptrend": false,
       "above_ema21": false,
-      "ema21_val": 105.1289,
-      "streak_21": 17,
-      "above_ema50": false,
-      "ema50_val": 105.6208,
-      "streak_50": 17,
-      "above_ema200": false,
-      "ema200_val": 106.1529,
-      "streak_200": 19
-    },
-    {
-      "sym": "XRT",
-      "price": 83.67,
-      "d1": 1.34,
-      "w1": 0.75,
-      "hi52": -10.34,
-      "ytd": -1.21,
-      "spark": [
-        -0.59,
-        0.11,
-        -0.95,
-        0.86,
-        1.34
-      ],
-      "asof": "2026-09-22",
-      "ema_uptrend": false,
-      "above_ema21": false,
-      "ema21_val": 84.8138,
-      "streak_21": 20,
-      "above_ema50": false,
-      "ema50_val": 86.0887,
-      "streak_50": 18,
-      "above_ema200": false,
-      "ema200_val": 84.9763,
-      "streak_200": 6
-    },
-    {
-      "sym": "PHO",
-      "price": 68.91,
-      "d1": 0.94,
-      "w1": 0.64,
-      "hi52": -7.53,
-      "ytd": -1.71,
-      "spark": [
-        -0.23,
-        0.12,
-        -0.41,
-        0.24,
-        0.94
-      ],
-      "asof": "2026-09-22",
-      "ema_uptrend": false,
-      "above_ema21": false,
-      "ema21_val": 69.4482,
+      "ema21_val": 105.1328,
       "streak_21": 16,
       "above_ema50": false,
-      "ema50_val": 69.7533,
-      "streak_50": 11,
+      "ema50_val": 105.6425,
+      "streak_50": 16,
       "above_ema200": false,
-      "ema200_val": 69.446,
-      "streak_200": 10
-    },
-    {
-      "sym": "EMLC",
-      "price": 25.33,
-      "d1": 0.12,
-      "w1": 0.56,
-      "hi52": -1.78,
-      "ytd": 2.25,
-      "spark": [
-        -0.44,
-        0.64,
-        -0.2,
-        0.44,
-        0.12
-      ],
-      "asof": "2026-09-22",
-      "ema_uptrend": false,
-      "above_ema21": false,
-      "ema21_val": 25.3814,
-      "streak_21": 9,
-      "above_ema50": false,
-      "ema50_val": 25.3577,
-      "streak_50": 7,
-      "above_ema200": true,
-      "ema200_val": 24.901,
-      "streak_200": 121
-    },
-    {
-      "sym": "AGG",
-      "price": 96.25,
-      "d1": 0.04,
-      "w1": 0.42,
-      "hi52": -2.88,
-      "ytd": -1.02,
-      "spark": [
-        -0.04,
-        0.54,
-        -0.38,
-        0.26,
-        0.04
-      ],
-      "asof": "2026-09-22",
-      "ema_uptrend": false,
-      "above_ema21": false,
-      "ema21_val": 96.4864,
-      "streak_21": 17,
-      "above_ema50": false,
-      "ema50_val": 96.8473,
-      "streak_50": 17,
-      "above_ema200": false,
-      "ema200_val": 96.9465,
-      "streak_200": 15
-    },
-    {
-      "sym": "IEF",
-      "price": 91.16,
-      "d1": 0.01,
-      "w1": 0.37,
-      "hi52": -4.85,
-      "ytd": -2.66,
-      "spark": [
-        -0.1,
-        0.57,
-        -0.49,
-        0.39,
-        0.01
-      ],
-      "asof": "2026-09-22",
-      "ema_uptrend": false,
-      "above_ema21": false,
-      "ema21_val": 91.6293,
-      "streak_21": 17,
-      "above_ema50": false,
-      "ema50_val": 92.1848,
-      "streak_50": 17,
-      "above_ema200": false,
-      "ema200_val": 92.7422,
+      "ema200_val": 106.1625,
       "streak_200": 18
     },
     {
-      "sym": "HYG",
-      "price": 78.67,
-      "d1": -0.01,
-      "w1": 0.37,
-      "hi52": -1.09,
-      "ytd": 1.54,
+      "sym": "WEAT",
+      "price": 26.31,
+      "d1": 1.74,
+      "w1": 0.53,
+      "hi52": -7.39,
+      "ytd": 31.75,
       "spark": [
+        0.57,
+        0.87,
+        -1.17,
+        -1.45,
+        1.74
+      ],
+      "asof": "2026-09-21",
+      "ema_uptrend": true,
+      "above_ema21": true,
+      "ema21_val": 26.2614,
+      "streak_21": 1,
+      "above_ema50": true,
+      "ema50_val": 25.5179,
+      "streak_50": 28,
+      "above_ema200": true,
+      "ema200_val": 23.7084,
+      "streak_200": 55
+    },
+    {
+      "sym": "PPH",
+      "price": 111.66,
+      "d1": 0.44,
+      "w1": 0.47,
+      "hi52": -5.37,
+      "ytd": 9.74,
+      "spark": [
+        -0.55,
+        -0.03,
+        1.06,
+        -0.45,
+        0.44
+      ],
+      "asof": "2026-09-21",
+      "ema_uptrend": false,
+      "above_ema21": false,
+      "ema21_val": 111.9758,
+      "streak_21": 10,
+      "above_ema50": true,
+      "ema50_val": 111.2301,
+      "streak_50": 1,
+      "above_ema200": true,
+      "ema200_val": 105.0925,
+      "streak_200": 245
+    },
+    {
+      "sym": "MSOS",
+      "price": 4.94,
+      "d1": 0.82,
+      "w1": 0.41,
+      "hi52": -31.86,
+      "ytd": 4.66,
+      "spark": [
+        0.2,
+        -0.2,
+        0.81,
+        -1.21,
+        0.82
+      ],
+      "asof": "2026-09-21",
+      "ema_uptrend": true,
+      "above_ema21": true,
+      "ema21_val": 4.8763,
+      "streak_21": 6,
+      "above_ema50": true,
+      "ema50_val": 4.7604,
+      "streak_50": 29,
+      "above_ema200": true,
+      "ema200_val": 4.5161,
+      "streak_200": 29
+    },
+    {
+      "sym": "XBI",
+      "price": 158.23,
+      "d1": 0.96,
+      "w1": 0.4,
+      "hi52": -6.86,
+      "ytd": 29.9,
+      "spark": [
+        -2.27,
+        0.1,
+        2.64,
+        -0.97,
+        0.96
+      ],
+      "asof": "2026-09-21",
+      "ema_uptrend": false,
+      "above_ema21": false,
+      "ema21_val": 159.0857,
+      "streak_21": 10,
+      "above_ema50": true,
+      "ema50_val": 156.7595,
+      "streak_50": 3,
+      "above_ema200": true,
+      "ema200_val": 138.3833,
+      "streak_200": 278
+    },
+    {
+      "sym": "XAR",
+      "price": 243.55,
+      "d1": 1.59,
+      "w1": 0.35,
+      "hi52": -18.17,
+      "ytd": 1.08,
+      "spark": [
+        -0.54,
+        0.31,
+        -0.4,
+        -0.61,
+        1.59
+      ],
+      "asof": "2026-09-21",
+      "ema_uptrend": false,
+      "above_ema21": false,
+      "ema21_val": 252.2891,
+      "streak_21": 22,
+      "above_ema50": false,
+      "ema50_val": 261.9676,
+      "streak_50": 22,
+      "above_ema200": false,
+      "ema200_val": 259.5155,
+      "streak_200": 15
+    },
+    {
+      "sym": "IHI",
+      "price": 51.95,
+      "d1": 0.35,
+      "w1": 0.33,
+      "hi52": -19.41,
+      "ytd": -16.09,
+      "spark": [
+        0.0,
+        0.23,
+        -0.39,
+        0.14,
+        0.35
+      ],
+      "asof": "2026-09-21",
+      "ema_uptrend": false,
+      "above_ema21": false,
+      "ema21_val": 52.7196,
+      "streak_21": 14,
+      "above_ema50": false,
+      "ema50_val": 52.8315,
+      "streak_50": 10,
+      "above_ema200": false,
+      "ema200_val": 54.322,
+      "streak_200": 14
+    },
+    {
+      "sym": "AGG",
+      "price": 96.21,
+      "d1": 0.26,
+      "w1": 0.33,
+      "hi52": -2.92,
+      "ytd": -1.06,
+      "spark": [
+        -0.04,
+        -0.04,
+        0.54,
+        -0.38,
+        0.26
+      ],
+      "asof": "2026-09-21",
+      "ema_uptrend": false,
+      "above_ema21": false,
+      "ema21_val": 96.51,
+      "streak_21": 16,
+      "above_ema50": false,
+      "ema50_val": 96.8717,
+      "streak_50": 16,
+      "above_ema200": false,
+      "ema200_val": 96.9528,
+      "streak_200": 14
+    },
+    {
+      "sym": "IEF",
+      "price": 91.15,
+      "d1": 0.39,
+      "w1": 0.24,
+      "hi52": -4.86,
+      "ytd": -2.67,
+      "spark": [
+        -0.12,
+        -0.1,
+        0.57,
+        -0.49,
+        0.39
+      ],
+      "asof": "2026-09-21",
+      "ema_uptrend": false,
+      "above_ema21": false,
+      "ema21_val": 91.6762,
+      "streak_21": 16,
+      "above_ema50": false,
+      "ema50_val": 92.2266,
+      "streak_50": 16,
+      "above_ema200": false,
+      "ema200_val": 92.7571,
+      "streak_200": 17
+    },
+    {
+      "sym": "EMLC",
+      "price": 25.3,
+      "d1": 0.44,
+      "w1": 0.24,
+      "hi52": -1.89,
+      "ytd": 2.13,
+      "spark": [
+        -0.2,
+        -0.44,
+        0.64,
+        -0.2,
+        0.44
+      ],
+      "asof": "2026-09-21",
+      "ema_uptrend": false,
+      "above_ema21": false,
+      "ema21_val": 25.3865,
+      "streak_21": 8,
+      "above_ema50": false,
+      "ema50_val": 25.3588,
+      "streak_50": 6,
+      "above_ema200": true,
+      "ema200_val": 24.8962,
+      "streak_200": 120
+    },
+    {
+      "sym": "FXI",
+      "price": 34.91,
+      "d1": 1.72,
+      "w1": 0.2,
+      "hi52": -15.35,
+      "ytd": -8.14,
+      "spark": [
+        -1.26,
+        -1.4,
+        0.8,
+        0.38,
+        1.72
+      ],
+      "asof": "2026-09-21",
+      "ema_uptrend": false,
+      "above_ema21": true,
+      "ema21_val": 34.8551,
+      "streak_21": 1,
+      "above_ema50": false,
+      "ema50_val": 34.9735,
+      "streak_50": 10,
+      "above_ema200": false,
+      "ema200_val": 35.675,
+      "streak_200": 10
+    },
+    {
+      "sym": "HYG",
+      "price": 78.68,
+      "d1": 0.19,
+      "w1": 0.19,
+      "hi52": -1.07,
+      "ytd": 1.56,
+      "spark": [
+        -0.19,
         0.05,
         0.38,
         -0.24,
-        0.19,
-        -0.01
+        0.19
       ],
-      "asof": "2026-09-22",
+      "asof": "2026-09-21",
       "ema_uptrend": false,
       "above_ema21": false,
-      "ema21_val": 78.8255,
-      "streak_21": 12,
+      "ema21_val": 78.841,
+      "streak_21": 11,
       "above_ema50": false,
-      "ema50_val": 78.8694,
-      "streak_50": 10,
+      "ema50_val": 78.8776,
+      "streak_50": 9,
       "above_ema200": true,
-      "ema200_val": 78.0143,
-      "streak_200": 302
+      "ema200_val": 78.0073,
+      "streak_200": 300
+    },
+    {
+      "sym": "PAVE",
+      "price": 53.08,
+      "d1": 0.23,
+      "w1": 0.11,
+      "hi52": -12.01,
+      "ytd": 11.26,
+      "spark": [
+        -0.34,
+        -0.17,
+        0.3,
+        0.09,
+        0.23
+      ],
+      "asof": "2026-09-21",
+      "ema_uptrend": false,
+      "above_ema21": false,
+      "ema21_val": 54.314,
+      "streak_21": 24,
+      "above_ema50": false,
+      "ema50_val": 55.4528,
+      "streak_50": 23,
+      "above_ema200": false,
+      "ema200_val": 53.7268,
+      "streak_200": 6
     },
     {
       "sym": "VGIT",
-      "price": 57.32,
-      "d1": 0.02,
-      "w1": 0.14,
-      "hi52": -3.49,
-      "ytd": -1.84,
+      "price": 57.31,
+      "d1": 0.23,
+      "w1": 0.05,
+      "hi52": -3.51,
+      "ytd": -1.86,
       "spark": [
+        -0.07,
         -0.12,
         0.4,
         -0.38,
-        0.23,
-        0.02
+        0.23
       ],
-      "asof": "2026-09-22",
+      "asof": "2026-09-21",
       "ema_uptrend": false,
       "above_ema21": false,
-      "ema21_val": 57.6112,
-      "streak_21": 17,
+      "ema21_val": 57.6403,
+      "streak_21": 16,
       "above_ema50": false,
-      "ema50_val": 57.8685,
-      "streak_50": 17,
+      "ema50_val": 57.8909,
+      "streak_50": 16,
       "above_ema200": false,
-      "ema200_val": 58.0043,
-      "streak_200": 17
-    },
-    {
-      "sym": "IEI",
-      "price": 114.475,
-      "d1": 0.01,
-      "w1": 0.09,
-      "hi52": -3.16,
-      "ytd": -1.69,
-      "spark": [
-        -0.13,
-        0.34,
-        -0.32,
-        0.19,
-        0.01
-      ],
-      "asof": "2026-09-22",
-      "ema_uptrend": false,
-      "above_ema21": false,
-      "ema21_val": 115.0473,
-      "streak_21": 17,
-      "above_ema50": false,
-      "ema50_val": 115.5166,
-      "streak_50": 17,
-      "above_ema200": false,
-      "ema200_val": 115.7169,
-      "streak_200": 17
+      "ema200_val": 58.0107,
+      "streak_200": 16
     },
     {
       "sym": "SHV",
@@ -2853,325 +2645,663 @@
       "ema_uptrend": true,
       "above_ema21": true,
       "ema21_val": 110.1009,
-      "streak_21": 481,
+      "streak_21": 480,
       "above_ema50": true,
       "ema50_val": 109.8864,
-      "streak_50": 452,
+      "streak_50": 451,
       "above_ema200": true,
       "ema200_val": 108.7202,
-      "streak_200": 302
+      "streak_200": 301
     },
     {
-      "sym": "XAR",
-      "price": 241.51,
-      "d1": -0.84,
-      "w1": 0.05,
-      "hi52": -18.86,
-      "ytd": 0.23,
+      "sym": "IEI",
+      "price": 114.46,
+      "d1": 0.19,
+      "w1": 0.01,
+      "hi52": -3.17,
+      "ytd": -1.71,
       "spark": [
-        0.31,
-        -0.4,
-        -0.61,
-        1.59,
-        -0.84
+        -0.07,
+        -0.13,
+        0.34,
+        -0.32,
+        0.19
       ],
-      "asof": "2026-09-22",
+      "asof": "2026-09-21",
       "ema_uptrend": false,
       "above_ema21": false,
-      "ema21_val": 251.3091,
-      "streak_21": 23,
+      "ema21_val": 115.1045,
+      "streak_21": 16,
       "above_ema50": false,
-      "ema50_val": 261.1653,
-      "streak_50": 23,
+      "ema50_val": 115.5592,
+      "streak_50": 16,
       "above_ema200": false,
-      "ema200_val": 259.3431,
+      "ema200_val": 115.7285,
       "streak_200": 16
     },
     {
-      "sym": "IDRV",
-      "price": 34.92,
-      "d1": 0.4,
-      "w1": -0.31,
-      "hi52": -22.93,
-      "ytd": -7.25,
+      "sym": "IWO",
+      "price": 365.15,
+      "d1": 0.85,
+      "w1": -0.01,
+      "hi52": -7.85,
+      "ytd": 13.34,
       "spark": [
-        -1.28,
-        2.0,
-        -1.84,
-        0.46,
-        0.4
-      ],
-      "asof": "2026-09-22",
-      "ema_uptrend": false,
-      "above_ema21": false,
-      "ema21_val": 35.7399,
-      "streak_21": 11,
-      "above_ema50": false,
-      "ema50_val": 36.5833,
-      "streak_50": 68,
-      "above_ema200": false,
-      "ema200_val": 37.6423,
-      "streak_200": 64
-    },
-    {
-      "sym": "IBUY",
-      "price": 68.3597,
-      "d1": 0.43,
-      "w1": -0.31,
-      "hi52": -12.7,
-      "ytd": -8.16,
-      "spark": [
-        -1.14,
-        0.04,
-        -0.34,
+        -1.09,
+        -0.03,
         0.71,
-        0.43
+        -0.43,
+        0.85
       ],
-      "asof": "2026-09-22",
+      "asof": "2026-09-21",
       "ema_uptrend": false,
       "above_ema21": false,
-      "ema21_val": 69.7882,
+      "ema21_val": 371.2187,
       "streak_21": 16,
       "above_ema50": false,
-      "ema50_val": 70.4844,
-      "streak_50": 12,
-      "above_ema200": false,
-      "ema200_val": 69.587,
-      "streak_200": 11
+      "ema50_val": 375.2693,
+      "streak_50": 16,
+      "above_ema200": true,
+      "ema200_val": 356.6678,
+      "streak_200": 118
     },
     {
-      "sym": "XSW",
-      "price": 200.87,
-      "d1": -0.4,
+      "sym": "BOUT",
+      "price": 42.8897,
+      "d1": -1.38,
       "w1": -0.33,
-      "hi52": -4.95,
-      "ytd": 7.34,
+      "hi52": -13.2,
+      "ytd": 18.15,
       "spark": [
-        -1.22,
-        0.35,
-        -1.33,
-        2.31,
-        -0.4
+        -0.21,
+        1.02,
+        -0.53,
+        0.79,
+        -1.38
       ],
-      "asof": "2026-09-22",
-      "ema_uptrend": true,
-      "above_ema21": true,
-      "ema21_val": 199.5062,
-      "streak_21": 2,
-      "above_ema50": true,
-      "ema50_val": 193.3084,
-      "streak_50": 42,
-      "above_ema200": true,
-      "ema200_val": 178.8753,
-      "streak_200": 42
+      "asof": "2026-09-23",
+      "ema_uptrend": false,
+      "above_ema21": false,
+      "ema21_val": 43.9157,
+      "streak_21": 33,
+      "above_ema50": false,
+      "ema50_val": 44.7357,
+      "streak_50": 31,
+      "above_ema200": false,
+      "ema200_val": 43.2543,
+      "streak_200": 1
+    },
+    {
+      "sym": "PHO",
+      "price": 68.27,
+      "d1": 0.24,
+      "w1": -0.55,
+      "hi52": -8.39,
+      "ytd": -2.62,
+      "spark": [
+        -0.26,
+        -0.23,
+        0.12,
+        -0.41,
+        0.24
+      ],
+      "asof": "2026-09-21",
+      "ema_uptrend": false,
+      "above_ema21": false,
+      "ema21_val": 69.5021,
+      "streak_21": 15,
+      "above_ema50": false,
+      "ema50_val": 69.7877,
+      "streak_50": 10,
+      "above_ema200": false,
+      "ema200_val": 69.4501,
+      "streak_200": 9
     },
     {
       "sym": "IYR",
-      "price": 98.68,
-      "d1": -0.22,
-      "w1": -0.63,
-      "hi52": -8.1,
-      "ytd": 6.7,
+      "price": 98.9,
+      "d1": 0.92,
+      "w1": -0.64,
+      "hi52": -7.89,
+      "ytd": 6.94,
       "spark": [
+        -0.23,
         -0.66,
         0.29,
         -0.95,
-        0.92,
-        -0.22
+        0.92
       ],
-      "asof": "2026-09-22",
+      "asof": "2026-09-21",
       "ema_uptrend": false,
       "above_ema21": false,
-      "ema21_val": 100.4723,
-      "streak_21": 18,
+      "ema21_val": 100.6516,
+      "streak_21": 17,
       "above_ema50": false,
-      "ema50_val": 101.6515,
-      "streak_50": 18,
+      "ema50_val": 101.7728,
+      "streak_50": 17,
       "above_ema200": false,
-      "ema200_val": 99.5392,
-      "streak_200": 7
+      "ema200_val": 99.5462,
+      "streak_200": 6
     },
     {
       "sym": "IAI",
-      "price": 183.44,
-      "d1": -1.96,
-      "w1": -0.97,
-      "hi52": -7.14,
-      "ytd": 3.25,
+      "price": 187.1,
+      "d1": 1.24,
+      "w1": -0.67,
+      "hi52": -5.29,
+      "ytd": 5.31,
       "spark": [
+        -1.66,
         -2.2,
         0.75,
         1.25,
-        1.24,
-        -1.96
+        1.24
       ],
-      "asof": "2026-09-22",
+      "asof": "2026-09-21",
       "ema_uptrend": false,
       "above_ema21": false,
-      "ema21_val": 188.2463,
-      "streak_21": 10,
+      "ema21_val": 188.7269,
+      "streak_21": 9,
       "above_ema50": false,
-      "ema50_val": 188.0944,
+      "ema50_val": 188.2843,
+      "streak_50": 6,
+      "above_ema200": true,
+      "ema200_val": 179.8013,
+      "streak_200": 115
+    },
+    {
+      "sym": "XHB",
+      "price": 96.96,
+      "d1": 1.15,
+      "w1": -0.78,
+      "hi52": -20.46,
+      "ytd": -4.88,
+      "spark": [
+        -0.52,
+        -0.98,
+        0.28,
+        -0.7,
+        1.15
+      ],
+      "asof": "2026-09-21",
+      "ema_uptrend": false,
+      "above_ema21": false,
+      "ema21_val": 99.9842,
+      "streak_21": 25,
+      "above_ema50": false,
+      "ema50_val": 102.9527,
+      "streak_50": 22,
+      "above_ema200": false,
+      "ema200_val": 105.1329,
+      "streak_200": 22
+    },
+    {
+      "sym": "ESPO",
+      "price": 98.44,
+      "d1": 1.69,
+      "w1": -0.83,
+      "hi52": -18.97,
+      "ytd": -4.99,
+      "spark": [
+        -1.3,
+        -1.44,
+        1.11,
+        -0.85,
+        1.69
+      ],
+      "asof": "2026-09-21",
+      "ema_uptrend": true,
+      "above_ema21": true,
+      "ema21_val": 97.2256,
+      "streak_21": 1,
+      "above_ema50": true,
+      "ema50_val": 95.887,
       "streak_50": 7,
       "above_ema200": true,
-      "ema200_val": 179.8393,
-      "streak_200": 116
+      "ema200_val": 95.5244,
+      "streak_200": 7
     },
     {
       "sym": "DBA",
-      "price": 28.55,
-      "d1": -0.45,
-      "w1": -1.14,
-      "hi52": -3.29,
-      "ytd": 11.87,
+      "price": 28.68,
+      "d1": 1.88,
+      "w1": -0.97,
+      "hi52": -2.85,
+      "ytd": 12.38,
       "spark": [
+        -0.28,
         -0.21,
         -1.39,
         -0.95,
-        1.88,
-        -0.45
+        1.88
       ],
-      "asof": "2026-09-22",
+      "asof": "2026-09-21",
       "ema_uptrend": true,
       "above_ema21": false,
-      "ema21_val": 28.6707,
-      "streak_21": 4,
-      "above_ema50": true,
-      "ema50_val": 28.321,
-      "streak_50": 2,
-      "above_ema200": true,
-      "ema200_val": 27.2571,
-      "streak_200": 68
-    },
-    {
-      "sym": "XHS",
-      "price": 136.227,
-      "d1": 0.66,
-      "w1": -1.25,
-      "hi52": -2.46,
-      "ytd": 27.59,
-      "spark": [
-        0.21,
-        -0.64,
-        -0.92,
-        -0.55,
-        0.66
-      ],
-      "asof": "2026-09-22",
-      "ema_uptrend": true,
-      "above_ema21": true,
-      "ema21_val": 136.0833,
-      "streak_21": 1,
-      "above_ema50": true,
-      "ema50_val": 133.8394,
-      "streak_50": 113,
-      "above_ema200": true,
-      "ema200_val": 120.2772,
-      "streak_200": 113
-    },
-    {
-      "sym": "WEAT",
-      "price": 25.99,
-      "d1": -1.22,
-      "w1": -1.25,
-      "hi52": -8.52,
-      "ytd": 30.15,
-      "spark": [
-        0.87,
-        -1.17,
-        -1.45,
-        1.74,
-        -1.22
-      ],
-      "asof": "2026-09-22",
-      "ema_uptrend": true,
-      "above_ema21": false,
-      "ema21_val": 26.2367,
-      "streak_21": 1,
-      "above_ema50": true,
-      "ema50_val": 25.5364,
-      "streak_50": 29,
-      "above_ema200": true,
-      "ema200_val": 23.7311,
-      "streak_200": 56
-    },
-    {
-      "sym": "IYT",
-      "price": 80.15,
-      "d1": 0.36,
-      "w1": -2.04,
-      "hi52": -10.8,
-      "ytd": 8.39,
-      "spark": [
-        -2.03,
-        0.8,
-        -0.66,
-        -0.51,
-        0.36
-      ],
-      "asof": "2026-09-22",
-      "ema_uptrend": false,
-      "above_ema21": false,
-      "ema21_val": 82.5728,
-      "streak_21": 18,
-      "above_ema50": false,
-      "ema50_val": 84.0374,
-      "streak_50": 16,
-      "above_ema200": false,
-      "ema200_val": 80.8093,
-      "streak_200": 5
-    },
-    {
-      "sym": "MOO",
-      "price": 84.56,
-      "d1": 0.63,
-      "w1": -2.25,
-      "hi52": -5.31,
-      "ytd": 16.17,
-      "spark": [
-        -1.41,
-        1.1,
-        -1.84,
-        -0.72,
-        0.63
-      ],
-      "asof": "2026-09-22",
-      "ema_uptrend": true,
-      "above_ema21": false,
-      "ema21_val": 85.3997,
+      "ema21_val": 28.6827,
       "streak_21": 3,
       "above_ema50": true,
-      "ema50_val": 84.1113,
+      "ema50_val": 28.3117,
       "streak_50": 1,
       "above_ema200": true,
-      "ema200_val": 80.5415,
-      "streak_200": 62
+      "ema200_val": 27.2445,
+      "streak_200": 67
+    },
+    {
+      "sym": "XME",
+      "price": 109.0,
+      "d1": 0.36,
+      "w1": -1.0,
+      "hi52": -19.51,
+      "ytd": 5.41,
+      "spark": [
+        -0.66,
+        -0.61,
+        2.34,
+        -2.37,
+        0.36
+      ],
+      "asof": "2026-09-21",
+      "ema_uptrend": false,
+      "above_ema21": false,
+      "ema21_val": 113.3964,
+      "streak_21": 8,
+      "above_ema50": false,
+      "ema50_val": 113.0761,
+      "streak_50": 7,
+      "above_ema200": true,
+      "ema200_val": 108.7004,
+      "streak_200": 1
+    },
+    {
+      "sym": "XSW",
+      "price": 201.68,
+      "d1": 2.31,
+      "w1": -1.18,
+      "hi52": -4.57,
+      "ytd": 7.77,
+      "spark": [
+        -1.24,
+        -1.22,
+        0.35,
+        -1.33,
+        2.31
+      ],
+      "asof": "2026-09-21",
+      "ema_uptrend": true,
+      "above_ema21": true,
+      "ema21_val": 199.3699,
+      "streak_21": 1,
+      "above_ema50": true,
+      "ema50_val": 192.9998,
+      "streak_50": 41,
+      "above_ema200": true,
+      "ema200_val": 178.6568,
+      "streak_200": 41
+    },
+    {
+      "sym": "ITB",
+      "price": 88.2,
+      "d1": 0.9,
+      "w1": -1.23,
+      "hi52": -22.56,
+      "ytd": -7.31,
+      "spark": [
+        -0.2,
+        -1.12,
+        0.49,
+        -1.29,
+        0.9
+      ],
+      "asof": "2026-09-21",
+      "ema_uptrend": false,
+      "above_ema21": false,
+      "ema21_val": 91.1348,
+      "streak_21": 18,
+      "above_ema50": false,
+      "ema50_val": 93.5627,
+      "streak_50": 18,
+      "above_ema200": false,
+      "ema200_val": 96.5135,
+      "streak_200": 22
+    },
+    {
+      "sym": "OIH",
+      "price": 396.63,
+      "d1": -0.52,
+      "w1": -1.35,
+      "hi52": -13.64,
+      "ytd": 39.28,
+      "spark": [
+        2.35,
+        -2.83,
+        0.19,
+        -0.47,
+        -0.52
+      ],
+      "asof": "2026-09-21",
+      "ema_uptrend": false,
+      "above_ema21": false,
+      "ema21_val": 410.8488,
+      "streak_21": 6,
+      "above_ema50": false,
+      "ema50_val": 407.4537,
+      "streak_50": 4,
+      "above_ema200": true,
+      "ema200_val": 378.5964,
+      "streak_200": 54
+    },
+    {
+      "sym": "IDRV",
+      "price": 34.78,
+      "d1": 0.46,
+      "w1": -1.36,
+      "hi52": -23.23,
+      "ytd": -7.62,
+      "spark": [
+        -0.65,
+        -1.28,
+        2.0,
+        -1.84,
+        0.46
+      ],
+      "asof": "2026-09-21",
+      "ema_uptrend": false,
+      "above_ema21": false,
+      "ema21_val": 35.8219,
+      "streak_21": 10,
+      "above_ema50": false,
+      "ema50_val": 36.6512,
+      "streak_50": 67,
+      "above_ema200": false,
+      "ema200_val": 37.6691,
+      "streak_200": 63
+    },
+    {
+      "sym": "DBC",
+      "price": 32.58,
+      "d1": -1.06,
+      "w1": -1.72,
+      "hi52": -3.55,
+      "ytd": 45.71,
+      "spark": [
+        1.6,
+        -1.54,
+        -0.33,
+        -0.36,
+        -1.06
+      ],
+      "asof": "2026-09-21",
+      "ema_uptrend": true,
+      "above_ema21": true,
+      "ema21_val": 32.1836,
+      "streak_21": 32,
+      "above_ema50": true,
+      "ema50_val": 30.9781,
+      "streak_50": 32,
+      "above_ema200": true,
+      "ema200_val": 28.0385,
+      "streak_200": 273
     },
     {
       "sym": "NANR",
-      "price": 87.59,
-      "d1": 0.79,
-      "w1": -2.41,
-      "hi52": -5.01,
-      "ytd": 30.25,
+      "price": 86.9,
+      "d1": -1.64,
+      "w1": -1.76,
+      "hi52": -5.76,
+      "ytd": 29.23,
       "spark": [
+        1.46,
         -2.11,
         1.76,
         -1.18,
-        -1.64,
-        0.79
+        -1.64
       ],
-      "asof": "2026-09-22",
+      "asof": "2026-09-21",
+      "ema_uptrend": true,
+      "above_ema21": false,
+      "ema21_val": 88.6454,
+      "streak_21": 2,
+      "above_ema50": true,
+      "ema50_val": 86.2582,
+      "streak_50": 44,
+      "above_ema200": true,
+      "ema200_val": 79.0285,
+      "streak_200": 300
+    },
+    {
+      "sym": "IBUY",
+      "price": 68.07,
+      "d1": 0.71,
+      "w1": -2.04,
+      "hi52": -13.9,
+      "ytd": -8.55,
+      "spark": [
+        -1.31,
+        -1.14,
+        0.04,
+        -0.34,
+        0.71
+      ],
+      "asof": "2026-09-21",
       "ema_uptrend": false,
       "above_ema21": false,
-      "ema21_val": 88.5495,
-      "streak_21": 3,
-      "above_ema50": true,
-      "ema50_val": 86.3105,
-      "streak_50": 45,
+      "ema21_val": 69.9311,
+      "streak_21": 15,
+      "above_ema50": false,
+      "ema50_val": 70.5712,
+      "streak_50": 11,
+      "above_ema200": false,
+      "ema200_val": 69.5995,
+      "streak_200": 10
+    },
+    {
+      "sym": "KBE",
+      "price": 66.07,
+      "d1": -0.26,
+      "w1": -2.49,
+      "hi52": -7.61,
+      "ytd": 10.71,
+      "spark": [
+        -0.28,
+        -1.72,
+        -0.15,
+        -0.09,
+        -0.26
+      ],
+      "asof": "2026-09-21",
+      "ema_uptrend": false,
+      "above_ema21": false,
+      "ema21_val": 67.577,
+      "streak_21": 10,
+      "above_ema50": false,
+      "ema50_val": 67.8092,
+      "streak_50": 10,
       "above_ema200": true,
-      "ema200_val": 79.115,
-      "streak_200": 302
+      "ema200_val": 64.2106,
+      "streak_200": 120
+    },
+    {
+      "sym": "XHS",
+      "price": 135.33,
+      "d1": -0.55,
+      "w1": -2.51,
+      "hi52": -3.11,
+      "ytd": 26.75,
+      "spark": [
+        -0.62,
+        0.21,
+        -0.64,
+        -0.92,
+        -0.55
+      ],
+      "asof": "2026-09-21",
+      "ema_uptrend": true,
+      "above_ema21": false,
+      "ema21_val": 136.0689,
+      "streak_21": 2,
+      "above_ema50": true,
+      "ema50_val": 133.742,
+      "streak_50": 112,
+      "above_ema200": true,
+      "ema200_val": 120.1171,
+      "streak_200": 112
+    },
+    {
+      "sym": "SPPP",
+      "price": 13.96,
+      "d1": -3.59,
+      "w1": -2.58,
+      "hi52": -41.37,
+      "ytd": -17.1,
+      "spark": [
+        -2.23,
+        1.57,
+        1.9,
+        -0.14,
+        -3.59
+      ],
+      "asof": "2026-09-23",
+      "ema_uptrend": false,
+      "above_ema21": false,
+      "ema21_val": 14.4062,
+      "streak_21": 1,
+      "above_ema50": false,
+      "ema50_val": 14.2635,
+      "streak_50": 1,
+      "above_ema200": false,
+      "ema200_val": 14.5052,
+      "streak_200": 9
+    },
+    {
+      "sym": "MOO",
+      "price": 84.03,
+      "d1": -0.72,
+      "w1": -2.65,
+      "hi52": -5.9,
+      "ytd": 15.44,
+      "spark": [
+        0.22,
+        -1.41,
+        1.1,
+        -1.84,
+        -0.72
+      ],
+      "asof": "2026-09-21",
+      "ema_uptrend": true,
+      "above_ema21": false,
+      "ema21_val": 85.4836,
+      "streak_21": 2,
+      "above_ema50": false,
+      "ema50_val": 84.093,
+      "streak_50": 1,
+      "above_ema200": true,
+      "ema200_val": 80.4994,
+      "streak_200": 61
+    },
+    {
+      "sym": "IXC",
+      "price": 57.65,
+      "d1": -2.16,
+      "w1": -2.78,
+      "hi52": -5.02,
+      "ytd": 39.35,
+      "spark": [
+        2.16,
+        -2.82,
+        0.56,
+        -0.47,
+        -2.16
+      ],
+      "asof": "2026-09-21",
+      "ema_uptrend": true,
+      "above_ema21": false,
+      "ema21_val": 58.4594,
+      "streak_21": 1,
+      "above_ema50": true,
+      "ema50_val": 56.8551,
+      "streak_50": 50,
+      "above_ema200": true,
+      "ema200_val": 51.8183,
+      "streak_200": 300
+    },
+    {
+      "sym": "KIE",
+      "price": 61.39,
+      "d1": -0.61,
+      "w1": -2.9,
+      "hi52": -7.45,
+      "ytd": 3.27,
+      "spark": [
+        -0.46,
+        -0.79,
+        -0.32,
+        -0.75,
+        -0.61
+      ],
+      "asof": "2026-09-21",
+      "ema_uptrend": false,
+      "above_ema21": false,
+      "ema21_val": 62.7333,
+      "streak_21": 5,
+      "above_ema50": false,
+      "ema50_val": 62.5752,
+      "streak_50": 4,
+      "above_ema200": true,
+      "ema200_val": 59.7983,
+      "streak_200": 71
+    },
+    {
+      "sym": "IYT",
+      "price": 79.86,
+      "d1": -0.51,
+      "w1": -3.15,
+      "hi52": -11.13,
+      "ytd": 8.0,
+      "spark": [
+        -0.77,
+        -2.03,
+        0.8,
+        -0.66,
+        -0.51
+      ],
+      "asof": "2026-09-21",
+      "ema_uptrend": false,
+      "above_ema21": false,
+      "ema21_val": 82.8151,
+      "streak_21": 17,
+      "above_ema50": false,
+      "ema50_val": 84.1961,
+      "streak_50": 15,
+      "above_ema200": false,
+      "ema200_val": 80.8152,
+      "streak_200": 4
+    },
+    {
+      "sym": "XRT",
+      "price": 82.56,
+      "d1": 0.86,
+      "w1": -3.26,
+      "hi52": -11.53,
+      "ytd": -2.52,
+      "spark": [
+        -2.69,
+        -0.59,
+        0.11,
+        -0.95,
+        0.86
+      ],
+      "asof": "2026-09-21",
+      "ema_uptrend": false,
+      "above_ema21": false,
+      "ema21_val": 84.9282,
+      "streak_21": 19,
+      "above_ema50": false,
+      "ema50_val": 86.1874,
+      "streak_50": 17,
+      "above_ema200": false,
+      "ema200_val": 84.9882,
+      "streak_200": 5
     },
     {
       "sym": "KRE",
@@ -3196,164 +3326,34 @@
       "ema50_val": 73.7256,
       "streak_50": 11,
       "above_ema200": true,
-      "ema200_val": 69.8064,
+      "ema200_val": 69.806,
       "streak_200": 121
-    },
-    {
-      "sym": "KBE",
-      "price": 65.23,
-      "d1": -1.27,
-      "w1": -3.46,
-      "hi52": -8.79,
-      "ytd": 9.3,
-      "spark": [
-        -1.72,
-        -0.15,
-        -0.09,
-        -0.26,
-        -1.27
-      ],
-      "asof": "2026-09-22",
-      "ema_uptrend": false,
-      "above_ema21": false,
-      "ema21_val": 67.3636,
-      "streak_21": 11,
-      "above_ema50": false,
-      "ema50_val": 67.7081,
-      "streak_50": 11,
-      "above_ema200": true,
-      "ema200_val": 64.2213,
-      "streak_200": 121
-    },
-    {
-      "sym": "KIE",
-      "price": 60.69,
-      "d1": -1.14,
-      "w1": -3.56,
-      "hi52": -8.51,
-      "ytd": 2.09,
-      "spark": [
-        -0.79,
-        -0.32,
-        -0.75,
-        -0.61,
-        -1.14
-      ],
-      "asof": "2026-09-22",
-      "ema_uptrend": false,
-      "above_ema21": false,
-      "ema21_val": 62.5475,
-      "streak_21": 6,
-      "above_ema50": false,
-      "ema50_val": 62.5013,
-      "streak_50": 5,
-      "above_ema200": true,
-      "ema200_val": 59.8068,
-      "streak_200": 72
-    },
-    {
-      "sym": "DBC",
-      "price": 32.44,
-      "d1": -0.43,
-      "w1": -3.68,
-      "hi52": -3.97,
-      "ytd": 45.08,
-      "spark": [
-        -1.54,
-        -0.33,
-        -0.36,
-        -1.06,
-        -0.43
-      ],
-      "asof": "2026-09-22",
-      "ema_uptrend": true,
-      "above_ema21": true,
-      "ema21_val": 32.2069,
-      "streak_21": 33,
-      "above_ema50": true,
-      "ema50_val": 31.0354,
-      "streak_50": 33,
-      "above_ema200": true,
-      "ema200_val": 28.0824,
-      "streak_200": 274
-    },
-    {
-      "sym": "OIH",
-      "price": 395.06,
-      "d1": -0.4,
-      "w1": -4.0,
-      "hi52": -13.98,
-      "ytd": 38.73,
-      "spark": [
-        -2.83,
-        0.19,
-        -0.47,
-        -0.52,
-        -0.4
-      ],
-      "asof": "2026-09-22",
-      "ema_uptrend": false,
-      "above_ema21": false,
-      "ema21_val": 409.4135,
-      "streak_21": 7,
-      "above_ema50": false,
-      "ema50_val": 406.9676,
-      "streak_50": 5,
-      "above_ema200": true,
-      "ema200_val": 378.7633,
-      "streak_200": 55
-    },
-    {
-      "sym": "IXC",
-      "price": 57.26,
-      "d1": -0.68,
-      "w1": -5.48,
-      "hi52": -5.67,
-      "ytd": 38.41,
-      "spark": [
-        -2.82,
-        0.56,
-        -0.47,
-        -2.16,
-        -0.68
-      ],
-      "asof": "2026-09-22",
-      "ema_uptrend": true,
-      "above_ema21": false,
-      "ema21_val": 58.3503,
-      "streak_21": 2,
-      "above_ema50": true,
-      "ema50_val": 56.871,
-      "streak_50": 51,
-      "above_ema200": true,
-      "ema200_val": 51.873,
-      "streak_200": 302
     },
     {
       "sym": "XOP",
-      "price": 181.61,
-      "d1": -1.7,
-      "w1": -8.7,
-      "hi52": -9.24,
-      "ytd": 45.7,
+      "price": 184.75,
+      "d1": -2.69,
+      "w1": -4.13,
+      "hi52": -7.67,
+      "ytd": 48.22,
       "spark": [
+        3.22,
         -3.96,
         0.41,
         -1.03,
-        -2.69,
-        -1.7
+        -2.69
       ],
-      "asof": "2026-09-22",
+      "asof": "2026-09-21",
       "ema_uptrend": true,
       "above_ema21": false,
-      "ema21_val": 188.2298,
-      "streak_21": 2,
-      "above_ema50": false,
-      "ema50_val": 181.8277,
-      "streak_50": 1,
+      "ema21_val": 188.8918,
+      "streak_21": 1,
+      "above_ema50": true,
+      "ema50_val": 181.8366,
+      "streak_50": 32,
       "above_ema200": true,
-      "ema200_val": 163.1677,
-      "streak_200": 174
+      "ema200_val": 162.9807,
+      "streak_200": 173
     },
     {
       "sym": "USO",
@@ -3378,7 +3378,7 @@
       "ema50_val": 136.97,
       "streak_50": 31,
       "above_ema200": true,
-      "ema200_val": 116.3809,
+      "ema200_val": 116.3805,
       "streak_200": 57
     }
   ],
@@ -3406,697 +3406,645 @@
       "ema50_val": 178.9971,
       "streak_50": 4,
       "above_ema200": true,
-      "ema200_val": 154.01,
-      "streak_200": 302
+      "ema200_val": 154.0054,
+      "streak_200": 301
     },
     {
       "sym": "EWT",
-      "price": 115.11,
-      "d1": -0.46,
-      "w1": 7.91,
-      "hi52": -0.61,
-      "ytd": 81.19,
+      "price": 115.64,
+      "d1": 3.58,
+      "w1": 7.86,
+      "hi52": -0.16,
+      "ytd": 82.02,
       "spark": [
+        -0.5,
         1.62,
         2.07,
         0.9,
-        3.58,
-        -0.46
+        3.58
       ],
-      "asof": "2026-09-22",
+      "asof": "2026-09-21",
       "ema_uptrend": true,
       "above_ema21": true,
-      "ema21_val": 109.5828,
-      "streak_21": 5,
+      "ema21_val": 109.03,
+      "streak_21": 4,
       "above_ema50": true,
-      "ema50_val": 106.138,
-      "streak_50": 35,
+      "ema50_val": 105.7718,
+      "streak_50": 34,
       "above_ema200": true,
-      "ema200_val": 90.0709,
-      "streak_200": 302
+      "ema200_val": 89.8179,
+      "streak_200": 300
     },
     {
       "sym": "EEM",
-      "price": 69.1,
-      "d1": 0.39,
-      "w1": 5.08,
-      "hi52": -3.45,
-      "ytd": 26.96,
+      "price": 68.83,
+      "d1": 2.69,
+      "w1": 4.3,
+      "hi52": -3.83,
+      "ytd": 26.46,
       "spark": [
+        -0.35,
         -0.06,
         1.81,
         0.18,
-        2.69,
-        0.39
+        2.69
       ],
-      "asof": "2026-09-22",
+      "asof": "2026-09-21",
       "ema_uptrend": true,
       "above_ema21": true,
-      "ema21_val": 67.2085,
-      "streak_21": 4,
+      "ema21_val": 67.0193,
+      "streak_21": 3,
       "above_ema50": true,
-      "ema50_val": 66.5778,
-      "streak_50": 4,
+      "ema50_val": 66.4749,
+      "streak_50": 3,
       "above_ema200": true,
-      "ema200_val": 62.2172,
-      "streak_200": 302
-    },
-    {
-      "sym": "MCHI",
-      "price": 54.25,
-      "d1": 0.46,
-      "w1": 2.53,
-      "hi52": -17.95,
-      "ytd": -9.09,
-      "spark": [
-        -1.13,
-        0.69,
-        0.76,
-        1.75,
-        0.46
-      ],
-      "asof": "2026-09-22",
-      "ema_uptrend": false,
-      "above_ema21": true,
-      "ema21_val": 53.8482,
-      "streak_21": 2,
-      "above_ema50": true,
-      "ema50_val": 54.2292,
-      "streak_50": 1,
-      "above_ema200": false,
-      "ema200_val": 55.7686,
-      "streak_200": 30
+      "ema200_val": 62.1472,
+      "streak_200": 300
     },
     {
       "sym": "ACWI",
-      "price": 162.2,
-      "d1": 0.22,
-      "w1": 2.53,
-      "hi52": -0.37,
-      "ytd": 15.38,
+      "price": 161.85,
+      "d1": 1.61,
+      "w1": 1.82,
+      "hi52": -0.58,
+      "ytd": 15.13,
       "spark": [
+        -0.48,
         -0.37,
         1.24,
         -0.18,
-        1.61,
-        0.22
+        1.61
       ],
-      "asof": "2026-09-22",
-      "ema_uptrend": true,
-      "above_ema21": true,
-      "ema21_val": 160.1217,
-      "streak_21": 2,
-      "above_ema50": true,
-      "ema50_val": 159.0471,
-      "streak_50": 4,
-      "above_ema200": true,
-      "ema200_val": 150.4683,
-      "streak_200": 121
-    },
-    {
-      "sym": "EWJ",
-      "price": 98.78,
-      "d1": 0.84,
-      "w1": 1.92,
-      "hi52": -0.23,
-      "ytd": 23.01,
-      "spark": [
-        0.09,
-        0.93,
-        -0.93,
-        0.99,
-        0.84
-      ],
-      "asof": "2026-09-22",
-      "ema_uptrend": true,
-      "above_ema21": true,
-      "ema21_val": 97.0038,
-      "streak_21": 14,
-      "above_ema50": true,
-      "ema50_val": 95.6063,
-      "streak_50": 38,
-      "above_ema200": true,
-      "ema200_val": 89.4136,
-      "streak_200": 302
-    },
-    {
-      "sym": "EWH",
-      "price": 22.84,
-      "d1": 0.35,
-      "w1": 1.65,
-      "hi52": -5.88,
-      "ytd": 9.22,
-      "spark": [
-        -0.85,
-        1.08,
-        -0.31,
-        1.38,
-        0.35
-      ],
-      "asof": "2026-09-22",
+      "asof": "2026-09-21",
       "ema_uptrend": false,
       "above_ema21": true,
-      "ema21_val": 22.6862,
-      "streak_21": 2,
+      "ema21_val": 159.9139,
+      "streak_21": 1,
       "above_ema50": true,
-      "ema50_val": 22.6032,
-      "streak_50": 2,
+      "ema50_val": 158.9184,
+      "streak_50": 3,
       "above_ema200": true,
-      "ema200_val": 22.0549,
-      "streak_200": 50
+      "ema200_val": 150.3486,
+      "streak_200": 120
     },
     {
-      "sym": "EWL",
-      "price": 61.18,
-      "d1": 0.61,
-      "w1": 1.54,
-      "hi52": -5.51,
-      "ytd": 3.84,
+      "sym": "MCHI",
+      "price": 54.0,
+      "d1": 1.75,
+      "w1": 1.28,
+      "hi52": -18.33,
+      "ytd": -9.51,
       "spark": [
-        -0.33,
-        0.48,
-        -0.5,
-        1.28,
-        0.61
+        -0.77,
+        -1.13,
+        0.69,
+        0.76,
+        1.75
       ],
-      "asof": "2026-09-22",
+      "asof": "2026-09-21",
       "ema_uptrend": false,
-      "above_ema21": false,
-      "ema21_val": 61.5579,
-      "streak_21": 12,
+      "above_ema21": true,
+      "ema21_val": 53.808,
+      "streak_21": 1,
       "above_ema50": false,
-      "ema50_val": 62.1616,
-      "streak_50": 11,
-      "above_ema200": true,
-      "ema200_val": 60.3644,
-      "streak_200": 2
-    },
-    {
-      "sym": "INDA",
-      "price": 48.29,
-      "d1": -0.43,
-      "w1": 1.47,
-      "hi52": -12.99,
-      "ytd": -10.66,
-      "spark": [
-        -0.27,
-        1.16,
-        0.02,
-        1.0,
-        -0.43
-      ],
-      "asof": "2026-09-22",
-      "ema_uptrend": false,
-      "above_ema21": false,
-      "ema21_val": 48.7304,
-      "streak_21": 11,
-      "above_ema50": false,
-      "ema50_val": 49.0372,
-      "streak_50": 11,
+      "ema50_val": 54.2283,
+      "streak_50": 10,
       "above_ema200": false,
-      "ema200_val": 50.0089,
-      "streak_200": 31
+      "ema200_val": 55.7848,
+      "streak_200": 29
     },
     {
       "sym": "EWZ",
-      "price": 38.26,
-      "d1": 0.5,
-      "w1": 1.27,
-      "hi52": -8.08,
-      "ytd": 21.57,
+      "price": 38.07,
+      "d1": 1.47,
+      "w1": 0.93,
+      "hi52": -8.54,
+      "ytd": 20.97,
       "spark": [
+        0.16,
         -0.79,
         0.69,
         -0.58,
-        1.47,
-        0.5
+        1.47
       ],
-      "asof": "2026-09-22",
+      "asof": "2026-09-21",
       "ema_uptrend": true,
       "above_ema21": true,
-      "ema21_val": 37.2708,
-      "streak_21": 22,
+      "ema21_val": 37.1718,
+      "streak_21": 21,
       "above_ema50": true,
-      "ema50_val": 36.4886,
-      "streak_50": 20,
+      "ema50_val": 36.4163,
+      "streak_50": 19,
       "above_ema200": true,
-      "ema200_val": 34.985,
-      "streak_200": 22
+      "ema200_val": 34.9513,
+      "streak_200": 21
     },
     {
       "sym": "EZU",
-      "price": 69.16,
-      "d1": 0.25,
-      "w1": 1.21,
-      "hi52": -4.21,
-      "ytd": 9.83,
+      "price": 68.99,
+      "d1": 1.22,
+      "w1": 0.69,
+      "hi52": -4.45,
+      "ytd": 9.56,
       "spark": [
+        -0.28,
         -0.25,
         0.87,
         -0.86,
-        1.22,
-        0.25
+        1.22
       ],
-      "asof": "2026-09-22",
+      "asof": "2026-09-21",
       "ema_uptrend": false,
       "above_ema21": false,
-      "ema21_val": 69.4834,
-      "streak_21": 17,
+      "ema21_val": 69.5157,
+      "streak_21": 16,
       "above_ema50": false,
-      "ema50_val": 69.516,
-      "streak_50": 10,
-      "above_ema200": true,
-      "ema200_val": 66.1579,
-      "streak_200": 121
-    },
-    {
-      "sym": "EFA",
-      "price": 106.5,
-      "d1": 0.35,
-      "w1": 1.04,
-      "hi52": -2.19,
-      "ytd": 12.66,
-      "spark": [
-        -0.36,
-        0.97,
-        -1.01,
-        1.11,
-        0.35
-      ],
-      "asof": "2026-09-22",
-      "ema_uptrend": false,
-      "above_ema21": true,
-      "ema21_val": 106.4993,
-      "streak_21": 1,
-      "above_ema50": true,
-      "ema50_val": 106.0843,
-      "streak_50": 2,
-      "above_ema200": true,
-      "ema200_val": 100.8317,
-      "streak_200": 302
-    },
-    {
-      "sym": "IEUR",
-      "price": 75.95,
-      "d1": 0.21,
-      "w1": 0.97,
-      "hi52": -3.74,
-      "ytd": 9.21,
-      "spark": [
-        -0.36,
-        0.84,
-        -0.79,
-        1.08,
-        0.21
-      ],
-      "asof": "2026-09-22",
-      "ema_uptrend": false,
-      "above_ema21": false,
-      "ema21_val": 76.311,
-      "streak_21": 11,
-      "above_ema50": false,
-      "ema50_val": 76.3102,
-      "streak_50": 10,
-      "above_ema200": true,
-      "ema200_val": 72.9039,
-      "streak_200": 121
-    },
-    {
-      "sym": "EWC",
-      "price": 60.76,
-      "d1": 0.55,
-      "w1": 0.78,
-      "hi52": -3.11,
-      "ytd": 13.19,
-      "spark": [
-        -0.71,
-        0.92,
-        -0.31,
-        0.35,
-        0.55
-      ],
-      "asof": "2026-09-22",
-      "ema_uptrend": false,
-      "above_ema21": false,
-      "ema21_val": 60.8454,
-      "streak_21": 11,
-      "above_ema50": true,
-      "ema50_val": 60.5038,
-      "streak_50": 1,
-      "above_ema200": true,
-      "ema200_val": 56.9451,
-      "streak_200": 302
-    },
-    {
-      "sym": "EWA",
-      "price": 29.09,
-      "d1": 0.17,
-      "w1": 0.69,
-      "hi52": -4.47,
-      "ytd": 12.63,
-      "spark": [
-        -1.38,
-        2.25,
-        -1.3,
-        1.01,
-        0.17
-      ],
-      "asof": "2026-09-22",
-      "ema_uptrend": false,
-      "above_ema21": false,
-      "ema21_val": 29.3647,
-      "streak_21": 10,
-      "above_ema50": false,
-      "ema50_val": 29.3508,
+      "ema50_val": 69.5306,
       "streak_50": 9,
       "above_ema200": true,
-      "ema200_val": 28.2771,
-      "streak_200": 202
-    },
-    {
-      "sym": "IEV",
-      "price": 73.19,
-      "d1": 0.08,
-      "w1": 0.69,
-      "hi52": -4.1,
-      "ytd": 8.57,
-      "spark": [
-        -0.47,
-        0.94,
-        -0.84,
-        0.98,
-        0.08
-      ],
-      "asof": "2026-09-22",
-      "ema_uptrend": false,
-      "above_ema21": false,
-      "ema21_val": 73.7325,
-      "streak_21": 12,
-      "above_ema50": false,
-      "ema50_val": 73.7869,
-      "streak_50": 10,
-      "above_ema200": true,
-      "ema200_val": 70.5368,
-      "streak_200": 121
-    },
-    {
-      "sym": "EWG",
-      "price": 42.65,
-      "d1": 0.12,
-      "w1": 0.28,
-      "hi52": -4.91,
-      "ytd": 2.37,
-      "spark": [
-        -0.24,
-        0.61,
-        -1.26,
-        1.07,
-        0.12
-      ],
-      "asof": "2026-09-22",
-      "ema_uptrend": false,
-      "above_ema21": false,
-      "ema21_val": 43.0494,
-      "streak_21": 11,
-      "above_ema50": false,
-      "ema50_val": 42.945,
-      "streak_50": 10,
-      "above_ema200": true,
-      "ema200_val": 41.6698,
-      "streak_200": 42
+      "ema200_val": 66.1263,
+      "streak_200": 120
     },
     {
       "sym": "EWI",
-      "price": 60.75,
-      "d1": -0.8,
-      "w1": 0.0,
-      "hi52": -4.72,
-      "ytd": 14.02,
+      "price": 61.24,
+      "d1": 1.98,
+      "w1": 0.54,
+      "hi52": -3.95,
+      "ytd": 14.94,
       "spark": [
+        -0.26,
         -0.26,
         0.97,
         -1.85,
-        1.98,
-        -0.8
+        1.98
       ],
-      "asof": "2026-09-22",
+      "asof": "2026-09-21",
       "ema_uptrend": false,
       "above_ema21": false,
-      "ema21_val": 61.3829,
-      "streak_21": 7,
+      "ema21_val": 61.4462,
+      "streak_21": 6,
       "above_ema50": false,
-      "ema50_val": 61.2565,
-      "streak_50": 7,
+      "ema50_val": 61.2772,
+      "streak_50": 6,
       "above_ema200": true,
-      "ema200_val": 57.0786,
-      "streak_200": 127
+      "ema200_val": 57.0405,
+      "streak_200": 126
+    },
+    {
+      "sym": "EWL",
+      "price": 60.81,
+      "d1": 1.28,
+      "w1": 0.53,
+      "hi52": -6.08,
+      "ytd": 3.21,
+      "spark": [
+        -0.4,
+        -0.33,
+        0.48,
+        -0.5,
+        1.28
+      ],
+      "asof": "2026-09-21",
+      "ema_uptrend": false,
+      "above_ema21": false,
+      "ema21_val": 61.5957,
+      "streak_21": 11,
+      "above_ema50": false,
+      "ema50_val": 62.2017,
+      "streak_50": 10,
+      "above_ema200": true,
+      "ema200_val": 60.3551,
+      "streak_200": 1
+    },
+    {
+      "sym": "IEUR",
+      "price": 75.79,
+      "d1": 1.08,
+      "w1": 0.5,
+      "hi52": -3.95,
+      "ytd": 8.98,
+      "spark": [
+        -0.25,
+        -0.36,
+        0.84,
+        -0.79,
+        1.08
+      ],
+      "asof": "2026-09-21",
+      "ema_uptrend": false,
+      "above_ema21": false,
+      "ema21_val": 76.3471,
+      "streak_21": 10,
+      "above_ema50": false,
+      "ema50_val": 76.3249,
+      "streak_50": 9,
+      "above_ema200": true,
+      "ema200_val": 72.8716,
+      "streak_200": 120
+    },
+    {
+      "sym": "EWJ",
+      "price": 97.96,
+      "d1": 0.99,
+      "w1": 0.39,
+      "hi52": -0.84,
+      "ytd": 21.99,
+      "spark": [
+        -0.68,
+        0.09,
+        0.93,
+        -0.93,
+        0.99
+      ],
+      "asof": "2026-09-21",
+      "ema_uptrend": true,
+      "above_ema21": true,
+      "ema21_val": 96.8262,
+      "streak_21": 13,
+      "above_ema50": true,
+      "ema50_val": 95.4768,
+      "streak_50": 37,
+      "above_ema200": true,
+      "ema200_val": 89.3184,
+      "streak_200": 300
+    },
+    {
+      "sym": "IEV",
+      "price": 73.13,
+      "d1": 0.98,
+      "w1": 0.34,
+      "hi52": -4.18,
+      "ytd": 8.49,
+      "spark": [
+        -0.26,
+        -0.47,
+        0.94,
+        -0.84,
+        0.98
+      ],
+      "asof": "2026-09-21",
+      "ema_uptrend": false,
+      "above_ema21": false,
+      "ema21_val": 73.7868,
+      "streak_21": 11,
+      "above_ema50": false,
+      "ema50_val": 73.8112,
+      "streak_50": 9,
+      "above_ema200": true,
+      "ema200_val": 70.5086,
+      "streak_200": 120
+    },
+    {
+      "sym": "EFA",
+      "price": 106.13,
+      "d1": 1.11,
+      "w1": 0.26,
+      "hi52": -2.53,
+      "ytd": 12.27,
+      "spark": [
+        -0.43,
+        -0.36,
+        0.97,
+        -1.01,
+        1.11
+      ],
+      "asof": "2026-09-21",
+      "ema_uptrend": false,
+      "above_ema21": false,
+      "ema21_val": 106.4993,
+      "streak_21": 9,
+      "above_ema50": true,
+      "ema50_val": 106.0673,
+      "streak_50": 1,
+      "above_ema200": true,
+      "ema200_val": 100.7727,
+      "streak_200": 300
+    },
+    {
+      "sym": "EWH",
+      "price": 22.76,
+      "d1": 1.38,
+      "w1": 0.18,
+      "hi52": -6.21,
+      "ytd": 8.84,
+      "spark": [
+        -1.1,
+        -0.85,
+        1.08,
+        -0.31,
+        1.38
+      ],
+      "asof": "2026-09-21",
+      "ema_uptrend": false,
+      "above_ema21": true,
+      "ema21_val": 22.6708,
+      "streak_21": 1,
+      "above_ema50": true,
+      "ema50_val": 22.5936,
+      "streak_50": 1,
+      "above_ema200": true,
+      "ema200_val": 22.0467,
+      "streak_200": 49
+    },
+    {
+      "sym": "INDA",
+      "price": 48.5,
+      "d1": 1.0,
+      "w1": 0.14,
+      "hi52": -12.61,
+      "ytd": -10.27,
+      "spark": [
+        -1.73,
+        -0.27,
+        1.16,
+        0.02,
+        1.0
+      ],
+      "asof": "2026-09-21",
+      "ema_uptrend": false,
+      "above_ema21": false,
+      "ema21_val": 48.7744,
+      "streak_21": 10,
+      "above_ema50": false,
+      "ema50_val": 49.0677,
+      "streak_50": 10,
+      "above_ema200": false,
+      "ema200_val": 50.0243,
+      "streak_200": 30
+    },
+    {
+      "sym": "EWA",
+      "price": 29.04,
+      "d1": 1.01,
+      "w1": -0.07,
+      "hi52": -4.63,
+      "ytd": 12.44,
+      "spark": [
+        -0.58,
+        -1.38,
+        2.25,
+        -1.3,
+        1.01
+      ],
+      "asof": "2026-09-21",
+      "ema_uptrend": false,
+      "above_ema21": false,
+      "ema21_val": 29.3922,
+      "streak_21": 9,
+      "above_ema50": false,
+      "ema50_val": 29.3614,
+      "streak_50": 8,
+      "above_ema200": true,
+      "ema200_val": 28.2682,
+      "streak_200": 201
+    },
+    {
+      "sym": "EWC",
+      "price": 60.43,
+      "d1": 0.35,
+      "w1": -0.12,
+      "hi52": -3.64,
+      "ytd": 12.58,
+      "spark": [
+        -0.35,
+        -0.71,
+        0.92,
+        -0.31,
+        0.35
+      ],
+      "asof": "2026-09-21",
+      "ema_uptrend": false,
+      "above_ema21": false,
+      "ema21_val": 60.854,
+      "streak_21": 10,
+      "above_ema50": false,
+      "ema50_val": 60.4933,
+      "streak_50": 6,
+      "above_ema200": true,
+      "ema200_val": 56.9059,
+      "streak_200": 300
+    },
+    {
+      "sym": "EWG",
+      "price": 42.6,
+      "d1": 1.07,
+      "w1": -0.26,
+      "hi52": -5.02,
+      "ytd": 2.25,
+      "spark": [
+        -0.42,
+        -0.24,
+        0.61,
+        -1.26,
+        1.07
+      ],
+      "asof": "2026-09-21",
+      "ema_uptrend": false,
+      "above_ema21": false,
+      "ema21_val": 43.0893,
+      "streak_21": 10,
+      "above_ema50": false,
+      "ema50_val": 42.957,
+      "streak_50": 9,
+      "above_ema200": true,
+      "ema200_val": 41.6591,
+      "streak_200": 41
     },
     {
       "sym": "EUFN",
-      "price": 41.19,
-      "d1": -1.29,
-      "w1": -0.89,
-      "hi52": -4.36,
-      "ytd": 14.4,
+      "price": 41.73,
+      "d1": 1.48,
+      "w1": -0.45,
+      "hi52": -3.11,
+      "ytd": 15.9,
       "spark": [
+        -0.86,
         -0.72,
         1.24,
         -1.56,
-        1.48,
-        -1.29
+        1.48
       ],
-      "asof": "2026-09-22",
+      "asof": "2026-09-21",
       "ema_uptrend": false,
       "above_ema21": false,
-      "ema21_val": 41.8415,
-      "streak_21": 7,
-      "above_ema50": false,
-      "ema50_val": 41.3485,
+      "ema21_val": 41.9066,
+      "streak_21": 6,
+      "above_ema50": true,
+      "ema50_val": 41.355,
       "streak_50": 1,
       "above_ema200": true,
-      "ema200_val": 37.7512,
-      "streak_200": 121
+      "ema200_val": 37.716,
+      "streak_200": 120
     },
     {
       "sym": "ARGT",
-      "price": 92.88,
-      "d1": 0.53,
-      "w1": -1.71,
-      "hi52": -10.34,
-      "ytd": 1.98,
+      "price": 92.39,
+      "d1": -0.04,
+      "w1": -3.21,
+      "hi52": -10.82,
+      "ytd": 1.44,
       "spark": [
+        -1.0,
         -1.19,
         0.49,
         -1.5,
-        -0.04,
-        0.53
+        -0.04
       ],
-      "asof": "2026-09-22",
+      "asof": "2026-09-21",
       "ema_uptrend": false,
       "above_ema21": false,
-      "ema21_val": 94.1744,
-      "streak_21": 6,
+      "ema21_val": 94.3039,
+      "streak_21": 5,
       "above_ema50": false,
-      "ema50_val": 93.9076,
-      "streak_50": 5,
+      "ema50_val": 93.9496,
+      "streak_50": 4,
       "above_ema200": true,
-      "ema200_val": 91.3247,
-      "streak_200": 24
+      "ema200_val": 91.313,
+      "streak_200": 23
     },
     {
       "sym": "TUR",
-      "price": 37.35,
-      "d1": -0.77,
-      "w1": -3.59,
-      "hi52": -14.03,
-      "ytd": 9.85,
+      "price": 37.64,
+      "d1": 0.97,
+      "w1": -5.36,
+      "hi52": -13.36,
+      "ytd": 10.7,
       "spark": [
+        -2.59,
         -6.61,
         4.2,
         -1.11,
-        0.97,
-        -0.77
+        0.97
       ],
-      "asof": "2026-09-22",
+      "asof": "2026-09-21",
       "ema_uptrend": false,
       "above_ema21": false,
-      "ema21_val": 38.8645,
-      "streak_21": 7,
+      "ema21_val": 39.0159,
+      "streak_21": 6,
       "above_ema50": false,
-      "ema50_val": 39.1978,
-      "streak_50": 6,
+      "ema50_val": 39.2732,
+      "streak_50": 5,
       "above_ema200": false,
-      "ema200_val": 38.4122,
-      "streak_200": 5
+      "ema200_val": 38.4223,
+      "streak_200": 4
     }
   ],
   "crypto": [
     {
       "sym": "BTC",
-      "price": 86177.4297,
-      "d1": -0.49,
-      "w1": 12.79,
-      "hi52": -11.94,
-      "ytd": -1.52,
+      "price": 84350.5781,
+      "d1": -2.11,
+      "w1": 4.26,
+      "hi52": -13.18,
+      "ytd": -3.61,
       "spark": [
-        5.89,
         0.41,
         -0.11,
         6.73,
-        -0.49
+        -0.5,
+        -2.11
       ],
-      "asof": "2026-09-22",
+      "asof": "2026-09-24",
       "ema_uptrend": true,
       "above_ema21": true,
-      "ema21_val": 79324.3379,
-      "streak_21": 5,
+      "ema21_val": 79780.8433,
+      "streak_21": 6,
       "above_ema50": true,
-      "ema50_val": 75427.6498,
-      "streak_50": 37,
+      "ema50_val": 75777.3746,
+      "streak_50": 38,
       "above_ema200": true,
-      "ema200_val": 73624.263,
-      "streak_200": 34,
+      "ema200_val": 73732.3803,
+      "streak_200": 35,
       "id": "bitcoin",
       "name": "Bitcoin"
     },
     {
       "sym": "ETH",
-      "price": 2753.0,
-      "d1": -0.85,
-      "w1": 12.5,
-      "hi52": -18.98,
-      "ytd": -7.21,
+      "price": 2684.8,
+      "d1": -2.46,
+      "w1": 2.81,
+      "hi52": -20.63,
+      "ytd": -9.51,
       "spark": [
-        6.71,
         0.79,
         0.42,
         5.05,
-        -0.85
+        -0.86,
+        -2.46
       ],
-      "asof": "2026-09-22",
+      "asof": "2026-09-24",
       "ema_uptrend": true,
       "above_ema21": true,
-      "ema21_val": 2528.9541,
-      "streak_21": 6,
+      "ema21_val": 2543.0916,
+      "streak_21": 7,
       "above_ema50": true,
-      "ema50_val": 2355.402,
-      "streak_50": 52,
+      "ema50_val": 2368.3057,
+      "streak_50": 53,
       "above_ema200": true,
-      "ema200_val": 2233.0916,
-      "streak_200": 35,
+      "ema200_val": 2237.6552,
+      "streak_200": 36,
       "id": "ethereum",
       "name": "Ethereum"
     },
     {
       "sym": "SOL",
-      "price": 118.53,
-      "d1": -0.19,
-      "w1": 16.66,
-      "hi52": -20.03,
-      "ytd": -4.78,
+      "price": 115.1,
+      "d1": -2.88,
+      "w1": 2.22,
+      "hi52": -21.57,
+      "ytd": -7.54,
       "spark": [
-        10.82,
         -1.41,
         0.11,
         6.85,
-        -0.19
+        -0.2,
+        -2.88
       ],
-      "asof": "2026-09-22",
+      "asof": "2026-09-24",
       "ema_uptrend": true,
       "above_ema21": true,
-      "ema21_val": 105.2812,
-      "streak_21": 6,
+      "ema21_val": 106.172,
+      "streak_21": 7,
       "above_ema50": true,
-      "ema50_val": 97.0,
-      "streak_50": 37,
+      "ema50_val": 97.7089,
+      "streak_50": 38,
       "above_ema200": true,
-      "ema200_val": 93.1648,
-      "streak_200": 33,
+      "ema200_val": 93.3879,
+      "streak_200": 34,
       "id": "solana",
       "name": "Solana"
     },
     {
       "sym": "XRP",
-      "price": 1.5712,
-      "d1": 2.49,
-      "w1": 21.25,
-      "hi52": -28.12,
-      "ytd": -14.61,
+      "price": 1.4998,
+      "d1": -4.58,
+      "w1": 7.42,
+      "hi52": -30.0,
+      "ytd": -18.49,
       "spark": [
-        7.74,
         1.02,
         -0.04,
         8.74,
-        2.49
+        2.53,
+        -4.58
       ],
-      "asof": "2026-09-22",
+      "asof": "2026-09-24",
       "ema_uptrend": true,
       "above_ema21": true,
-      "ema21_val": 1.3927,
-      "streak_21": 5,
+      "ema21_val": 1.4025,
+      "streak_21": 6,
       "above_ema50": true,
-      "ema50_val": 1.3171,
-      "streak_50": 35,
+      "ema50_val": 1.3243,
+      "streak_50": 36,
       "above_ema200": true,
-      "ema200_val": 1.3586,
-      "streak_200": 5,
+      "ema200_val": 1.36,
+      "streak_200": 6,
       "id": "ripple",
       "name": "Ripple"
     }
   ],
   "holdings": {
-    "IVW": [
-      {
-        "s": "NVDA",
-        "n": "NVIDIA Corp",
-        "w": 14.85
-      },
-      {
-        "s": "MSFT",
-        "n": "Microsoft Corp",
-        "w": 10.46
-      },
-      {
-        "s": "AAPL",
-        "n": "Apple Inc",
-        "w": 6.46
-      },
-      {
-        "s": "GOOGL",
-        "n": "Alphabet Inc Class A",
-        "w": 5.52
-      },
-      {
-        "s": "AVGO",
-        "n": "Broadcom Inc",
-        "w": 4.87
-      },
-      {
-        "s": "GOOG",
-        "n": "Alphabet Inc Class C",
-        "w": 4.4
-      },
-      {
-        "s": "AMZN",
-        "n": "Amazon.com Inc",
-        "w": 3.74
-      },
-      {
-        "s": "META",
-        "n": "Meta Platforms Inc Class A",
-        "w": 3.49
-      },
-      {
-        "s": "MU",
-        "n": "Micron Technology Inc",
-        "w": 3.0
-      },
-      {
-        "s": "BRK-B",
-        "n": "Berkshire Hathaway Inc Class B",
-        "w": 2.57
-      }
-    ],
     "QQQ": [
       {
         "s": "NVDA",
@@ -4201,58 +4149,6 @@
         "w": 0.29
       }
     ],
-    "SPY": [
-      {
-        "s": "NVDA",
-        "n": "NVIDIA Corp",
-        "w": 8.08
-      },
-      {
-        "s": "AAPL",
-        "n": "Apple Inc",
-        "w": 7.03
-      },
-      {
-        "s": "MSFT",
-        "n": "Microsoft Corp",
-        "w": 5.69
-      },
-      {
-        "s": "AMZN",
-        "n": "Amazon.com Inc",
-        "w": 3.84
-      },
-      {
-        "s": "GOOGL",
-        "n": "Alphabet Inc Class A",
-        "w": 3.01
-      },
-      {
-        "s": "AVGO",
-        "n": "Broadcom Inc",
-        "w": 2.65
-      },
-      {
-        "s": "GOOG",
-        "n": "Alphabet Inc Class C",
-        "w": 2.4
-      },
-      {
-        "s": "META",
-        "n": "Meta Platforms Inc Class A",
-        "w": 1.9
-      },
-      {
-        "s": "MU",
-        "n": "Micron Technology Inc",
-        "w": 1.63
-      },
-      {
-        "s": "TSLA",
-        "n": "Tesla Inc",
-        "w": 1.56
-      }
-    ],
     "IVE": [
       {
         "s": "AAPL",
@@ -4303,6 +4199,58 @@
         "s": "MRK",
         "n": "Merck & Co Inc",
         "w": 1.21
+      }
+    ],
+    "SPY": [
+      {
+        "s": "NVDA",
+        "n": "NVIDIA Corp",
+        "w": 8.08
+      },
+      {
+        "s": "AAPL",
+        "n": "Apple Inc",
+        "w": 7.03
+      },
+      {
+        "s": "MSFT",
+        "n": "Microsoft Corp",
+        "w": 5.69
+      },
+      {
+        "s": "AMZN",
+        "n": "Amazon.com Inc",
+        "w": 3.84
+      },
+      {
+        "s": "GOOGL",
+        "n": "Alphabet Inc Class A",
+        "w": 3.01
+      },
+      {
+        "s": "AVGO",
+        "n": "Broadcom Inc",
+        "w": 2.65
+      },
+      {
+        "s": "GOOG",
+        "n": "Alphabet Inc Class C",
+        "w": 2.4
+      },
+      {
+        "s": "META",
+        "n": "Meta Platforms Inc Class A",
+        "w": 1.9
+      },
+      {
+        "s": "MU",
+        "n": "Micron Technology Inc",
+        "w": 1.63
+      },
+      {
+        "s": "TSLA",
+        "n": "Tesla Inc",
+        "w": 1.56
       }
     ],
     "DIA": [
@@ -4357,6 +4305,58 @@
         "w": 3.78
       }
     ],
+    "IVW": [
+      {
+        "s": "NVDA",
+        "n": "NVIDIA Corp",
+        "w": 14.85
+      },
+      {
+        "s": "MSFT",
+        "n": "Microsoft Corp",
+        "w": 10.46
+      },
+      {
+        "s": "AAPL",
+        "n": "Apple Inc",
+        "w": 6.46
+      },
+      {
+        "s": "GOOGL",
+        "n": "Alphabet Inc Class A",
+        "w": 5.52
+      },
+      {
+        "s": "AVGO",
+        "n": "Broadcom Inc",
+        "w": 4.87
+      },
+      {
+        "s": "GOOG",
+        "n": "Alphabet Inc Class C",
+        "w": 4.4
+      },
+      {
+        "s": "AMZN",
+        "n": "Amazon.com Inc",
+        "w": 3.74
+      },
+      {
+        "s": "META",
+        "n": "Meta Platforms Inc Class A",
+        "w": 3.49
+      },
+      {
+        "s": "MU",
+        "n": "Micron Technology Inc",
+        "w": 3.0
+      },
+      {
+        "s": "BRK-B",
+        "n": "Berkshire Hathaway Inc Class B",
+        "w": 2.57
+      }
+    ],
     "IJK": [
       {
         "s": "TWLO",
@@ -4407,58 +4407,6 @@
         "s": "UTHR",
         "n": "United Therapeutics Corp",
         "w": 1.17
-      }
-    ],
-    "IJT": [
-      {
-        "s": "CORT",
-        "n": "Corcept Therapeutics Inc",
-        "w": 1.24
-      },
-      {
-        "s": "EAT",
-        "n": "Brinker International Inc",
-        "w": 1.13
-      },
-      {
-        "s": "VSAT",
-        "n": "Viasat Inc",
-        "w": 1.05
-      },
-      {
-        "s": "RHP",
-        "n": "Ryman Hospitality Properties Inc",
-        "w": 1.01
-      },
-      {
-        "s": "PTGX",
-        "n": "Protagonist Therapeutics Inc",
-        "w": 1.0
-      },
-      {
-        "s": "ETSY",
-        "n": "Etsy Inc",
-        "w": 0.91
-      },
-      {
-        "s": "FORM",
-        "n": "FormFactor Inc",
-        "w": 0.91
-      },
-      {
-        "s": "ALKS",
-        "n": "Alkermes PLC",
-        "w": 0.9
-      },
-      {
-        "s": "AWI",
-        "n": "Armstrong World Industries Inc",
-        "w": 0.85
-      },
-      {
-        "s": "GKOS",
-        "n": "Glaukos Corp",
-        "w": 0.83
       }
     ],
     "IJJ": [
@@ -4513,6 +4461,58 @@
         "w": 0.91
       }
     ],
+    "IJT": [
+      {
+        "s": "CORT",
+        "n": "Corcept Therapeutics Inc",
+        "w": 1.24
+      },
+      {
+        "s": "EAT",
+        "n": "Brinker International Inc",
+        "w": 1.13
+      },
+      {
+        "s": "VSAT",
+        "n": "Viasat Inc",
+        "w": 1.05
+      },
+      {
+        "s": "RHP",
+        "n": "Ryman Hospitality Properties Inc",
+        "w": 1.01
+      },
+      {
+        "s": "PTGX",
+        "n": "Protagonist Therapeutics Inc",
+        "w": 1.0
+      },
+      {
+        "s": "ETSY",
+        "n": "Etsy Inc",
+        "w": 0.91
+      },
+      {
+        "s": "FORM",
+        "n": "FormFactor Inc",
+        "w": 0.91
+      },
+      {
+        "s": "ALKS",
+        "n": "Alkermes PLC",
+        "w": 0.9
+      },
+      {
+        "s": "AWI",
+        "n": "Armstrong World Industries Inc",
+        "w": 0.85
+      },
+      {
+        "s": "GKOS",
+        "n": "Glaukos Corp",
+        "w": 0.83
+      }
+    ],
     "MGK": [
       {
         "s": "NVDA",
@@ -4563,58 +4563,6 @@
         "s": "LLY",
         "n": "Eli Lilly and Co",
         "w": 3.2
-      }
-    ],
-    "VUG": [
-      {
-        "s": "NVDA",
-        "n": "NVIDIA Corp",
-        "w": 13.62
-      },
-      {
-        "s": "AAPL",
-        "n": "Apple Inc",
-        "w": 12.49
-      },
-      {
-        "s": "MSFT",
-        "n": "Microsoft Corp",
-        "w": 10.12
-      },
-      {
-        "s": "GOOGL",
-        "n": "Alphabet Inc Class A",
-        "w": 5.34
-      },
-      {
-        "s": "AMZN",
-        "n": "Amazon.com Inc",
-        "w": 4.76
-      },
-      {
-        "s": "GOOG",
-        "n": "Alphabet Inc Class C",
-        "w": 4.21
-      },
-      {
-        "s": "AVGO",
-        "n": "Broadcom Inc",
-        "w": 4.1
-      },
-      {
-        "s": "META",
-        "n": "Meta Platforms Inc Class A",
-        "w": 3.39
-      },
-      {
-        "s": "TSLA",
-        "n": "Tesla Inc",
-        "w": 2.79
-      },
-      {
-        "s": "LLY",
-        "n": "Eli Lilly and Co",
-        "w": 2.64
       }
     ],
     "IJS": [
@@ -4669,6 +4617,58 @@
         "w": 0.79
       }
     ],
+    "VUG": [
+      {
+        "s": "NVDA",
+        "n": "NVIDIA Corp",
+        "w": 13.62
+      },
+      {
+        "s": "AAPL",
+        "n": "Apple Inc",
+        "w": 12.49
+      },
+      {
+        "s": "MSFT",
+        "n": "Microsoft Corp",
+        "w": 10.12
+      },
+      {
+        "s": "GOOGL",
+        "n": "Alphabet Inc Class A",
+        "w": 5.34
+      },
+      {
+        "s": "AMZN",
+        "n": "Amazon.com Inc",
+        "w": 4.76
+      },
+      {
+        "s": "GOOG",
+        "n": "Alphabet Inc Class C",
+        "w": 4.21
+      },
+      {
+        "s": "AVGO",
+        "n": "Broadcom Inc",
+        "w": 4.1
+      },
+      {
+        "s": "META",
+        "n": "Meta Platforms Inc Class A",
+        "w": 3.39
+      },
+      {
+        "s": "TSLA",
+        "n": "Tesla Inc",
+        "w": 2.79
+      },
+      {
+        "s": "LLY",
+        "n": "Eli Lilly and Co",
+        "w": 2.64
+      }
+    ],
     "VTV": [
       {
         "s": "MU",
@@ -4719,58 +4719,6 @@
         "s": "CVX",
         "n": "Chevron Corp",
         "w": 1.42
-      }
-    ],
-    "XLV": [
-      {
-        "s": "LLY",
-        "n": "Eli Lilly and Co",
-        "w": 14.87
-      },
-      {
-        "s": "JNJ",
-        "n": "Johnson & Johnson",
-        "w": 10.4
-      },
-      {
-        "s": "ABBV",
-        "n": "AbbVie Inc",
-        "w": 7.36
-      },
-      {
-        "s": "MRK",
-        "n": "Merck & Co Inc",
-        "w": 5.93
-      },
-      {
-        "s": "UNH",
-        "n": "UnitedHealth Group Inc",
-        "w": 5.75
-      },
-      {
-        "s": "AMGN",
-        "n": "Amgen Inc",
-        "w": 3.77
-      },
-      {
-        "s": "TMO",
-        "n": "Thermo Fisher Scientific Inc",
-        "w": 3.73
-      },
-      {
-        "s": "ABT",
-        "n": "Abbott Laboratories",
-        "w": 3.12
-      },
-      {
-        "s": "GILD",
-        "n": "Gilead Sciences Inc",
-        "w": 2.95
-      },
-      {
-        "s": "PFE",
-        "n": "Pfizer Inc",
-        "w": 2.64
       }
     ],
     "XLK": [
@@ -4825,56 +4773,56 @@
         "w": 2.47
       }
     ],
-    "XLE": [
+    "XLV": [
       {
-        "s": "XOM",
-        "n": "ExxonMobil Holdings Corp",
-        "w": 19.86
+        "s": "LLY",
+        "n": "Eli Lilly and Co",
+        "w": 14.87
       },
       {
-        "s": "CVX",
-        "n": "Chevron Corp",
-        "w": 14.89
+        "s": "JNJ",
+        "n": "Johnson & Johnson",
+        "w": 10.4
       },
       {
-        "s": "COP",
-        "n": "ConocoPhillips",
-        "w": 6.23
+        "s": "ABBV",
+        "n": "AbbVie Inc",
+        "w": 7.36
       },
       {
-        "s": "MPC",
-        "n": "Marathon Petroleum Corp",
-        "w": 5.42
+        "s": "MRK",
+        "n": "Merck & Co Inc",
+        "w": 5.93
       },
       {
-        "s": "PSX",
-        "n": "Phillips 66",
-        "w": 5.33
+        "s": "UNH",
+        "n": "UnitedHealth Group Inc",
+        "w": 5.75
       },
       {
-        "s": "VLO",
-        "n": "Valero Energy Corp",
-        "w": 5.07
+        "s": "AMGN",
+        "n": "Amgen Inc",
+        "w": 3.77
       },
       {
-        "s": "SLB",
-        "n": "SLB Ltd",
-        "w": 4.88
+        "s": "TMO",
+        "n": "Thermo Fisher Scientific Inc",
+        "w": 3.73
       },
       {
-        "s": "EOG",
-        "n": "EOG Resources Inc",
-        "w": 4.13
+        "s": "ABT",
+        "n": "Abbott Laboratories",
+        "w": 3.12
       },
       {
-        "s": "WMB",
-        "n": "Williams Companies Inc",
-        "w": 3.78
+        "s": "GILD",
+        "n": "Gilead Sciences Inc",
+        "w": 2.95
       },
       {
-        "s": "KMI",
-        "n": "Kinder Morgan Inc Class P",
-        "w": 3.65
+        "s": "PFE",
+        "n": "Pfizer Inc",
+        "w": 2.64
       }
     ],
     "XLF": [
@@ -4927,6 +4875,58 @@
         "s": "SCHW",
         "n": "Charles Schwab Corp",
         "w": 2.2
+      }
+    ],
+    "XLE": [
+      {
+        "s": "XOM",
+        "n": "ExxonMobil Holdings Corp",
+        "w": 19.86
+      },
+      {
+        "s": "CVX",
+        "n": "Chevron Corp",
+        "w": 14.89
+      },
+      {
+        "s": "COP",
+        "n": "ConocoPhillips",
+        "w": 6.23
+      },
+      {
+        "s": "MPC",
+        "n": "Marathon Petroleum Corp",
+        "w": 5.42
+      },
+      {
+        "s": "PSX",
+        "n": "Phillips 66",
+        "w": 5.33
+      },
+      {
+        "s": "VLO",
+        "n": "Valero Energy Corp",
+        "w": 5.07
+      },
+      {
+        "s": "SLB",
+        "n": "SLB Ltd",
+        "w": 4.88
+      },
+      {
+        "s": "EOG",
+        "n": "EOG Resources Inc",
+        "w": 4.13
+      },
+      {
+        "s": "WMB",
+        "n": "Williams Companies Inc",
+        "w": 3.78
+      },
+      {
+        "s": "KMI",
+        "n": "Kinder Morgan Inc Class P",
+        "w": 3.65
       }
     ],
     "XLY": [
@@ -5189,58 +5189,6 @@
         "w": 3.4
       }
     ],
-    "XLP": [
-      {
-        "s": "WMT",
-        "n": "Walmart Inc",
-        "w": 9.82
-      },
-      {
-        "s": "COST",
-        "n": "Costco Wholesale Corp",
-        "w": 8.94
-      },
-      {
-        "s": "KO",
-        "n": "Coca-Cola Co",
-        "w": 7.33
-      },
-      {
-        "s": "PG",
-        "n": "Procter & Gamble Co",
-        "w": 7.22
-      },
-      {
-        "s": "PM",
-        "n": "Philip Morris International Inc",
-        "w": 6.24
-      },
-      {
-        "s": "TGT",
-        "n": "Target Corp",
-        "w": 4.66
-      },
-      {
-        "s": "CL",
-        "n": "Colgate-Palmolive Co",
-        "w": 4.52
-      },
-      {
-        "s": "PEP",
-        "n": "PepsiCo Inc",
-        "w": 4.4
-      },
-      {
-        "s": "MDLZ",
-        "n": "Mondelez International Inc Class A",
-        "w": 4.38
-      },
-      {
-        "s": "MO",
-        "n": "Altria Group Inc",
-        "w": 4.24
-      }
-    ],
     "XLC": [
       {
         "s": "META",
@@ -5293,56 +5241,56 @@
         "w": 4.59
       }
     ],
-    "GDXJ": [
+    "XLP": [
       {
-        "s": "EQX.TO",
-        "n": "Equinox Gold Corp Ordinary Shares Class A",
-        "w": 7.11
+        "s": "WMT",
+        "n": "Walmart Inc",
+        "w": 9.82
       },
       {
-        "s": "EVN.AX",
-        "n": "Evolution Mining Ltd",
-        "w": 6.35
+        "s": "COST",
+        "n": "Costco Wholesale Corp",
+        "w": 8.94
       },
       {
-        "s": "AGI.TO",
-        "n": "Alamos Gold Inc Class A",
-        "w": 5.69
+        "s": "KO",
+        "n": "Coca-Cola Co",
+        "w": 7.33
       },
       {
-        "s": "EDV.L",
-        "n": "Endeavour Mining PLC",
-        "w": 5.14
+        "s": "PG",
+        "n": "Procter & Gamble Co",
+        "w": 7.22
       },
       {
-        "s": "CDE",
-        "n": "Coeur Mining Inc",
-        "w": 5.02
+        "s": "PM",
+        "n": "Philip Morris International Inc",
+        "w": 6.24
       },
       {
-        "s": "ELD.TO",
-        "n": "Eldorado Gold Corp",
-        "w": 2.75
+        "s": "TGT",
+        "n": "Target Corp",
+        "w": 4.66
       },
       {
-        "s": "PE&OLES.MX",
-        "n": "Industrias Penoles SAB de CV",
-        "w": 2.65
+        "s": "CL",
+        "n": "Colgate-Palmolive Co",
+        "w": 4.52
       },
       {
-        "s": "HL",
-        "n": "Hecla Mining Co",
-        "w": 2.62
+        "s": "PEP",
+        "n": "PepsiCo Inc",
+        "w": 4.4
       },
       {
-        "s": "IMG.TO",
-        "n": "Iamgold Corp",
-        "w": 2.57
+        "s": "MDLZ",
+        "n": "Mondelez International Inc Class A",
+        "w": 4.38
       },
       {
-        "s": "AG.TO",
-        "n": "First Majestic Silver Corp",
-        "w": 2.51
+        "s": "MO",
+        "n": "Altria Group Inc",
+        "w": 4.24
       }
     ],
     "GDX": [
@@ -5397,6 +5345,58 @@
         "w": 2.56
       }
     ],
+    "GDXJ": [
+      {
+        "s": "EQX.TO",
+        "n": "Equinox Gold Corp Ordinary Shares Class A",
+        "w": 7.11
+      },
+      {
+        "s": "EVN.AX",
+        "n": "Evolution Mining Ltd",
+        "w": 6.35
+      },
+      {
+        "s": "AGI.TO",
+        "n": "Alamos Gold Inc Class A",
+        "w": 5.69
+      },
+      {
+        "s": "EDV.L",
+        "n": "Endeavour Mining PLC",
+        "w": 5.14
+      },
+      {
+        "s": "CDE",
+        "n": "Coeur Mining Inc",
+        "w": 5.02
+      },
+      {
+        "s": "ELD.TO",
+        "n": "Eldorado Gold Corp",
+        "w": 2.75
+      },
+      {
+        "s": "PE&OLES.MX",
+        "n": "Industrias Penoles SAB de CV",
+        "w": 2.65
+      },
+      {
+        "s": "HL",
+        "n": "Hecla Mining Co",
+        "w": 2.62
+      },
+      {
+        "s": "IMG.TO",
+        "n": "Iamgold Corp",
+        "w": 2.57
+      },
+      {
+        "s": "AG.TO",
+        "n": "First Majestic Silver Corp",
+        "w": 2.51
+      }
+    ],
     "IDNA": [
       {
         "s": "MRNA",
@@ -5447,58 +5447,6 @@
         "s": "4502.T",
         "n": "Takeda Pharmaceutical Co Ltd",
         "w": 3.51
-      }
-    ],
-    "REMX": [
-      {
-        "s": "PLS.AX",
-        "n": "PLS Group Ltd",
-        "w": 8.17
-      },
-      {
-        "s": "ALB",
-        "n": "Albemarle Corp",
-        "w": 8.1
-      },
-      {
-        "s": "MP",
-        "n": "MP Materials Corp Ordinary Shares - Class A",
-        "w": 6.84
-      },
-      {
-        "s": "LYC.AX",
-        "n": "Lynas Rare Earths Ltd",
-        "w": 6.79
-      },
-      {
-        "s": "600111.SS",
-        "n": "China Northern Rare Earth (Group) High-Tech Co Ltd Class A",
-        "w": 6.55
-      },
-      {
-        "s": "ALM",
-        "n": "Almonty Industries Inc",
-        "w": 5.76
-      },
-      {
-        "s": "SQM",
-        "n": "Sociedad Quimica Y Minera De Chile SA ADR",
-        "w": 5.75
-      },
-      {
-        "s": "601958.SS",
-        "n": "Jinduicheng Molybdenum Co Ltd Class A",
-        "w": 5.35
-      },
-      {
-        "s": "600549.SS",
-        "n": "Xiamen Tungsten Co Ltd Class A",
-        "w": 5.09
-      },
-      {
-        "s": "7610.TW",
-        "n": "Lianyou Metals Co Ltd",
-        "w": 4.06
       }
     ],
     "WGMI": [
@@ -5553,56 +5501,108 @@
         "w": 4.61
       }
     ],
-    "COPX": [
+    "REMX": [
       {
-        "s": "HBM.TO",
-        "n": "Hudbay Minerals Inc",
-        "w": 5.62
+        "s": "PLS.AX",
+        "n": "PLS Group Ltd",
+        "w": 8.17
       },
       {
-        "s": "BHP.AX",
-        "n": "BHP Group Ltd",
-        "w": 5.21
+        "s": "ALB",
+        "n": "Albemarle Corp",
+        "w": 8.1
       },
       {
-        "s": "TECK-B.TO",
-        "n": "Teck Resources Ltd Class B (Sub Voting)",
-        "w": 5.18
+        "s": "MP",
+        "n": "MP Materials Corp Ordinary Shares - Class A",
+        "w": 6.84
       },
       {
-        "s": "FM.TO",
-        "n": "First Quantum Minerals Ltd",
-        "w": 5.13
+        "s": "LYC.AX",
+        "n": "Lynas Rare Earths Ltd",
+        "w": 6.79
       },
       {
-        "s": "SCCO",
-        "n": "Southern Copper Corp",
-        "w": 4.98
+        "s": "600111.SS",
+        "n": "China Northern Rare Earth (Group) High-Tech Co Ltd Class A",
+        "w": 6.55
       },
       {
-        "s": "FCX",
-        "n": "Freeport-McMoRan Inc",
-        "w": 4.87
+        "s": "ALM",
+        "n": "Almonty Industries Inc",
+        "w": 5.76
       },
       {
-        "s": "ANTO.L",
-        "n": "Antofagasta PLC",
-        "w": 4.72
+        "s": "SQM",
+        "n": "Sociedad Quimica Y Minera De Chile SA ADR",
+        "w": 5.75
       },
       {
-        "s": "KGH.WA",
-        "n": "KGHM Polska Miedz SA",
-        "w": 4.7
+        "s": "601958.SS",
+        "n": "Jinduicheng Molybdenum Co Ltd Class A",
+        "w": 5.35
       },
       {
-        "s": "GLEN.L",
-        "n": "Glencore PLC",
-        "w": 4.69
+        "s": "600549.SS",
+        "n": "Xiamen Tungsten Co Ltd Class A",
+        "w": 5.09
       },
       {
-        "s": "5713.T",
-        "n": "Sumitomo Metal Mining Co Ltd",
-        "w": 4.42
+        "s": "7610.TW",
+        "n": "Lianyou Metals Co Ltd",
+        "w": 4.06
+      }
+    ],
+    "FFTY": [
+      {
+        "s": "HNGE",
+        "n": "Hinge Health Inc Ordinary Shares - Class A",
+        "w": 3.64
+      },
+      {
+        "s": "KNSA",
+        "n": "Kiniksa Pharmaceuticals International PLC Class A",
+        "w": 3.56
+      },
+      {
+        "s": "TVTX",
+        "n": "Travere Therapeutics Inc Ordinary Shares",
+        "w": 3.51
+      },
+      {
+        "s": "TGTX",
+        "n": "TG Therapeutics Inc",
+        "w": 3.51
+      },
+      {
+        "s": "WT",
+        "n": "WisdomTree Inc",
+        "w": 3.46
+      },
+      {
+        "s": "DAVE",
+        "n": "Dave Inc Ordinary Shares - Class A",
+        "w": 3.44
+      },
+      {
+        "s": "ETON",
+        "n": "Eton Pharmaceuticals Inc",
+        "w": 3.44
+      },
+      {
+        "s": "NTRA",
+        "n": "Natera Inc",
+        "w": 3.39
+      },
+      {
+        "s": "ERO.TO",
+        "n": "Ero Copper Corp",
+        "w": 3.37
+      },
+      {
+        "s": "AUGO",
+        "n": "Aura Minerals Inc",
+        "w": 3.33
       }
     ],
     "XBI": [
@@ -5657,56 +5657,56 @@
         "w": 1.3
       }
     ],
-    "FFTY": [
+    "COPX": [
       {
-        "s": "HNGE",
-        "n": "Hinge Health Inc Ordinary Shares - Class A",
-        "w": 3.64
+        "s": "HBM.TO",
+        "n": "Hudbay Minerals Inc",
+        "w": 5.62
       },
       {
-        "s": "KNSA",
-        "n": "Kiniksa Pharmaceuticals International PLC Class A",
-        "w": 3.56
+        "s": "BHP.AX",
+        "n": "BHP Group Ltd",
+        "w": 5.21
       },
       {
-        "s": "TVTX",
-        "n": "Travere Therapeutics Inc Ordinary Shares",
-        "w": 3.51
+        "s": "TECK-B.TO",
+        "n": "Teck Resources Ltd Class B (Sub Voting)",
+        "w": 5.18
       },
       {
-        "s": "TGTX",
-        "n": "TG Therapeutics Inc",
-        "w": 3.51
+        "s": "FM.TO",
+        "n": "First Quantum Minerals Ltd",
+        "w": 5.13
       },
       {
-        "s": "WT",
-        "n": "WisdomTree Inc",
-        "w": 3.46
+        "s": "SCCO",
+        "n": "Southern Copper Corp",
+        "w": 4.98
       },
       {
-        "s": "DAVE",
-        "n": "Dave Inc Ordinary Shares - Class A",
-        "w": 3.44
+        "s": "FCX",
+        "n": "Freeport-McMoRan Inc",
+        "w": 4.87
       },
       {
-        "s": "ETON",
-        "n": "Eton Pharmaceuticals Inc",
-        "w": 3.44
+        "s": "ANTO.L",
+        "n": "Antofagasta PLC",
+        "w": 4.72
       },
       {
-        "s": "NTRA",
-        "n": "Natera Inc",
-        "w": 3.39
+        "s": "KGH.WA",
+        "n": "KGHM Polska Miedz SA",
+        "w": 4.7
       },
       {
-        "s": "ERO.TO",
-        "n": "Ero Copper Corp",
-        "w": 3.37
+        "s": "GLEN.L",
+        "n": "Glencore PLC",
+        "w": 4.69
       },
       {
-        "s": "AUGO",
-        "n": "Aura Minerals Inc",
-        "w": 3.33
+        "s": "5713.T",
+        "n": "Sumitomo Metal Mining Co Ltd",
+        "w": 4.42
       }
     ],
     "LIT": [
@@ -6395,6 +6395,58 @@
         "w": 4.45
       }
     ],
+    "ESPO": [
+      {
+        "s": "7974.T",
+        "n": "Nintendo Co Ltd",
+        "w": 8.39
+      },
+      {
+        "s": "NTES",
+        "n": "NetEase Inc ADR",
+        "w": 7.5
+      },
+      {
+        "s": "0700.HK",
+        "n": "Tencent Holdings Ltd",
+        "w": 7.35
+      },
+      {
+        "s": "U",
+        "n": "Unity Software Inc Ordinary Shares",
+        "w": 7.01
+      },
+      {
+        "s": "7832.T",
+        "n": "BANDAI NAMCO Holdings Inc",
+        "w": 6.64
+      },
+      {
+        "s": "TTWO",
+        "n": "Take-Two Interactive Software Inc",
+        "w": 6.43
+      },
+      {
+        "s": "9697.T",
+        "n": "Capcom Co Ltd",
+        "w": 6.32
+      },
+      {
+        "s": "ALL.AX",
+        "n": "Aristocrat Leisure Ltd",
+        "w": 5.52
+      },
+      {
+        "s": "9766.T",
+        "n": "Konami Group Corp",
+        "w": 4.95
+      },
+      {
+        "s": "RBLX",
+        "n": "Roblox Corp Ordinary Shares - Class A",
+        "w": 4.9
+      }
+    ],
     "IDRV": [
       {
         "s": "006400.KQ",
@@ -6499,58 +6551,6 @@
         "w": 1.35
       }
     ],
-    "ESPO": [
-      {
-        "s": "7974.T",
-        "n": "Nintendo Co Ltd",
-        "w": 8.39
-      },
-      {
-        "s": "NTES",
-        "n": "NetEase Inc ADR",
-        "w": 7.5
-      },
-      {
-        "s": "0700.HK",
-        "n": "Tencent Holdings Ltd",
-        "w": 7.35
-      },
-      {
-        "s": "U",
-        "n": "Unity Software Inc Ordinary Shares",
-        "w": 7.01
-      },
-      {
-        "s": "7832.T",
-        "n": "BANDAI NAMCO Holdings Inc",
-        "w": 6.64
-      },
-      {
-        "s": "TTWO",
-        "n": "Take-Two Interactive Software Inc",
-        "w": 6.43
-      },
-      {
-        "s": "9697.T",
-        "n": "Capcom Co Ltd",
-        "w": 6.32
-      },
-      {
-        "s": "ALL.AX",
-        "n": "Aristocrat Leisure Ltd",
-        "w": 5.52
-      },
-      {
-        "s": "9766.T",
-        "n": "Konami Group Corp",
-        "w": 4.95
-      },
-      {
-        "s": "RBLX",
-        "n": "Roblox Corp Ordinary Shares - Class A",
-        "w": 4.9
-      }
-    ],
     "PBW": [
       {
         "s": "BETA",
@@ -6601,58 +6601,6 @@
         "s": "RIVN",
         "n": "Rivian Automotive Inc Class A",
         "w": 1.96
-      }
-    ],
-    "BOUT": [
-      {
-        "s": "HNGE",
-        "n": "Hinge Health Inc Ordinary Shares - Class A",
-        "w": 7.33
-      },
-      {
-        "s": "TVTX",
-        "n": "Travere Therapeutics Inc Ordinary Shares",
-        "w": 7.06
-      },
-      {
-        "s": "TGTX",
-        "n": "TG Therapeutics Inc",
-        "w": 7.01
-      },
-      {
-        "s": "TX",
-        "n": "Ternium SA ADR",
-        "w": 6.92
-      },
-      {
-        "s": "ELVN",
-        "n": "Enliven Therapeutics Inc",
-        "w": 6.78
-      },
-      {
-        "s": "NESR",
-        "n": "National Energy Services Reunited Corp",
-        "w": 6.38
-      },
-      {
-        "s": "UBSG.SW",
-        "n": "UBS Group AG Registered Shares",
-        "w": 6.28
-      },
-      {
-        "s": "BAC",
-        "n": "Bank of America Corp",
-        "w": 6.03
-      },
-      {
-        "s": "EMR",
-        "n": "Emerson Electric Co",
-        "w": 5.82
-      },
-      {
-        "s": "EMBJ",
-        "n": "Embraer SA ADR",
-        "w": 5.66
       }
     ],
     "FXI": [
@@ -6707,58 +6655,6 @@
         "w": 3.35
       }
     ],
-    "SMH": [
-      {
-        "s": "NVDA",
-        "n": "NVIDIA Corp",
-        "w": 22.63
-      },
-      {
-        "s": "TSM",
-        "n": "Taiwan Semiconductor Manufacturing Co Ltd ADR",
-        "w": 9.65
-      },
-      {
-        "s": "AVGO",
-        "n": "Broadcom Inc",
-        "w": 6.11
-      },
-      {
-        "s": "MU",
-        "n": "Micron Technology Inc",
-        "w": 5.45
-      },
-      {
-        "s": "AMD",
-        "n": "Advanced Micro Devices Inc",
-        "w": 5.36
-      },
-      {
-        "s": "ASML",
-        "n": "ASML Holding NV ADR",
-        "w": 5.1
-      },
-      {
-        "s": "LRCX",
-        "n": "Lam Research Corp",
-        "w": 4.4
-      },
-      {
-        "s": "AMAT",
-        "n": "Applied Materials Inc",
-        "w": 4.36
-      },
-      {
-        "s": "ADI",
-        "n": "Analog Devices Inc",
-        "w": 4.32
-      },
-      {
-        "s": "TXN",
-        "n": "Texas Instruments Inc",
-        "w": 4.3
-      }
-    ],
     "XSD": [
       {
         "s": "PI",
@@ -6809,6 +6705,58 @@
         "s": "OLED",
         "n": "Universal Display Corp",
         "w": 2.62
+      }
+    ],
+    "BOUT": [
+      {
+        "s": "HNGE",
+        "n": "Hinge Health Inc Ordinary Shares - Class A",
+        "w": 7.33
+      },
+      {
+        "s": "TVTX",
+        "n": "Travere Therapeutics Inc Ordinary Shares",
+        "w": 7.06
+      },
+      {
+        "s": "TGTX",
+        "n": "TG Therapeutics Inc",
+        "w": 7.01
+      },
+      {
+        "s": "TX",
+        "n": "Ternium SA ADR",
+        "w": 6.92
+      },
+      {
+        "s": "ELVN",
+        "n": "Enliven Therapeutics Inc",
+        "w": 6.78
+      },
+      {
+        "s": "NESR",
+        "n": "National Energy Services Reunited Corp",
+        "w": 6.38
+      },
+      {
+        "s": "UBSG.SW",
+        "n": "UBS Group AG Registered Shares",
+        "w": 6.28
+      },
+      {
+        "s": "BAC",
+        "n": "Bank of America Corp",
+        "w": 6.03
+      },
+      {
+        "s": "EMR",
+        "n": "Emerson Electric Co",
+        "w": 5.82
+      },
+      {
+        "s": "EMBJ",
+        "n": "Embraer SA ADR",
+        "w": 5.66
       }
     ],
     "XAR": [
@@ -6913,6 +6861,58 @@
         "s": "J",
         "n": "Jacobs Solutions Inc",
         "w": 3.64
+      }
+    ],
+    "SMH": [
+      {
+        "s": "NVDA",
+        "n": "NVIDIA Corp",
+        "w": 22.63
+      },
+      {
+        "s": "TSM",
+        "n": "Taiwan Semiconductor Manufacturing Co Ltd ADR",
+        "w": 9.65
+      },
+      {
+        "s": "AVGO",
+        "n": "Broadcom Inc",
+        "w": 6.11
+      },
+      {
+        "s": "MU",
+        "n": "Micron Technology Inc",
+        "w": 5.45
+      },
+      {
+        "s": "AMD",
+        "n": "Advanced Micro Devices Inc",
+        "w": 5.36
+      },
+      {
+        "s": "ASML",
+        "n": "ASML Holding NV ADR",
+        "w": 5.1
+      },
+      {
+        "s": "LRCX",
+        "n": "Lam Research Corp",
+        "w": 4.4
+      },
+      {
+        "s": "AMAT",
+        "n": "Applied Materials Inc",
+        "w": 4.36
+      },
+      {
+        "s": "ADI",
+        "n": "Analog Devices Inc",
+        "w": 4.32
+      },
+      {
+        "s": "TXN",
+        "n": "Texas Instruments Inc",
+        "w": 4.3
       }
     ],
     "BOTZ": [
@@ -7026,56 +7026,56 @@
         "w": 29.27
       }
     ],
-    "MOO": [
+    "ITB": [
       {
-        "s": "BAYN.DE",
-        "n": "Bayer AG",
-        "w": 8.82
+        "s": "DHI",
+        "n": "D.R. Horton Inc",
+        "w": 16.62
       },
       {
-        "s": "CTVA",
-        "n": "Corteva Inc",
-        "w": 8.24
+        "s": "PHM",
+        "n": "PulteGroup Inc",
+        "w": 10.49
       },
       {
-        "s": "DE",
-        "n": "Deere & Co",
-        "w": 8.23
+        "s": "LEN",
+        "n": "Lennar Corp Class A",
+        "w": 7.89
       },
       {
-        "s": "NTR.TO",
-        "n": "Nutrien Ltd",
-        "w": 6.72
+        "s": "NVR",
+        "n": "NVR Inc",
+        "w": 7.43
       },
       {
-        "s": "ZTS",
-        "n": "Zoetis Inc Class A",
+        "s": "SHW",
+        "n": "Sherwin-Williams Co",
+        "w": 5.32
+      },
+      {
+        "s": "TOL",
+        "n": "Toll Brothers Inc",
         "w": 5.22
       },
       {
-        "s": "ADM",
-        "n": "Archer-Daniels-Midland Co",
-        "w": 5.05
+        "s": "HD",
+        "n": "The Home Depot Inc",
+        "w": 4.9
       },
       {
-        "s": "CF",
-        "n": "CF Industries Holdings Inc",
-        "w": 4.74
+        "s": "LOW",
+        "n": "Lowe's Companies Inc",
+        "w": 4.52
       },
       {
-        "s": "6326.T",
-        "n": "Kubota Corp",
-        "w": 4.6
+        "s": "MAS",
+        "n": "Masco Corp",
+        "w": 3.19
       },
       {
-        "s": "TSN",
-        "n": "Tyson Foods Inc Class A",
-        "w": 3.93
-      },
-      {
-        "s": "BG",
-        "n": "Bunge Global SA",
-        "w": 3.4
+        "s": "LII",
+        "n": "Lennox International Inc",
+        "w": 2.66
       }
     ],
     "IWO": [
@@ -7130,108 +7130,108 @@
         "w": 0.56
       }
     ],
-    "ITB": [
+    "MOO": [
       {
-        "s": "DHI",
-        "n": "D.R. Horton Inc",
-        "w": 16.62
+        "s": "BAYN.DE",
+        "n": "Bayer AG",
+        "w": 8.82
       },
       {
-        "s": "PHM",
-        "n": "PulteGroup Inc",
-        "w": 10.49
+        "s": "CTVA",
+        "n": "Corteva Inc",
+        "w": 8.24
       },
       {
-        "s": "LEN",
-        "n": "Lennar Corp Class A",
-        "w": 7.89
+        "s": "DE",
+        "n": "Deere & Co",
+        "w": 8.23
       },
       {
-        "s": "NVR",
-        "n": "NVR Inc",
-        "w": 7.43
+        "s": "NTR.TO",
+        "n": "Nutrien Ltd",
+        "w": 6.72
       },
       {
-        "s": "SHW",
-        "n": "Sherwin-Williams Co",
-        "w": 5.32
-      },
-      {
-        "s": "TOL",
-        "n": "Toll Brothers Inc",
+        "s": "ZTS",
+        "n": "Zoetis Inc Class A",
         "w": 5.22
       },
       {
-        "s": "HD",
-        "n": "The Home Depot Inc",
-        "w": 4.9
+        "s": "ADM",
+        "n": "Archer-Daniels-Midland Co",
+        "w": 5.05
       },
       {
-        "s": "LOW",
-        "n": "Lowe's Companies Inc",
-        "w": 4.52
+        "s": "CF",
+        "n": "CF Industries Holdings Inc",
+        "w": 4.74
       },
       {
-        "s": "MAS",
-        "n": "Masco Corp",
-        "w": 3.19
+        "s": "6326.T",
+        "n": "Kubota Corp",
+        "w": 4.6
       },
       {
-        "s": "LII",
-        "n": "Lennox International Inc",
-        "w": 2.66
+        "s": "TSN",
+        "n": "Tyson Foods Inc Class A",
+        "w": 3.93
+      },
+      {
+        "s": "BG",
+        "n": "Bunge Global SA",
+        "w": 3.4
       }
     ],
-    "KWEB": [
+    "NLR": [
       {
-        "s": "0700.HK",
-        "n": "Tencent Holdings Ltd",
-        "w": 10.25
+        "s": "CEG",
+        "n": "Constellation Energy Corp",
+        "w": 8.68
       },
       {
-        "s": "9988.HK",
-        "n": "Alibaba Group Holding Ltd Ordinary Shares",
-        "w": 8.65
+        "s": "CCO.TO",
+        "n": "Cameco Corp",
+        "w": 8.0
       },
       {
-        "s": "PDD",
-        "n": "PDD Holdings Inc ADR",
-        "w": 8.27
+        "s": "PEG",
+        "n": "Public Service Enterprise Group Inc",
+        "w": 6.19
       },
       {
-        "s": "3690.HK",
-        "n": "Meituan Class B",
-        "w": 7.29
+        "s": "FORTUM.HE",
+        "n": "Fortum Oyj",
+        "w": 5.8
       },
       {
-        "s": "9999.HK",
-        "n": "NetEase Inc Ordinary Shares",
-        "w": 6.25
+        "s": "UEC",
+        "n": "Uranium Energy Corp",
+        "w": 5.63
       },
       {
-        "s": "0992.HK",
-        "n": "Lenovo Group Ltd",
-        "w": 5.04
+        "s": "PDN.AX",
+        "n": "Paladin Energy Ltd",
+        "w": 5.37
       },
       {
-        "s": "2423.HK",
-        "n": "KE Holdings Inc Class A",
-        "w": 4.35
+        "s": "NXE.TO",
+        "n": "NexGen Energy Ltd",
+        "w": 5.33
       },
       {
-        "s": "9618.HK",
-        "n": "JD.com Inc Ordinary Shares - Class A",
-        "w": 3.94
+        "s": "BWXT",
+        "n": "BWX Technologies Inc",
+        "w": 5.16
       },
       {
-        "s": "9961.HK",
-        "n": "Trip.com Group Ltd",
-        "w": 3.82
+        "s": "LEU",
+        "n": "Centrus Energy Corp Class A",
+        "w": 5.12
       },
       {
-        "s": "9888.HK",
-        "n": "Baidu Inc",
-        "w": 3.38
+        "s": "DML.TO",
+        "n": "Denison Mines Corp",
+        "w": 5.12
       }
     ],
     "PAVE": [
@@ -7284,6 +7284,58 @@
         "s": "CSX",
         "n": "CSX Corp",
         "w": 3.01
+      }
+    ],
+    "KWEB": [
+      {
+        "s": "0700.HK",
+        "n": "Tencent Holdings Ltd",
+        "w": 10.25
+      },
+      {
+        "s": "9988.HK",
+        "n": "Alibaba Group Holding Ltd Ordinary Shares",
+        "w": 8.65
+      },
+      {
+        "s": "PDD",
+        "n": "PDD Holdings Inc ADR",
+        "w": 8.27
+      },
+      {
+        "s": "3690.HK",
+        "n": "Meituan Class B",
+        "w": 7.29
+      },
+      {
+        "s": "9999.HK",
+        "n": "NetEase Inc Ordinary Shares",
+        "w": 6.25
+      },
+      {
+        "s": "0992.HK",
+        "n": "Lenovo Group Ltd",
+        "w": 5.04
+      },
+      {
+        "s": "2423.HK",
+        "n": "KE Holdings Inc Class A",
+        "w": 4.35
+      },
+      {
+        "s": "9618.HK",
+        "n": "JD.com Inc Ordinary Shares - Class A",
+        "w": 3.94
+      },
+      {
+        "s": "9961.HK",
+        "n": "Trip.com Group Ltd",
+        "w": 3.82
+      },
+      {
+        "s": "9888.HK",
+        "n": "Baidu Inc",
+        "w": 3.38
       }
     ],
     "XOP": [
@@ -7390,56 +7442,51 @@
         "w": 2.98
       }
     ],
-    "NLR": [
-      {
-        "s": "CEG",
-        "n": "Constellation Energy Corp",
-        "w": 8.68
-      },
+    "URA": [
       {
         "s": "CCO.TO",
         "n": "Cameco Corp",
-        "w": 8.0
-      },
-      {
-        "s": "PEG",
-        "n": "Public Service Enterprise Group Inc",
-        "w": 6.19
-      },
-      {
-        "s": "FORTUM.HE",
-        "n": "Fortum Oyj",
-        "w": 5.8
-      },
-      {
-        "s": "UEC",
-        "n": "Uranium Energy Corp",
-        "w": 5.63
-      },
-      {
-        "s": "PDN.AX",
-        "n": "Paladin Energy Ltd",
-        "w": 5.37
+        "w": 21.95
       },
       {
         "s": "NXE.TO",
         "n": "NexGen Energy Ltd",
-        "w": 5.33
+        "w": 6.01
       },
       {
-        "s": "BWXT",
-        "n": "BWX Technologies Inc",
-        "w": 5.16
+        "s": "OKLO",
+        "n": "Oklo Inc Class A Shares",
+        "w": 5.5
+      },
+      {
+        "s": "UEC",
+        "n": "Uranium Energy Corp",
+        "w": 5.3
+      },
+      {
+        "s": "KAP",
+        "n": "National Atomic Co Kazatomprom JSC GDR - Regulation S",
+        "w": 4.48
+      },
+      {
+        "s": "PDN.AX",
+        "n": "Paladin Energy Ltd",
+        "w": 3.42
+      },
+      {
+        "s": "EFR.TO",
+        "n": "Energy Fuels Inc",
+        "w": 3.37
+      },
+      {
+        "s": "XE",
+        "n": "X-Energy Inc Class A",
+        "w": 2.96
       },
       {
         "s": "LEU",
         "n": "Centrus Energy Corp Class A",
-        "w": 5.12
-      },
-      {
-        "s": "DML.TO",
-        "n": "Denison Mines Corp",
-        "w": 5.12
+        "w": 2.89
       }
     ],
     "QTUM": [
@@ -7492,53 +7539,6 @@
         "s": "MDB",
         "n": "MongoDB Inc Class A",
         "w": 1.54
-      }
-    ],
-    "URA": [
-      {
-        "s": "CCO.TO",
-        "n": "Cameco Corp",
-        "w": 21.95
-      },
-      {
-        "s": "NXE.TO",
-        "n": "NexGen Energy Ltd",
-        "w": 6.01
-      },
-      {
-        "s": "OKLO",
-        "n": "Oklo Inc Class A Shares",
-        "w": 5.5
-      },
-      {
-        "s": "UEC",
-        "n": "Uranium Energy Corp",
-        "w": 5.3
-      },
-      {
-        "s": "KAP",
-        "n": "National Atomic Co Kazatomprom JSC GDR - Regulation S",
-        "w": 4.48
-      },
-      {
-        "s": "PDN.AX",
-        "n": "Paladin Energy Ltd",
-        "w": 3.42
-      },
-      {
-        "s": "EFR.TO",
-        "n": "Energy Fuels Inc",
-        "w": 3.37
-      },
-      {
-        "s": "XE",
-        "n": "X-Energy Inc Class A",
-        "w": 2.96
-      },
-      {
-        "s": "LEU",
-        "n": "Centrus Energy Corp Class A",
-        "w": 2.89
       }
     ],
     "IPO": [
@@ -7853,6 +7853,18 @@
         "w": 2.68
       }
     ],
+    "MSOS": [
+      {
+        "s": "TRLV",
+        "n": "Trulieve Cannabis Corp Ordinary Shares (Sub Voting)",
+        "w": 11.35
+      },
+      {
+        "s": "CURA.TO",
+        "n": "Curaleaf Holdings Inc",
+        "w": 11.3
+      }
+    ],
     "AIQ": [
       {
         "s": "PLTR",
@@ -7903,58 +7915,6 @@
         "s": "005930.KQ",
         "n": "Samsung Electronics Co Ltd",
         "w": 2.81
-      }
-    ],
-    "IYT": [
-      {
-        "s": "UNP",
-        "n": "Union Pacific Corp",
-        "w": 17.85
-      },
-      {
-        "s": "UBER",
-        "n": "Uber Technologies Inc",
-        "w": 15.39
-      },
-      {
-        "s": "CSX",
-        "n": "CSX Corp",
-        "w": 9.38
-      },
-      {
-        "s": "UPS",
-        "n": "United Parcel Service Inc Class B",
-        "w": 5.62
-      },
-      {
-        "s": "NSC",
-        "n": "Norfolk Southern Corp",
-        "w": 4.88
-      },
-      {
-        "s": "FDX",
-        "n": "FedEx Corp",
-        "w": 4.51
-      },
-      {
-        "s": "DAL",
-        "n": "Delta Air Lines Inc",
-        "w": 4.49
-      },
-      {
-        "s": "UAL",
-        "n": "United Airlines Holdings Inc",
-        "w": 4.47
-      },
-      {
-        "s": "ODFL",
-        "n": "Old Dominion Freight Line Inc Ordinary Shares",
-        "w": 3.73
-      },
-      {
-        "s": "EXPD",
-        "n": "Expeditors International of Washington Inc",
-        "w": 3.16
       }
     ],
     "IAI": [
@@ -8009,16 +7969,56 @@
         "w": 3.74
       }
     ],
-    "MSOS": [
+    "IYT": [
       {
-        "s": "TRLV",
-        "n": "Trulieve Cannabis Corp Ordinary Shares (Sub Voting)",
-        "w": 11.35
+        "s": "UNP",
+        "n": "Union Pacific Corp",
+        "w": 17.85
       },
       {
-        "s": "CURA.TO",
-        "n": "Curaleaf Holdings Inc",
-        "w": 11.3
+        "s": "UBER",
+        "n": "Uber Technologies Inc",
+        "w": 15.39
+      },
+      {
+        "s": "CSX",
+        "n": "CSX Corp",
+        "w": 9.38
+      },
+      {
+        "s": "UPS",
+        "n": "United Parcel Service Inc Class B",
+        "w": 5.62
+      },
+      {
+        "s": "NSC",
+        "n": "Norfolk Southern Corp",
+        "w": 4.88
+      },
+      {
+        "s": "FDX",
+        "n": "FedEx Corp",
+        "w": 4.51
+      },
+      {
+        "s": "DAL",
+        "n": "Delta Air Lines Inc",
+        "w": 4.49
+      },
+      {
+        "s": "UAL",
+        "n": "United Airlines Holdings Inc",
+        "w": 4.47
+      },
+      {
+        "s": "ODFL",
+        "n": "Old Dominion Freight Line Inc Ordinary Shares",
+        "w": 3.73
+      },
+      {
+        "s": "EXPD",
+        "n": "Expeditors International of Washington Inc",
+        "w": 3.16
       }
     ],
     "FDN": [
@@ -8229,58 +8229,6 @@
         "w": 1.09
       }
     ],
-    "CLOU": [
-      {
-        "s": "SNOW",
-        "n": "Snowflake Inc Ordinary Shares",
-        "w": 6.94
-      },
-      {
-        "s": "PAYC",
-        "n": "Paycom Software Inc",
-        "w": 5.39
-      },
-      {
-        "s": "DDOG",
-        "n": "Datadog Inc Class A",
-        "w": 5.12
-      },
-      {
-        "s": "NOW",
-        "n": "ServiceNow Inc",
-        "w": 4.79
-      },
-      {
-        "s": "WDAY",
-        "n": "Workday Inc Class A",
-        "w": 4.61
-      },
-      {
-        "s": "TWLO",
-        "n": "Twilio Inc Class A",
-        "w": 4.55
-      },
-      {
-        "s": "NET",
-        "n": "Cloudflare Inc",
-        "w": 4.25
-      },
-      {
-        "s": "CRM",
-        "n": "Salesforce Inc",
-        "w": 4.17
-      },
-      {
-        "s": "ZS",
-        "n": "Zscaler Inc",
-        "w": 4.12
-      },
-      {
-        "s": "QLYS",
-        "n": "Qualys Inc",
-        "w": 4.0
-      }
-    ],
     "KRE": [
       {
         "s": "CFR",
@@ -8331,6 +8279,58 @@
         "s": "HWC",
         "n": "Hancock Whitney Corp",
         "w": 1.38
+      }
+    ],
+    "CLOU": [
+      {
+        "s": "SNOW",
+        "n": "Snowflake Inc Ordinary Shares",
+        "w": 6.94
+      },
+      {
+        "s": "PAYC",
+        "n": "Paycom Software Inc",
+        "w": 5.39
+      },
+      {
+        "s": "DDOG",
+        "n": "Datadog Inc Class A",
+        "w": 5.12
+      },
+      {
+        "s": "NOW",
+        "n": "ServiceNow Inc",
+        "w": 4.79
+      },
+      {
+        "s": "WDAY",
+        "n": "Workday Inc Class A",
+        "w": 4.61
+      },
+      {
+        "s": "TWLO",
+        "n": "Twilio Inc Class A",
+        "w": 4.55
+      },
+      {
+        "s": "NET",
+        "n": "Cloudflare Inc",
+        "w": 4.25
+      },
+      {
+        "s": "CRM",
+        "n": "Salesforce Inc",
+        "w": 4.17
+      },
+      {
+        "s": "ZS",
+        "n": "Zscaler Inc",
+        "w": 4.12
+      },
+      {
+        "s": "QLYS",
+        "n": "Qualys Inc",
+        "w": 4.0
       }
     ],
     "IGV": [
@@ -8437,6 +8437,13 @@
         "w": 1.06
       }
     ],
+    "BTF": [
+      {
+        "s": "FXFXX",
+        "n": "First American Treasury Obligs X",
+        "w": 3.6
+      }
+    ],
     "SKYY": [
       {
         "s": "NTNX",
@@ -8487,65 +8494,6 @@
         "s": "IBM",
         "n": "International Business Machines Corp",
         "w": 2.51
-      }
-    ],
-    "BTF": [
-      {
-        "s": "FXFXX",
-        "n": "First American Treasury Obligs X",
-        "w": 3.6
-      }
-    ],
-    "EUFN": [
-      {
-        "s": "HSBA.L",
-        "n": "HSBC Holdings PLC",
-        "w": 9.6
-      },
-      {
-        "s": "SAN.MC",
-        "n": "Banco Santander SA",
-        "w": 5.66
-      },
-      {
-        "s": "ALV.DE",
-        "n": "Allianz SE",
-        "w": 5.37
-      },
-      {
-        "s": "UBSG.SW",
-        "n": "UBS Group AG Registered Shares",
-        "w": 4.6
-      },
-      {
-        "s": "BBVA.MC",
-        "n": "Banco Bilbao Vizcaya Argentaria SA",
-        "w": 4.37
-      },
-      {
-        "s": "UCG.MI",
-        "n": "UniCredit SpA",
-        "w": 3.57
-      },
-      {
-        "s": "BNP.PA",
-        "n": "BNP Paribas Act. Cat.A",
-        "w": 3.19
-      },
-      {
-        "s": "ISP.MI",
-        "n": "Intesa Sanpaolo",
-        "w": 3.01
-      },
-      {
-        "s": "ZURN.SW",
-        "n": "Zurich Insurance Group AG",
-        "w": 2.91
-      },
-      {
-        "s": "INGA.AS",
-        "n": "ING Groep NV",
-        "w": 2.74
       }
     ],
     "ARGT": [
@@ -8600,56 +8548,56 @@
         "w": 3.19
       }
     ],
-    "EWI": [
+    "EUFN": [
+      {
+        "s": "HSBA.L",
+        "n": "HSBC Holdings PLC",
+        "w": 9.6
+      },
+      {
+        "s": "SAN.MC",
+        "n": "Banco Santander SA",
+        "w": 5.66
+      },
+      {
+        "s": "ALV.DE",
+        "n": "Allianz SE",
+        "w": 5.37
+      },
+      {
+        "s": "UBSG.SW",
+        "n": "UBS Group AG Registered Shares",
+        "w": 4.6
+      },
+      {
+        "s": "BBVA.MC",
+        "n": "Banco Bilbao Vizcaya Argentaria SA",
+        "w": 4.37
+      },
       {
         "s": "UCG.MI",
         "n": "UniCredit SpA",
-        "w": 16.78
+        "w": 3.57
+      },
+      {
+        "s": "BNP.PA",
+        "n": "BNP Paribas Act. Cat.A",
+        "w": 3.19
       },
       {
         "s": "ISP.MI",
         "n": "Intesa Sanpaolo",
-        "w": 13.6
+        "w": 3.01
       },
       {
-        "s": "ENEL.MI",
-        "n": "Enel SpA",
-        "w": 10.34
+        "s": "ZURN.SW",
+        "n": "Zurich Insurance Group AG",
+        "w": 2.91
       },
       {
-        "s": "RACE.MI",
-        "n": "Ferrari NV",
-        "w": 5.16
-      },
-      {
-        "s": "ENI.MI",
-        "n": "Eni SpA",
-        "w": 5.05
-      },
-      {
-        "s": "G.MI",
-        "n": "Generali",
-        "w": 4.81
-      },
-      {
-        "s": "BPE.MI",
-        "n": "BPER Banca SpA",
-        "w": 3.95
-      },
-      {
-        "s": "BMPS.MI",
-        "n": "Banca Monte dei Paschi di Siena",
-        "w": 3.89
-      },
-      {
-        "s": "LDO.MI",
-        "n": "Leonardo SpA Az nom Post raggruppamento",
-        "w": 3.73
-      },
-      {
-        "s": "PRY.MI",
-        "n": "Prysmian SpA",
-        "w": 3.54
+        "s": "INGA.AS",
+        "n": "ING Groep NV",
+        "w": 2.74
       }
     ],
     "EWZ": [
@@ -8702,6 +8650,58 @@
         "s": "ABEV3.SA",
         "n": "Ambev SA",
         "w": 2.81
+      }
+    ],
+    "EWI": [
+      {
+        "s": "UCG.MI",
+        "n": "UniCredit SpA",
+        "w": 16.78
+      },
+      {
+        "s": "ISP.MI",
+        "n": "Intesa Sanpaolo",
+        "w": 13.6
+      },
+      {
+        "s": "ENEL.MI",
+        "n": "Enel SpA",
+        "w": 10.34
+      },
+      {
+        "s": "RACE.MI",
+        "n": "Ferrari NV",
+        "w": 5.16
+      },
+      {
+        "s": "ENI.MI",
+        "n": "Eni SpA",
+        "w": 5.05
+      },
+      {
+        "s": "G.MI",
+        "n": "Generali",
+        "w": 4.81
+      },
+      {
+        "s": "BPE.MI",
+        "n": "BPER Banca SpA",
+        "w": 3.95
+      },
+      {
+        "s": "BMPS.MI",
+        "n": "Banca Monte dei Paschi di Siena",
+        "w": 3.89
+      },
+      {
+        "s": "LDO.MI",
+        "n": "Leonardo SpA Az nom Post raggruppamento",
+        "w": 3.73
+      },
+      {
+        "s": "PRY.MI",
+        "n": "Prysmian SpA",
+        "w": 3.54
       }
     ],
     "EWY": [
@@ -8964,56 +8964,56 @@
         "w": 2.45
       }
     ],
-    "IEUR": [
+    "EWA": [
       {
-        "s": "ASML.AS",
-        "n": "ASML Holding NV",
-        "w": 4.07
+        "s": "BHP.AX",
+        "n": "BHP Group Ltd",
+        "w": 16.35
       },
       {
-        "s": "HSBA.L",
-        "n": "HSBC Holdings PLC",
-        "w": 2.21
+        "s": "CBA.AX",
+        "n": "Commonwealth Bank of Australia",
+        "w": 13.0
       },
       {
-        "s": "ROP.SW",
-        "n": "Roche Holding AG Ordinary Shares new",
-        "w": 1.91
+        "s": "NAB.AX",
+        "n": "National Australia Bank Ltd",
+        "w": 5.85
       },
       {
-        "s": "NOVN.SW",
-        "n": "Novartis AG Registered Shares",
-        "w": 1.73
+        "s": "WBC.AX",
+        "n": "Westpac Banking Corp",
+        "w": 5.74
       },
       {
-        "s": "SHEL.L",
-        "n": "Shell PLC",
-        "w": 1.57
+        "s": "ANZ.AX",
+        "n": "ANZ Group Holdings Ltd",
+        "w": 5.45
       },
       {
-        "s": "NESN.SW",
-        "n": "Nestle SA",
-        "w": 1.56
+        "s": "MQG.AX",
+        "n": "Macquarie Group Ltd",
+        "w": 4.44
       },
       {
-        "s": "AZN.L",
-        "n": "AstraZeneca PLC",
-        "w": 1.52
+        "s": "WES.AX",
+        "n": "Wesfarmers Ltd",
+        "w": 4.32
       },
       {
-        "s": "SIE.DE",
-        "n": "Siemens AG",
-        "w": 1.5
+        "s": "CSL.AX",
+        "n": "CSL Ltd",
+        "w": 3.99
       },
       {
-        "s": "SAP.DE",
-        "n": "SAP SE",
-        "w": 1.4
+        "s": "RIO.AX",
+        "n": "Rio Tinto Ltd",
+        "w": 3.16
       },
       {
-        "s": "SAN.MC",
-        "n": "Banco Santander SA",
-        "w": 1.3
+        "s": "WDS.AX",
+        "n": "Woodside Energy Group Ltd",
+        "w": 2.99
       }
     ],
     "IEV": [
@@ -9068,108 +9068,56 @@
         "w": 1.53
       }
     ],
-    "EWA": [
+    "IEUR": [
       {
-        "s": "BHP.AX",
-        "n": "BHP Group Ltd",
-        "w": 16.35
-      },
-      {
-        "s": "CBA.AX",
-        "n": "Commonwealth Bank of Australia",
-        "w": 13.0
-      },
-      {
-        "s": "NAB.AX",
-        "n": "National Australia Bank Ltd",
-        "w": 5.85
-      },
-      {
-        "s": "WBC.AX",
-        "n": "Westpac Banking Corp",
-        "w": 5.74
-      },
-      {
-        "s": "ANZ.AX",
-        "n": "ANZ Group Holdings Ltd",
-        "w": 5.45
-      },
-      {
-        "s": "MQG.AX",
-        "n": "Macquarie Group Ltd",
-        "w": 4.44
-      },
-      {
-        "s": "WES.AX",
-        "n": "Wesfarmers Ltd",
-        "w": 4.32
-      },
-      {
-        "s": "CSL.AX",
-        "n": "CSL Ltd",
-        "w": 3.99
-      },
-      {
-        "s": "RIO.AX",
-        "n": "Rio Tinto Ltd",
-        "w": 3.16
-      },
-      {
-        "s": "WDS.AX",
-        "n": "Woodside Energy Group Ltd",
-        "w": 2.99
-      }
-    ],
-    "INDA": [
-      {
-        "s": "HDFCBANK.NS",
-        "n": "HDFC Bank Ltd",
-        "w": 6.42
-      },
-      {
-        "s": "RELIANCE.NS",
-        "n": "Reliance Industries Ltd",
-        "w": 5.99
-      },
-      {
-        "s": "ICICIBANK.NS",
-        "n": "ICICI Bank Ltd",
-        "w": 5.68
-      },
-      {
-        "s": "BHARTIARTL.NS",
-        "n": "Bharti Airtel Ltd",
+        "s": "ASML.AS",
+        "n": "ASML Holding NV",
         "w": 4.07
       },
       {
-        "s": "INFY.NS",
-        "n": "Infosys Ltd",
-        "w": 2.59
+        "s": "HSBA.L",
+        "n": "HSBC Holdings PLC",
+        "w": 2.21
       },
       {
-        "s": "XTSLA",
-        "n": "BlackRock Cash Funds Treasury SL Agency",
-        "w": 2.44
+        "s": "ROP.SW",
+        "n": "Roche Holding AG Ordinary Shares new",
+        "w": 1.91
       },
       {
-        "s": "M&M.NS",
-        "n": "Mahindra & Mahindra Ltd",
-        "w": 2.22
+        "s": "NOVN.SW",
+        "n": "Novartis AG Registered Shares",
+        "w": 1.73
       },
       {
-        "s": "AXISBANK.BO",
-        "n": "Axis Bank Ltd",
-        "w": 2.15
+        "s": "SHEL.L",
+        "n": "Shell PLC",
+        "w": 1.57
       },
       {
-        "s": "500034",
-        "n": "Bajaj Finance Ltd",
-        "w": 2.14
+        "s": "NESN.SW",
+        "n": "Nestle SA",
+        "w": 1.56
       },
       {
-        "s": "LT.NS",
-        "n": "Larsen & Toubro Ltd",
-        "w": 2.0
+        "s": "AZN.L",
+        "n": "AstraZeneca PLC",
+        "w": 1.52
+      },
+      {
+        "s": "SIE.DE",
+        "n": "Siemens AG",
+        "w": 1.5
+      },
+      {
+        "s": "SAP.DE",
+        "n": "SAP SE",
+        "w": 1.4
+      },
+      {
+        "s": "SAN.MC",
+        "n": "Banco Santander SA",
+        "w": 1.3
       }
     ],
     "EWG": [
@@ -9276,6 +9224,58 @@
         "w": 1.74
       }
     ],
+    "INDA": [
+      {
+        "s": "HDFCBANK.NS",
+        "n": "HDFC Bank Ltd",
+        "w": 6.42
+      },
+      {
+        "s": "RELIANCE.NS",
+        "n": "Reliance Industries Ltd",
+        "w": 5.99
+      },
+      {
+        "s": "ICICIBANK.NS",
+        "n": "ICICI Bank Ltd",
+        "w": 5.68
+      },
+      {
+        "s": "BHARTIARTL.NS",
+        "n": "Bharti Airtel Ltd",
+        "w": 4.07
+      },
+      {
+        "s": "INFY.NS",
+        "n": "Infosys Ltd",
+        "w": 2.59
+      },
+      {
+        "s": "XTSLA",
+        "n": "BlackRock Cash Funds Treasury SL Agency",
+        "w": 2.44
+      },
+      {
+        "s": "M&M.NS",
+        "n": "Mahindra & Mahindra Ltd",
+        "w": 2.22
+      },
+      {
+        "s": "AXISBANK.BO",
+        "n": "Axis Bank Ltd",
+        "w": 2.15
+      },
+      {
+        "s": "500034",
+        "n": "Bajaj Finance Ltd",
+        "w": 2.14
+      },
+      {
+        "s": "LT.NS",
+        "n": "Larsen & Toubro Ltd",
+        "w": 2.0
+      }
+    ],
     "EEM": [
       {
         "s": "2330.TW",
@@ -9326,58 +9326,6 @@
         "s": "2317.TW",
         "n": "Hon Hai Precision Industry Co Ltd",
         "w": 0.78
-      }
-    ],
-    "ACWI": [
-      {
-        "s": "NVDA",
-        "n": "NVIDIA Corp",
-        "w": 4.87
-      },
-      {
-        "s": "AAPL",
-        "n": "Apple Inc",
-        "w": 4.46
-      },
-      {
-        "s": "MSFT",
-        "n": "Microsoft Corp",
-        "w": 3.43
-      },
-      {
-        "s": "AMZN",
-        "n": "Amazon.com Inc",
-        "w": 2.41
-      },
-      {
-        "s": "GOOGL",
-        "n": "Alphabet Inc Class A",
-        "w": 1.91
-      },
-      {
-        "s": "2330.TW",
-        "n": "Taiwan Semiconductor Manufacturing Co Ltd",
-        "w": 1.79
-      },
-      {
-        "s": "AVGO",
-        "n": "Broadcom Inc",
-        "w": 1.61
-      },
-      {
-        "s": "GOOG",
-        "n": "Alphabet Inc Class C",
-        "w": 1.5
-      },
-      {
-        "s": "META",
-        "n": "Meta Platforms Inc Class A",
-        "w": 1.2
-      },
-      {
-        "s": "MU",
-        "n": "Micron Technology Inc",
-        "w": 1.04
       }
     ],
     "EFA": [
@@ -9484,56 +9432,56 @@
         "w": 2.74
       }
     ],
-    "EWJ": [
+    "ACWI": [
       {
-        "s": "8306.T",
-        "n": "Mitsubishi UFJ Financial Group Inc",
-        "w": 4.63
+        "s": "NVDA",
+        "n": "NVIDIA Corp",
+        "w": 4.87
       },
       {
-        "s": "7203.T",
-        "n": "Toyota Motor Corp",
-        "w": 3.53
+        "s": "AAPL",
+        "n": "Apple Inc",
+        "w": 4.46
       },
       {
-        "s": "8316.T",
-        "n": "Sumitomo Mitsui Financial Group Inc",
-        "w": 2.99
+        "s": "MSFT",
+        "n": "Microsoft Corp",
+        "w": 3.43
       },
       {
-        "s": "8035.T",
-        "n": "Tokyo Electron Ltd",
-        "w": 2.96
+        "s": "AMZN",
+        "n": "Amazon.com Inc",
+        "w": 2.41
       },
       {
-        "s": "6857.T",
-        "n": "Advantest Corp",
-        "w": 2.9
+        "s": "GOOGL",
+        "n": "Alphabet Inc Class A",
+        "w": 1.91
       },
       {
-        "s": "6098.T",
-        "n": "Recruit Holdings Co Ltd",
-        "w": 2.84
+        "s": "2330.TW",
+        "n": "Taiwan Semiconductor Manufacturing Co Ltd",
+        "w": 1.79
       },
       {
-        "s": "6501.T",
-        "n": "Hitachi Ltd",
-        "w": 2.83
+        "s": "AVGO",
+        "n": "Broadcom Inc",
+        "w": 1.61
       },
       {
-        "s": "6758.T",
-        "n": "Sony Group Corp",
-        "w": 2.75
+        "s": "GOOG",
+        "n": "Alphabet Inc Class C",
+        "w": 1.5
       },
       {
-        "s": "8411.T",
-        "n": "Mizuho Financial Group Inc",
-        "w": 2.36
+        "s": "META",
+        "n": "Meta Platforms Inc Class A",
+        "w": 1.2
       },
       {
-        "s": "9984.T",
-        "n": "SoftBank Group Corp",
-        "w": 2.27
+        "s": "MU",
+        "n": "Micron Technology Inc",
+        "w": 1.04
       }
     ],
     "EWT": [
@@ -9587,39 +9535,91 @@
         "n": "Asia Vital Components Co Ltd",
         "w": 1.88
       }
+    ],
+    "EWJ": [
+      {
+        "s": "8306.T",
+        "n": "Mitsubishi UFJ Financial Group Inc",
+        "w": 4.63
+      },
+      {
+        "s": "7203.T",
+        "n": "Toyota Motor Corp",
+        "w": 3.53
+      },
+      {
+        "s": "8316.T",
+        "n": "Sumitomo Mitsui Financial Group Inc",
+        "w": 2.99
+      },
+      {
+        "s": "8035.T",
+        "n": "Tokyo Electron Ltd",
+        "w": 2.96
+      },
+      {
+        "s": "6857.T",
+        "n": "Advantest Corp",
+        "w": 2.9
+      },
+      {
+        "s": "6098.T",
+        "n": "Recruit Holdings Co Ltd",
+        "w": 2.84
+      },
+      {
+        "s": "6501.T",
+        "n": "Hitachi Ltd",
+        "w": 2.83
+      },
+      {
+        "s": "6758.T",
+        "n": "Sony Group Corp",
+        "w": 2.75
+      },
+      {
+        "s": "8411.T",
+        "n": "Mizuho Financial Group Inc",
+        "w": 2.36
+      },
+      {
+        "s": "9984.T",
+        "n": "SoftBank Group Corp",
+        "w": 2.27
+      }
     ]
   },
   "breadth": {
     "fear_greed": {
-      "score": 35.3,
+      "score": 34.7,
       "rating": "Fear",
-      "asof": "2026-09-22T23:41:10+00:00"
+      "asof": "2026-09-23T23:53:14+00:00"
     },
     "naaim": null,
     "advance_decline": {
-      "advancers": 249,
-      "decliners": 253,
-      "unchanged": 1
+      "advancers": 1,
+      "decliners": 0,
+      "unchanged": 502
     },
     "new_high_low": {
-      "new_highs": 12,
-      "new_lows": 20,
-      "near_highs": 19,
-      "near_lows": 25
+      "new_highs": 9,
+      "new_lows": 19,
+      "near_highs": 14,
+      "near_lows": 34
     },
-    "pct_above_sma20": 29.2,
-    "pct_above_sma50": 31.4,
-    "pct_above_sma200": 51.1,
+    "pct_above_sma20": 27.2,
+    "pct_above_sma50": 30.0,
+    "pct_above_sma200": 52.9,
     "universe": {
       "expected": 503,
       "covered": 503
     },
-    "asof": "2026-09-22"
+    "asof": "2026-09-23"
   },
   "warnings": [
     "US2Y: no source returned a value",
     "yields: no data for ['US2Y']",
     "NAAIM unavailable"
   ],
-  "data_asof": "2026-09-22"
+  "data_asof": "2026-09-24"
 }
