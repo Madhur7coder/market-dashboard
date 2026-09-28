@@ -6,6 +6,11 @@
 yfinance~=1.7.0
 pandas~=3.0.2
 numpy~=2.4.0
+
+# Used by fetch_funds.py only. fetch_data.py dropped its HTML-scraping paths
+# (S&P 500 breadth via Wikipedia, NAAIM, Fear & Greed, the FRED/Treasury US2Y
+# fallback) when those sources stopped returning usable values, so the main
+# dashboard no longer needs an HTML parser or a direct HTTP client.
 requests~=2.33.0
 beautifulsoup4~=4.14.0
 lxml~=6.1.0

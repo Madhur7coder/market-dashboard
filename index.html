@@ -453,7 +453,6 @@ const META = {
   'CL1!':   { name:'WTI Crude', sym:'CL1!', unit:'$/bbl' },
   'NG1!':   { name:'Natural Gas',   sym:'NG1!', unit:'$/mmBtu' },
   // Yields
-  'US2Y':   { name:'2-Year Treasury', sym:'US02Y', isYield:true },
   'US10Y':  { name:'10-Year Treasury', sym:'US10Y', isYield:true },
   'US30Y':  { name:'30-Year Treasury', sym:'US30Y', isYield:true },
   // Global
@@ -461,7 +460,6 @@ const META = {
   '^KS11':  { name:'KOSPI',           sym:'KOSPI' },
   '^NSEI':  { name:'Nifty 50',        sym:'NIFTY' },
   '000001.SS':{ name:'Shanghai',sym:'SHCOMP'},
-  '000300.SS':{ name:'CSI 300',       sym:'CSI300'},
   '^HSI':   { name:'Hang Seng',       sym:'HSI' },
   '^FTSE':  { name:'FTSE 100',        sym:'UKX' },
   '^FCHI':  { name:'CAC 40',          sym:'CAC' },
@@ -494,14 +492,9 @@ const META = {
   'XLC':    { name:'Comm. Services',     sym:'XLC' },
   'XLP':    { name:'Consumer Staples',   sym:'XLP' },
   // EW Sectors
-  'RYT':    { name:'EW Technology',      sym:'RYT' },
-  'RYH':    { name:'EW Health Care',     sym:'RYH' },
-  'RYF':    { name:'EW Financials',      sym:'RYF' },
-  'RYE':    { name:'EW Energy',          sym:'RYE' },
   'RCD':    { name:'EW Consumer Disc.',  sym:'RCD' },
   'RGI':    { name:'EW Industrials',     sym:'RGI' },
   'RTM':    { name:'EW Materials',       sym:'RTM' },
-  'RYU':    { name:'EW Utilities',       sym:'RYU' },
   'EWRE':   { name:'EW Real Estate',     sym:'EWRE' },
   'EWCO':   { name:'EW Comm. Services',  sym:'EWCO' },
   'RHS':    { name:'EW Consumer Stap.',  sym:'RHS' },
@@ -575,7 +568,6 @@ const HOLDINGS = {
   XLC:  [{s:'META',n:'Meta',w:22.4},{s:'GOOGL',n:'Alphabet A',w:12.8},{s:'GOOG',n:'Alphabet C',w:11.4},{s:'NFLX',n:'Netflix',w:8.4},{s:'CHTR',n:'Charter Comm.',w:4.8},{s:'CMCSA',n:'Comcast',w:4.4},{s:'DIS',n:'Disney',w:4.1},{s:'ATVI',n:'Activision',w:3.8},{s:'EA',n:'Electronic Arts',w:3.4},{s:'TTWO',n:'Take-Two',w:3.1}],
   XLP:  [{s:'PG',n:'Procter & Gamble',w:14.4},{s:'KO',n:'Coca-Cola',w:10.8},{s:'PM',n:'Philip Morris',w:8.4},{s:'COST',n:'Costco',w:8.1},{s:'WMT',n:'Walmart',w:7.8},{s:'PEP',n:'PepsiCo',w:7.4},{s:'MO',n:'Altria',w:5.4},{s:'MDLZ',n:'Mondelez',w:4.8},{s:'CL',n:'Colgate-Palmolive',w:4.4},{s:'STZ',n:'Constellation Brands',w:3.8}],
   // EW Sectors (representative holdings)
-  RYT:  [{s:'NVDA',n:'Nvidia',w:1.2},{s:'AAPL',n:'Apple',w:1.1},{s:'MSFT',n:'Microsoft',w:1.1},{s:'AMD',n:'AMD',w:1.0},{s:'AVGO',n:'Broadcom',w:1.0},{s:'ORCL',n:'Oracle',w:1.0},{s:'ACN',n:'Accenture',w:0.9},{s:'NOW',n:'ServiceNow',w:0.9},{s:'CSCO',n:'Cisco',w:0.9},{s:'IBM',n:'IBM',w:0.9}],
   // Sub-market
   IVW:  [{s:'AAPL',n:'Apple',w:11.2},{s:'MSFT',n:'Microsoft',w:9.8},{s:'NVDA',n:'Nvidia',w:9.4},{s:'AMZN',n:'Amazon',w:5.8},{s:'META',n:'Meta',w:4.4},{s:'GOOGL',n:'Alphabet A',w:3.8},{s:'TSLA',n:'Tesla',w:3.2},{s:'GOOG',n:'Alphabet C',w:3.1},{s:'AVGO',n:'Broadcom',w:2.6},{s:'COST',n:'Costco',w:2.4}],
   IVE:  [{s:'BRK.B',n:'Berkshire B',w:4.8},{s:'JPM',n:'JPMorgan Chase',w:4.4},{s:'XOM',n:'ExxonMobil',w:4.1},{s:'JNJ',n:'J&J',w:3.8},{s:'UNH',n:'UnitedHealth',w:3.4},{s:'BAC',n:'Bank of America',w:2.8},{s:'CVX',n:'Chevron',w:2.6},{s:'LLY',n:'Eli Lilly',w:2.4},{s:'WFC',n:'Wells Fargo',w:2.1},{s:'PG',n:'Procter & Gamble',w:1.9}],
@@ -631,7 +623,6 @@ const DEMO = {
     {sym:'NG1!',price:4.13,d1:2.84,w1:8.44,hi52:-14.22,ytd:42.84,spark:[1.2,3.8,2.4,1.8,2.84]},
   ],
   yields: [
-    {sym:'US2Y',price:4.28,d1:-3.2,w1:-1.84,hi52:-18.44,ytd:-0.84,spark:[0.2,-1.8,-2.4,-1.4,-3.2]},
     {sym:'US10Y',price:4.48,d1:1.8,w1:0.44,hi52:-8.22,ytd:1.44,spark:[-0.8,1.4,2.2,0.8,1.8]},
     {sym:'US30Y',price:4.78,d1:2.4,w1:1.22,hi52:-6.44,ytd:2.84,spark:[-0.4,1.8,2.8,1.2,2.4]},
   ],
@@ -640,7 +631,6 @@ const DEMO = {
     {sym:'^KS11',price:2548,d1:0.44,w1:1.22,hi52:-14.84,ytd:2.44,spark:[0.2,0.8,0.4,0.2,0.44]},
     {sym:'^NSEI',price:22840,d1:0.82,w1:2.44,hi52:-9.84,ytd:1.84,spark:[0.4,1.2,0.8,0.4,0.82]},
     {sym:'000001.SS',price:3348,d1:0.18,w1:0.84,hi52:-8.44,ytd:4.22,spark:[-0.2,0.6,0.4,0.1,0.18]},
-    {sym:'000300.SS',price:3912,d1:0.22,w1:0.94,hi52:-7.84,ytd:3.84,spark:[-0.1,0.8,0.6,0.2,0.22]},
     {sym:'^HSI',price:22984,d1:-0.44,w1:1.84,hi52:-12.22,ytd:16.84,spark:[0.8,2.4,1.2,-0.2,-0.44]},
     {sym:'^FTSE',price:8548,d1:-0.28,w1:-0.84,hi52:-2.44,ytd:4.84,spark:[0.2,-0.4,-0.6,-0.1,-0.28]},
     {sym:'^FCHI',price:7984,d1:-0.62,w1:-1.44,hi52:-8.84,ytd:8.44,spark:[0.4,-0.8,-1.2,-0.4,-0.62]},
@@ -675,19 +665,6 @@ const DEMO = {
     {sym:'XLE',d1:-1.44,w1:-0.44,hi52:-18.44,ytd:-8.84,spark:[-0.8,-1.2,-0.4,-0.6,-1.44]},
     {sym:'XLC',d1:-1.22,w1:-2.44,hi52:-8.84,ytd:-1.84,spark:[-0.6,-0.8,-1.4,-0.8,-1.22]},
     {sym:'XLY',d1:-1.22,w1:-1.84,hi52:-12.44,ytd:-4.84,spark:[-0.6,-0.8,-1.2,-0.8,-1.22]},
-  ].sort((a,b)=>b.w1-a.w1),
-  sectorew: [
-    {sym:'RYT',d1:-0.72,w1:3.44,hi52:-7.84,ytd:0.84,spark:[0.4,2.1,1.0,-0.2,-0.72]},
-    {sym:'RYH',d1:0.22,w1:2.44,hi52:-5.84,ytd:2.84,spark:[0.1,1.4,0.8,0.1,0.22]},
-    {sym:'RYF',d1:-0.44,w1:2.22,hi52:-4.84,ytd:7.44,spark:[0.2,1.2,0.6,-0.2,-0.44]},
-    {sym:'RYU',d1:0.62,w1:2.04,hi52:-7.84,ytd:5.84,spark:[0.3,1.6,0.5,0.3,0.62]},
-    {sym:'RHS',d1:0.18,w1:1.64,hi52:-5.44,ytd:4.84,spark:[0.1,1.0,0.5,0.1,0.18]},
-    {sym:'RTM',d1:0.44,w1:1.84,hi52:-9.84,ytd:2.84,spark:[0.2,1.4,0.4,0.2,0.44]},
-    {sym:'RGI',d1:-0.22,w1:1.22,hi52:-6.84,ytd:1.84,spark:[0.1,0.8,0.4,-0.1,-0.22]},
-    {sym:'EWRE',d1:0.22,w1:1.22,hi52:-11.84,ytd:0.84,spark:[0.1,0.8,0.4,0.1,0.22]},
-    {sym:'RYE',d1:-1.22,w1:-0.84,hi52:-19.84,ytd:-9.84,spark:[-0.6,-1.1,-0.6,-0.4,-1.22]},
-    {sym:'EWCO',d1:-1.04,w1:-2.24,hi52:-9.84,ytd:-2.44,spark:[-0.5,-0.7,-1.2,-0.7,-1.04]},
-    {sym:'RCD',d1:-1.44,w1:-2.44,hi52:-14.84,ytd:-6.44,spark:[-0.8,-1.0,-1.4,-1.0,-1.44]},
   ].sort((a,b)=>b.w1-a.w1),
   thematic: [
     {sym:'BOTZ',price:32.84,d1:-1.44,w1:4.84,hi52:-12.44,ytd:2.84,spark:[0.8,2.8,1.4,-0.4,-1.44]},
@@ -939,9 +916,17 @@ function renderList(key, tbodyId, all, opts){
   bar.innerHTML = `<button type="button" class="more-btn" aria-expanded="${expanded[key]}" onclick="toggleMore('${key}')">` +
     (expanded[key] ? `▴ Show top ${TOP_N}` : `▾ Show all ${all.length}`) + `</button>`;
 }
+// Re-render only the list that was toggled. This used to call renderAll, which
+// tore down and rebuilt every tbody on the page — futures, metals, yields,
+// global, sector, crypto and all — to expand one table from 10 rows to 81.
+const LISTS = {
+  thematic: {tbody:'t-thematic', opts:{rank:true,hasPrice:true,hasHoldings:true,showEma:true}},
+};
 function toggleMore(key){
   expanded[key] = !expanded[key];
-  if(DATA) renderAll(DATA);
+  const cfg = LISTS[key];
+  if(!cfg || !DATA){ if(DATA) renderAll(DATA); return; }
+  renderList(key, cfg.tbody, DATA[key] || [], cfg.opts);
 }
 
 function renderAll(d) {
@@ -964,7 +949,7 @@ function renderAll(d) {
 
   // The fetcher pulls 81 thematic ETFs; the table shows the top 10 with a
   // toggle to the full list rather than silently discarding the other 71.
-  renderList('thematic', 't-thematic', d.thematic||[], {rank:true,hasPrice:true,hasHoldings:true,showEma:true});
+  renderList('thematic', 't-thematic', d.thematic||[], LISTS.thematic.opts);
 
   // Crypto — same builder as everything else now, so it gets the same null
   // guards, escaping and decimal rules instead of its own copy.
@@ -1129,9 +1114,9 @@ function toTvSym(raw) {
     'GC1!':'OANDA:XAUUSD','SI1!':'OANDA:XAGUSD','HG1!':'CAPITALCOM:COPPER',
     'PL1!':'OANDA:XPTUSD','PA1!':'OANDA:XPDUSD','ALI1!':'AMEX:JJU',
     'CL1!':'OANDA:WTICOUSD','NG1!':'OANDA:NATGASUSD',
-    'US2Y':'NASDAQ:SHY','US10Y':'NASDAQ:IEF','US30Y':'NASDAQ:TLT',
+    'US10Y':'NASDAQ:IEF','US30Y':'NASDAQ:TLT',
     '^N225':'OANDA:JP225USD','^KS11':'AMEX:EWY','^NSEI':'AMEX:INDA',
-    '000001.SS':'SSE:000001','000300.SS':'SZSE:399300',
+    '000001.SS':'SSE:000001',
     '^HSI':'FXOPEN:HSI','^FTSE':'OANDA:UK100GBP','^FCHI':'OANDA:FR40EUR',
     '^GDAXI':'OANDA:DE30EUR','DXY':'CAPITALCOM:DXY','UKX':'OANDA:UK100GBP',
     'BTC':'CRYPTOCAP:BTC','ETH':'CRYPTOCAP:ETH',
@@ -1277,7 +1262,6 @@ const META_EXTRA = {
   'RSPU':{name:'Utilities EW',sym:'RSPU'},'RSPM':{name:'Materials EW',sym:'RSPM'},
   'RSPH':{name:'Health Care EW',sym:'RSPH'},'RSPR':{name:'Real Estate EW',sym:'RSPR'},
   'RSPS':{name:'Cons Staples EW',sym:'RSPS'},'RSPC':{name:'Comm Svcs EW',sym:'RSPC'},
-  'US2Y':{name:'2Y Treasury',sym:'US2Y'},
   'US10Y':{name:'10Y Treasury',sym:'US10Y'},'US30Y':{name:'30Y Treasury',sym:'US30Y'},
   'GREK':{name:'Greece',sym:'GREK',flag:'🇬🇷'},'ARGT':{name:'Argentina',sym:'ARGT',flag:'🇦🇷'},
   'EWS':{name:'Singapore',sym:'EWS',flag:'🇸🇬'},'EWP':{name:'Spain',sym:'EWP',flag:'🇪🇸'},

@@ -2,12 +2,9 @@ import json
 import time
 import datetime
 import sys
-import csv
 import math
-import xml.etree.ElementTree as ET
 import concurrent.futures
 from pathlib import Path
-from io import StringIO
 try:
     import yfinance as yf
 except ImportError:
@@ -19,9 +16,8 @@ try:
     import pandas as pd
 except ImportError:
     import subprocess
-    subprocess.check_call([sys.executable, "-m", "pip", "install", "pandas", "lxml", "html5lib"])
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "pandas"])
     import pandas as pd
-import requests
 
 # ── PATHS ──────────────────────────────────────────────────────────────────────
 # Everything is resolved relative to this file, never the working directory, so
@@ -51,7 +47,6 @@ def utcnow():
 ETF_MAIN   = ['SPY','QQQ','DIA','IWM']
 SUBMARKET  = ['IVW','IVE','IJK','IJJ','IJT','IJS','MGK','VUG','VTV']
 SECTOR     = ['XLK','XLV','XLF','XLE','XLY','XLI','XLB','XLU','XLRE','XLC','XLP']
-SECTOR_EW  = []
 THEMATIC   = ['BOTZ','HACK','SOXX','ICLN','SKYY','XBI','ITA','FINX','ARKG','URA',
               'AIQ','CIBR','ROBO','ARKK','DRIV','OGIG','ACES','PAVE','HERO','CLOU']
 COUNTRY    = ['ARGT','EUFN','MCHI','EWZ','EWI','EWY','EWH',
@@ -60,7 +55,7 @@ COUNTRY    = ['ARGT','EUFN','MCHI','EWZ','EWI','EWY','EWH',
 FUTURES    = ['ES=F','NQ=F','RTY=F','YM=F']
 METALS     = ['GC=F','SI=F','HG=F','PL=F','PA=F']
 ENERGY     = ['CL=F','NG=F']
-GLOBAL_IDX = ['^N225','^KS11','^NSEI','000001.SS','000300.SS','^HSI','^FTSE','^FCHI','^GDAXI']
+GLOBAL_IDX = ['^N225','^KS11','^NSEI','000001.SS','^HSI','^FTSE','^FCHI','^GDAXI']
 YIELDS     = ['^TNX','^TYX']
 DX_VIX     = ['DX-Y.NYB','^VIX']
 CRYPTO_YF  = ['BTC-USD','ETH-USD','SOL-USD','XRP-USD']
@@ -73,7 +68,6 @@ if config_path.exists():
     ETF_MAIN   = CFG.get('etfmain',    ETF_MAIN)
     SUBMARKET  = CFG.get('submarket',  SUBMARKET)
     SECTOR     = CFG.get('sectors',    SECTOR)
-    SECTOR_EW  = CFG.get('sectors_ew', SECTOR_EW)
     THEMATIC   = CFG.get('thematic',   THEMATIC)
     COUNTRY    = CFG.get('country',    COUNTRY)
     FUTURES    = CFG.get('futures',    FUTURES)
@@ -128,85 +122,6 @@ def _series_record(sym, dates, values):
         'ytd_bps': round((price - ytd_base) * 100, 1) if ytd_base else None,
         'spark': spark,
     }
-
-def fetch_treasury_2y():
-    # FRED carries the full daily history, so we can derive the same metrics we
-    # compute for every other series rather than shipping placeholder zeros.
-    try:
-        url = 'https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS2'
-        resp = requests.get(url, timeout=15, headers={'User-Agent': 'Mozilla/5.0'})
-        resp.raise_for_status()
-        reader = csv.reader(StringIO(resp.text))
-        rows = list(reader)
-        header = [h.strip().lower() for h in rows[0]] if rows else []
-        # FRED renamed this column from DATE to observation_date; accept either,
-        # and fall back to positional access if they rename it again.
-        try:
-            di = next(i for i, h in enumerate(header) if 'date' in h)
-        except StopIteration:
-            di = 0
-        try:
-            vi = next(i for i, h in enumerate(header) if 'dgs2' in h)
-        except StopIteration:
-            vi = 1
-        dates, values = [], []
-        for row in rows[1:]:
-            if len(row) <= max(di, vi):
-                continue
-            raw = row[vi].strip()
-            if raw in ('.', '', 'VALUE'):
-                continue
-            try:
-                dates.append(datetime.date.fromisoformat(row[di].strip()))
-                values.append(float(raw))
-            except ValueError:
-                continue
-        if values:
-            rec = _series_record('US2Y', dates, values)
-            age = (datetime.date.today() - dates[-1]).days
-            if age > 5:
-                warn(f"US2Y: FRED series is {age} days stale (last {dates[-1]})")
-            print(f"  ✓ US2Y = {values[-1]}% (FRED, {len(values)} obs)")
-            return rec
-    except Exception as e:
-        print(f"  FRED CSV failed: {e}")
-    try:
-        now = utcnow()
-        # Query this month and last month — on the 1st of a month the current
-        # month's file is empty and the fallback would otherwise return nothing.
-        months = [now.strftime('%Y%m'),
-                  (now.replace(day=1) - datetime.timedelta(days=1)).strftime('%Y%m')]
-        for month in months:
-            url = ("https://home.treasury.gov/resource-center/data-chart-center/"
-                   "interest-rates/pages/xml?data=daily_treasury_yield_curve"
-                   f"&field_tdr_date_value={month}")
-            resp = requests.get(url, timeout=15, headers={'User-Agent': 'Mozilla/5.0'})
-            resp.raise_for_status()
-            ns_m = 'http://schemas.microsoft.com/ado/2007/08/dataservices/metadata'
-            ns_d = 'http://schemas.microsoft.com/ado/2007/08/dataservices'
-            root = ET.fromstring(resp.content)
-            entries = root.findall(f'.//{{{ns_m}}}properties')
-            parsed = []
-            for e in entries:
-                dv = e.find(f'{{{ns_d}}}NEW_DATE')
-                rv = e.find(f'{{{ns_d}}}BC_2YEAR')
-                if dv is not None and dv.text and rv is not None and rv.text:
-                    try:
-                        parsed.append((datetime.date.fromisoformat(dv.text[:10]), float(rv.text)))
-                    except ValueError:
-                        continue
-            if parsed:
-                parsed.sort()   # don't assume the feed is already in date order
-                rate = parsed[-1][1]
-                print(f"  ✓ US2Y = {rate}% (Treasury XML, {parsed[-1][0]})")
-                # Only a level is available here — leave the deltas null rather
-                # than inventing zeros the dashboard would render as "unchanged".
-                return {'sym': 'US2Y', 'price': round(rate, 4), 'd1': None, 'w1': None,
-                        'hi52': None, 'ytd': None, 'spark': []}
-    except Exception as e:
-        print(f"  Treasury XML failed: {e}")
-    warn("US2Y: no source returned a value")
-    return None
 
 # ── ETF HOLDINGS ─────────────────────────────────────────────────────────────────────────────────────────
 def _safe_float(val):
@@ -508,7 +423,7 @@ def extract_metrics(df, sym):
     # Treasury yields are quoted in percent, so a *percent change* of the yield
     # is not what anyone means by "the 10-year moved X". Ship the real basis-point
     # move alongside, and let the dashboard label the column honestly.
-    if out_sym in ('US2Y', 'US10Y', 'US30Y'):
+    if out_sym in ('US10Y', 'US30Y'):
         result['d1_bps']  = round((price - float(closes[-2])) * 100, 1) if len(closes) >= 2 else None
         result['w1_bps']  = round((price - float(closes[-6])) * 100, 1) if len(closes) >= 6 else None
         result['ytd_bps'] = round((price - ytd_base) * 100, 1) if ytd_base is not None else None
@@ -540,242 +455,7 @@ def extract_metrics(df, sym):
         result['name'] = crypto_names[sym]
     return result
 
-# ── FEAR & GREED ──────────────────────────────────────────────────────────────────────────────
-def fetch_fear_greed():
-    urls = [
-        "https://production.dataviz.cnn.io/index/fearandgreed/graphdata",
-    ]
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
-        'Accept': 'application/json',
-        'Referer': 'https://edition.cnn.com/',
-    }
-    for attempt in range(3):
-        try:
-            r = requests.get(urls[0], timeout=15, headers=headers)
-            print(f"  Fear & Greed HTTP {r.status_code}")
-            r.raise_for_status()
-            data = r.json()
-            fg = data.get('fear_and_greed') or {}
-            # No silent defaults. The old code fell back to score=50/"neutral",
-            # so a CNN schema change would have published a plausible-looking
-            # fabricated reading instead of failing visibly.
-            if 'score' not in fg:
-                raise ValueError("response has no fear_and_greed.score")
-            score = round(float(fg['score']), 1)
-            if not 0 <= score <= 100:
-                raise ValueError(f"score {score} out of range")
-            rating = str(fg.get('rating') or '').replace('_', ' ').title() or None
-            print(f"  ✓ Fear & Greed: {score} ({rating})")
-            return {'score': score, 'rating': rating,
-                    'asof': (fg.get('timestamp') or None)}
-        except Exception as e:
-            print(f"  Fear & Greed attempt {attempt+1} failed: {e}")
-            if attempt < 2:
-                time.sleep(3 * (attempt + 1))
-    warn("Fear & Greed unavailable")
-    return None
-
-# ── NAAIM EXPOSURE INDEX ────────────────────────────────────────────────────────────────────────────
-def _naaim_from_table(table):
-    """Pull (date, mean exposure) out of a NAAIM table.
-
-    The old version grabbed the first <table> on the page and then the first
-    number in *any* column that happened to fall in -200..300 — a column reorder
-    would silently return the wrong series (e.g. a quartile instead of the mean).
-    Here we locate the mean-exposure column by its header and fall back to the
-    first numeric column only if no header matches."""
-    from bs4 import BeautifulSoup  # noqa: F401  (import kept local, as before)
-    header_cells = [th.get_text(strip=True).lower()
-                    for th in table.find_all('th')]
-    col = None
-    for i, h in enumerate(header_cells):
-        if 'mean' in h or 'naaim number' in h or 'exposure index' in h:
-            col = i
-            break
-    for row in table.find_all('tr')[1:]:
-        cells = [td.get_text(strip=True) for td in row.find_all('td')]
-        if len(cells) < 2:
-            continue
-        date_str = cells[0]
-        candidates = []
-        if col is not None and col < len(cells):
-            candidates = [cells[col]]
-        else:
-            candidates = cells[1:]
-        for cell in candidates:
-            try:
-                val = float(cell.replace(',', '').replace('%', ''))
-            except ValueError:
-                continue
-            if -200 <= val <= 300:
-                return date_str, round(val, 1)
-    return None, None
-
-def fetch_naaim():
-    from bs4 import BeautifulSoup
-    url = "https://www.naaim.org/programs/naaim-exposure-index/"
-    for attempt in range(3):
-        try:
-            r = requests.get(url, timeout=20, headers={
-                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) '
-                              'AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124 Safari/537.36',
-                'Accept': 'text/html,application/xhtml+xml',
-            })
-            r.raise_for_status()
-            soup = BeautifulSoup(r.text, 'html.parser')
-            tables = soup.find_all('table')
-            if not tables:
-                raise ValueError("no table on NAAIM page")
-            for table in tables:
-                date_str, val = _naaim_from_table(table)
-                if val is not None:
-                    print(f"  ✓ NAAIM: {val:.1f}% ({date_str})")
-                    return {'value': val, 'date': date_str}
-            raise ValueError("no parsable exposure value in any table")
-        except Exception as e:
-            print(f"  NAAIM attempt {attempt+1} failed: {e}")
-            if attempt < 2:
-                time.sleep(3 * (attempt + 1))
-    warn("NAAIM unavailable")
-    return None
-
-# ── S&P 500 BREADTH COMPUTATION ──────────────────────────────────────────────────────────────────────
-def compute_sp500_breadth():
-    try:
-        from bs4 import BeautifulSoup
-        print("  Fetching S&P 500 component list...")
-        r = requests.get('https://en.wikipedia.org/wiki/List_of_S%26P_500_companies',
-                         timeout=15, headers={'User-Agent': 'Mozilla/5.0'})
-        r.raise_for_status()
-        soup = BeautifulSoup(r.text, 'html.parser')
-        table = soup.find('table', {'id': 'constituents'})
-        if not table:
-            table = soup.find('table', {'class': 'wikitable'})
-        if not table:
-            raise ValueError("constituents table not found")
-        tickers = []
-        for row in table.find_all('tr')[1:]:
-            cells = row.find_all('td')
-            if not cells:
-                continue
-            t = cells[0].get_text(strip=True).replace('.', '-').upper()
-            # Guard against grabbing the wrong table/column: real tickers are
-            # 1-5 characters of A-Z plus an optional class suffix.
-            if 1 <= len(t) <= 6 and all(c.isalpha() or c == '-' for c in t):
-                tickers.append(t)
-        # The S&P 500 has ~500 members; anything far off means we parsed the
-        # wrong table and must not go on to publish breadth from it.
-        if len(tickers) < 400:
-            raise ValueError(f"parsed only {len(tickers)} constituents from Wikipedia")
-        print(f"  Downloading {len(tickers)} tickers (1 year of daily closes)...")
-        raw = yf.download(tickers, period='1y', interval='1d',
-                          auto_adjust=True, progress=False, threads=True)
-        if raw.empty:
-            raise ValueError("No data returned")
-
-        close = raw['Close'] if isinstance(raw.columns, pd.MultiIndex) else raw
-        close = close.dropna(axis=1, how='all')
-        covered = close.shape[1]
-        # A rate-limited batch used to be silently averaged over whatever
-        # survived; refuse to publish breadth computed off a thin sample.
-        if covered < len(tickers) * COVERAGE_FLOOR:
-            raise ValueError(f"only {covered}/{len(tickers)} constituents returned data")
-        close = close.ffill()
-        if len(close) < 5:
-            raise ValueError("Not enough trading days in data")
-
-        last = close.iloc[-1]
-        prev = close.iloc[-2]
-
-        changes = last - prev
-        advancers = int((changes > 0).sum())
-        decliners = int((changes < 0).sum())
-        unchanged = int(covered - advancers - decliners)
-        print(f"  A/D: {advancers} adv / {decliners} dec / {unchanged} unch")
-
-        window = close.iloc[-252:] if len(close) >= 252 else close
-        hi52 = window.max()
-        lo52 = window.min()
-        # A *new* 52-week high means today's close IS the highest close in the
-        # window — not "within 1% of it", which is what this used to count and
-        # report under the same label.
-        new_highs = int((last >= hi52).sum())
-        new_lows  = int((last <= lo52).sum())
-        # Keep the looser measure too, correctly named, since it is the more
-        # useful day-to-day signal.
-        near_highs = int((last >= hi52 * 0.99).sum())
-        near_lows  = int((last <= lo52 * 1.01).sum())
-        print(f"  NH/NL: {new_highs} highs / {new_lows} lows "
-              f"({near_highs}/{near_lows} within 1%)")
-
-        def pct_above(n):
-            # Return None, never 0.0 — "0% of the S&P is above its 200-day" is a
-            # maximally bearish reading and must never stand in for missing data.
-            if len(close) < n:
-                return None
-            sma = close.rolling(n).mean().iloc[-1]
-            valid = sma.dropna()
-            if valid.empty:
-                return None
-            return round(float((last[valid.index] > valid).sum()) / len(valid) * 100, 1)
-
-        p20  = pct_above(20)
-        p50  = pct_above(50)
-        p200 = pct_above(200)
-        print(f"  % above SMA: 20={p20} | 50={p50} | 200={p200}")
-
-        return {
-            'universe':        {'expected': len(tickers), 'covered': covered},
-            'advance_decline': {'advancers': advancers, 'decliners': decliners,
-                                'unchanged': unchanged},
-            'new_high_low':    {'new_highs': new_highs, 'new_lows': new_lows,
-                                'near_highs': near_highs, 'near_lows': near_lows},
-            'pct_above_sma20':  p20,
-            'pct_above_sma50':  p50,
-            'pct_above_sma200': p200,
-            'asof': close.index[-1].strftime('%Y-%m-%d'),
-        }
-    except Exception as e:
-        warn(f"S&P 500 breadth failed: {e}")
-        return None
-
-def fetch_breadth(previous=None):
-    """Fetch breadth & sentiment, keeping the previous value for any component
-    that failed. A full run used to overwrite this block wholesale, so one bad
-    scrape replaced good data with nulls — which the dashboard then rendered as
-    real, and maximally bearish, readings."""
-    previous = previous or {}
-    print("\nFetching market breadth & sentiment...")
-    fg = fetch_fear_greed()
-    nm = fetch_naaim()
-    sp = compute_sp500_breadth()
-
-    fresh = {
-        'fear_greed': fg,
-        'naaim':      nm,
-        'advance_decline':  sp.get('advance_decline')  if sp else None,
-        'new_high_low':     sp.get('new_high_low')     if sp else None,
-        'pct_above_sma20':  sp.get('pct_above_sma20')  if sp else None,
-        'pct_above_sma50':  sp.get('pct_above_sma50')  if sp else None,
-        'pct_above_sma200': sp.get('pct_above_sma200') if sp else None,
-        'universe':         sp.get('universe')         if sp else None,
-        'asof':             sp.get('asof')             if sp else None,
-    }
-
-    result = {}
-    for key, val in fresh.items():
-        if val is None and previous.get(key) is not None:
-            result[key] = previous[key]
-            # Mark it so the dashboard can show the value greyed out rather than
-            # passing off yesterday's number as today's.
-            result.setdefault('_stale', []).append(key)
-            print(f"  ↩ {key}: kept previous value (this run failed)")
-        else:
-            result[key] = val
-    return result
-
-# ── MAIN FETCH ──────────────────────────────────────────────────────────────────────────────────────────────────────
+# ── MAIN FETCH ────────────────────────────────────────────────────────
 def fetch_all(prices_only=False):
     existing = {}
     if OUT_PATH.exists():
@@ -790,17 +470,15 @@ def fetch_all(prices_only=False):
         'generated_at': utcnow().strftime('%Y-%m-%dT%H:%M:%SZ'),
         'futures':  [], 'dxvix':   [], 'metals':   [], 'commod':  [],
         'yields':   [], 'global':  [], 'etfmain':  [], 'submarket':[],
-        'sector':   [], 'sectorew':[], 'thematic': [], 'country': [],
+        'sector':   [], 'thematic': [], 'country': [],
         'crypto':   [],
         'holdings': existing.get('holdings', {}),
-        'breadth':  existing.get('breadth',  {}),
     }
 
     yf_etf_batches = [
         ('etfmain',   ETF_MAIN),
         ('submarket', SUBMARKET),
         ('sector',    SECTOR),
-        ('sectorew',  SECTOR_EW),
         ('thematic',  THEMATIC),
         ('country',   COUNTRY),
     ]
@@ -816,10 +494,19 @@ def fetch_all(prices_only=False):
         ('commod',    ENERGY),
     ]
 
+    # World indices used to be pulled one symbol at a time — 8 sequential
+    # requests, each with its own 0.3s pause and up to 3 retries with 2-4s
+    # backoff, for data one batched call returns. Batch first, then retry only
+    # the stragglers individually, which is both faster and no less robust:
+    # a batch that drops a symbol still gets it a second chance on its own.
     for key, tickers in yf_individual_batches:
         if not tickers: continue
-        print(f"Fetching {key} ({len(tickers)} tickers) via yfinance (individual)...")
-        raw = fetch_individual(tickers)
+        print(f"Fetching {key} ({len(tickers)} tickers) via yfinance...")
+        raw = fetch_batch(tickers)
+        stragglers = [s for s in tickers if s not in raw]
+        if stragglers:
+            print(f"  retrying {len(stragglers)} individually: {stragglers}")
+            raw.update(fetch_individual(stragglers))
         for yf_sym in tickers:
             rec = raw.get(yf_sym)
             if rec:
@@ -847,9 +534,6 @@ def fetch_all(prices_only=False):
             yield_map = {'^TNX': 'US10Y', '^TYX': 'US30Y'}
             rec['sym'] = yield_map.get(yf_sym, rec['sym'])
             output['yields'].append(rec)
-    rec_2y = fetch_treasury_2y()
-    if rec_2y:
-        output['yields'].insert(0, rec_2y)
 
     # ── PER-SYMBOL MERGE ───────────────────────────────────────────────────────
     # The old logic only restored a section when it came back COMPLETELY empty.
@@ -858,12 +542,10 @@ def fetch_all(prices_only=False):
     # the symbol level instead: every ticker we expected either has fresh data or
     # falls back to its last known record, flagged stale.
     #
-    # Sections explicitly configured empty (e.g. sectorew) stay empty.
     expected_syms = {
         'etfmain':   ETF_MAIN,
         'submarket': SUBMARKET,
         'sector':    SECTOR,
-        'sectorew':  SECTOR_EW,
         'thematic':  THEMATIC,
         'country':   COUNTRY,
         'crypto':    CRYPTO_YF,
@@ -878,8 +560,6 @@ def fetch_all(prices_only=False):
         if not source:
             continue
         want = {TICKER_REMAP.get(s, s) for s in source}
-        if key == 'yields':
-            want |= {'US2Y'}   # sourced from FRED, not the yfinance list
         have = {r.get('sym') for r in output.get(key, [])}
         missing = want - have
         if not missing:
@@ -907,33 +587,73 @@ def fetch_all(prices_only=False):
 
     # Sort AFTER the merge so restored rows land in the right place. Records with
     # no 1W value sort last instead of being treated as 0%.
-    for key in ('country', 'sector', 'sectorew', 'thematic', 'submarket'):
+    for key in ('country', 'sector', 'thematic', 'submarket'):
         output[key].sort(key=lambda x: (x.get('w1') is None, -(x.get('w1') or 0)))
 
-    _yorder = {'US2Y': 0, 'US10Y': 1, 'US30Y': 2}
+    _yorder = {'US10Y': 0, 'US30Y': 1}
     output['yields'].sort(key=lambda x: _yorder.get(x.get('sym', ''), 99))
 
     if not prices_only:
-        holdings_tickers = list(dict.fromkeys(
-            ETF_MAIN + SUBMARKET + SECTOR + SECTOR_EW + THEMATIC + COUNTRY
-        ))
+        # Only the tables that actually render a holdings drawer: etfmain, sector
+        # and thematic. submarket and country are fetched for the daily brief's
+        # mover ranking, which never reads holdings, so pulling theirs was ~30
+        # ETF requests a run that nothing consumed.
+        holdings_tickers = list(dict.fromkeys(ETF_MAIN + SECTOR + THEMATIC))
         print(f"\nFetching ETF holdings ({len(holdings_tickers)} ETFs)...")
         output['holdings'] = fetch_etf_holdings(
             holdings_tickers, previous=existing.get('holdings') or {})
         print(f"✓ Holdings available for {len(output['holdings'])} ETFs")
-
-        output['breadth'] = fetch_breadth(previous=existing.get('breadth') or {})
-        print(f"✓ Breadth data fetched")
     else:
-        print("\nPrices-only mode — skipping holdings & breadth (preserved from last full run)")
+        print("\nPrices-only mode — skipping holdings (preserved from last full run)")
 
+    check_equity_freshness(output)
     return output
+
+def last_completed_us_session(now=None):
+    """The most recent weekday whose US cash session has finished.
+
+    The US close is 20:00 UTC (21:00 under DST); allow an hour past the later of
+    the two before expecting Yahoo to carry that day's daily bar. Weekends roll
+    back to Friday. Market holidays are not modelled — they make this one day
+    optimistic, which is why a mismatch is a warning and never a hard failure.
+    """
+    now = now or utcnow()
+    d = now.date()
+    if now.hour < 22:
+        d -= datetime.timedelta(days=1)
+    while d.weekday() >= 5:            # 5=Sat, 6=Sun
+        d -= datetime.timedelta(days=1)
+    return d
+
+def check_equity_freshness(output):
+    """Warn when the equity bars are a session behind everything else.
+
+    This is the failure that motivated the check: futures, metals, yields and
+    crypto all carried Friday's bar while every equity ETF was still on
+    Thursday's, and nothing anywhere said so — the page looked current and the
+    brief ranked a stale session's movers as though they were last night's.
+    """
+    equity_keys = ('etfmain', 'sector', 'thematic', 'submarket', 'country')
+    dates = [r['asof'] for k in equity_keys for r in output.get(k, [])
+             if r.get('asof') and not r.get('stale')]
+    if not dates:
+        warn("equities: no fresh bars at all in this run")
+        return
+    newest = max(dates)
+    expected = last_completed_us_session().isoformat()
+    if newest < expected:
+        warn(f"equities are a session behind: newest bar {newest}, "
+             f"expected {expected} — Yahoo had not consolidated the daily bar")
+    behind = sorted({d for d in dates if d < newest})
+    if behind:
+        counts = {d: sum(1 for x in dates if x == d) for d in behind}
+        warn(f"mixed equity session dates alongside {newest}: {counts}")
 
 if __name__ == '__main__':
     import argparse
     parser = argparse.ArgumentParser(description='Market Dashboard Data Fetcher')
     parser.add_argument('--prices-only', action='store_true',
-                        help='Refresh prices only; skip holdings & breadth (for intraday runs)')
+                        help="Refresh prices only; skip ETF holdings (for intraday runs)")
     args = parser.parse_args()
 
     mode = 'PRICES ONLY' if args.prices_only else 'FULL RUN'

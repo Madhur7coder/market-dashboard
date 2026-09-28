@@ -2,7 +2,6 @@
   "etfmain":    ["SPY","QQQ","DIA","IWM"],
   "submarket":  ["IVW","IVE","IJK","IJJ","IJT","IJS","MGK","VUG","VTV"],
   "sectors":    ["XLK","XLV","XLF","XLE","XLY","XLI","XLB","XLU","XLRE","XLC","XLP"],
-  "sectors_ew": [],
   "thematic": [
     "SLV","GDX","GDXJ","OUNZ","GLD","IDNA","REMX","WGMI","COPX","XBI",
     "FFTY","SPPP","LIT","NANR","OIH","IXC","DBC","PPH","TAN","TLT",
@@ -21,7 +20,7 @@
   "futures":  ["ES=F","NQ=F","RTY=F","YM=F"],
   "metals":   ["GC=F","SI=F","HG=F","PL=F","PA=F"],
   "energy":   ["CL=F","NG=F"],
-  "global":   ["^N225","^KS11","^NSEI","000001.SS","000300.SS","^HSI","^FTSE","^FCHI","^GDAXI"],
+  "global":   ["^N225","^KS11","^NSEI","000001.SS","^HSI","^FTSE","^FCHI","^GDAXI"],
   "yields":   ["^TNX","^TYX"],
   "dxvix":    ["DX-Y.NYB","^VIX"],
   "crypto":   ["BTC-USD","ETH-USD","SOL-USD","XRP-USD"]
