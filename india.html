@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#07090d">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>India &middot; Market Command Centre</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;1,300&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:      #07090d;
+  --bg2:     #0c0f15;
+  --bg3:     #111520;
+  --bg4:     #161b26;
+  --border:  #1c2535;
+  --border2: #243044;
+  --accent:  #00c8ff;
+  --accent2: #0099cc;
+  --adim:    rgba(0,200,255,0.07);
+  --green:   #00e676;
+  --gdim:    rgba(0,230,118,0.09);
+  --red:     #ff3355;
+  --rdim:    rgba(255,51,85,0.09);
+  --amber:   #ffb300;
+  --adim2:   rgba(255,179,0,0.09);
+  --text:    #ffffff;
+  --text2:   #c4c4c4;
+  --text3:   #949494;
+  --mono:    'IBM Plex Mono', monospace;
+  --sans:    'DM Sans', sans-serif;
+  color-scheme: dark;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:2px}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+}
+body{background:var(--bg);color:var(--text);font-family:var(--mono);font-size:13px;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(0,200,255,0.015) 1px,transparent 1px),linear-gradient(90deg,rgba(0,200,255,0.015) 1px,transparent 1px);background-size:48px 48px;pointer-events:none;z-index:0}
+.wrap{position:relative;z-index:1;max-width:1920px;margin:0 auto;padding:5px 8px}
+
+/* HEADER */
+.hdr{display:flex;align-items:center;justify-content:space-between;padding:5px 13px;background:var(--bg2);border:1px solid var(--border);border-radius:4px;margin-bottom:4px;position:relative;overflow:hidden;gap:10px;flex-wrap:wrap}
+.hdr::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent 0%,#ff9933 30%,#ffffff 50%,#138808 70%,transparent 100%)}
+.hdr-l{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.logo{font-size:18px;font-weight:600;letter-spacing:3px;color:var(--accent)}
+.hdr-meta{font-size:11px;color:var(--text2);letter-spacing:1px;line-height:1.45}
+.hdr-r{display:flex;gap:7px;align-items:center;flex-wrap:wrap}
+
+/* BUTTONS */
+.btn{display:inline-flex;align-items:center;gap:5px;padding:5px 11px;border:1px solid var(--border2);border-radius:3px;background:var(--bg3);color:var(--text2);font-family:var(--mono);font-size:11px;letter-spacing:1px;cursor:pointer;transition:all .15s;text-transform:uppercase;white-space:nowrap;text-decoration:none}
+.btn:hover{border-color:var(--accent);color:var(--accent);background:var(--adim)}
+.btn-pri{background:rgba(0,200,255,.12);border-color:var(--accent);color:var(--accent);font-weight:600}
+.btn-pri:hover{background:rgba(0,200,255,.2)}
+
+/* STATUS BAR */
+.api-bar{display:flex;align-items:center;gap:10px;padding:4px 11px;background:rgba(255,179,0,.05);border:1px solid rgba(255,179,0,.18);border-radius:3px;margin-bottom:5px;font-size:11px;color:var(--amber);letter-spacing:.5px;flex-wrap:wrap}
+.api-bar.ok{background:rgba(0,230,118,.04);border-color:rgba(0,230,118,.18);color:var(--green)}
+.api-bar.bad{background:rgba(255,51,85,.05);border-color:rgba(255,51,85,.2);color:var(--red)}
+
+/* SECTION */
+.sec{margin-bottom:6px}
+.sec-hdr{display:flex;align-items:center;gap:10px;padding:1px 0 2px;border-bottom:1px solid var(--border);margin-bottom:5px}
+.sec-n{font-size:10px;color:var(--accent);letter-spacing:2px;padding:1px 6px;border:1px solid rgba(0,200,255,.25);border-radius:2px}
+h2.sec-t{font-size:13px;font-weight:600;color:var(--text);letter-spacing:2px;text-transform:uppercase}
+.sec-sub{font-size:10px;color:var(--text3);letter-spacing:1px;margin-left:auto;text-align:right}
+
+/* CARD + TABLE */
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:4px;overflow:hidden;margin-bottom:5px}
+.card-lbl{padding:2px 8px;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--accent);background:var(--bg3);border-bottom:1px solid var(--border);font-weight:500;display:flex;justify-content:space-between;gap:8px}
+.card-lbl span.r{color:var(--text3);letter-spacing:1px;text-transform:none}
+table{width:100%;border-collapse:collapse}
+thead th{padding:2px 6px;text-align:right;font-size:9.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text3);background:var(--bg3);border-bottom:1px solid var(--border);font-weight:500;white-space:nowrap}
+thead th:first-child,thead th.l{text-align:left}
+tbody tr{border-bottom:1px solid rgba(28,37,53,.6);transition:background .1s}
+tbody tr:hover{background:rgba(0,200,255,.025)}
+tbody tr:last-child{border-bottom:none}
+td{padding:1px 6px;text-align:right;font-size:12px;line-height:1.3}
+td:first-child,td.l{text-align:left}
+td.l{white-space:nowrap}
+.tn{color:var(--text);font-weight:500;font-size:12px}
+.ts{color:var(--text3);font-size:10px;margin-left:5px;letter-spacing:.5px}
+.up{color:var(--green)}
+.dn{color:var(--red)}
+.neu{color:var(--text3)}
+.up-b{background:var(--gdim);color:var(--green);padding:1px 5px;border-radius:2px;font-size:10.5px}
+.dn-b{background:var(--rdim);color:var(--red);padding:1px 5px;border-radius:2px;font-size:10.5px}
+.neu-b{background:rgba(61,90,120,.15);color:var(--text3);padding:1px 5px;border-radius:2px;font-size:10.5px}
+.loading{text-align:center;color:var(--text3);padding:14px 6px;font-size:11px;letter-spacing:1px}
+
+/* STAT TILES — the headline breadth numbers are single values, so they get
+   tiles rather than a chart. */
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:5px}
+.tile{background:var(--bg2);border:1px solid var(--border);border-radius:4px;padding:6px 9px;min-width:0}
+.tile-l{font-size:9.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text3);margin-bottom:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tile-v{font-size:19px;font-weight:600;line-height:1.1;letter-spacing:.5px}
+.tile-s{font-size:10px;color:var(--text3);letter-spacing:.5px;margin-top:2px}
+.tile-s b{font-weight:500}
+
+/* MAGNITUDE BAR — one hue, light to dark by value. Anchored to a baseline,
+   2px surface gap, 4px rounded data end. */
+.mbar{position:relative;height:4px;background:var(--bg4);border-radius:2px;margin-top:4px;overflow:hidden}
+.mbar i{position:absolute;left:0;top:0;bottom:0;border-radius:0 2px 2px 0;background:var(--accent);min-width:2px}
+/* DIVERGING BAR — two poles from a centre line, neutral surface midpoint. */
+.dbar{position:relative;height:4px;background:var(--bg4);border-radius:2px;margin-top:4px}
+.dbar::before{content:'';position:absolute;left:50%;top:-1px;bottom:-1px;width:1px;background:var(--border2)}
+.dbar i{position:absolute;top:0;bottom:0;min-width:2px}
+.dbar i.p{left:50%;background:var(--green);border-radius:0 2px 2px 0}
+.dbar i.n{right:50%;background:var(--red);border-radius:2px 0 0 2px}
+/* In-cell bar for table magnitude columns */
+.cbar{display:inline-block;position:relative;width:34px;height:3px;background:var(--bg4);border-radius:2px;vertical-align:middle;margin-left:6px}
+.cbar i{position:absolute;left:0;top:0;bottom:0;background:var(--accent);border-radius:0 2px 2px 0;min-width:1px}
+
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:5px}
+.foot{padding:7px 11px;margin-top:6px;background:var(--bg2);border:1px solid var(--border);border-radius:4px;font-size:10.5px;color:var(--text3);letter-spacing:.5px;line-height:1.6}
+.foot a{color:var(--accent2);text-decoration:none;border-bottom:1px dotted rgba(0,153,204,.5)}
+.foot a:hover{color:var(--accent)}
+.sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+@media (max-width:900px){ .g2{grid-template-columns:1fr} }
+@media (max-width:700px){
+  .wrap{padding:4px}
+  .logo{font-size:15px;letter-spacing:2px}
+  .tile-v{font-size:17px}
+  .scrollx{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .scrollx table{min-width:560px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hdr">
+  <div class="hdr-l">
+    <h1 class="logo">India</h1>
+    <div class="hdr-meta">
+      <div style="letter-spacing:1px">NSE MARKET BREADTH &middot; NIFTY 50 / MIDCAP 150 / SMALLCAP 250</div>
+      <div id="asofLine" style="color:var(--text3)">&mdash;</div>
+    </div>
+  </div>
+  <div class="hdr-r">
+    <a href="index.html" class="btn btn-pri" title="Back to the main dashboard">&#9666; Back to Dashboard</a>
+    <a href="https://markets.ashwinraghavan.com/" target="_blank" rel="noopener" class="btn" title="Source dashboard by Ashwin Raghavan — opens in new tab">&#9656; Source</a>
+  </div>
+</header>
+
+<div class="api-bar" id="statusBar">&#11044; <span id="status">Loading India breadth data&hellip;</span></div>
+
+<!-- ══ INDICES ══ -->
+<section class="sec">
+  <div class="sec-hdr">
+    <span class="sec-n">01</span><h2 class="sec-t">Indices</h2>
+    <span class="sec-sub" id="idxSub">&mdash;</span>
+  </div>
+  <div class="tiles" id="idxTiles">
+    <div class="tile"><div class="loading">Loading&hellip;</div></div>
+  </div>
+</section>
+
+<!-- ══ BREADTH ══ -->
+<section class="sec">
+  <div class="sec-hdr">
+    <span class="sec-n">02</span><h2 class="sec-t">Breadth</h2>
+    <span class="sec-sub">Stockbee-style momentum &amp; participation</span>
+  </div>
+  <div class="tiles" id="brTiles">
+    <div class="tile"><div class="loading">Loading&hellip;</div></div>
+  </div>
+</section>
+
+<!-- ══ SECTORS ══ -->
+<section class="sec">
+  <div class="sec-hdr">
+    <span class="sec-n">03</span><h2 class="sec-t">Sectors</h2>
+    <span class="sec-sub" id="secSub">&mdash;</span>
+  </div>
+  <div class="card">
+    <div class="card-lbl">Where the strength is<span class="r" id="secDate"></span></div>
+    <div class="scrollx">
+    <table>
+      <caption class="sr">NSE sectors ranked by 60-day excess return over the Nifty, with participation and new-high counts.</caption>
+      <thead><tr>
+        <th scope="col" class="l">#</th><th scope="col" class="l">Sector</th>
+        <th scope="col">Stocks</th><th scope="col">Excess 20D</th><th scope="col">Excess 60D</th>
+        <th scope="col">% &gt; 50D</th><th scope="col">Net NH 10D</th>
+        <th scope="col">Hi 10D</th><th scope="col">Lo 10D</th>
+      </tr></thead>
+      <tbody id="t-sectors"><tr><td colspan="9" class="loading">Loading&hellip;</td></tr></tbody>
+    </table>
+    </div>
+  </div>
+</section>
+
+<!-- ══ HISTORY ══ -->
+<section class="sec">
+  <div class="sec-hdr">
+    <span class="sec-n">04</span><h2 class="sec-t">Last 30 Sessions</h2>
+    <span class="sec-sub">Most recent first</span>
+  </div>
+  <div class="card">
+    <div class="card-lbl">Breadth history<span class="r" id="histRange"></span></div>
+    <div class="scrollx">
+    <table>
+      <caption class="sr">Daily NSE breadth readings for the last 30 sessions.</caption>
+      <thead><tr>
+        <th scope="col" class="l">Date</th>
+        <th scope="col">Nifty</th><th scope="col">1D%</th>
+        <th scope="col">Up 4%</th><th scope="col">Dn 4%</th>
+        <th scope="col">Adv</th><th scope="col">Dec</th>
+        <th scope="col">Net A 10D</th>
+        <th scope="col">% &gt; 50D</th><th scope="col">Net NH</th>
+        <th scope="col">VIX</th>
+      </tr></thead>
+      <tbody id="t-hist"><tr><td colspan="11" class="loading">Loading&hellip;</td></tr></tbody>
+    </table>
+    </div>
+  </div>
+</section>
+
+<div class="foot">
+  Data mirrored each run from <a href="https://markets.ashwinraghavan.com/" target="_blank" rel="noopener">markets.ashwinraghavan.com</a>
+  (Ashwin Raghavan), built from NSE prices via Zerodha Kite Connect &mdash; the 1,000 most-traded NSE stocks.
+  This page reads the snapshot in <code>data/india/</code>, so it keeps working if that site is unreachable;
+  the status bar above shows how old the snapshot is.
+  Breadth definitions follow the Stockbee Market Monitor: <b>Up/Dn 4%</b> = stocks moving &plusmn;4% in a session,
+  <b>Up/Dn 25% month</b> and <b>Up/Dn 50% month</b> = the slower momentum counts,
+  <b>Net A 10D</b> = 10-day net advances, <b>% &gt; 50D</b> = share of stocks above their 50-day average.
+</div>
+
+</div>
+
+<script>
+'use strict';
+
+// ── CSV ───────────────────────────────────────────────────────────────────
+// Quote-aware, so a sector name containing a comma cannot shift every column
+// to its right. Returns an array of objects keyed by the header row.
+function parseCSV(text){
+  const rows=[]; let row=[], cell='', q=false;
+  for(let i=0;i<text.length;i++){
+    const c=text[i];
+    if(q){
+      if(c==='"'){ if(text[i+1]==='"'){cell+='"';i++;} else q=false; }
+      else cell+=c;
+    } else if(c==='"') q=true;
+    else if(c===','){ row.push(cell); cell=''; }
+    else if(c==='\n'||c==='\r'){
+      if(c==='\r'&&text[i+1]==='\n') i++;
+      row.push(cell); cell='';
+      if(row.some(v=>v!=='')) rows.push(row);
+      row=[];
+    } else cell+=c;
+  }
+  row.push(cell);
+  if(row.some(v=>v!=='')) rows.push(row);
+  if(!rows.length) return [];
+  const hdr=rows[0].map(h=>h.trim());
+  return rows.slice(1).map(r=>{
+    const o={}; hdr.forEach((h,i)=>o[h]=(r[i]??'').trim()); return o;
+  });
+}
+
+// A blank, '-', 'NA' or unparseable field is UNKNOWN, not zero.
+function num(v){
+  if(v===undefined||v===null) return null;
+  const s=String(v).trim();
+  if(s===''||s==='-'||/^(na|nan|null|none)$/i.test(s)) return null;
+  const n=Number(s);
+  return Number.isFinite(n)?n:null;
+}
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+// '—' for unknown, so a missing reading never renders as 0.
+function fmt(n,d=2,suf=''){ return n===null?'&mdash;':(n.toFixed(d)+suf); }
+function fmtInt(n){ return n===null?'&mdash;':Math.round(n).toLocaleString('en-IN'); }
+function sgn(n,d=2,suf=''){
+  if(n===null) return '&mdash;';
+  return (n>0?'+':'')+n.toFixed(d)+suf;
+}
+function cls(n){ return n===null?'neu':(n>0?'up':n<0?'dn':'neu'); }
+function pill(n,d=2,suf=''){
+  if(n===null) return '<span class="neu-b">&mdash;</span>';
+  const c=n>0?'up-b':n<0?'dn-b':'neu-b';
+  return '<span class="'+c+'">'+(n>0?'+':'')+n.toFixed(d)+suf+'</span>';
+}
+function mbar(v,max){
+  if(v===null||!max) return '';
+  const w=Math.max(0,Math.min(100,(v/max)*100));
+  return '<div class="mbar"><i style="width:'+w.toFixed(1)+'%"></i></div>';
+}
+function dbar(v,max){
+  if(v===null||!max) return '';
+  const w=Math.max(0,Math.min(50,(Math.abs(v)/max)*50));
+  return '<div class="dbar"><i class="'+(v>=0?'p':'n')+'" style="width:'+w.toFixed(1)+'%"></i></div>';
+}
+function cbar(v,max){
+  if(v===null||!max) return '';
+  const w=Math.max(0,Math.min(100,(v/max)*100));
+  return '<span class="cbar"><i style="width:'+w.toFixed(0)+'%"></i></span>';
+}
+function tile(label,value,valCls,sub,bar){
+  return '<div class="tile"><div class="tile-l">'+label+'</div>'+
+         '<div class="tile-v '+(valCls||'')+'">'+value+'</div>'+
+         (bar||'')+
+         (sub?'<div class="tile-s">'+sub+'</div>':'')+'</div>';
+}
+
+function setStatus(msg,kind){
+  const bar=document.getElementById('statusBar');
+  document.getElementById('status').innerHTML=msg;
+  bar.className='api-bar'+(kind?' '+kind:'');
+}
+
+// Calendar-day age of the snapshot, in IST (the market's own day).
+function istToday(){
+  const n=new Date();
+  return new Date(n.getTime()+(330+n.getTimezoneOffset())*60000);
+}
+function daysOld(dateStr){
+  const d=new Date(dateStr+'T00:00:00');
+  if(isNaN(d)) return null;
+  const t=istToday(); t.setHours(0,0,0,0);
+  return Math.round((t-d)/86400000);
+}
+
+// ── RENDER ────────────────────────────────────────────────────────────────
+function renderIndices(r){
+  const sets=[
+    ['Nifty 50','nifty','nifty_change_pct','nifty_20d_pct'],
+    ['Midcap 150','midcap_150','midcap_150_change_pct','midcap_150_20d_pct'],
+    ['Smallcap 250','smallcap_250','smallcap_250_change_pct','smallcap_250_20d_pct']
+  ];
+  let h='';
+  for(const [name,lk,ck,mk] of sets){
+    const lvl=num(r[lk]), chg=num(r[ck]), m20=num(r[mk]);
+    h+=tile(esc(name), fmtInt(lvl), '',
+      '1D '+pill(chg,2,'%')+' &nbsp; <b>20D</b> <span class="'+cls(m20)+'">'+sgn(m20,2,'%')+'</span>');
+  }
+  const vix=num(r.india_vix), rv=num(r.nifty_rv_20), ratio=num(r.vix_over_rv);
+  h+=tile('India VIX', fmt(vix,2), vix===null?'neu':(vix>=20?'dn':vix<=12?'up':''),
+    'Nifty 20D realised <b>'+fmt(rv,1)+'</b>');
+  // VIX/RV is a ratio around 1.0 — above means options are pricing more
+  // movement than the index has actually delivered.
+  h+=tile('VIX / Realised', fmt(ratio,2),
+    ratio===null?'neu':(ratio>1?'dn':'up'),
+    ratio===null?'no data':(ratio>1?'implied above realised':'implied below realised'));
+  document.getElementById('idxTiles').innerHTML=h;
+  document.getElementById('idxSub').innerHTML='Close '+esc(r.date||'&mdash;');
+}
+
+function renderBreadth(r){
+  const u4=num(r.up_4), d4=num(r.down_4);
+  const adv=num(r.advances), dec=num(r.declines);
+  const net10=num(r.net_advances_10d);
+  const u25=num(r.up_25_month), d25=num(r.down_25_month);
+  const u50=num(r.up_50_month), d50=num(r.down_50_month);
+  const nh=num(r.new_highs_52w), nl=num(r.new_lows_52w);
+  const nnh=num(r.net_new_highs), nnh10=num(r.net_new_highs_10d);
+  const p50=num(r.pct_above_50d), p5=num(r.pct_above_5d);
+
+  const ratio=(a,b)=>(a===null||b===null)?null:(b===0?null:a/b);
+  const r4=ratio(u4,d4), rad=ratio(adv,dec), r25=ratio(u25,d25);
+
+  let h='';
+  // Primary momentum signal.
+  h+=tile('4% Movers &mdash; Primary',
+    (u4===null?'&mdash;':u4)+' <span style="color:var(--text3);font-size:13px">/</span> '+(d4===null?'&mdash;':d4),
+    u4!==null&&d4!==null?(u4>d4?'up':u4<d4?'dn':'neu'):'neu',
+    'ratio <b>'+(r4===null?'&mdash;':r4.toFixed(2))+'</b> &nbsp; up / down',
+    dbar(u4===null||d4===null?null:u4-d4, Math.max(u4||0,d4||0,1)));
+  h+=tile('Advances / Declines',
+    fmtInt(adv)+' <span style="color:var(--text3);font-size:13px">/</span> '+fmtInt(dec),
+    adv!==null&&dec!==null?(adv>dec?'up':adv<dec?'dn':'neu'):'neu',
+    'ratio <b>'+(rad===null?'&mdash;':rad.toFixed(2))+'</b>',
+    dbar(adv===null||dec===null?null:adv-dec, Math.max(adv||0,dec||0,1)));
+  h+=tile('Net Advances 10D', sgn(net10,1), cls(net10),
+    '10-session cumulative', dbar(net10,10));
+  h+=tile('25% Movers &mdash; Month',
+    (u25===null?'&mdash;':u25)+' <span style="color:var(--text3);font-size:13px">/</span> '+(d25===null?'&mdash;':d25),
+    u25!==null&&d25!==null?(u25>d25?'up':u25<d25?'dn':'neu'):'neu',
+    'ratio <b>'+(r25===null?'&mdash;':r25.toFixed(2))+'</b>',
+    dbar(u25===null||d25===null?null:u25-d25, Math.max(u25||0,d25||0,1)));
+  h+=tile('50% Movers &mdash; Month',
+    (u50===null?'&mdash;':u50)+' <span style="color:var(--text3);font-size:13px">/</span> '+(d50===null?'&mdash;':d50),
+    u50!==null&&d50!==null?(u50>d50?'up':u50<d50?'dn':'neu'):'neu',
+    'slowest momentum count',
+    dbar(u50===null||d50===null?null:u50-d50, Math.max(u50||0,d50||0,1)));
+  h+=tile('52W Highs / Lows',
+    (nh===null?'&mdash;':nh)+' <span style="color:var(--text3);font-size:13px">/</span> '+(nl===null?'&mdash;':nl),
+    nh!==null&&nl!==null?(nh>nl?'up':nh<nl?'dn':'neu'):'neu',
+    'net <b>'+sgn(nnh,1)+'</b> &nbsp; 10D <b>'+sgn(nnh10,1)+'</b>',
+    dbar(nnh,Math.max(Math.abs(nnh||0),10)));
+  h+=tile('% Above 50-Day', fmt(p50,1,'%'),
+    p50===null?'neu':(p50>=50?'up':p50<=30?'dn':''),
+    'participation &mdash; medium term', mbar(p50,100));
+  h+=tile('% Above 5-Day', fmt(p5,1,'%'),
+    p5===null?'neu':(p5>=50?'up':p5<=30?'dn':''),
+    'participation &mdash; very short term', mbar(p5,100));
+  document.getElementById('brTiles').innerHTML=h;
+}
+
+function renderSectors(rows){
+  const tb=document.getElementById('t-sectors');
+  if(!rows.length){ tb.innerHTML='<tr><td colspan="9" class="loading">No sector data in snapshot.</td></tr>'; return; }
+  // Latest date only — the file carries history.
+  const latest=rows.map(r=>r.date).filter(Boolean).sort().pop();
+  let cur=rows.filter(r=>r.date===latest);
+  cur.sort((a,b)=>(num(b.excess_60d)??-1e9)-(num(a.excess_60d)??-1e9));
+  const maxP=100;
+  tb.innerHTML=cur.map((r,i)=>{
+    const e20=num(r.excess_20d), e60=num(r.excess_60d), p50=num(r.pct_above_50d);
+    const nnh=num(r.net_new_highs_10d);
+    return '<tr>'+
+      '<td class="l"><span style="color:var(--text3);font-size:10px">'+(i+1)+'</span></td>'+
+      '<td class="l"><span class="tn">'+esc(r.sector||'&mdash;')+'</span></td>'+
+      '<td>'+fmtInt(num(r.stocks))+'</td>'+
+      '<td class="'+cls(e20)+'">'+sgn(e20,1,'%')+'</td>'+
+      '<td>'+pill(e60,1,'%')+'</td>'+
+      '<td>'+fmt(p50,1,'%')+cbar(p50,maxP)+'</td>'+
+      '<td class="'+cls(nnh)+'">'+sgn(nnh,1)+'</td>'+
+      '<td class="up">'+fmtInt(num(r.n_highs_10d))+'</td>'+
+      '<td class="dn">'+fmtInt(num(r.n_lows_10d))+'</td>'+
+    '</tr>';
+  }).join('');
+  document.getElementById('secSub').innerHTML=cur.length+' sectors &middot; ranked by 60D excess';
+  document.getElementById('secDate').textContent=latest||'';
+}
+
+function renderHistory(rows){
+  const tb=document.getElementById('t-hist');
+  const last=rows.slice(-30).reverse();
+  if(!last.length){ tb.innerHTML='<tr><td colspan="11" class="loading">No history in snapshot.</td></tr>'; return; }
+  tb.innerHTML=last.map(r=>{
+    const chg=num(r.nifty_change_pct), u4=num(r.up_4), d4=num(r.down_4);
+    const net10=num(r.net_advances_10d), nnh=num(r.net_new_highs);
+    return '<tr>'+
+      '<td class="l"><span class="tn" style="font-size:11.5px">'+esc(r.date||'')+'</span></td>'+
+      '<td>'+fmtInt(num(r.nifty))+'</td>'+
+      '<td class="'+cls(chg)+'">'+sgn(chg,2,'%')+'</td>'+
+      '<td class="up">'+fmtInt(u4)+'</td>'+
+      '<td class="dn">'+fmtInt(d4)+'</td>'+
+      '<td>'+fmtInt(num(r.advances))+'</td>'+
+      '<td>'+fmtInt(num(r.declines))+'</td>'+
+      '<td class="'+cls(net10)+'">'+sgn(net10,1)+'</td>'+
+      '<td>'+fmt(num(r.pct_above_50d),1,'%')+'</td>'+
+      '<td class="'+cls(nnh)+'">'+sgn(nnh,1)+'</td>'+
+      '<td>'+fmt(num(r.india_vix),2)+'</td>'+
+    '</tr>';
+  }).join('');
+  document.getElementById('histRange').textContent=
+    (last[last.length-1].date||'')+' → '+(last[0].date||'');
+}
+
+// ── LOAD ──────────────────────────────────────────────────────────────────
+// Cache-bust so a GitHub Pages edge copy can't pin an old snapshot.
+const bust='?t='+Math.floor(Date.now()/60000);
+
+async function grab(path){
+  const res=await fetch(path+bust,{cache:'no-store'});
+  if(!res.ok) throw new Error(path+' → HTTP '+res.status);
+  const txt=await res.text();
+  if(/^\s*</.test(txt)) throw new Error(path+' returned HTML, not CSV');
+  return parseCSV(txt);
+}
+
+(async function(){
+  let breadth=null, sectors=null, errs=[];
+  const [b,s]=await Promise.allSettled([
+    grab('data/india/breadth.csv'),
+    grab('data/india/sectors.csv')
+  ]);
+  if(b.status==='fulfilled') breadth=b.value; else errs.push('breadth.csv: '+b.reason.message);
+  if(s.status==='fulfilled') sectors=s.value; else errs.push('sectors.csv: '+s.reason.message);
+
+  if(breadth&&breadth.length){
+    // Sort by date so "latest" is the real latest regardless of file order.
+    breadth.sort((x,y)=>String(x.date).localeCompare(String(y.date)));
+    const latest=breadth[breadth.length-1];
+    renderIndices(latest);
+    renderBreadth(latest);
+    renderHistory(breadth);
+    const age=daysOld(latest.date);
+    document.getElementById('asofLine').innerHTML=
+      'Close '+esc(latest.date||'&mdash;')+' &middot; '+breadth.length.toLocaleString('en-IN')+' sessions on file';
+    // 4 calendar days covers a Fri→Mon gap (3) and a Fri→Tue gap when Monday
+    // is one of the NSE's many festival holidays (4). Beyond that the mirror
+    // has not refreshed, and the page says so rather than looking current.
+    if(age===null) setStatus('Snapshot loaded &mdash; date not parseable.','');
+    else if(age<=4) setStatus('&#9679; Snapshot current &mdash; NSE close '+esc(latest.date)+'.','ok');
+    else setStatus('&#9888; <b>STALE</b> &mdash; newest NSE close is '+esc(latest.date)+
+      ', '+age+' days old. The mirror step has not refreshed.','bad');
+  } else {
+    // No snapshot yet: say so plainly rather than rendering an empty shell.
+    const msg=breadth?'Snapshot file is present but empty.':'No snapshot yet &mdash; '+
+      'the mirror step writes <code>data/india/</code> on the next scheduled run.';
+    setStatus('&#9888; '+msg,'bad');
+    document.getElementById('idxTiles').innerHTML=
+      '<div class="tile"><div class="tile-l">Awaiting first mirror</div><div class="tile-v neu">&mdash;</div>'+
+      '<div class="tile-s">data/india/breadth.csv not readable</div></div>';
+    document.getElementById('brTiles').innerHTML='';
+    document.getElementById('t-hist').innerHTML=
+      '<tr><td colspan="11" class="loading">Populates on the next data refresh.</td></tr>';
+  }
+
+  if(sectors) renderSectors(sectors);
+  else document.getElementById('t-sectors').innerHTML=
+    '<tr><td colspan="9" class="loading">Populates on the next data refresh.</td></tr>';
+
+  if(errs.length&&breadth&&breadth.length)
+    setStatus(document.getElementById('status').innerHTML+
+      ' &nbsp;&middot;&nbsp; '+esc(errs.join(' | ')),'bad');
+})();
+</script>
+</body>
+</html>
