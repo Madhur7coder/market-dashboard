@@ -806,8 +806,13 @@ function buildRows(data, tbodyId, opts={}) {
   // layout on every insert.
   const frag = document.createDocumentFragment();
 
-  (data||[]).forEach((item, i) => {
-    if(!item) return;
+  // A record with no numbers at all is not shown as a row of dashes — it is
+  // left out, and a card left with no rows is hidden altogether.
+  data = (data||[]).filter(it => it && (isNum(it.price) || isNum(it.d1) || isNum(it.w1)));
+  const card = tbody.closest('.card');
+  if(card) card.hidden = data.length === 0;
+
+  data.forEach((item, i) => {
     const m = META[item.sym]||{name:item.sym,sym:item.sym};
     const displayName = item.name || m.name;
     const displayFlag = item.flag || m.flag || '';
