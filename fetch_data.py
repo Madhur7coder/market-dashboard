@@ -32,6 +32,12 @@ OUT_PATH = DATA_DIR / 'data.json'
 # missing rather than silently dropping rows off the dashboard.
 COVERAGE_FLOOR = 0.60
 
+# A series whose newest bar is older than this has no data any more — a delisted
+# ticker, a dead index code, or a row carried over run after run because the
+# fetch keeps failing. Such rows are removed from the output rather than shown
+# with months-old numbers. Seven days rides out a long-weekend holiday.
+MAX_BAR_AGE_DAYS = 7
+
 # Warnings surfaced to the dashboard so a degraded run is visible in the UI
 # instead of only in the Actions log.
 WARNINGS = []
@@ -90,38 +96,6 @@ TICKER_REMAP = {
     'DX-Y.NYB':'DX-Y.NYB', '^VIX':'CBOE:VIX',
     'BTC-USD':'BTC','ETH-USD':'ETH','SOL-USD':'SOL','XRP-USD':'XRP',
 }
-
-# ── 2-YEAR TREASURY YIELD ───────────────────────────────────────────────────────────────────────────────
-def _series_record(sym, dates, values):
-    """Build a dashboard record from a plain (date, value) yield series so the
-    2-year gets real 1D / 1W / 52W / YTD numbers instead of hardcoded zeros."""
-    if not values:
-        return None
-    price = values[-1]
-    prev_year = dates[-1].year - 1
-    ytd_base = None
-    for d, v in zip(dates, values):
-        if d.year <= prev_year:
-            ytd_base = v          # keeps overwriting → last close of the prior year
-        else:
-            break
-    window = values[-252:]
-    spark = [round(pct(values[i], values[i - 1]) or 0.0, 2)
-             for i in range(max(1, len(values) - 5), len(values))]
-    while len(spark) < 5:
-        spark.insert(0, 0.0)
-    return {
-        'sym':   sym,
-        'price': round(price, 4),
-        'd1':    pct(price, values[-2]) if len(values) >= 2 else None,
-        'w1':    pct(price, values[-6]) if len(values) >= 6 else None,
-        'hi52':  pct(price, max(window)) if window else None,
-        'ytd':   pct(price, ytd_base) if ytd_base else None,
-        'd1_bps':  round((price - values[-2]) * 100, 1) if len(values) >= 2 else None,
-        'w1_bps':  round((price - values[-6]) * 100, 1) if len(values) >= 6 else None,
-        'ytd_bps': round((price - ytd_base) * 100, 1) if ytd_base else None,
-        'spark': spark,
-    }
 
 # ── ETF HOLDINGS ─────────────────────────────────────────────────────────────────────────────────────────
 def _safe_float(val):
@@ -526,7 +500,7 @@ def fetch_all(prices_only=False):
                 print(f"  ⚠ No data for {yf_sym}")
         time.sleep(1)
 
-    print("Fetching treasury yields via yfinance + FRED fallback...")
+    print("Fetching treasury yields via yfinance...")
     raw = fetch_batch(YIELDS)
     for yf_sym in YIELDS:
         rec = raw.get(yf_sym)
@@ -581,6 +555,8 @@ def fetch_all(prices_only=False):
         if len(have) < len(want) * COVERAGE_FLOOR:
             warn(f"{key}: only {len(have)}/{len(want)} tickers returned fresh data")
 
+    drop_dead_series(output)
+
     if output['dxvix']:
         _order = {'DX-Y.NYB': 0, 'CBOE:VIX': 1}
         output['dxvix'].sort(key=lambda x: _order.get(x.get('sym', ''), 99))
@@ -608,6 +584,37 @@ def fetch_all(prices_only=False):
 
     check_equity_freshness(output)
     return output
+
+def drop_dead_series(output, now=None):
+    """Remove every record that has no usable, recent data.
+
+    Covers three cases: a record with no price at all, a record with no bar
+    date, and a record whose newest bar is more than MAX_BAR_AGE_DAYS old
+    (whether Yahoo returned it that way or it was carried over from an earlier
+    run). Each removal is reported as a warning so it is never silent.
+    """
+    today = (now or utcnow()).date()
+    for key, rows in output.items():
+        if not isinstance(rows, list):
+            continue
+        kept = []
+        for r in rows:
+            if not isinstance(r, dict):
+                continue
+            sym, asof = r.get('sym'), r.get('asof')
+            if _safe_float(r.get('price')) is None:
+                warn(f"{key}: removed {sym} — no price")
+                continue
+            try:
+                age = (today - datetime.date.fromisoformat(asof)).days
+            except (TypeError, ValueError):
+                warn(f"{key}: removed {sym} — no bar date")
+                continue
+            if age > MAX_BAR_AGE_DAYS:
+                warn(f"{key}: removed {sym} — no data since {asof}")
+                continue
+            kept.append(r)
+        output[key] = kept
 
 def last_completed_us_session(now=None):
     """The most recent weekday whose US cash session has finished.

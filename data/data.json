@@ -614,33 +614,6 @@
       "above_ema200": true,
       "ema200_val": 24844.0712,
       "streak_200": 121
-    },
-    {
-      "sym": "000300.SS",
-      "price": 4529.1001,
-      "d1": -3.6,
-      "w1": -5.26,
-      "hi52": -10.57,
-      "ytd": -2.18,
-      "spark": [
-        -1.79,
-        2.15,
-        -0.2,
-        -1.85,
-        -3.6
-      ],
-      "asof": "2026-07-17",
-      "ema_uptrend": false,
-      "above_ema21": false,
-      "ema21_val": 4797.6495,
-      "streak_21": 6,
-      "above_ema50": false,
-      "ema50_val": 4815.4002,
-      "streak_50": 6,
-      "above_ema200": false,
-      "ema200_val": 4646.4649,
-      "streak_200": 1,
-      "stale": true
     }
   ],
   "etfmain": [
@@ -1273,7 +1246,6 @@
       "streak_200": 27
     }
   ],
-  "sectorew": [],
   "thematic": [
     {
       "sym": "UNG",
@@ -9589,37 +9561,6 @@
       }
     ]
   },
-  "breadth": {
-    "fear_greed": {
-      "score": 37.0,
-      "rating": "Fear",
-      "asof": "2026-09-25T23:59:59+00:00"
-    },
-    "naaim": null,
-    "advance_decline": {
-      "advancers": 0,
-      "decliners": 0,
-      "unchanged": 503
-    },
-    "new_high_low": {
-      "new_highs": 14,
-      "new_lows": 38,
-      "near_highs": 18,
-      "near_lows": 50
-    },
-    "pct_above_sma20": 27.4,
-    "pct_above_sma50": 25.8,
-    "pct_above_sma200": 47.7,
-    "universe": {
-      "expected": 503,
-      "covered": 503
-    },
-    "asof": "2026-09-25"
-  },
-  "warnings": [
-    "US2Y: no source returned a value",
-    "yields: no data for ['US2Y']",
-    "NAAIM unavailable"
-  ],
+  "warnings": [],
   "data_asof": "2026-09-26"
 }
